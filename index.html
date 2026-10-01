@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CONQUERORS LABS — Learn. Practice. Conquer."
+    >
+
+    <title>CONQUERORS LABS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================
+         BACKGROUND
+    ====================================== -->
+
+    <div class="background-overlay"></div>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="brand">
+            <div class="brand-icon">⚗</div>
+
+            <div>
+                <h1>CONQUERORS</h1>
+                <span>LABS</span>
+            </div>
+        </div>
+
+        <a
+            href="#quizzes"
+            class="nav-button"
+        >
+            CBT
+        </a>
+
+    </header>
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    <span></span>
+                    ACADEMIC TRAINING GROUND
+                </div>
+
+                <h2>
+                    Learn.
+                    <span>Practice.</span>
+                    Conquer.
+                </h2>
+
+                <p>
+                    Test your knowledge, sharpen your understanding,
+                    and prepare yourself to conquer your courses.
+                </p>
+
+                <a
+                    href="#quizzes"
+                    class="hero-button"
+                >
+                    ENTER THE LAB
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             CBT SECTION
+        ================================== -->
+
+        <section
+            class="quiz-section"
+            id="quizzes"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CBT ARENA
+                </span>
+
+                <h3>
+                    Choose Your Course
+                </h3>
+
+                <p>
+                    Select a subject and put your knowledge to the test.
+                </p>
+
+            </div>
+
+
+            <div class="quiz-grid">
+
+
+                <!-- BIOLOGY -->
+
+                <article
+                    class="quiz-card"
+                    data-subject="BIO101"
+                >
+
+                    <div class="subject-icon biology">
+                        🧬
+                    </div>
+
+                    <div class="quiz-info">
+
+                        <span class="course-code">
+                            BIO 101
+                        </span>
+
+                        <h4>
+                            Cell Biology
+                        </h4>
+
+                        <p>
+                            Test your understanding of biological concepts.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="quiz-button"
+                        onclick="openQuiz('BIO101')"
+                    >
+                        START CBT
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- CHEMISTRY -->
+
+                <article
+                    class="quiz-card"
+                    data-subject="CHM101"
+                >
+
+                    <div class="subject-icon chemistry">
+                        ⚗️
+                    </div>
+
+                    <div class="quiz-info">
+
+                        <span class="course-code">
+                            CHM 101
+                        </span>
+
+                        <h4>
+                            NOT AVAILABLE
+                        </h4>
+
+                        <p>
+                            Challenge yourself with chemistry questions.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="quiz-button"
+                        onclick="openQuiz('CHM101')"
+                    >
+                        START CBT
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- PHYSICS -->
+
+                <article
+                    class="quiz-card"
+                    data-subject="PHY101"
+                >
+
+                    <div class="subject-icon physics">
+                        ⚡
+                    </div>
+
+                    <div class="quiz-info">
+
+                        <span class="course-code">
+                            PHY 101
+                        </span>
+
+                        <h4>
+                            NOT AVAILABLE
+                        </h4>
+
+                        <p>
+                            Put your physics knowledge under pressure.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="quiz-button"
+                        onclick="openQuiz('PHY101')"
+                    >
+                        START CBT
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+
+                <!-- MATHEMATICS -->
+
+                <article
+                    class="quiz-card"
+                    data-subject="MATH101"
+                >
+
+                    <div class="subject-icon mathematics">
+                        ∑
+                    </div>
+
+                    <div class="quiz-info">
+
+                        <span class="course-code">
+                            MATH 101
+                        </span>
+
+                        <h4>
+                            NOT AVAILABLE 
+                        </h4>
+
+                        <p>
+                            Solve, calculate, and conquer.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="quiz-button"
+                        onclick="openQuiz('MATH101')"
+                    >
+                        START CBT
+                        <span>→</span>
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             SCIENTIST OF THE WEEK
+        ================================== -->
+
+        <section class="scientist-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    WEEKLY INSPIRATION
+                </span>
+
+                <h3>
+                    Scientist of the Week
+                </h3>
+
+                <p>
+                    Discover the minds that changed our understanding
+                    of the world.
+                </p>
+
+            </div>
+
+
+            <article class="scientist-card">
+
+                <div class="scientist-image-container">
+
+                    <img
+                        id="scientistImage"
+                        src="marie-curie.jpeg"
+                        alt="Scientist of the Week"
+                    >
+
+                </div>
+
+
+                <div class="scientist-content">
+
+                    <span
+                        class="scientist-tag"
+                        id="scientistField"
+                    >
+                        PHYSICIST & CHEMIST
+                    </span>
+
+                    <h4 id="scientistName">
+                        Marie Curie
+                    </h4>
+
+                    <blockquote id="scientistQuote">
+                        “Nothing in life is to be feared;
+                        it is only to be understood.”
+                    </blockquote>
+
+                    <p id="scientistBio">
+                        A pioneering scientist whose work transformed
+                        our understanding of radioactivity.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================
+             WHATSAPP
+        ================================== -->
+
+        <section class="community-section">
+
+            <div class="community-card">
+
+                <div class="community-icon">
+                    💬
+                </div>
+
+                <div>
+
+                    <span class="section-label">
+                        JOIN THE COMMUNITY
+                    </span>
+
+                    <h3>
+                        Stay connected with
+                        the Conquerors.
+                    </h3>
+
+                    <p>
+                        Get updates, new CBT announcements,
+                        challenges and more on our WhatsApp Channel.
+                    </p>
+
+                </div>
+
+                <a
+                    href="#"
+                    class="whatsapp-button"
+                    id="whatsappButton"
+                >
+                    JOIN WHATSAPP
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+            ⚗ CONQUERORS LABS
+        </div>
+
+        <p>
+            Learn. Practice. Conquer.
+        </p>
+
+        <span>
+            © 2026 CONQUERORS LABS
+        </span>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
