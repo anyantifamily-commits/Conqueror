@@ -1205,3 +1205,268 @@ footer span {
     line-height: 1.5;
 
 }
+
+/* =========================================
+   CGPA CALCULATOR CARD
+========================================= */
+
+.cgpa-section {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: -30px auto 0;
+
+    padding: 20px 6% 70px;
+}
+
+
+.cgpa-card {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255,255,255,0.11),
+            rgba(255,255,255,0.045)
+        );
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.18);
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+
+.cgpa-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(141,226,181,0.08);
+
+    pointer-events: none;
+}
+
+
+.cgpa-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(255,255,255,0.22);
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255,255,255,0.13),
+            rgba(255,255,255,0.055)
+        );
+}
+
+
+.cgpa-card-icon {
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 18px;
+
+    background:
+        rgba(141,226,181,0.1);
+
+    border:
+        1px solid rgba(141,226,181,0.12);
+
+    color: #8de2b5;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+
+.cgpa-card-content {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.cgpa-card-content .section-label {
+
+    margin-bottom: 7px;
+}
+
+
+.cgpa-card-content h3 {
+
+    font-size: 27px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 7px;
+}
+
+
+.cgpa-card-content p {
+
+    max-width: 520px;
+
+    color:
+        rgba(255,255,255,0.52);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.cgpa-card-button {
+
+    position: relative;
+
+    z-index: 1;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 20px;
+
+    border-radius: 100px;
+
+    text-decoration: none;
+
+    color: #07100d;
+
+    background: white;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+
+.cgpa-card-button span {
+
+    font-size: 16px;
+}
+
+
+.cgpa-card-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255,255,255,0.14);
+}
+
+
+/* =========================================
+   CGPA MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .cgpa-section {
+
+        margin: -20px auto 0;
+
+        padding:
+            15px
+            20px
+            50px;
+    }
+
+
+    .cgpa-card {
+
+        grid-template-columns: auto 1fr;
+
+        gap: 18px;
+
+        padding: 25px;
+    }
+
+
+    .cgpa-card-icon {
+
+        width: 52px;
+        height: 52px;
+
+        border-radius: 15px;
+
+        font-size: 23px;
+    }
+
+
+    .cgpa-card-content h3 {
+
+        font-size: 22px;
+    }
+
+
+    .cgpa-card-content p {
+
+        font-size: 11px;
+    }
+
+
+    .cgpa-card-button {
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        padding: 14px 18px;
+    }
+
+   }
