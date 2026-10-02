@@ -17,7 +17,7 @@ const QUIZ_CONFIG = {
     // ALLOW STUDENTS TO RETAKE THE QUIZ?
     // true  = retake allowed
     // false = one attempt only
-    allowRetake: true,
+    allowRetake: false,
 
 
     /* =============================================
