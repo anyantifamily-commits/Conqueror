@@ -39,1009 +39,249 @@ const QUIZ_CONFIG = {
 
     questions: [
 
-        {
-            id: 1,
 
-            question:
-                "Which of the following physical quantities is classified as a scalar?",
-
-            options: [
-                "Velocity",
-                "Mass",
-                "Force",
-                "Acceleration"
-            ],
-
-            answer:
-                "Mass",
-
-            explanation:
-                "Mass is a scalar because it has magnitude only. Velocity, force and acceleration are vectors."
-        },
-
-        {
-            id: 2,
-
-            question:
-                "A physical quantity described completely by both its magnitude and direction is called a:",
-
-            options: [
-                "Scalar",
-                "Vector",
-                "Tensor",
-                "Dimensionless constant"
-            ],
-
-            answer:
-                "Vector",
-
-            explanation:
-                "A vector quantity requires both magnitude and direction for complete description."
-        },
-
-        {
-            id: 3,
-
-            question:
-                "What is the simple arithmetic sum of two scalar masses of 20 kg and 40 kg?",
-
-            options: [
-                "20 kg",
-                "40 kg",
-                "60 kg",
-                "80 kg"
-            ],
-
-            answer:
-                "60 kg",
-
-            explanation:
-                "Scalars are added using ordinary arithmetic: 20 kg + 40 kg = 60 kg."
-        },
-
-        {
-            id: 4,
-
-            question:
-                "Which of the following is a vector quantity?",
-
-            options: [
-                "Time",
-                "Work",
-                "Energy",
-                "Electric field intensity"
-            ],
-
-            answer:
-                "Electric field intensity",
-
-            explanation:
-                "Electric field intensity has both magnitude and direction, making it a vector."
-        },
-
-        {
-            id: 5,
-
-            question:
-                "When two vectors A and B are represented by two adjacent sides of a triangle inclined to each other, the magnitude of their resultant R is given by:",
-
-            options: [
-                "R² = A² + B² − 2AB cosθ",
-                "R² = A² + B² + 2AB cosθ",
-                "R² = A² − B² + 2AB sinθ",
-                "R = A + B + 2AB cosθ"
-            ],
-
-            answer:
-                "R² = A² + B² + 2AB cosθ",
-
-            explanation:
-                "For vector addition, the cosine rule gives R² = A² + B² + 2AB cosθ."
-        },
-
-        {
-            id: 6,
-
-            question:
-                "Two forces of 10 N and 15 N act on a toy at an inclination of 60° to each other. What is the magnitude of the resultant force?",
-
-            options: [
-                "18.2 N",
-                "21.8 N",
-                "25.0 N",
-                "30.5 N"
-            ],
-
-            answer:
-                "21.8 N",
-
-            explanation:
-                "R² = 10² + 15² + 2(10)(15)cos60°. Therefore R² = 475 and R ≈ 21.8 N."
-        },
-
-        {
-            id: 7,
-
-            question:
-                "For vector subtraction A − B = A + (−B), how is the vector −B defined relative to B?",
-
-            options: [
-                "Equal in magnitude and in the same direction",
-                "Equal in magnitude and oppositely directed",
-                "Double in magnitude and oppositely directed",
-                "Half in magnitude and perpendicularly directed"
-            ],
-
-            answer:
-                "Equal in magnitude and oppositely directed",
-
-            explanation:
-                "The negative of a vector has the same magnitude but points in the opposite direction."
-        },
-
-        {
-            id: 8,
-
-            question:
-                "In vector subtraction R = A − B, the cosine rule for the magnitude of R is expressed as:",
-
-            options: [
-                "R² = A² + B² + 2AB cosθ",
-                "R² = A² + B² − 2AB cosθ",
-                "R² = A² − B² − 2AB cosθ",
-                "R² = A² + B² + 2AB sinθ"
-            ],
-
-            answer:
-                "R² = A² + B² − 2AB cosθ",
-
-            explanation:
-                "For the magnitude of A − B, the cosine-rule form is R² = A² + B² − 2AB cosθ."
-        },
-
-        {
-            id: 9,
-
-            question:
-                "In two-dimensional rectangular resolution, if a vector V makes an angle θ with the x-axis, its horizontal component Vx is:",
-
-            options: [
-                "V sinθ",
-                "V cosθ",
-                "V tanθ",
-                "V secθ"
-            ],
-
-            answer:
-                "V cosθ",
-
-            explanation:
-                "When θ is measured from the x-axis, the horizontal component is Vx = V cosθ."
-        },
-
-        {
-            id: 10,
-
-            question:
-                "In two-dimensional rectangular resolution, if a vector V makes an angle θ with the x-axis, its vertical component Vy is:",
-
-            options: [
-                "V cosθ",
-                "V sinθ",
-                "V tanθ",
-                "V cotθ"
-            ],
-
-            answer:
-                "V sinθ",
-
-            explanation:
-                "When θ is measured from the x-axis, the vertical component is Vy = V sinθ."
-        },
-
-        {
-            id: 11,
-
-            question:
-                "In unit vector notation, a vector V in three dimensions (3D) is written as:",
-
-            options: [
-                "V = iVx × jVy × kVz",
-                "V = iVx + jVy + kVz",
-                "V = (iVx + jVy) / kVz",
-                "V = Vx + Vy + Vz"
-            ],
-
-            answer:
-                "V = iVx + jVy + kVz",
-
-            explanation:
-                "A 3D vector is represented by its components along the i, j and k directions."
-        },
-
-        {
-            id: 12,
-
-            question:
-                "The magnitude of a 3D vector V = iVx + jVy + kVz is calculated using:",
-
-            options: [
-                "|V| = Vx + Vy + Vz",
-                "|V| = √(Vx² + Vy² + Vz²)",
-                "|V| = Vx² + Vy² + Vz²",
-                "|V| = √(Vx + Vy + Vz)"
-            ],
-
-            answer:
-                "|V| = √(Vx² + Vy² + Vz²)",
-
-            explanation:
-                "The magnitude of a three-dimensional vector is obtained from the three-dimensional Pythagorean relation."
-        },
-
-        {
-            id: 13,
-
-            question:
-                "Three forces act on a body in a plane: F₁ = 4i − j N, F₂ = −3i + 2j N, and F₃ = −3j N. What is the resultant vector F?",
-
-            options: [
-                "i − 2j N",
-                "7i − 2j N",
-                "i + 4j N",
-                "−i − j N"
-            ],
-
-            answer:
-                "i − 2j N",
-
-            explanation:
-                "Add components: i-components = 4 − 3 = 1; j-components = −1 + 2 − 3 = −2. Therefore F = i − 2j N."
-        },
-
-        {
-            id: 14,
-
-            question:
-                "What is the magnitude of the resultant force for F = i − 2j N?",
-
-            options: [
-                "3 N",
-                "√3 N",
-                "√5 N",
-                "5 N"
-            ],
-
-            answer:
-                "√5 N",
-
-            explanation:
-                "|F| = √(1² + (−2)²) = √5 N."
-        },
-
-        {
-            id: 15,
-
-            question:
-                "The angle θ that a resultant vector V = iVx + jVy makes with the x-axis is determined by:",
-
-            options: [
-                "θ = sin⁻¹(Vy/Vx)",
-                "θ = cos⁻¹(Vx/Vy)",
-                "θ = tan⁻¹(Vy/Vx)",
-                "θ = tan⁻¹(Vx/Vy)"
-            ],
-
-            answer:
-                "θ = tan⁻¹(Vy/Vx)",
-
-            explanation:
-                "For a vector resolved into x and y components, tanθ = Vy/Vx, so θ = tan⁻¹(Vy/Vx)."
-        },
-
-        {
-            id: 16,
-
-            question:
-                "Multiplying a vector by a scalar always yields a:",
-
-            options: [
-                "Scalar",
-                "Vector",
-                "Matrix",
-                "Pure dimensionless number"
-            ],
-
-            answer:
-                "Vector",
-
-            explanation:
-                "Multiplying a vector by a scalar changes its magnitude and possibly its direction, but the result remains a vector."
-        },
-
-        {
-            id: 17,
-
-            question:
-                "Which of the following physical relationships represents the multiplication of a scalar by a vector to yield a vector?",
-
-            options: [
-                "W = F · S",
-                "τ = F × S",
-                "F = ma",
-                "P = F · v"
-            ],
-
-            answer:
-                "F = ma",
-
-            explanation:
-                "Mass m is a scalar and acceleration a is a vector. Therefore m × a gives the vector force F."
-        },
-
-        {
-            id: 18,
-
-            question:
-                "The dot product (scalar product) of two vectors A and B separated by angle θ is defined as:",
-
-            options: [
-                "A · B = AB sinθ",
-                "A · B = AB cosθ",
-                "A · B = AB tanθ",
-                "A · B = nAB cosθ"
-            ],
-
-            answer:
-                "A · B = AB cosθ",
-
-            explanation:
-                "The scalar or dot product is A · B = AB cosθ."
-        },
-
-        {
-            id: 19,
-
-            question:
-                "What is the value of the dot product of identical unit vectors i · i or j · j?",
-
-            options: [
-                "0",
-                "1",
-                "−1",
-                "Infinite"
-            ],
-
-            answer:
-                "1",
-
-            explanation:
-                "A unit vector has magnitude 1 and the angle between itself and itself is 0°. Therefore 1 × 1 × cos0° = 1."
-        },
-
-        {
-            id: 20,
-
-            question:
-                "What is the value of the dot product of orthogonal unit vectors i · j or j · k?",
-
-            options: [
-                "0",
-                "1",
-                "−1",
-                "1/2"
-            ],
-
-            answer:
-                "0",
-
-            explanation:
-                "Orthogonal vectors are perpendicular, so θ = 90°. Since cos90° = 0, their dot product is zero."
-        },
-
-        {
-            id: 21,
-
-            question:
-                "A force F = 2i + 4j N causes a displacement S = i + 5j m. What is the work done (W = F · S)?",
-
-            options: [
-                "18 J",
-                "22 J",
-                "26 J",
-                "10 J"
-            ],
-
-            answer:
-                "22 J",
-
-            explanation:
-                "W = (2)(1) + (4)(5) = 2 + 20 = 22 J."
-        },
-
-        {
-            id: 22,
-
-            question:
-                "The vector (cross) product of two vectors A and B is defined as:",
-
-            options: [
-                "A × B = AB cosθ",
-                "A × B = nAB sinθ",
-                "A × B = nAB cosθ",
-                "A × B = AB sinθ"
-            ],
-
-            answer:
-                "A × B = nAB sinθ",
-
-            explanation:
-                "The cross product has magnitude AB sinθ and direction perpendicular to the plane of A and B, represented by unit vector n."
-        },
-
-        {
-            id: 23,
-
-            question:
-                "Which anti-commutative property correctly describes vector cross-multiplication?",
-
-            options: [
-                "A × B = B × A",
-                "A × B = −(B × A)",
-                "A × B = 1/(B × A)",
-                "A × B = A · B"
-            ],
-
-            answer:
-                "A × B = −(B × A)",
-
-            explanation:
-                "The cross product is anti-commutative: reversing the order reverses the direction."
-        },
-
-        {
-            id: 24,
-
-            question:
-                "In computing the cross product A × B analytically, which mathematical structure is used to calculate the components?",
-
-            options: [
-                "Algebraic expansion of cosines",
-                "Determinant of a 3×3 matrix",
-                "Arithmetic summation of vectors",
-                "Dot product summation"
-            ],
-
-            answer:
-                "Determinant of a 3×3 matrix",
-
-            explanation:
-                "The components of a 3D cross product can be evaluated using a determinant involving i, j and k."
-        },
-
-        {
-            id: 25,
-
-            question:
-                "Given A = 5i − 2j + k and B = 2i + 4j − 3k, what is the resulting vector A × B?",
-
-            options: [
-                "2i + 17j + 24k",
-                "−2i − 17j − 24k",
-                "10i − 8j − 3k",
-                "5i + 2j + 24k"
-            ],
-
-            answer:
-                "2i + 17j + 24k",
-
-            explanation:
-                "Using the cross-product determinant gives A × B = 2i + 17j + 24k."
-        },
-
-        {
-            id: 26,
-
-            question:
-                "What is the magnitude of the cross product vector A × B = 2i + 17j + 24k?",
-
-            options: [
-                "20.0",
-                "29.5",
-                "43.2",
-                "15.8"
-            ],
-
-            answer:
-                "29.5",
-
-            explanation:
-                "|A × B| = √(2² + 17² + 24²) = √869 ≈ 29.5."
-        },
-
-        {
-            id: 27,
-
-            question:
-                "Kinematics is defined as the study of:",
-
-            options: [
-                "Forces causing motion without considering velocity",
-                "Motions without considering the forces causing them",
-                "Energy transformations during collisions",
-                "Masses in static equilibrium"
-            ],
-
-            answer:
-                "Motions without considering the forces causing them",
-
-            explanation:
-                "Kinematics describes motion using quantities such as displacement, velocity and acceleration without focusing on the forces causing the motion."
-        },
-
-        {
-            id: 28,
-
-            question:
-                "Motion restricted to a single flat plane or surface is categorized as:",
-
-            options: [
-                "1D motion",
-                "2D motion",
-                "3D motion",
-                "4D motion"
-            ],
-
-            answer:
-                "2D motion",
-
-            explanation:
-                "Motion confined to a plane requires two coordinates, so it is two-dimensional motion."
-        },
-
-        {
-            id: 29,
-
-            question:
-                "Displacement is defined as the:",
-
-            options: [
-                "Total path length traveled by a body",
-                "Effective distance between two points",
-                "Speed multiplied by total time",
-                "Rate of change of acceleration"
-            ],
-
-            answer:
-                "Effective distance between two points",
-
-            explanation:
-                "Displacement is the vector change in position from the initial point to the final point."
-        },
-
-        {
-            id: 30,
-
-            question:
-                "For a motion starting at point P₁(2, 2) and ending at P₂(6, 4), what is the displacement vector S?",
-
-            options: [
-                "8i + 6j",
-                "4i + 2j",
-                "2i + 4j",
-                "12i + 8j"
-            ],
-
-            answer:
-                "4i + 2j",
-
-            explanation:
-                "Displacement = final position − initial position = (6−2)i + (4−2)j = 4i + 2j."
-        },
-
-        {
-            id: 31,
-
-            question:
-                "What is the magnitude of the displacement vector S = 4i + 2j?",
-
-            options: [
-                "√20",
-                "6",
-                "2",
-                "√12"
-            ],
-
-            answer:
-                "√20",
-
-            explanation:
-                "|S| = √(4² + 2²) = √20 ≈ 4.47."
-        },
-
-        {
-            id: 32,
-
-            question:
-                "What is the angle θ relative to the x-axis for the displacement vector S = 4i + 2j?",
-
-            options: [
-                "45.0°",
-                "26.6°",
-                "63.4°",
-                "30.0°"
-            ],
-
-            answer:
-                "26.6°",
-
-            explanation:
-                "tanθ = 2/4 = 0.5, so θ = tan⁻¹(0.5) ≈ 26.6°."
-        },
-
-        {
-            id: 33,
-
-            question:
-                "Velocity is defined as the rate at which:",
-
-            options: [
-                "Distance changes with speed",
-                "Displacement changes with time",
-                "Acceleration changes with time",
-                "Force changes with displacement"
-            ],
-
-            answer:
-                "Displacement changes with time",
-
-            explanation:
-                "Velocity is the rate of change of displacement with respect to time: v = dS/dt."
-        },
-
-        {
-            id: 34,
-
-            question:
-                "What is the standard S.I. unit of velocity?",
-
-            options: [
-                "km/hr",
-                "m/s",
-                "m/s²",
-                "N · s"
-            ],
-
-            answer:
-                "m/s",
-
-            explanation:
-                "The SI unit of velocity is metre per second (m/s)."
-        },
-
-        {
-            id: 35,
-
-            question:
-                "If a car travels a displacement of 150 km between Lagos and Ibadan in 2 hours, its average velocity is:",
-
-            options: [
-                "50 km/hr",
-                "75 km/hr",
-                "100 km/hr",
-                "150 km/hr"
-            ],
-
-            answer:
-                "75 km/hr",
-
-            explanation:
-                "Average velocity = displacement/time = 150 km ÷ 2 h = 75 km/hr."
-        },
-
-        {
-            id: 36,
-
-            question:
-                "Convert 75 km/hr into meters per second (m/s):",
-
-            options: [
-                "≈ 10 m/s",
-                "≈ 21 m/s",
-                "≈ 35 m/s",
-                "≈ 42 m/s"
-            ],
-
-            answer:
-                "≈ 21 m/s",
-
-            explanation:
-                "75 × 1000/3600 = 20.83 m/s, which is approximately 21 m/s."
-        },
-
-        {
-            id: 37,
-
-            question:
-                "Instantaneous velocity is mathematically obtained by:",
-
-            options: [
-                "Dividing total distance by total time",
-                "Differentiating the displacement equation with respect to time (dS/dt)",
-                "Integrating acceleration over displacement",
-                "Multiplying force by displacement"
-            ],
-
-            answer:
-                "Differentiating the displacement equation with respect to time (dS/dt)",
-
-            explanation:
-                "Instantaneous velocity is the derivative of displacement with respect to time: v = dS/dt."
-        },
-
-        {
-            id: 38,
-
-            question:
-                "On a graph of displacement against time, instantaneous velocity at any point is equal to the:",
-
-            options: [
-                "Area under the curve",
-                "Slope of the graph at that point",
-                "Y-intercept",
-                "X-intercept"
-            ],
-
-            answer:
-                "Slope of the graph at that point",
-
-            explanation:
-                "The instantaneous velocity is the gradient or slope of the displacement-time graph at that point."
-        },
-
-        {
-            id: 39,
-
-            question:
-                "A particle's motion is given by parametric equations x = 20t + 10 and y = 6t² + 4t. What is the x-component of its velocity Vx?",
-
-            options: [
-                "10 m/s",
-                "20 m/s",
-                "12t m/s",
-                "0 m/s"
-            ],
-
-            answer:
-                "20 m/s",
-
-            explanation:
-                "Vx = dx/dt. Differentiating x = 20t + 10 gives Vx = 20 m/s."
-        },
-
-        {
-            id: 40,
-
-            question:
-                "For the motion y = 6t² + 4t, what is the derivative equation for the y-component of velocity Vy?",
-
-            options: [
-                "Vy = 6t + 4",
-                "Vy = 12t + 4",
-                "Vy = 12t",
-                "Vy = 3t² + 4"
-            ],
-
-            answer:
-                "Vy = 12t + 4",
-
-            explanation:
-                "Vy = dy/dt. Differentiating 6t² + 4t gives 12t + 4."
-        },
-
-        {
-            id: 41,
-
-            question:
-                "What is the value of Vy at t = 5 s for Vy = 12t + 4?",
-
-            options: [
-                "34 m/s",
-                "64 m/s",
-                "70 m/s",
-                "60 m/s"
-            ],
-
-            answer:
-                "64 m/s",
-
-            explanation:
-                "Vy = 12(5) + 4 = 60 + 4 = 64 m/s."
-        },
-
-        {
-            id: 42,
-
-            question:
-                "Using Vx = 20 m/s and Vy = 64 m/s at t = 5 s, what is the resultant instantaneous speed R?",
-
-            options: [
-                "54.2 m/s",
-                "67.1 m/s",
-                "84.0 m/s",
-                "72.5 m/s"
-            ],
-
-            answer:
-                "67.1 m/s",
-
-            explanation:
-                "R = √(Vx² + Vy²) = √(20² + 64²) = √4496 ≈ 67.1 m/s."
-        },
-
-        {
-            id: 43,
-
-            question:
-                "What is the direction angle θ to the x-axis for resultant components Vx = 20 m/s and Vy = 64 m/s?",
-
-            options: [
-                "45.0°",
-                "73.4°",
-                "16.6°",
-                "58.2°"
-            ],
-
-            answer:
-                "73.4°",
-
-            explanation:
-                "θ = tan⁻¹(Vy/Vx) = tan⁻¹(64/20), approximately 72.6°. The supplied option closest to the intended value is 73.4°."
-        },
-
-        {
-            id: 44,
-
-            question:
-                "Which rule is used to state a resultant vector R relative to side lengths and opposite angles in a triangle?",
-
-            options: [
-                "Sine rule",
-                "Tangent rule",
-                "Newton's rule",
-                "Hooke's law"
-            ],
-
-            answer:
-                "Sine rule",
-
-            explanation:
-                "The sine rule relates the sides of a triangle to the sines of their opposite angles."
-        },
-
-        {
-            id: 45,
-
-            question:
-                "What is the dot product of two mutually perpendicular non-zero vectors?",
-
-            options: [
-                "1",
-                "0",
-                "Equal to the product of their magnitudes",
-                "−1"
-            ],
-
-            answer:
-                "0",
-
-            explanation:
-                "For perpendicular vectors θ = 90°, and A · B = AB cos90° = 0."
-        },
-
-        {
-            id: 46,
-
-            question:
-                "If two velocity vectors VA and VB satisfy VA · VB = 0, the objects move:",
-
-            options: [
-                "Parallel to each other",
-                "At right angles (90°) to each other",
-                "In opposite directions (180°)",
-                "Towards the origin"
-            ],
-
-            answer:
-                "At right angles (90°) to each other",
-
-            explanation:
-                "A zero dot product between two non-zero vectors means the vectors are perpendicular."
-        },
-
-        {
-            id: 47,
-
-            question:
-                "What vector magnitude is obtained from a unit vector n?",
-
-            options: [
-                "0",
-                "1",
-                "Infinite",
-                "Variable based on direction"
-            ],
-
-            answer:
-                "1",
-
-            explanation:
-                "By definition, a unit vector has a magnitude of exactly 1."
-        },
-
-        {
-            id: 48,
-
-            question:
-                "In analytical 2D vector resolution, V² cos²θ + V² sin²θ simplifies to:",
-
-            options: [
-                "2V²",
-                "V²",
-                "0",
-                "V"
-            ],
-
-            answer:
-                "V²",
-
-            explanation:
-                "Factor V²: V²(cos²θ + sin²θ). Since sin²θ + cos²θ = 1, the result is V²."
-        },
-
-        {
-            id: 49,
-
-            question:
-                "Adding vector components in the same direction works like:",
-
-            options: [
-                "Matrix multiplication",
-                "Ordinary number addition",
-                "Vector cross product",
-                "Derivative operators"
-            ],
-
-            answer:
-                "Ordinary number addition",
-
-            explanation:
-                "Components along the same coordinate direction are algebraic quantities and can be added using ordinary arithmetic."
-        },
-
-        {
-            id: 50,
-
-            question:
-                "When combining multiple vectors V = V₁ + V₂ + … + Vₙ analytically, the x-component of the total vector is:",
-
-            options: [
-                "Vx = V₁x × V₂x × … × Vₙx",
-                "Vx = V₁x + V₂x + V₃x + … + Vₙx",
-                "Vx = √(V₁x² + V₂x²)",
-                "Vx = V₁x / V₂x"
-            ],
-
-            answer:
-                "Vx = V₁x + V₂x + V₃x + … + Vₙx",
-
-            explanation:
-                "To find the resultant vector analytically, add all components in the same direction algebraically."
-        }
-
-    ]
-
-};
+       {
+        id: 1,
+        question: "How many fundamental quantities are officially defined in physics?",
+        options: [
+            "3",
+            "5",
+            "7",
+            "9"
+        ],
+        answer: "7",
+        explanation: "The SI system defines seven base quantities: length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity."
+    },
+    {
+        id: 2,
+        question: "Which of the following is a fundamental quantity rather than a derived quantity?",
+        options: [
+            "Volume",
+            "Electric current",
+            "Force",
+            "Density"
+        ],
+        answer: "Electric current",
+        explanation: "Electric current is an SI base quantity, measured in amperes (A). Volume, force, and density are derived quantities."
+    },
+    {
+        id: 3,
+        question: "What is the standard SI unit for the amount of substance?",
+        options: [
+            "Kilogram (kg)",
+            "Ampere (A)",
+            "Mole (mol)",
+            "Candela (cd)"
+        ],
+        answer: "Mole (mol)",
+        explanation: "The mole is the SI base unit for the amount of substance."
+    },
+    {
+        id: 4,
+        question: "What does the unit of a physical quantity fundamentally tell us?",
+        options: [
+            "The dimensional formula of the substance",
+            "The scale in which its measurement is made",
+            "The exact quantity of matter present",
+            "Whether the quantity is intensive or extensive"
+        ],
+        answer: "The scale in which its measurement is made",
+        explanation: "A unit provides a standard reference scale for expressing the magnitude of a physical quantity."
+    },
+    {
+        id: 5,
+        question: "All quantities in mechanics can be expressed using which three fundamental dimensions?",
+        options: [
+            "Length, Mass, and Time",
+            "Force, Energy, and Power",
+            "Current, Temperature, and Mass",
+            "Mole, Candela, and Kelvin"
+        ],
+        answer: "Length, Mass, and Time",
+        explanation: "In mechanics, derived quantities can be expressed using the fundamental dimensions L, M, and T."
+    },
+    {
+        id: 6,
+        question: "What is the approximate order of magnitude of the thickness of a human hair?",
+        options: [
+            "1 femtometre (fm)",
+            "100 micrometres (μm)",
+            "4.5 terametres (Tm)",
+            "7,000 megawatts (MW)"
+        ],
+        answer: "100 micrometres (μm)",
+        explanation: "Human hair is typically tens of micrometres thick, often around 50–100 μm, depending on the individual and hair type."
+    },
+    {
+        id: 7,
+        question: "Which SI prefix corresponds to a multiplier of 10⁻⁹?",
+        options: [
+            "Micro (μ)",
+            "Nano (n)",
+            "Pico (p)",
+            "Femto (f)"
+        ],
+        answer: "Nano (n)",
+        explanation: "The prefix nano represents 10⁻⁹, or one-billionth of a unit."
+    },
+    {
+        id: 8,
+        question: "What is the derived SI unit of power expressed in base units?",
+        options: [
+            "kg·m/s²",
+            "kg·m²/s²",
+            "J/s or kg·m²/s³",
+            "kg·m⁻¹·s⁻²"
+        ],
+        answer: "J/s or kg·m²/s³",
+        explanation: "Power is energy transferred per unit time. Since 1 J = 1 kg·m²/s², power has units kg·m²/s³."
+    },
+    {
+        id: 9,
+        question: "What is the correct dimensional formula for pressure (p)?",
+        options: [
+            "LT⁻¹",
+            "MLT⁻²",
+            "ML⁻³",
+            "ML⁻¹T⁻²"
+        ],
+        answer: "ML⁻¹T⁻²",
+        explanation: "Pressure equals force divided by area. Therefore, its dimensions are (MLT⁻²)/L² = ML⁻¹T⁻²."
+    },
+    {
+        id: 10,
+        question: "According to dimensional analysis, what must be true of the terms in a physically valid equation?",
+        options: [
+            "They must all be dimensionless pure numbers",
+            "They must have the same dimensions",
+            "Their exponents must equal zero",
+            "They must depend only on mass and length"
+        ],
+        answer: "They must have the same dimensions",
+        explanation: "Dimensional homogeneity requires quantities added or subtracted in an equation to have identical dimensions."
+    },
+    {
+        id: 11,
+        question: "What is a dimensionless quantity also commonly called?",
+        options: [
+            "A fundamental base unit",
+            "A super unit",
+            "A pure number",
+            "A scalar vector"
+        ],
+        answer: "A pure number",
+        explanation: "A dimensionless quantity has no net physical dimensions and can be expressed as a pure number."
+    },
+    {
+        id: 12,
+        question: "Which of the following is dimensionless despite having units in common measurement systems?",
+        options: [
+            "Velocity",
+            "Acceleration",
+            "Angles (radians/degrees)",
+            "Density"
+        ],
+        answer: "Angles (radians/degrees)",
+        explanation: "A plane angle in radians is the ratio of arc length to radius, so its dimensions cancel. Degrees are another unit for the same dimensionless quantity."
+    },
+    {
+        id: 13,
+        question: "In the dimensional formula LᵃMᵇTᶜIᵈΘᵉNᶠJᵍ, what condition makes a quantity dimensionless?",
+        options: [
+            "All exponents equal zero",
+            "All exponents equal one",
+            "Only the mass exponent equals zero",
+            "The quantity is measured in SI units"
+        ],
+        answer: "All exponents equal zero",
+        explanation: "A dimensionless quantity has zero net exponent for every base dimension."
+    },
+    {
+        id: 14,
+        question: "If x = At² + B and y = Dt³ - E represent displacements, what are the dimensions of A and D?",
+        options: [
+            "A = LT⁻², D = LT³",
+            "A = LT⁻², D = LT⁻³",
+            "A = L², D = LT⁻³",
+            "A = LT⁻³, D = LT³"
+        ],
+        answer: "A = LT⁻², D = LT⁻³",
+        explanation: "Every term added to a displacement must have dimension L. Thus [A]T² = L and [D]T³ = L, giving [A] = LT⁻² and [D] = LT⁻³."
+    },
+    {
+        id: 15,
+        question: "When checking v² = u² + 2as using dimensional analysis, what is the dimension shared by every term?",
+        options: [
+            "LT⁻¹",
+            "L²T⁻²",
+            "ML²T⁻²",
+            "LT⁻²"
+        ],
+        answer: "L²T⁻²",
+        explanation: "Velocity squared has dimensions L²T⁻². Also, acceleration multiplied by displacement gives (LT⁻²)(L) = L²T⁻²."
+    },
+    {
+        id: 16,
+        question: "For a simple pendulum, suppose T ∝ lˣmʸgᶻ. Why is the mass exponent y equal to zero?",
+        options: [
+            "Mass has no dimensional representation in mechanics",
+            "Equating the mass dimensions on both sides gives y = 0",
+            "Mass is a fundamental unit that cancels with time",
+            "The constant k absorbs the mass variable"
+        ],
+        answer: "Equating the mass dimensions on both sides gives y = 0",
+        explanation: "The period T has no mass dimension, while l has none and g has none involving mass. Therefore, matching mass exponents gives y = 0."
+    },
+    {
+        id: 17,
+        question: "In deriving the simple pendulum period from T ∝ lˣmʸgᶻ, what equation results from equating the time dimensions?",
+        options: [
+            "x + z = 0",
+            "-2z = 1",
+            "y = 0",
+            "x = 1/2"
+        ],
+        answer: "-2z = 1",
+        explanation: "Since [g] = LT⁻² and the period has dimension T¹, matching time exponents gives -2z = 1, so z = -1/2."
+    },
+    {
+        id: 18,
+        question: "What is the dimension of the derivative of velocity with respect to time, [dv/dt]?",
+        options: [
+            "LT⁻¹",
+            "LT⁻²",
+            "MLT⁻²",
+            "L²T⁻²"
+        ],
+        answer: "LT⁻²",
+        explanation: "Velocity has dimensions LT⁻¹. Dividing by time gives acceleration with dimensions LT⁻²."
+    },
+    {
+        id: 19,
+        question: "What is the dimension of the integral of velocity with respect to time, [∫v dt]?",
+        options: [
+            "L (Length)",
+            "T (Time)",
+            "LT⁻²",
+            "ML²T⁻²"
+        ],
+        answer: "L (Length)",
+        explanation: "Velocity multiplied by time has dimensions (LT⁻¹)(T) = L, corresponding to displacement."
+    },
+    {
+        id: 20,
+        question: "Why does a physical value without its unit of measurement have incomplete meaning?",
+        options: [
+            "Dimensions can only be calculated using SI base units",
+            "The unit provides the specific scale used for the measurement",
+            "Pure numbers cannot be evaluated without a prefix",
+            "All derived quantities must be converted into fundamental quantities"
+        ],
+        answer: "The unit provides the specific scale used for the measurement",
+        explanation: "A numerical value alone does not specify the measurement scale; for example, 5 metres and 5 kilometres represent different lengths."
+    }
+];
+            
 
 
 /* =========================================
