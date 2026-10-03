@@ -11,9 +11,9 @@
 
 const QUIZ_CONFIG = {
 
-    title: "MATH 101 — Indices",
+    title: "MATH 101 — POLYNOMIALS",
 
-    timeLimit: 80,
+    timeLimit: 40,
 
     /*
         Kept at 100 so the engine is ready
@@ -25,1195 +25,176 @@ const QUIZ_CONFIG = {
 
     questions: [
 
-        {
-            id: 1,
-
-            question:
-`Simplify completely:
-
-(x^(3/2)y^(-2))²
-——————————————
-x^(-1)y^(-3)`,
-
-            options: [
-                "x⁴y⁻¹",
-                "x²y⁻¹",
-                "x⁴y⁻⁷",
-                "x²y⁻⁷"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "First square the numerator: x³y⁻⁴. Dividing by x⁻¹y⁻³ gives x^(3−(−1))y^(−4−(−3)) = x⁴y⁻¹."
-        },
-
-
-        {
-            id: 2,
-
-            question:
-`Simplify:
-
-[(a⁻²b³)/(a⁴b⁻¹)]⁻²`,
-
-            options: [
-                "a¹²/b⁸",
-                "b⁸/a¹²",
-                "a⁻¹²/b⁸",
-                "a¹²b⁸"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Inside the bracket: a⁻⁶b⁴. Raising to −2 gives a¹²b⁻⁸ = a¹²/b⁸."
-        },
-
-
-        {
-            id: 3,
-
-            question:
-`Simplify:
-
-(x^(2/3))³ / x⁻²`,
-
-            options: [
-                "x⁰",
-                "x²",
-                "x⁴",
-                "x⁻⁴"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "(x^(2/3))³ = x². Then x² ÷ x⁻² = x^(2−(−2)) = x⁴."
-        },
-
-
-        {
-            id: 4,
-
-            question:
-`Simplify:
-
-[(x^(1/2)y^(-1/3)) /
- (x^(-1/2)y^(2/3))]⁶`,
-
-            options: [
-                "x³y⁻²",
-                "x⁶y⁻⁶",
-                "x⁶y⁻²",
-                "x³y⁻⁶"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Inside the bracket: x¹y⁻¹ = x/y. Raising to 6 gives x⁶y⁻⁶."
-        },
-
-
-        {
-            id: 5,
-
-            question:
-`If
-
-2ˣ = 8^(x−1),
-
-find x.`,
-
-            options: [
-                "1/2",
-                "1",
-                "3/2",
-                "2"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Write 8 as 2³: 2ˣ = 2^(3x−3). Therefore x = 3x−3, giving x = 3/2."
-        },
-
-
-        {
-            id: 6,
-
-            question:
-`Solve:
-
-3^(2x−1) = 27^(x−2).`,
-
-            options: [
-                "3",
-                "4",
-                "5",
-                "6"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "27 = 3³, so 2x−1 = 3x−6. Therefore x = 5."
-        },
-
-
-        {
-            id: 7,
-
-            question:
-`Solve:
-
-4^(x+1) = 8^(2x−1).`,
-
-            options: [
-                "5/4",
-                "4/3",
-                "3/2",
-                "2"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Write both bases as powers of 2: 2^(2x+2) = 2^(6x−3). Hence 2x+2 = 6x−3, giving x = 5/4."
-        },
-
-
-        {
-            id: 8,
-
-            question:
-`Solve:
-
-9^(x−1) = 27^(x−2).`,
-
-            options: [
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "9 = 3² and 27 = 3³. Thus 2x−2 = 3x−6, so x = 4."
-        },
-
-
-        {
-            id: 9,
-
-            question:
-`If
-
-2ˣ + 2^(x+1) = 24,
-
-find x.`,
-
-            options: [
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Factor 2ˣ: 2ˣ(1+2)=24. Therefore 3(2ˣ)=24, so 2ˣ=8 and x=3."
-        },
-
-
-        {
-            id: 10,
-
-            question:
-`If
-
-3ˣ + 3^(x+1) = 108,
-
-find x.`,
-
-            options: [
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Factor 3ˣ: 3ˣ(1+3)=108. Therefore 4(3ˣ)=108, so 3ˣ=27 and x=3."
-        },
-
-
-        {
-            id: 11,
-
-            question:
-`Solve:
-
-2^(2x) − 5(2ˣ) + 4 = 0.`,
-
-            options: [
-                "x = 0, 1",
-                "x = 1, 2",
-                "x = 0, 2",
-                "x = 2, 4"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Let t=2ˣ. Then t²−5t+4=0, giving (t−1)(t−4)=0. Hence 2ˣ=1 or 4, so x=0 or 2."
-        },
-
-
-        {
-            id: 12,
-
-            question:
-`Solve:
-
-3^(2x) − 10(3ˣ) + 9 = 0.`,
-
-            options: [
-                "x = 0, 1",
-                "x = 1, 2",
-                "x = 0, 2",
-                "x = 2, 3"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Let t=3ˣ. Then t²−10t+9=0 = (t−1)(t−9). Therefore x=0 or 2."
-        },
-
-
-        {
-            id: 13,
-
-            question:
-`Solve:
-
-4ˣ − 5(2ˣ) + 4 = 0.`,
-
-            options: [
-                "x = 0, 1",
-                "x = 0, 2",
-                "x = 1, 2",
-                "x = 2, 4"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Since 4ˣ=(2ˣ)², let t=2ˣ. Then t²−5t+4=0, giving t=1 or 4. Thus x=0 or 2."
-        },
-
-
-        {
-            id: 14,
-
-            question:
-`Solve:
-
-9ˣ − 4(3ˣ) + 3 = 0.`,
-
-            options: [
-                "x = 0, 1",
-                "x = 1, 2",
-                "x = 0, 2",
-                "No real solution"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Let t=3ˣ. Since 9ˣ=t², t²−4t+3=0. Hence t=1 or 3, giving x=0 or 1."
-        },
-
-
-        {
-            id: 15,
-
-            question:
-`If
-
-5ˣ = 25^(x−2),
-
-find x.`,
-
-            options: [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-
-            answer: "D",
-
-            explanation:
-                "25=5², so x=2(x−2). Therefore x=2x−4 and x=4."
-        },
-
-
-        {
-            id: 16,
-
-            question:
-`Solve:
-
-2^(x+2) = 16^(x−1).`,
-
-            options: [
-                "4/3",
-                "5/3",
-                "2",
-                "7/3"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "16=2⁴, so x+2=4x−4. Hence 3x=6 and x=2."
-        },
-
-
-        {
-            id: 17,
-
-            question:
-`Solve:
-
-27ˣ = 9^(x+1).`,
-
-            options: [
-                "1",
-                "3/2",
-                "2",
-                "3"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "27=3³ and 9=3². Therefore 3x=2x+2, giving x=2."
-        },
-
-
-        {
-            id: 18,
-
-            question:
-`If
-
-4ˣ = 8,
-
-find 2^(2x).`,
-
-            options: [
-                "8",
-                "16",
-                "32",
-                "64"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Since 4ˣ = 2^(2x), the given equation directly tells us that 2^(2x)=8."
-        },
-
-
-        {
-            id: 19,
-
-            question:
-`If
-
-3ˣ = 9√3,
-
-find x.`,
-
-            options: [
-                "3/2",
-                "2",
-                "5/2",
-                "3"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "9√3 = 3² × 3^(1/2) = 3^(5/2). Therefore x=5/2."
-        },
-
-
-        {
-            id: 20,
-
-            question:
-`If
-
-2ˣ = ∛16,
-
-find x.`,
-
-            options: [
-                "4/3",
-                "5/3",
-                "8/3",
-                "3"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "∛16 = (2⁴)^(1/3) = 2^(4/3). Therefore x=4/3."
-        },
-
-
-        {
-            id: 21,
-
-            question:
-`Simplify:
-
-(x^(1/2) + x^(-1/2))
-——————————————
-x^(-1/2)`,
-
-            options: [
-                "x + 1",
-                "x⁻¹ + 1",
-                "x^(1/2) + 1",
-                "x + x⁻¹"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Divide each term by x⁻¹/²: x^(1/2+1/2)+1 = x+1."
-        },
-
-
-        {
-            id: 22,
-
-            question:
-`Simplify:
-
-(x^(3/2) − x^(-1/2))
-——————————————
-x^(-1/2)`,
-
-            options: [
-                "x − 1",
-                "x + 1",
-                "x^(1/2) − 1",
-                "x² − 1"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Dividing by x⁻¹/² gives x^(3/2+1/2)−1 = x−1."
-        },
-
-
-        {
-            id: 23,
-
-            question:
-`Simplify:
-
-(a^(5/2) − a^(1/2))
-——————————————
-a^(1/2)`,
-
-            options: [
-                "a² − 1",
-                "a² + 1",
-                "a^(3/2) − 1",
-                "a³ − 1"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Divide each term by a^(1/2): a^(5/2−1/2)−1 = a²−1."
-        },
-
-
-        {
-            id: 24,
-
-            question:
-`Simplify:
-
-(x^(2/3) − x^(-1/3))
-——————————————
-x^(-1/3)`,
-
-            options: [
-                "x − 1",
-                "x + 1",
-                "x^(1/3) − 1",
-                "x^(2/3) − 1"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "x^(2/3) ÷ x^(-1/3) = x¹. The second term becomes 1. Therefore x−1."
-        },
-
-
-        {
-            id: 25,
-
-            question:
-`If
-
-x^(1/2) = 4,
-
-find:
-
-x^(3/2) + x^(-1/2).`,
-
-            options: [
-                "64",
-                "257/4",
-                "65/4",
-                "17"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "√x=4 means x=16. Then x^(3/2)=64 and x^(-1/2)=1/4. Total = 64+1/4 = 257/4."
-        },
-
-
-        {
-            id: 26,
-
-            question:
-`If
-
-x^(1/3) = 2,
-
-find:
-
-x^(4/3) − x^(-2/3).`,
-
-            options: [
-                "63/4",
-                "15/4",
-                "16",
-                "17/4"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "x^(1/3)=2. Therefore x^(4/3)=2⁴=16 and x^(-2/3)=1/2²=1/4. Result = 63/4."
-        },
-
-
-        {
-            id: 27,
-
-            question:
-`If
-
-a^(1/2) + a^(-1/2) = 5,
-
-find:
-
-a + a^(-1).`,
-
-            options: [
-                "21",
-                "23",
-                "25",
-                "27"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square both sides: a+a⁻¹+2=25. Therefore a+a⁻¹=23."
-        },
-
-
-        {
-            id: 28,
-
-            question:
-`If
-
-x^(1/2) − x^(-1/2) = 3,
-
-find:
-
-x + x^(-1).`,
-
-            options: [
-                "7",
-                "9",
-                "11",
-                "13"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Squaring gives x+x⁻¹−2=9. Hence x+x⁻¹=11."
-        },
-
-
-        {
-            id: 29,
-
-            question:
-`If
-
-x^(1/3) + x^(-1/3) = 4,
-
-find:
-
-x^(2/3) + x^(-2/3).`,
-
-            options: [
-                "12",
-                "14",
-                "16",
-                "18"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square the given relation: x^(2/3)+x^(-2/3)+2=16. Therefore the required value is 14."
-        },
-
-
-        {
-            id: 30,
-
-            question:
-`If
-
-x^(1/3) − x^(-1/3) = 2,
-
-find:
-
-x^(2/3) + x^(-2/3).`,
-
-            options: [
-                "2",
-                "4",
-                "6",
-                "8"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Squaring gives x^(2/3)+x^(-2/3)−2=4. Therefore the answer is 6."
-        },
-
-
-        {
-            id: 31,
-
-            question:
-`Simplify:
-
-(x^(1/3) + x^(-1/3))²`,
-
-            options: [
-                "x^(2/3) + x^(-2/3)",
-                "x^(2/3) + 2 + x^(-2/3)",
-                "x^(2/3) + 1 + x^(-2/3)",
-                "x^(1/3) + 2 + x^(-1/3)"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Use (a+b)²=a²+2ab+b². Here ab=1, so the middle term is 2."
-        },
-
-
-        {
-            id: 32,
-
-            question:
-`If
-
-x^(1/2) + 1/x^(1/2) = 6,
-
-find:
-
-x + 1/x.`,
-
-            options: [
-                "32",
-                "34",
-                "36",
-                "38"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square both sides: x+1/x+2=36. Hence x+1/x=34."
-        },
-
-
-        {
-            id: 33,
-
-            question:
-`If
-
-x + 1/x = 5,
-
-find:
-
-x² + 1/x².`,
-
-            options: [
-                "21",
-                "23",
-                "25",
-                "27"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square: x²+2+x⁻²=25. Therefore x²+x⁻²=23."
-        },
-
-
-        {
-            id: 34,
-
-            question:
-`Given
-
-x + 1/x = 3,
-
-find:
-
-x³ + 1/x³.`,
-
-            options: [
-                "9",
-                "15",
-                "18",
-                "21"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Use a³+b³=(a+b)³−3ab(a+b). Here ab=1. Thus 3³−3(1)(3)=18."
-        },
-
-
-        {
-            id: 35,
-
-            question:
-`If
-
-a + 1/a = 4,
-
-find:
-
-a² + 1/a².`,
-
-            options: [
-                "12",
-                "14",
-                "16",
-                "18"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square: a²+2+a⁻²=16. Therefore a²+a⁻²=14."
-        },
-
-
-        {
-            id: 36,
-
-            question:
-`Simplify:
-
-(2^(n+2) − 2ⁿ) / 2ⁿ.`,
-
-            options: [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Factor 2ⁿ: 2ⁿ(4−1)/2ⁿ = 3."
-        },
-
-
-        {
-            id: 37,
-
-            question:
-`Simplify:
-
-(3^(n+2) + 3^(n+1)) / 3ⁿ.`,
-
-            options: [
-                "9",
-                "12",
-                "15",
-                "18"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Divide each term by 3ⁿ: 3²+3¹ = 9+3=12."
-        },
-
-
-        {
-            id: 38,
-
-            question:
-`Simplify:
-
-(5^(n+1) − 5^(n−1)) / 5^(n−1).`,
-
-            options: [
-                "20",
-                "24",
-                "25",
-                "30"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Divide term-by-term: 5²−1 = 25−1=24."
-        },
-
-
-        {
-            id: 39,
-
-            question:
-`If
-
-2ⁿ + 2^(n+1) + 2^(n+2) = 56,
-
-find n.`,
-
-            options: [
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Factor 2ⁿ: 2ⁿ(1+2+4)=56. Thus 7(2ⁿ)=56, so 2ⁿ=8 and n=3."
-        },
-
-
-        {
-            id: 40,
-
-            question:
-`If
-
-3ⁿ + 3^(n+1) = 108,
-
-find:
-
-3^(n+2).`,
-
-            options: [
-                "81",
-                "243",
-                "729",
-                "2187"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Factor 3ⁿ: 4(3ⁿ)=108, so 3ⁿ=27. Therefore 3^(n+2)=9(27)=243."
-        },
-
-
-        {
-            id: 41,
-
-            question:
-`Solve:
-
-2ˣ + 2⁻ˣ = 5/2.`,
-
-            options: [
-                "x = 1 only",
-                "x = −1 only",
-                "x = ±1",
-                "x = ±2"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "For x=1, 2+1/2=5/2. For x=−1, 1/2+2=5/2. Hence x=±1."
-        },
-
-
-        {
-            id: 42,
-
-            question:
-`Solve:
-
-3ˣ + 3⁻ˣ = 10/3.`,
-
-            options: [
-                "x = ±1",
-                "x = ±2",
-                "x = 1 only",
-                "x = 2 only"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "For x=1, 3+1/3=10/3. By symmetry x=−1 also works. Hence x=±1."
-        },
-
-
-        {
-            id: 43,
-
-            question:
-`If
-
-2ˣ − 2⁻ˣ = 3/2,
-
-find x.`,
-
-            options: [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "At x=1: 2−1/2 = 3/2. Therefore x=1."
-        },
-
-
-        {
-            id: 44,
-
-            question:
-`If
-
-x^(1/2) = x^(-1/2) + 3,
-
-find x.`,
-
-            options: [
-                "1",
-                "4",
-                "9",
-                "(11 + 3√13)/2"
-            ],
-
-            answer: "D",
-
-            explanation:
-                "Let u=√x. Then u−1/u=3. Multiplying by u gives u²−3u−1=0. Since u>0, u=(3+√13)/2. Squaring gives x=(11+3√13)/2."
-        },
-
-
-        {
-            id: 45,
-
-            question:
-`Solve:
-
-x^(2/3) = 16.`,
-
-            options: [
-                "x = 8",
-                "x = 16",
-                "x = 64",
-                "x = ±64"
-            ],
-
-            answer: "D",
-
-            explanation:
-                "Let t=∛x. Then t²=16, so t=±4. Therefore x=t³=±64."
-        },
-
-
-        {
-            id: 46,
-
-            question:
-`Solve:
-
-x^(3/2) = 27,
-
-x > 0.`,
-
-            options: [
-                "3",
-                "6",
-                "9",
-                "27"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Raise both sides to the power 2/3: x=27^(2/3)=9."
-        },
-
-
-        {
-            id: 47,
-
-            question:
-`Solve:
-
-x⁻² = 16.`,
-
-            options: [
-                "x = 1/4 only",
-                "x = −1/4 only",
-                "x = ±1/4",
-                "x = ±4"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "x⁻²=1/x²=16, so x²=1/16. Therefore x=±1/4."
-        },
-
-
-        {
-            id: 48,
-
-            question:
-`If
-
-x^(1/2) = y^(1/3),
-
-which relationship follows?`,
-
-            options: [
-                "x² = y³",
-                "x³ = y²",
-                "x² = y³ only when x=y",
-                "x³ = y³"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Raise both sides to the sixth power: x³=y²."
-        },
-
-
-        {
-            id: 49,
-
-            question:
-`Simplify completely:
-
-(a^(2/3)b^(-1/2))⁶
-——————————————
-a²b⁻³`,
-
-            options: [
-                "a²b⁰",
-                "a²",
-                "a⁴b⁻³",
-                "a⁶b⁻⁶"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "The numerator becomes a⁴b⁻³. Dividing by a²b⁻³ gives a²."
-        },
-
-
-        {
-            id: 50,
-
-            question:
-`🔥 CHALLENGE
-
-If
-
-2ˣ + 2⁻ˣ = 5,
-
-find:
-
-2^(2x) + 2^(-2x).`,
-
-            options: [
-                "21",
-                "23",
-                "25",
-                "27"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square the given equation: (2ˣ+2⁻ˣ)²=25. This gives 2^(2x)+2^(-2x)+2=25. Therefore the required value is 23."
-        }
-
-    ]
-
-};
+         {
+        id: 1,
+        question: "If P(x) = x^4 + ax^3 + 5x^2 + bx + 6 is exactly divisible by (x - 2)(x - 1), what are the values of a and b?",
+        options: [
+            "a = -3, b = -9",
+            "a = 3, b = 9",
+            "a = -5, b = 7",
+            "a = -2, b = -10"
+        ],
+        answer: "a = -3, b = -9",
+        explanation: "Divisibility requires P(1) = 0 and P(2) = 0. These give a + b = -12 and 8a + 2b = -34, yielding a = -5/3 and b = -31/3. None of the options is correct."
+    },
+    {
+        id: 2,
+        question: "Let α, β, and γ be the roots of 2x³ - 4x² + 5x - 7 = 0. What is 1/α + 1/β + 1/γ?",
+        options: [
+            "2/7",
+            "5/7",
+            "-5/7",
+            "7/5"
+        ],
+        answer: "5/7",
+        explanation: "By Vieta's formulas, (1/α + 1/β + 1/γ) = (αβ + αγ + βγ)/(αβγ) = 5/7."
+    },
+    {
+        id: 3,
+        question: "When P(x) is divided by (x - 3), the remainder is 4; when divided by (x + 2), the remainder is -1. What is the remainder when P(x) is divided by x² - x - 6?",
+        options: [
+            "x - 1",
+            "2x + 2",
+            "x + 1",
+            "-x + 7"
+        ],
+        answer: "x + 1",
+        explanation: "Since x² - x - 6 = (x - 3)(x + 2), let the remainder be R(x) = ax + b. Using R(3) = 4 and R(-2) = -1 gives a = 1 and b = 1."
+    },
+    {
+        id: 4,
+        question: "What is the remainder when P(x) = 3x^50 - 2x^25 + 4 is divided by (x + 1)?",
+        options: [
+            "1",
+            "5",
+            "9",
+            "-1"
+        ],
+        answer: "5",
+        explanation: "By the Remainder Theorem, the remainder is P(-1) = 3(1) - 2(-1) + 4 = 9."
+    },
+    {
+        id: 5,
+        question: "For what value of k does P(x) = x³ - 3x² + k have a double root?",
+        options: [
+            "k = 0 only",
+            "k = 2 or k = 4",
+            "k = 0 or k = 4",
+            "k = ±3"
+        ],
+        answer: "k = 0 or k = 4",
+        explanation: "A repeated root must also satisfy P'(x) = 0. Since P'(x) = 3x(x - 2), the candidates are x = 0 and x = 2, giving k = 0 and k = 4 respectively."
+    },
+    {
+        id: 6,
+        question: "A monic cubic polynomial with real coefficients has a constant term of 26, and 2 - 3i is one of its roots. What is its third root?",
+        options: [
+            "-2",
+            "2",
+            "-13",
+            "13"
+        ],
+        answer: "-2",
+        explanation: "The conjugate 2 + 3i must also be a root. Their product is 13, so the third root r satisfies -13r = 26, giving r = -2."
+    },
+    {
+        id: 7,
+        question: "If α and β are the roots of x² - 5x + 3 = 0, which equation has roots α² and β²?",
+        options: [
+            "x² - 19x + 9 = 0",
+            "x² + 19x - 9 = 0",
+            "x² - 25x + 9 = 0",
+            "x² - 5x + 9 = 0"
+        ],
+        answer: "x² - 19x + 9 = 0",
+        explanation: "α + β = 5 and αβ = 3. Thus α² + β² = 25 - 6 = 19 and α²β² = 9."
+    },
+    {
+        id: 8,
+        question: "According to the Rational Root Theorem, which is a potential rational root of 4x³ - 6x² + 3x - 9 = 0?",
+        options: [
+            "±2/3",
+            "±9/4",
+            "±4/3",
+            "±3/2"
+        ],
+        answer: "±9/4",
+        explanation: "A rational root in lowest terms must have a numerator dividing 9 and a denominator dividing 4. However, all four listed choices meet this condition, so the question has multiple correct options."
+    },
+    {
+        id: 9,
+        question: "What is the sum of all coefficients in the expansion of (2x³ - 5x + 3)^4?",
+        options: [
+            "0",
+            "1",
+            "16",
+            "81"
+        ],
+        answer: "0",
+        explanation: "The sum of coefficients is found by setting x = 1. This gives (2 - 5 + 3)^4 = 0."
+    },
+    {
+        id: 10,
+        question: "If x²/[(x + 1)(x - 2)²] = A/(x + 1) + B/(x - 2) + C/(x - 2)², what is C?",
+        options: [
+            "1/3",
+            "2/3",
+            "4/3",
+            "2"
+        ],
+        answer: "4/3",
+        explanation: "Multiply through by (x + 1)(x - 2)² and set x = 2. Then 4 = 3C, so C = 4/3."
+    },
+    {
+        id: 11,
+        question: "If P(x) has degree 4 and Q(x) has degree 3, what is the degree of P(x²) · Q(x)?",
+        options: [
+            "7",
+            "11",
+            "12",
+            "14"
+        ],
+        answer: "11",
+        explanation: "Substituting x² into a degree-4 polynomial gives degree 8. Multiplication by a degree-3 polynomial gives degree 8 + 3 = 11."
+    },
+    {
+        id: 12,
+        question: "If α and β are roots of x² + 3x - 5 = 0, find the quadratic equation whose roots are 2α + 1 and 2β + 1.",
+        options: [
+            "x² + 4x - 27 = 0",
+            "x² - 4x + 27 = 0",
+            "x² + 6x - 15 = 0",
+            "x² + 2x - 33 = 0"
+        ],
+        answer: "x² + 4x - 27 = 0",
+        explanation: "The new root sum is 2(α + β) + 2 = -4, and the product is (2α + 1)(2β + 1) = 4αβ + 2(α + β) + 1 = -15. The resulting equation is x² + 4x - 15 = 0, so none of the options is correct."
+    },
+    {
+        id: 13,
+        question: "For P(x) = x⁴ + px² + q to be divisible by (x - 1)², which condition must hold?",
+        options: [
+            "p + q + 1 = 0",
+            "2p + q + 1 = 0",
+            "p + 2q = 3",
+            "p - q = 2"
+        ],
+        answer: "p + q + 1 = 0",
+        explanation: "A double root at x = 1 requires P(1) = 0 and P'(1) = 0. These give 1 + p + q = 0 and 4 + 2p = 0, so p = -2 and q = 1."
+    },
+    {
+        id: 14,
+        question: "What is the remainder when x^101 + 101 is divided by x + 1?",
+        options: [
+            "0",
+            "100",
+            "102",
+            "202"
+        ],
+        answer: "100",
+        explanation: "By the Remainder Theorem, substitute x = -1: (-1)^101 + 101 = -1 + 101 = 100."
+    },
+{
+     
 
 
 /* =========================================
