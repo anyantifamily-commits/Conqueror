@@ -13,7 +13,7 @@ const GLOBAL_QUIZ_SETTINGS = {
 
     // true  = retakes allowed
     // false = one attempt only
-    allowRetake: false
+    allowRetake: true
 
 };
 
@@ -25,25 +25,25 @@ const GLOBAL_QUIZ_SETTINGS = {
 const QUIZ_CONFIG = {
 
     BIO101: {
-        enabled: false,
+        enabled: true,
         name: "BIO 101",
         url: "bio101.html"
     },
 
     CHM101: {
-        enabled: false,
+        enabled: true,
         name: "CHM 101",
         url: "chm101.html"
     },
 
     PHY101: {
-        enabled: false,
+        enabled: true,
         name: "PHY 101",
         url: "phy101.html"
     },
 
     MATH101: {
-        enabled: false,
+        enabled: true,
         name: "MATH 101",
         url: "math101.html"
     }
