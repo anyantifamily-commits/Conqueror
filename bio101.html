@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>CONQUERORS LABS — BIO 101</title>
+
+<link rel="stylesheet" href="bio101.css">
+
+</head><body><header class="quiz-header"><a href="index.html" class="brand">
+
+    <div class="brand-icon">
+        ⚛
+    </div>
+
+    <div class="brand-text">
+
+        <h1>
+            CONQUERORS LABS
+        </h1>
+
+        <p>
+            CBT TRAINING GROUND
+        </p>
+
+    </div>
+
+</a>
+
+<div class="header-course">
+    BIO 101
+</div>
+
+</header><main class="quiz-container"><!-- INTRO -->
+
+<section class="quiz-intro">
+
+    <div class="intro-badge">
+        🧬 BIOLOGY CBT
+    </div>
+
+    <h2 id="quizTitle">
+        BIO 101 — Genetics
+    </h2>
+
+    <p>
+        Test your knowledge. Track your progress.
+        Conquer the questions.
+    </p>
+
+</section>
+
+
+<!-- STATUS -->
+
+<section class="quiz-status">
+
+    <div class="status-box">
+
+        <span class="status-label">
+            TIME
+        </span>
+
+        <strong id="timer">
+            20:00
+        </strong>
+
+    </div>
+
+
+    <div class="status-box">
+
+        <span class="status-label">
+            PROGRESS
+        </span>
+
+        <strong id="progressPercent">
+            1%
+        </strong>
+
+    </div>
+
+
+    <div class="status-box">
+
+        <span class="status-label">
+            ANSWERED
+        </span>
+
+        <strong id="answeredCount">
+            0
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- PROGRESS -->
+
+<div class="progress-container">
+
+    <div
+        id="progressFill"
+        class="progress-fill"
+    ></div>
+
+</div>
+
+
+<!-- QUESTION -->
+
+<section class="question-card">
+
+    <div class="question-top">
+
+        <span id="questionNumber">
+            QUESTION 01
+        </span>
+
+        <span id="questionCounter">
+            Question 1 of 20
+        </span>
+
+    </div>
+
+
+    <div class="question-content">
+
+        <h2 id="questionText">
+            Loading question...
+        </h2>
+
+    </div>
+
+
+    <div
+        id="optionsContainer"
+        class="options-container"
+    ></div>
+
+</section>
+
+
+<!-- NAVIGATION -->
+
+<section class="navigation">
+
+    <button
+        id="previousBtn"
+        class="nav-btn previous-btn"
+        type="button"
+    >
+        ← Previous
+    </button>
+
+
+    <button
+        id="nextBtn"
+        class="nav-btn next-btn"
+        type="button"
+    >
+        Next →
+    </button>
+
+</section>
+
+
+<!-- QUESTION NAVIGATOR -->
+
+<section class="navigator-card">
+
+    <div class="navigator-header">
+
+        <div>
+
+            <h3>
+                Question Navigator
+            </h3>
+
+            <p>
+                Jump to any question
+            </p>
+
+        </div>
+
+
+        <span
+            id="navigatorCount"
+            class="navigator-count"
+        >
+            20 QUESTIONS
+        </span>
+
+    </div>
+
+
+    <div
+        id="questionNavigator"
+        class="question-navigator"
+    ></div>
+
+
+    <div class="navigator-legend">
+
+        <span>
+            <i class="legend-dot current-dot"></i>
+            Current
+        </span>
+
+        <span>
+            <i class="legend-dot answered-dot"></i>
+            Answered
+        </span>
+
+        <span>
+            <i class="legend-dot unanswered-dot"></i>
+            Unanswered
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- SUBMIT -->
+
+<button
+    id="submitBtn"
+    class="submit-btn"
+    type="button"
+>
+    SUBMIT CBT
+</button>
+
+
+<!-- RESULTS -->
+
+<section
+    id="resultSection"
+    class="result-section"
+>
+
+    <div class="result-icon">
+        🏆
+    </div>
+
+
+    <p class="result-label">
+        CBT COMPLETED
+    </p>
+
+
+    <h2>
+        Your Result
+    </h2>
+
+
+    <div class="result-score">
+
+        <strong id="resultScore">
+            0 / 20
+        </strong>
+
+        <span id="resultPercentage">
+            0%
+        </span>
+
+    </div>
+
+
+    <p
+        id="resultMessage"
+        class="result-message"
+    >
+        Well done.
+    </p>
+
+
+    <div class="result-actions">
+
+        <button
+            id="reviewBtn"
+            class="review-btn"
+            type="button"
+        >
+            Review Corrections
+        </button>
+
+
+        <button
+            id="homeBtn"
+            class="home-btn"
+            type="button"
+        >
+            Back to Home
+        </button>
+
+    </div>
+
+
+    <div
+        id="reviewContainer"
+        class="review-container"
+    ></div>
+
+</section>
+
+</main><script src="bio101.js"></script></body></html>
