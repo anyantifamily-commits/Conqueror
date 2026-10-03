@@ -11,10 +11,10 @@
 const QUIZ_CONFIG = {
 
     title:
-        "PHY 101 — Vectors & Kinematics",
+        "DIMESIONAL ANALYSIS",
 
     timeLimit:
-        60,
+        30,
 
     /*
         The engine can support up to 100
