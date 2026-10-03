@@ -25,7 +25,7 @@ const GLOBAL_QUIZ_SETTINGS = {
 const QUIZ_CONFIG = {
 
     BIO101: {
-        enabled: true,
+        enabled: false,
         name: "BIO 101",
         url: "bio101.html"
     },
