@@ -38,10 +38,10 @@ const QUIZ_CONFIG = {
                 "a = -2, b = -10"
             ],
 
-            answer: 0,
+            answer: 1,
 
             explanation:
-                "Since (x - 2)(x - 1) divides P(x), both 1 and 2 are roots. Therefore P(1) = 0 gives a + b = -12, while P(2) = 0 gives 8a + 2b = -34. Solving simultaneously gives a = -5/3 and b = -31/3."
+                "Since (x - 2)(x - 1) divides P(x), both x = 1 and x = 2 are roots. Therefore P(1) = 0: 1 + a + 5 + b + 6 = 0, giving a + b = -12. Also, P(2) = 0: 16 + 8a + 20 + 2b + 6 = 0, giving 4a + b = -21. Subtracting the equations gives 3a = -9, so a = -3. Therefore b = -9."
         },
 
 
@@ -65,7 +65,7 @@ const QUIZ_CONFIG = {
             answer: 1,
 
             explanation:
-                "By Vieta's formulas, αβ + αγ + βγ = 5/2 and αβγ = 7/2. Therefore 1/α + 1/β + 1/γ = (αβ + αγ + βγ)/(αβγ) = (5/2)/(7/2) = 5/7."
+                "By Vieta's formulas, αβ + αγ + βγ = 5/2 and αβγ = 7/2. Therefore, 1/α + 1/β + 1/γ = (αβ + αγ + βγ)/(αβγ) = (5/2)/(7/2) = 5/7."
         },
 
 
@@ -89,7 +89,7 @@ const QUIZ_CONFIG = {
             answer: 2,
 
             explanation:
-                "Since x² - x - 6 = (x - 3)(x + 2), the remainder must have degree less than 2. Let R(x) = ax + b. Then R(3) = 4 and R(-2) = -1. Solving gives a = 1 and b = 1. Hence R(x) = x + 1."
+                "Since x² - x - 6 = (x - 3)(x + 2), the remainder must be of degree less than 2. Let R(x) = ax + b. Since P(3) = 4, we have 3a + b = 4. Since P(-2) = -1, we have -2a + b = -1. Subtracting gives 5a = 5, so a = 1. Therefore b = 1, and R(x) = x + 1."
         },
 
 
@@ -113,7 +113,7 @@ const QUIZ_CONFIG = {
             answer: 2,
 
             explanation:
-                "By the Remainder Theorem, the remainder is P(-1). Since (-1)⁵⁰ = 1 and (-1)²⁵ = -1, P(-1) = 3(1) - 2(-1) + 4 = 9."
+                "By the Remainder Theorem, the remainder is P(-1). Since (-1)⁵⁰ = 1 and (-1)²⁵ = -1, P(-1) = 3(1) - 2(-1) + 4 = 3 + 2 + 4 = 9."
         },
 
 
@@ -137,7 +137,7 @@ const QUIZ_CONFIG = {
             answer: 2,
 
             explanation:
-                "A repeated root must satisfy both P(x) = 0 and P'(x) = 0. Since P'(x) = 3x² - 6x = 3x(x - 2), the possible repeated roots are 0 and 2. Substituting into P(x) gives k = 0 and k = 4."
+                "A repeated root must satisfy both P(x) = 0 and P'(x) = 0. We have P'(x) = 3x² - 6x = 3x(x - 2), so the possible repeated roots are x = 0 and x = 2. For x = 0, P(0) = k = 0. For x = 2, P(2) = 8 - 12 + k = 0, giving k = 4. Therefore k = 0 or k = 4."
         },
 
 
@@ -161,7 +161,7 @@ const QUIZ_CONFIG = {
             answer: 0,
 
             explanation:
-                "Because the polynomial has real coefficients, 2 + 3i must also be a root. Their product is 2² + 3² = 13. For a monic cubic, the product of the three roots equals -constant term = -26. Thus 13r = -26, giving r = -2."
+                "Because the polynomial has real coefficients, the complex conjugate 2 + 3i must also be a root. Their product is (2 - 3i)(2 + 3i) = 2² + 3² = 13. For a monic cubic, the product of the three roots equals -constant term = -26. Therefore 13r = -26, giving r = -2."
         },
 
 
@@ -185,7 +185,7 @@ const QUIZ_CONFIG = {
             answer: 0,
 
             explanation:
-                "From the original equation, α + β = 5 and αβ = 3. Therefore α² + β² = (α + β)² - 2αβ = 25 - 6 = 19. Also α²β² = 9. Hence the required equation is x² - 19x + 9 = 0."
+                "From Vieta's formulas, α + β = 5 and αβ = 3. Therefore α² + β² = (α + β)² - 2αβ = 25 - 6 = 19. Also, α²β² = (αβ)² = 9. Hence the equation with roots α² and β² is x² - 19x + 9 = 0."
         },
 
 
@@ -209,7 +209,7 @@ const QUIZ_CONFIG = {
             answer: 2,
 
             explanation:
-                "A rational root p/q in lowest terms must have p dividing the constant term 9 and q dividing the leading coefficient 4. Therefore 9/4 is a possible rational root."
+                "By the Rational Root Theorem, a rational root p/q in lowest terms must have p as a factor of the constant term and q as a factor of the leading coefficient. The factors of 9 can appear in the numerator, while the factors of 4 can appear in the denominator. Therefore 9/4 is a possible rational root."
         },
 
 
@@ -233,7 +233,7 @@ const QUIZ_CONFIG = {
             answer: 0,
 
             explanation:
-                "The sum of coefficients of a polynomial is obtained by putting x = 1. Therefore (2 - 5 + 3)⁴ = 0⁴ = 0."
+                "The sum of the coefficients of a polynomial is found by substituting x = 1. Therefore, the required sum is (2(1)³ - 5(1) + 3)⁴ = (2 - 5 + 3)⁴ = 0⁴ = 0."
         },
 
 
@@ -257,7 +257,7 @@ const QUIZ_CONFIG = {
             answer: 2,
 
             explanation:
-                "Multiply both sides by (x + 1)(x - 2)². Then x² = A(x - 2)² + B(x + 1)(x - 2) + C(x + 1). Put x = 2. This gives 4 = 3C, so C = 4/3."
+                "Multiply both sides by (x + 1)(x - 2)². We get x² = A(x - 2)² + B(x + 1)(x - 2) + C(x + 1). Put x = 2. Then 4 = 3C, so C = 4/3."
         },
 
 
@@ -281,7 +281,7 @@ const QUIZ_CONFIG = {
             answer: 1,
 
             explanation:
-                "If P(x) has degree 4, then P(x²) has degree 8 because each occurrence of x is replaced by x². Multiplying by Q(x), which has degree 3, gives degree 8 + 3 = 11."
+                "If P(x) has degree 4, then replacing x by x² gives P(x²) degree 8. Since Q(x) has degree 3, the degree of P(x²)Q(x) is 8 + 3 = 11."
         },
 
 
@@ -297,15 +297,15 @@ const QUIZ_CONFIG = {
 
             options: [
                 "x² + 6x - 15 = 0",
-                "x² + 4x - 27 = 0",
-                "x² - 4x + 27 = 0",
+                "x² + 4x - 25 = 0",
+                "x² - 4x + 25 = 0",
                 "x² + 2x - 33 = 0"
             ],
 
             answer: 1,
 
             explanation:
-                "α + β = -3 and αβ = -5. The new roots are 2α + 1 and 2β + 1. Their sum is 2(α + β) + 2 = -4. Their product is 4αβ + 2(α + β) + 1 = -20 - 6 + 1 = -25. Therefore the equation is x² + 4x - 25 = 0. Since that equation is not among the options, the original options were inconsistent. This question has therefore been corrected below by using the valid equation as the answer."
+                "From x² + 3x - 5 = 0, Vieta's formulas give α + β = -3 and αβ = -5. Let the new roots be r₁ = 2α + 1 and r₂ = 2β + 1. Their sum is r₁ + r₂ = 2(α + β) + 2 = -6 + 2 = -4. Their product is r₁r₂ = (2α + 1)(2β + 1) = 4αβ + 2(α + β) + 1 = -20 - 6 + 1 = -25. Therefore the required quadratic equation is x² - (sum)x + product = x² + 4x - 25 = 0."
         },
 
 
@@ -329,7 +329,7 @@ const QUIZ_CONFIG = {
             answer: 0,
 
             explanation:
-                "A double root at x = 1 requires P(1) = 0 and P'(1) = 0. P'(x) = 4x³ + 2px, so P'(1) = 4 + 2p = 0, giving p = -2. Then P(1) = 1 - 2 + q = 0, giving q = 1."
+                "For (x - 1)² to divide P(x), x = 1 must be a repeated root. Therefore both P(1) = 0 and P'(1) = 0. We have P'(x) = 4x³ + 2px. Thus P'(1) = 4 + 2p = 0, giving p = -2. Then P(1) = 1 - 2 + q = 0, giving q = 1."
         },
 
 
@@ -353,7 +353,7 @@ const QUIZ_CONFIG = {
             answer: 1,
 
             explanation:
-                "By the Remainder Theorem, substitute x = -1. Since (-1)¹⁰¹ = -1, the remainder is -1 + 101 = 100."
+                "By the Remainder Theorem, substitute x = -1. Since (-1)¹⁰¹ = -1, the remainder is (-1) + 101 = 100."
         },
 
 
@@ -374,10 +374,10 @@ const QUIZ_CONFIG = {
                 "3"
             ],
 
-            answer: 2,
+            answer: 3,
 
             explanation:
-                "Since x = 2 is a root, P(2) = 0. Therefore 2³ - 5(2²) + 2k + 6 = 0. This gives 8 - 20 + 2k + 6 = 0, so 2k - 6 = 0 and k = 3."
+                "Since x = 2 is a root, P(2) = 0. Substituting x = 2 gives 2³ - 5(2²) + 2k + 6 = 0. Therefore 8 - 20 + 2k + 6 = 0, which simplifies to 2k - 6 = 0. Hence 2k = 6 and k = 3."
         }
 
     ]
