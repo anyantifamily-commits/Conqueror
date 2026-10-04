@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Leaderboard — CONQUERORS LABS</title>
+
+    <link
+        rel="stylesheet"
+        href="leaderboard.css?v=2"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="battle-background">
+
+        <div class="blade blade-left"></div>
+
+        <div class="blade blade-right"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         PAGE
+    ========================================== -->
+
+    <main class="leaderboard-page">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="leaderboard-header">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← HOME
+            </a>
+
+
+            <div class="header-center">
+
+                <span class="header-label">
+                    CONQUERORS RANKING
+                </span>
+
+                <h1>
+                    LEADERBOARD
+                </h1>
+
+                <p>
+                    The scholars who conquered the quiz.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             COURSE SELECTOR
+        ====================================== -->
+
+        <section class="course-selector-section">
+
+            <div class="selector-label">
+                SELECT COURSE
+            </div>
+
+
+            <div class="course-selector">
+
+                <button
+                    class="course-button active"
+                    data-quiz="bio101-cell-biology"
+                >
+                    BIO 101
+                </button>
+
+
+                <button
+                    class="course-button"
+                    data-quiz="chm101"
+                >
+                    CHM 101
+                </button>
+
+
+                <button
+                    class="course-button"
+                    data-quiz="phy101"
+                >
+                    PHY 101
+                </button>
+
+
+                <button
+                    class="course-button"
+                    data-quiz="math101"
+                >
+                    MATH 101
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CURRENT QUIZ
+        ====================================== -->
+
+        <section class="current-quiz">
+
+            <span class="current-label">
+                CURRENT RANKING
+            </span>
+
+            <h2 id="quizTitle">
+                BIO 101 — Cell Biology
+            </h2>
+
+            <p id="quizStatus">
+                Loading leaderboard...
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             TOP THREE
+        ====================================== -->
+
+        <section
+            class="top-three"
+            id="topThree"
+        >
+
+        </section>
+
+
+        <!-- =====================================
+             FULL RANKING
+        ====================================== -->
+
+        <section class="ranking-section">
+
+
+            <div class="ranking-header">
+
+                <div>
+
+                    <span class="ranking-label">
+                        TOP CONQUERORS
+                    </span>
+
+                    <h2>
+                        RANKING
+                    </h2>
+
+                </div>
+
+
+                <div class="qualification">
+
+                    <span>
+                        PASS MARK
+                    </span>
+
+                    <strong id="passMark">
+                        50%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="ranking-list"
+                id="rankingList"
+            >
+
+            </div>
+
+
+            <!-- =================================
+                 EMPTY STATE
+            ================================== -->
+
+            <div
+                class="empty-state"
+                id="emptyState"
+                hidden
+            >
+
+                <div class="empty-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    No conquerors yet
+                </h3>
+
+                <p>
+                    Be the first scholar to enter
+                    this leaderboard.
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 LOCKED STATE
+            ================================== -->
+
+            <div
+                class="locked-state"
+                id="lockedState"
+                hidden
+            >
+
+                <div class="locked-icon">
+                    🔒
+                </div>
+
+                <h3>
+                    Leaderboard Locked
+                </h3>
+
+                <p>
+                    The leaderboard for this course
+                    has not been opened yet.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             PERSONAL RESULT
+        ====================================== -->
+
+        <section
+            class="personal-result"
+            id="personalResult"
+            hidden
+        >
+
+            <div class="personal-result-header">
+
+                <span class="personal-result-label">
+                    YOUR RESULT
+                </span>
+
+                <h2 id="personalResultHeading">
+                    Your Quiz Result
+                </h2>
+
+            </div>
+
+
+            <div class="personal-result-card">
+
+                <div class="personal-result-status">
+                    <span id="personalResultIcon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong id="personalResultMessage">
+                            You passed the quiz.
+                        </strong>
+
+                        <p id="personalResultDescription">
+                            Your result is shown below.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="personal-result-stats">
+
+                    <div class="personal-stat">
+
+                        <span>
+                            SCORE
+                        </span>
+
+                        <strong id="personalScore">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="personal-stat">
+
+                        <span>
+                            PERCENTAGE
+                        </span>
+
+                        <strong id="personalPercentage">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="personal-stat"
+                        id="personalRankStat"
+                    >
+
+                        <span>
+                            RANK
+                        </span>
+
+                        <strong id="personalRank">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
+        <footer class="leaderboard-footer">
+
+            <div class="footer-line"></div>
+
+            <p>
+                CONQUERORS LABS
+            </p>
+
+            <span>
+                Study. Conquer. Become unforgettable.
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="leaderboard.js?v=2"></script>
+
+</body>
+
+</html>

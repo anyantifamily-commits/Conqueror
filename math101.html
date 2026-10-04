@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CONQUERORS LABS MATH 101 Indices CBT"
+    >
+
+    <title>
+        MATH 101 — Indices | CONQUERORS LABS
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="math101.css"
+    >
+
+</head>
+
+<body>
+
+<main class="quiz-page">
+
+    <header class="quiz-header">
+
+        <div>
+
+            <div class="brand">
+                CONQUERORS LABS
+            </div>
+
+            <h1 id="quizTitle">
+                MATH 101 — Indices
+            </h1>
+
+        </div>
+
+        <div class="timer-box" id="timerBox">
+
+            <span>TIME LEFT</span>
+
+            <strong id="timer">
+                80:00
+            </strong>
+
+        </div>
+
+    </header>
+
+
+    <section class="progress-section">
+
+        <div class="progress-info">
+
+            <span id="questionCount">
+                Question 1 of 50
+            </span>
+
+            <span id="answeredCount">
+                0 answered
+            </span>
+
+        </div>
+
+        <div class="progress-bar">
+
+            <div
+                class="progress-fill"
+                id="progressFill"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <section id="quizSection">
+
+        <div id="questionContainer"></div>
+
+
+        <div class="navigation">
+
+            <button
+                class="nav-btn secondary"
+                id="prevBtn"
+            >
+                ← Previous
+            </button>
+
+            <button
+                class="nav-btn primary"
+                id="nextBtn"
+            >
+                Next →
+            </button>
+
+        </div>
+
+
+        <div class="navigator-card">
+
+            <div class="navigator-header">
+
+                <h3>
+                    Question Navigator
+                </h3>
+
+                <p>
+                    Tap a number to jump to a question.
+                </p>
+
+            </div>
+
+            <div
+                class="question-navigator"
+                id="questionNavigator"
+            ></div>
+
+
+            <div class="legend">
+
+                <span>
+                    <i class="legend-dot"></i>
+                    Unanswered
+                </span>
+
+                <span>
+                    <i class="legend-dot answered"></i>
+                    Answered
+                </span>
+
+                <span>
+                    <i class="legend-dot current"></i>
+                    Current
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="submit-btn"
+            id="submitBtn"
+        >
+            SUBMIT QUIZ
+        </button>
+
+    </section>
+
+
+    <section
+        class="result-section hidden"
+        id="resultSection"
+    >
+
+        <div class="result-icon">
+            ✓
+        </div>
+
+        <div class="result-label">
+            QUIZ COMPLETE
+        </div>
+
+        <h2 id="resultScore">
+            0/50
+        </h2>
+
+        <div id="resultPercentage">
+            0%
+        </div>
+
+        <p id="resultMessage">
+            Your result will appear here.
+        </p>
+
+
+        <div class="result-stats">
+
+            <div>
+
+                <strong id="correctCount">
+                    0
+                </strong>
+
+                <span>
+                    Correct
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong id="wrongCount">
+                    0
+                </strong>
+
+                <span>
+                    Wrong
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong id="unansweredCount">
+                    0
+                </strong>
+
+                <span>
+                    Unanswered
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="review-btn"
+            id="reviewBtn"
+        >
+            REVIEW ANSWERS
+        </button>
+
+
+        <button
+            class="retake-btn hidden"
+            id="retakeBtn"
+        >
+            RETAKE QUIZ
+        </button>
+
+    </section>
+
+
+    <section
+        class="review-section hidden"
+        id="reviewSection"
+    >
+
+        <div class="review-heading">
+
+            <h2>
+                Answer Review
+            </h2>
+
+            <p>
+                Study the corrections carefully. These are your
+                jot-worthy takeaways.
+            </p>
+
+        </div>
+
+        <div id="reviewContainer"></div>
+
+    </section>
+
+
+</main>
+
+
+<!-- SUBMIT MODAL -->
+
+<div
+    class="modal hidden"
+    id="submitModal"
+>
+
+    <div class="modal-box">
+
+        <div class="modal-icon">
+            ⚠️
+        </div>
+
+        <h2>
+            Submit Quiz?
+        </h2>
+
+        <p>
+            Once you submit, your attempt will be completed.
+            You will not be able to change your answers.
+        </p>
+
+        <div class="modal-actions">
+
+            <button
+                class="modal-btn cancel"
+                id="cancelSubmit"
+            >
+                CANCEL
+            </button>
+
+            <button
+                class="modal-btn confirm"
+                id="confirmSubmit"
+            >
+                SUBMIT
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- NAME MODAL -->
+
+<div
+    class="modal hidden"
+    id="nameModal"
+>
+
+    <div class="modal-box">
+
+        <div class="modal-icon">
+            📝
+        </div>
+
+        <h2>
+            Enter Your Name
+        </h2>
+
+        <p>
+            Enter your name to submit your result
+            to the MATH 101 leaderboard.
+        </p>
+
+        <input
+            type="text"
+            id="studentNameInput"
+            placeholder="Enter your full name"
+            maxlength="60"
+            autocomplete="name"
+        >
+
+        <p
+            class="name-error"
+            id="nameError"
+        >
+            Please enter your name.
+        </p>
+
+        <div class="modal-actions">
+
+            <button
+                class="modal-btn cancel"
+                id="cancelName"
+            >
+                CANCEL
+            </button>
+
+            <button
+                class="modal-btn confirm"
+                id="confirmName"
+            >
+                SUBMIT RESULT
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="math101.js?v=2"></script>
+
+</body>
+
+</html>

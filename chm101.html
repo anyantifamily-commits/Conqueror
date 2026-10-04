@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CHM 101 — Atomic Theory & Cathode Rays</title>
+
+    <link rel="stylesheet" href="chm101.css">
+</head>
+
+<body>
+
+    <main class="quiz-page">
+
+        <!-- HEADER -->
+        <header class="quiz-header">
+
+            <div>
+                <p class="brand">
+                    CONQUERORS LABS
+                </p>
+
+                <h1 id="quizTitle">
+                    CHM 101 — Atomic Theory & Cathode Rays
+                </h1>
+            </div>
+
+            <div class="timer-box">
+                <span>TIME</span>
+
+                <strong id="timer">
+                    60:00
+                </strong>
+            </div>
+
+        </header>
+
+
+        <!-- PROGRESS -->
+        <section class="progress-section">
+
+            <div class="progress-info">
+
+                <span id="progressText">
+                    Question 1 of 30
+                </span>
+
+                <span id="answeredText">
+                    0 answered
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressBar"
+                    class="progress-fill">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUESTION AREA -->
+        <section id="questionArea">
+
+            <div class="question-card">
+
+                <div class="question-number">
+
+                    QUESTION
+                    <span id="questionNumber">
+                        1
+                    </span>
+
+                </div>
+
+                <h2 id="questionText">
+                    Loading question...
+                </h2>
+
+                <div
+                    id="optionsContainer"
+                    class="options-container">
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+            <div class="navigation">
+
+                <button
+                    id="previousBtn"
+                    class="nav-btn secondary"
+                    type="button">
+
+                    ← Previous
+
+                </button>
+
+                <button
+                    id="nextBtn"
+                    class="nav-btn primary"
+                    type="button">
+
+                    Next →
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUESTION NAVIGATOR -->
+        <section class="navigator-card">
+
+            <div class="navigator-header">
+
+                <div>
+
+                    <h3>
+                        Question Navigator
+                    </h3>
+
+                    <p>
+                        Tap a number to jump to a question.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                id="questionNavigator"
+                class="question-navigator">
+            </div>
+
+            <div class="legend">
+
+                <span>
+                    <i class="legend-dot unanswered"></i>
+                    Unanswered
+                </span>
+
+                <span>
+                    <i class="legend-dot answered"></i>
+                    Answered
+                </span>
+
+                <span>
+                    <i class="legend-dot current"></i>
+                    Current
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBMIT -->
+        <button
+            id="submitBtn"
+            class="submit-btn"
+            type="button">
+
+            SUBMIT CBT
+
+        </button>
+
+
+        <!-- RESULT SECTION -->
+        <section
+            id="resultSection"
+            class="result-section hidden">
+
+            <div class="result-icon">
+                ✓
+            </div>
+
+            <p class="result-label">
+                CBT COMPLETED
+            </p>
+
+            <h2 id="resultScore">
+                0 / 30
+            </h2>
+
+            <p id="resultPercentage">
+                0%
+            </p>
+
+            <p id="resultMessage">
+                Well done.
+            </p>
+
+
+            <div class="result-stats">
+
+                <div>
+                    <strong id="correctCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Correct
+                    </span>
+                </div>
+
+                <div>
+                    <strong id="wrongCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Wrong
+                    </span>
+                </div>
+
+                <div>
+                    <strong id="unansweredCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Unanswered
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                id="reviewBtn"
+                class="review-btn"
+                type="button">
+
+                REVIEW ANSWERS
+
+            </button>
+
+
+            <button
+                id="retakeBtn"
+                class="retake-btn hidden"
+                type="button">
+
+                RETAKE CBT
+
+            </button>
+
+        </section>
+
+
+        <!-- REVIEW -->
+        <section
+            id="reviewSection"
+            class="review-section hidden">
+
+            <div class="review-heading">
+
+                <p class="brand">
+                    CONQUERORS LABS
+                </p>
+
+                <h2>
+                    Answer Review
+                </h2>
+
+                <p>
+                    Review the questions and corrections below.
+                </p>
+
+            </div>
+
+            <div id="reviewContainer"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         SUBMIT CONFIRMATION MODAL
+    ====================================== -->
+
+    <div
+        id="submitModal"
+        class="modal hidden">
+
+        <div class="modal-box">
+
+            <div class="modal-icon">
+                ⚠️
+            </div>
+
+            <h2>
+                Submit CBT?
+            </h2>
+
+            <p id="modalText">
+                Are you sure you want to submit?
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    id="cancelSubmitBtn"
+                    type="button"
+                    class="modal-btn cancel">
+
+                    CANCEL
+
+                </button>
+
+                <button
+                    id="confirmSubmitBtn"
+                    type="button"
+                    class="modal-btn confirm">
+
+                    SUBMIT
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         STUDENT NAME MODAL
+    ====================================== -->
+
+    <div
+        id="nameModal"
+        class="modal hidden">
+
+        <div class="modal-box name-modal-box">
+
+            <div class="name-modal-icon">
+                🏆
+            </div>
+
+            <p class="name-modal-label">
+                CONQUERORS LEADERBOARD
+            </p>
+
+            <h2>
+                Enter Your Name
+            </h2>
+
+            <p class="name-modal-description">
+                Enter the name you want displayed
+                on the leaderboard.
+            </p>
+
+            <input
+                id="studentNameInput"
+                class="student-name-input"
+                type="text"
+                placeholder="Enter your name"
+                maxlength="40"
+                autocomplete="name"
+            >
+
+            <p
+                id="nameError"
+                class="name-error hidden">
+                Please enter your name.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    id="cancelNameBtn"
+                    type="button"
+                    class="modal-btn cancel">
+
+                    CANCEL
+
+                </button>
+
+                <button
+                    id="continueNameBtn"
+                    type="button"
+                    class="modal-btn confirm name-confirm">
+
+                    CONTINUE
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="chm101.js"></script>
+
+</body>
+</html>
