@@ -57,17 +57,18 @@ const QUIZ_CONFIG = {
 
 const SCIENTIST_OF_THE_WEEK = {
 
-    name: "Marie Curie",
+    name: "Isaac Newton",
 
-    field: "PHYSICIST & CHEMIST",
+    field: "ENGLISH MATHEMATICIAN & PHYSICIST",
 
-    image: "marie-curie.jpeg",
+    image: "isaac-newton.jpg",
 
     quote:
-        "Nothing in life is to be feared; it is only to be understood.",
+        "If i have seen further than others, it is by standing upon the shoulders of giants",
 
     bio:
-        "A pioneering scientist whose work transformed our understanding of radioactivity."
+        " Sir Isaac Newton (1642–1727) was a genius English scientist who invented calculus, discovered gravity and the laws of motion, and proved white light is a spectrum of colors—forever changing modern physics.
+  "
 
 };
 
