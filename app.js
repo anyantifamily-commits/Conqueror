@@ -1,4 +1,3 @@
-
 /* =========================================
    CONQUERORS LABS
    MAIN JAVASCRIPT
@@ -47,28 +46,6 @@ const QUIZ_CONFIG = {
         name: "MATH 101",
         url: "math101.html"
     }
-
-};
-
-
-/* =========================================
-   SCIENTIST OF THE WEEK
-========================================= */
-
-const SCIENTIST_OF_THE_WEEK = {
-
-    name: "Isaac Newton",
-
-    field: "ENGLISH MATHEMATICIAN & PHYSICIST",
-
-    image: "isaac-newton.jpg",
-
-    quote:
-        "If i have seen further than others, it is by standing upon the shoulders of giants",
-
-    bio:
-        " Sir Isaac Newton (1642–1727) was a genius English scientist who invented calculus, discovered gravity and the laws of motion, and proved white light is a spectrum of colors—forever changing modern physics.
-  "
 
 };
 
@@ -368,80 +345,6 @@ function applyQuizStatus() {
 
 
 /* =========================================
-   LOAD SCIENTIST
-========================================= */
-
-function loadScientist() {
-
-    const scientistName =
-        document.getElementById(
-            "scientistName"
-        );
-
-    const scientistField =
-        document.getElementById(
-            "scientistField"
-        );
-
-    const scientistQuote =
-        document.getElementById(
-            "scientistQuote"
-        );
-
-    const scientistBio =
-        document.getElementById(
-            "scientistBio"
-        );
-
-    const scientistImage =
-        document.getElementById(
-            "scientistImage"
-        );
-
-
-    if (scientistName) {
-
-        scientistName.textContent =
-            SCIENTIST_OF_THE_WEEK.name;
-
-    }
-
-
-    if (scientistField) {
-
-        scientistField.textContent =
-            SCIENTIST_OF_THE_WEEK.field;
-
-    }
-
-
-    if (scientistQuote) {
-
-        scientistQuote.textContent =
-            `“${SCIENTIST_OF_THE_WEEK.quote}”`;
-
-    }
-
-
-    if (scientistBio) {
-
-        scientistBio.textContent =
-            SCIENTIST_OF_THE_WEEK.bio;
-
-    }
-
-
-    if (scientistImage) {
-
-        scientistImage.src =
-            SCIENTIST_OF_THE_WEEK.image;
-
-    }
-
-}
-
-
-/* =========================================
    LOAD WHATSAPP
 ========================================= */
 
@@ -479,8 +382,6 @@ document.addEventListener(
     () => {
 
         applyQuizStatus();
-
-        loadScientist();
 
         loadWhatsApp();
 
