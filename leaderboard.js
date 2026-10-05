@@ -12,7 +12,7 @@ const QUIZZES = {
 
     "bio101-cell-biology": {
         title: "BIO 101",
-        resultKey: "conquerorsLabs_BIO101_result_id"
+        resultKey: "conquerorsLabs_BIO101_result_id_v3"
     },
 
     "chm101": {
