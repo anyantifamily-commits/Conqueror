@@ -22,7 +22,7 @@ const QUIZZES = {
 
     "phy101": {
         title: "PHY 101",
-        resultKey: "conquerorsLabs_PHY101_result_id"
+        resultKey: "conquerorsLabs_PHY101_result_id_v2"
     },
 
     "math101": {
