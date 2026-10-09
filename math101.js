@@ -1,7 +1,7 @@
 /* =========================================
    CONQUERORS LABS
-   MATH 101 — INDICES
-   QUIZ ENGINE
+   MATH 101 — DIFFERENTIATION
+   QUIZ ENGINE — VERSION 2
 ========================================= */
 
 
@@ -10,1227 +10,374 @@
 ========================================= */
 
 const QUIZ_CONFIG = {
-
-    title: "MATH 101 — Indices",
-
-    timeLimit: 80,
-
-    /*
-        Kept at 100 so the engine is ready
-        when more questions are added later.
-    */
-    maxQuestions: 100,
-
+    title: "MATH 101 & 102 — Differentiation",
+    quizId: "math101",
+    quizVersion: 2,
+    timeLimit: 30,
+    maxQuestions: 30,
     allowRetake: false,
+    passMark: 50,
 
     questions: [
 
+        // =====================================
+        // PART 1: EASY QUESTIONS
+        // =====================================
+
         {
             id: 1,
-
-            question:
-`Simplify completely:
-
-(x^(3/2)y^(-2))²
-——————————————
-x^(-1)y^(-3)`,
-
-            options: [
-                "x⁴y⁻¹",
-                "x²y⁻¹",
-                "x⁴y⁻⁷",
-                "x²y⁻⁷"
-            ],
-
+            question: "What is the derivative of f(x) = x⁶ with respect to x?",
+            options: ["6x⁵", "x⁵", "6x⁶", "5x⁶"],
             answer: "A",
-
-            explanation:
-                "First square the numerator: x³y⁻⁴. Dividing by x⁻¹y⁻³ gives x^(3−(−1))y^(−4−(−3)) = x⁴y⁻¹."
+            explanation: "Using the power rule, d(xⁿ)/dx = nxⁿ⁻¹. Therefore, d(x⁶)/dx = 6x⁵."
         },
-
 
         {
             id: 2,
-
-            question:
-`Simplify:
-
-[(a⁻²b³)/(a⁴b⁻¹)]⁻²`,
-
-            options: [
-                "a¹²/b⁸",
-                "b⁸/a¹²",
-                "a⁻¹²/b⁸",
-                "a¹²b⁸"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Inside the bracket: a⁻⁶b⁴. Raising to −2 gives a¹²b⁻⁸ = a¹²/b⁸."
+            question: "What is the derivative of any constant function, such as f(x) = 12?",
+            options: ["12", "1", "0", "12x"],
+            answer: "C",
+            explanation: "The derivative of a constant is zero because its value does not change as x changes."
         },
-
 
         {
             id: 3,
-
-            question:
-`Simplify:
-
-(x^(2/3))³ / x⁻²`,
-
+            question: "Find the derivative of f(x) = 4x³ − 5x² + 7.",
             options: [
-                "x⁰",
-                "x²",
-                "x⁴",
-                "x⁻⁴"
+                "12x² − 10x",
+                "7x² − 10x + 7",
+                "12x² − 5x",
+                "4x² − 10x"
             ],
-
-            answer: "C",
-
-            explanation:
-                "(x^(2/3))³ = x². Then x² ÷ x⁻² = x^(2−(−2)) = x⁴."
+            answer: "A",
+            explanation: "Differentiate each term: 4x³ gives 12x², −5x² gives −10x, and the constant 7 gives 0."
         },
-
 
         {
             id: 4,
-
-            question:
-`Simplify:
-
-[(x^(1/2)y^(-1/3)) /
- (x^(-1/2)y^(2/3))]⁶`,
-
+            question: "What is the derivative of f(x) = √x?",
             options: [
-                "x³y⁻²",
-                "x⁶y⁻⁶",
-                "x⁶y⁻²",
-                "x³y⁻⁶"
+                "1/(2√x)",
+                "2√x",
+                "1/√x",
+                "−1/(2√x)"
             ],
-
-            answer: "B",
-
-            explanation:
-                "Inside the bracket: x¹y⁻¹ = x/y. Raising to 6 gives x⁶y⁻⁶."
+            answer: "A",
+            explanation: "Rewrite √x as x^(1/2). The power rule gives (1/2)x^(−1/2) = 1/(2√x), for x > 0."
         },
-
 
         {
             id: 5,
-
-            question:
-`If
-
-2ˣ = 8^(x−1),
-
-find x.`,
-
-            options: [
-                "1/2",
-                "1",
-                "3/2",
-                "2"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Write 8 as 2³: 2ˣ = 2^(3x−3). Therefore x = 3x−3, giving x = 3/2."
+            question: "What is the derivative of the natural exponential function f(x) = eˣ?",
+            options: ["xeˣ⁻¹", "eˣ", "ln(x)", "1"],
+            answer: "B",
+            explanation: "The exponential function eˣ is its own derivative: d(eˣ)/dx = eˣ."
         },
-
 
         {
             id: 6,
-
-            question:
-`Solve:
-
-3^(2x−1) = 27^(x−2).`,
-
-            options: [
-                "3",
-                "4",
-                "5",
-                "6"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "27 = 3³, so 2x−1 = 3x−6. Therefore x = 5."
+            question: "What is the derivative of f(x) = ln(x) for x > 0?",
+            options: ["eˣ", "1/x", "x", "1/ln(x)"],
+            answer: "B",
+            explanation: "The standard derivative rule for the natural logarithm is d(ln x)/dx = 1/x."
         },
-
 
         {
             id: 7,
-
-            question:
-`Solve:
-
-4^(x+1) = 8^(2x−1).`,
-
-            options: [
-                "5/4",
-                "4/3",
-                "3/2",
-                "2"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Write both bases as powers of 2: 2^(2x+2) = 2^(6x−3). Hence 2x+2 = 6x−3, giving x = 5/4."
+            question: "Find the derivative of f(x) = sin(x).",
+            options: ["−cos(x)", "sin(x)", "cos(x)", "−sin(x)"],
+            answer: "C",
+            explanation: "The derivative of sin(x) is cos(x)."
         },
-
 
         {
             id: 8,
-
-            question:
-`Solve:
-
-9^(x−1) = 27^(x−2).`,
-
-            options: [
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "9 = 3² and 27 = 3³. Thus 2x−2 = 3x−6, so x = 4."
+            question: "Find the derivative of f(x) = cos(x).",
+            options: ["−sin(x)", "sin(x)", "cos(x)", "−cos(x)"],
+            answer: "A",
+            explanation: "The derivative of cos(x) is −sin(x)."
         },
-
 
         {
             id: 9,
-
-            question:
-`If
-
-2ˣ + 2^(x+1) = 24,
-
-find x.`,
-
-            options: [
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
-
+            question: "What is the derivative of f(x) = 1/x?",
+            options: ["1/x²", "−1/x²", "−1/x", "x⁻²"],
             answer: "B",
-
-            explanation:
-                "Factor 2ˣ: 2ˣ(1+2)=24. Therefore 3(2ˣ)=24, so 2ˣ=8 and x=3."
+            explanation: "Rewrite 1/x as x⁻¹. Applying the power rule gives −x⁻² = −1/x²."
         },
-
 
         {
             id: 10,
-
-            question:
-`If
-
-3ˣ + 3^(x+1) = 108,
-
-find x.`,
-
-            options: [
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
-
+            question: "Find the derivative of f(x) = 9x².",
+            options: ["9x", "18x", "18x²", "2x"],
             answer: "B",
-
-            explanation:
-                "Factor 3ˣ: 3ˣ(1+3)=108. Therefore 4(3ˣ)=108, so 3ˣ=27 and x=3."
+            explanation: "Using the power rule, d(9x²)/dx = 9 × 2x = 18x."
         },
-
 
         {
             id: 11,
-
-            question:
-`Solve:
-
-2^(2x) − 5(2ˣ) + 4 = 0.`,
-
-            options: [
-                "x = 0, 1",
-                "x = 1, 2",
-                "x = 0, 2",
-                "x = 2, 4"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Let t=2ˣ. Then t²−5t+4=0, giving (t−1)(t−4)=0. Hence 2ˣ=1 or 4, so x=0 or 2."
+            question: "What is the derivative of f(x) = 3ˣ?",
+            options: ["3ˣ ln(3)", "x3ˣ⁻¹", "3ˣ/ln(3)", "3ˣ"],
+            answer: "A",
+            explanation: "For an exponential function aˣ, the derivative is aˣ ln(a). Therefore, d(3ˣ)/dx = 3ˣ ln(3)."
         },
-
 
         {
             id: 12,
-
-            question:
-`Solve:
-
-3^(2x) − 10(3ˣ) + 9 = 0.`,
-
+            question: "Find the derivative of f(x) = 4sin(x) + 2cos(x).",
             options: [
-                "x = 0, 1",
-                "x = 1, 2",
-                "x = 0, 2",
-                "x = 2, 3"
+                "4cos(x) − 2sin(x)",
+                "−4sin(x) − 2cos(x)",
+                "4cos(x) + 2sin(x)",
+                "−4cos(x) + 2sin(x)"
             ],
-
-            answer: "C",
-
-            explanation:
-                "Let t=3ˣ. Then t²−10t+9=0 = (t−1)(t−9). Therefore x=0 or 2."
+            answer: "A",
+            explanation: "Differentiate each term: 4sin(x) gives 4cos(x), while 2cos(x) gives −2sin(x)."
         },
-
 
         {
             id: 13,
-
-            question:
-`Solve:
-
-4ˣ − 5(2ˣ) + 4 = 0.`,
-
+            question: "What is the derivative of f(x) = 5∛x?",
             options: [
-                "x = 0, 1",
-                "x = 0, 2",
-                "x = 1, 2",
-                "x = 2, 4"
+                "(5/3)x⁻²ᐟ³",
+                "15x²ᐟ³",
+                "(3/5)x²ᐟ³",
+                "5x⁻²ᐟ³"
             ],
-
-            answer: "B",
-
-            explanation:
-                "Since 4ˣ=(2ˣ)², let t=2ˣ. Then t²−5t+4=0, giving t=1 or 4. Thus x=0 or 2."
+            answer: "A",
+            explanation: "Rewrite 5∛x as 5x^(1/3). The power rule gives (5/3)x^(−2/3)."
         },
-
 
         {
             id: 14,
-
-            question:
-`Solve:
-
-9ˣ − 4(3ˣ) + 3 = 0.`,
-
+            question: "Find the derivative of f(x) = −6x⁻².",
             options: [
-                "x = 0, 1",
-                "x = 1, 2",
-                "x = 0, 2",
-                "No real solution"
+                "12x⁻³",
+                "−12x⁻³",
+                "12x⁻¹",
+                "−3x⁻³"
             ],
-
             answer: "A",
-
-            explanation:
-                "Let t=3ˣ. Since 9ˣ=t², t²−4t+3=0. Hence t=1 or 3, giving x=0 or 1."
+            explanation: "The power rule gives −6 × (−2)x⁻³ = 12x⁻³."
         },
-
 
         {
             id: 15,
-
-            question:
-`If
-
-5ˣ = 25^(x−2),
-
-find x.`,
-
-            options: [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-
-            answer: "D",
-
-            explanation:
-                "25=5², so x=2(x−2). Therefore x=2x−4 and x=4."
+            question: "What is the derivative of f(x) = 7π with respect to x?",
+            options: ["7", "7π", "0", "π"],
+            answer: "C",
+            explanation: "7π is constant with respect to x. The derivative of a constant is zero."
         },
 
+
+        // =====================================
+        // PART 2: MEDIUM QUESTIONS
+        // =====================================
 
         {
             id: 16,
-
-            question:
-`Solve:
-
-2^(x+2) = 16^(x−1).`,
-
+            question: "Using the product rule, find the derivative of f(x) = x³eˣ.",
             options: [
-                "4/3",
-                "5/3",
-                "2",
-                "7/3"
+                "3x²eˣ",
+                "x³eˣ + 3x²eˣ",
+                "3x²e²ˣ",
+                "x³eˣ"
             ],
-
-            answer: "C",
-
-            explanation:
-                "16=2⁴, so x+2=4x−4. Hence 3x=6 and x=2."
+            answer: "B",
+            explanation: "The product rule states (uv)' = u'v + uv'. Here u = x³ and v = eˣ, so f'(x) = 3x²eˣ + x³eˣ."
         },
-
 
         {
             id: 17,
-
-            question:
-`Solve:
-
-27ˣ = 9^(x+1).`,
-
+            question: "Using the quotient rule, find the derivative of f(x) = x/(x − 1).",
             options: [
-                "1",
-                "3/2",
-                "2",
-                "3"
+                "1/(x − 1)²",
+                "−1/(x − 1)²",
+                "(2x − 1)/(x − 1)²",
+                "1/(x − 1)"
             ],
-
-            answer: "C",
-
-            explanation:
-                "27=3³ and 9=3². Therefore 3x=2x+2, giving x=2."
+            answer: "B",
+            explanation: "Using the quotient rule, f'(x) = [(x − 1) − x]/(x − 1)² = −1/(x − 1)²."
         },
-
 
         {
             id: 18,
-
-            question:
-`If
-
-4ˣ = 8,
-
-find 2^(2x).`,
-
+            question: "Using the chain rule, find the derivative of f(x) = (2x² + 3)⁵.",
             options: [
-                "8",
-                "16",
-                "32",
-                "64"
+                "5(2x² + 3)⁴",
+                "10x(2x² + 3)⁴",
+                "20x(2x² + 3)⁴",
+                "40x(2x² + 3)⁴"
             ],
-
-            answer: "A",
-
-            explanation:
-                "Since 4ˣ = 2^(2x), the given equation directly tells us that 2^(2x)=8."
+            answer: "C",
+            explanation: "The chain rule gives 5(2x² + 3)⁴ × 4x = 20x(2x² + 3)⁴."
         },
-
 
         {
             id: 19,
-
-            question:
-`If
-
-3ˣ = 9√3,
-
-find x.`,
-
+            question: "Find the derivative of f(x) = sin(3x²).",
             options: [
-                "3/2",
-                "2",
-                "5/2",
-                "3"
+                "cos(3x²)",
+                "6x cos(3x²)",
+                "−6x sin(3x²)",
+                "3x cos(3x²)"
             ],
-
-            answer: "C",
-
-            explanation:
-                "9√3 = 3² × 3^(1/2) = 3^(5/2). Therefore x=5/2."
+            answer: "B",
+            explanation: "By the chain rule, differentiate the outer sine function and multiply by the derivative of 3x², which is 6x."
         },
-
 
         {
             id: 20,
-
-            question:
-`If
-
-2ˣ = ∛16,
-
-find x.`,
-
-            options: [
-                "4/3",
-                "5/3",
-                "8/3",
-                "3"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "∛16 = (2⁴)^(1/3) = 2^(4/3). Therefore x=4/3."
+            question: "Find the derivative of f(x) = e⁴ˣ.",
+            options: ["e⁴ˣ", "4e⁴ˣ", "4xe⁴ˣ⁻¹", "(1/4)e⁴ˣ"],
+            answer: "B",
+            explanation: "By the chain rule, d(e⁴ˣ)/dx = e⁴ˣ × 4 = 4e⁴ˣ."
         },
-
 
         {
             id: 21,
-
-            question:
-`Simplify:
-
-(x^(1/2) + x^(-1/2))
-——————————————
-x^(-1/2)`,
-
+            question: "Find the derivative of f(x) = ln(3x² + 2).",
             options: [
-                "x + 1",
-                "x⁻¹ + 1",
-                "x^(1/2) + 1",
-                "x + x⁻¹"
+                "6x/(3x² + 2)",
+                "3/(3x² + 2)",
+                "6x/x",
+                "1/(6x)"
             ],
-
             answer: "A",
-
-            explanation:
-                "Divide each term by x⁻¹/²: x^(1/2+1/2)+1 = x+1."
+            explanation: "Using the chain rule, the derivative is (1/(3x² + 2)) × 6x = 6x/(3x² + 2)."
         },
-
 
         {
             id: 22,
-
-            question:
-`Simplify:
-
-(x^(3/2) − x^(-1/2))
-——————————————
-x^(-1/2)`,
-
-            options: [
-                "x − 1",
-                "x + 1",
-                "x^(1/2) − 1",
-                "x² − 1"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "Dividing by x⁻¹/² gives x^(3/2+1/2)−1 = x−1."
+            question: "What is the derivative of f(x) = tan(x)?",
+            options: ["cot(x)", "sec²(x)", "−csc²(x)", "sec(x)tan(x)"],
+            answer: "B",
+            explanation: "The standard derivative rule is d(tan x)/dx = sec²(x), wherever tan(x) is defined."
         },
-
 
         {
             id: 23,
-
-            question:
-`Simplify:
-
-(a^(5/2) − a^(1/2))
-——————————————
-a^(1/2)`,
-
+            question: "What is the derivative of f(x) = csc(x)?",
             options: [
-                "a² − 1",
-                "a² + 1",
-                "a^(3/2) − 1",
-                "a³ − 1"
+                "sec(x)tan(x)",
+                "−csc(x)cot(x)",
+                "csc²(x)",
+                "−sec(x)"
             ],
-
-            answer: "A",
-
-            explanation:
-                "Divide each term by a^(1/2): a^(5/2−1/2)−1 = a²−1."
+            answer: "B",
+            explanation: "The derivative of csc(x) is −csc(x)cot(x)."
         },
-
 
         {
             id: 24,
-
-            question:
-`Simplify:
-
-(x^(2/3) − x^(-1/3))
-——————————————
-x^(-1/3)`,
-
+            question: "Find the derivative of f(x) = x sin(x).",
             options: [
-                "x − 1",
-                "x + 1",
-                "x^(1/3) − 1",
-                "x^(2/3) − 1"
+                "x cos(x)",
+                "sin(x) + x cos(x)",
+                "sin(x) − x cos(x)",
+                "−x sin(x)"
             ],
-
-            answer: "A",
-
-            explanation:
-                "x^(2/3) ÷ x^(-1/3) = x¹. The second term becomes 1. Therefore x−1."
+            answer: "B",
+            explanation: "By the product rule, f'(x) = 1 × sin(x) + x × cos(x) = sin(x) + x cos(x)."
         },
-
 
         {
             id: 25,
-
-            question:
-`If
-
-x^(1/2) = 4,
-
-find:
-
-x^(3/2) + x^(-1/2).`,
-
+            question: "Find the derivative of f(x) = x²/(x + 2).",
             options: [
-                "64",
-                "257/4",
-                "65/4",
-                "17"
+                "(x² + 4x)/(x + 2)²",
+                "2x/(x + 2)²",
+                "1/(x + 2)²",
+                "(x² + 2)/(x + 2)²"
             ],
-
-            answer: "B",
-
-            explanation:
-                "√x=4 means x=16. Then x^(3/2)=64 and x^(-1/2)=1/4. Total = 64+1/4 = 257/4."
+            answer: "A",
+            explanation: "The quotient rule gives [2x(x + 2) − x²]/(x + 2)². Simplifying the numerator gives x² + 4x."
         },
-
 
         {
             id: 26,
-
-            question:
-`If
-
-x^(1/3) = 2,
-
-find:
-
-x^(4/3) − x^(-2/3).`,
-
+            question: "Find the derivative of f(x) = √(x² + 9).",
             options: [
-                "63/4",
-                "15/4",
-                "16",
-                "17/4"
+                "1/(2√(x² + 9))",
+                "x/√(x² + 9)",
+                "2x/√(x² + 9)",
+                "x/(2√(x² + 9))"
             ],
-
-            answer: "A",
-
-            explanation:
-                "x^(1/3)=2. Therefore x^(4/3)=2⁴=16 and x^(-2/3)=1/2²=1/4. Result = 63/4."
+            answer: "B",
+            explanation: "Rewrite the function as (x² + 9)^(1/2). The chain rule gives (1/2)(x² + 9)^(−1/2) × 2x = x/√(x² + 9)."
         },
-
 
         {
             id: 27,
-
-            question:
-`If
-
-a^(1/2) + a^(-1/2) = 5,
-
-find:
-
-a + a^(-1).`,
-
+            question: "Find the second derivative f''(x) of f(x) = 2x³ − 5x² + 4x − 1.",
             options: [
-                "21",
-                "23",
-                "25",
-                "27"
+                "6x² − 10x + 4",
+                "12x − 10",
+                "12x",
+                "6 − 10x"
             ],
-
             answer: "B",
-
-            explanation:
-                "Square both sides: a+a⁻¹+2=25. Therefore a+a⁻¹=23."
+            explanation: "First derivative: f'(x) = 6x² − 10x + 4. Differentiating again gives f''(x) = 12x − 10."
         },
-
 
         {
             id: 28,
-
-            question:
-`If
-
-x^(1/2) − x^(-1/2) = 3,
-
-find:
-
-x + x^(-1).`,
-
+            question: "Find the derivative of f(x) = x² ln(x) for x > 0.",
             options: [
-                "7",
-                "9",
-                "11",
-                "13"
+                "2x ln(x)",
+                "x(2ln(x) + 1)",
+                "x² + ln(x)",
+                "2/x"
             ],
-
-            answer: "C",
-
-            explanation:
-                "Squaring gives x+x⁻¹−2=9. Hence x+x⁻¹=11."
+            answer: "B",
+            explanation: "Using the product rule, f'(x) = 2x ln(x) + x²(1/x) = 2x ln(x) + x = x(2ln(x) + 1)."
         },
-
 
         {
             id: 29,
-
-            question:
-`If
-
-x^(1/3) + x^(-1/3) = 4,
-
-find:
-
-x^(2/3) + x^(-2/3).`,
-
+            question: "Find the derivative of f(x) = cos(5x).",
             options: [
-                "12",
-                "14",
-                "16",
-                "18"
+                "−5sin(5x)",
+                "5sin(5x)",
+                "−5cos(5x)",
+                "sin(5x)"
             ],
-
-            answer: "B",
-
-            explanation:
-                "Square the given relation: x^(2/3)+x^(-2/3)+2=16. Therefore the required value is 14."
+            answer: "A",
+            explanation: "By the chain rule, the derivative is −sin(5x) × 5 = −5sin(5x)."
         },
-
 
         {
             id: 30,
-
-            question:
-`If
-
-x^(1/3) − x^(-1/3) = 2,
-
-find:
-
-x^(2/3) + x^(-2/3).`,
-
+            question: "Find the derivative of f(x) = e²ˣ + 3x⁴.",
             options: [
-                "2",
-                "4",
-                "6",
-                "8"
+                "2e²ˣ + 12x³",
+                "e²ˣ + 12x³",
+                "2e²ˣ + 3x³",
+                "4e²ˣ + 12x³"
             ],
-
-            answer: "C",
-
-            explanation:
-                "Squaring gives x^(2/3)+x^(-2/3)−2=4. Therefore the answer is 6."
-        },
-
-
-        {
-            id: 31,
-
-            question:
-`Simplify:
-
-(x^(1/3) + x^(-1/3))²`,
-
-            options: [
-                "x^(2/3) + x^(-2/3)",
-                "x^(2/3) + 2 + x^(-2/3)",
-                "x^(2/3) + 1 + x^(-2/3)",
-                "x^(1/3) + 2 + x^(-1/3)"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Use (a+b)²=a²+2ab+b². Here ab=1, so the middle term is 2."
-        },
-
-
-        {
-            id: 32,
-
-            question:
-`If
-
-x^(1/2) + 1/x^(1/2) = 6,
-
-find:
-
-x + 1/x.`,
-
-            options: [
-                "32",
-                "34",
-                "36",
-                "38"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square both sides: x+1/x+2=36. Hence x+1/x=34."
-        },
-
-
-        {
-            id: 33,
-
-            question:
-`If
-
-x + 1/x = 5,
-
-find:
-
-x² + 1/x².`,
-
-            options: [
-                "21",
-                "23",
-                "25",
-                "27"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square: x²+2+x⁻²=25. Therefore x²+x⁻²=23."
-        },
-
-
-        {
-            id: 34,
-
-            question:
-`Given
-
-x + 1/x = 3,
-
-find:
-
-x³ + 1/x³.`,
-
-            options: [
-                "9",
-                "15",
-                "18",
-                "21"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Use a³+b³=(a+b)³−3ab(a+b). Here ab=1. Thus 3³−3(1)(3)=18."
-        },
-
-
-        {
-            id: 35,
-
-            question:
-`If
-
-a + 1/a = 4,
-
-find:
-
-a² + 1/a².`,
-
-            options: [
-                "12",
-                "14",
-                "16",
-                "18"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square: a²+2+a⁻²=16. Therefore a²+a⁻²=14."
-        },
-
-
-        {
-            id: 36,
-
-            question:
-`Simplify:
-
-(2^(n+2) − 2ⁿ) / 2ⁿ.`,
-
-            options: [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Factor 2ⁿ: 2ⁿ(4−1)/2ⁿ = 3."
-        },
-
-
-        {
-            id: 37,
-
-            question:
-`Simplify:
-
-(3^(n+2) + 3^(n+1)) / 3ⁿ.`,
-
-            options: [
-                "9",
-                "12",
-                "15",
-                "18"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Divide each term by 3ⁿ: 3²+3¹ = 9+3=12."
-        },
-
-
-        {
-            id: 38,
-
-            question:
-`Simplify:
-
-(5^(n+1) − 5^(n−1)) / 5^(n−1).`,
-
-            options: [
-                "20",
-                "24",
-                "25",
-                "30"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Divide term-by-term: 5²−1 = 25−1=24."
-        },
-
-
-        {
-            id: 39,
-
-            question:
-`If
-
-2ⁿ + 2^(n+1) + 2^(n+2) = 56,
-
-find n.`,
-
-            options: [
-                "2",
-                "3",
-                "4",
-                "5"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Factor 2ⁿ: 2ⁿ(1+2+4)=56. Thus 7(2ⁿ)=56, so 2ⁿ=8 and n=3."
-        },
-
-
-        {
-            id: 40,
-
-            question:
-`If
-
-3ⁿ + 3^(n+1) = 108,
-
-find:
-
-3^(n+2).`,
-
-            options: [
-                "81",
-                "243",
-                "729",
-                "2187"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Factor 3ⁿ: 4(3ⁿ)=108, so 3ⁿ=27. Therefore 3^(n+2)=9(27)=243."
-        },
-
-
-        {
-            id: 41,
-
-            question:
-`Solve:
-
-2ˣ + 2⁻ˣ = 5/2.`,
-
-            options: [
-                "x = 1 only",
-                "x = −1 only",
-                "x = ±1",
-                "x = ±2"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "For x=1, 2+1/2=5/2. For x=−1, 1/2+2=5/2. Hence x=±1."
-        },
-
-
-        {
-            id: 42,
-
-            question:
-`Solve:
-
-3ˣ + 3⁻ˣ = 10/3.`,
-
-            options: [
-                "x = ±1",
-                "x = ±2",
-                "x = 1 only",
-                "x = 2 only"
-            ],
-
             answer: "A",
-
-            explanation:
-                "For x=1, 3+1/3=10/3. By symmetry x=−1 also works. Hence x=±1."
-        },
-
-
-        {
-            id: 43,
-
-            question:
-`If
-
-2ˣ − 2⁻ˣ = 3/2,
-
-find x.`,
-
-            options: [
-                "1",
-                "2",
-                "3",
-                "4"
-            ],
-
-            answer: "A",
-
-            explanation:
-                "At x=1: 2−1/2 = 3/2. Therefore x=1."
-        },
-
-
-        {
-            id: 44,
-
-            question:
-`If
-
-x^(1/2) = x^(-1/2) + 3,
-
-find x.`,
-
-            options: [
-                "1",
-                "4",
-                "9",
-                "(11 + 3√13)/2"
-            ],
-
-            answer: "D",
-
-            explanation:
-                "Let u=√x. Then u−1/u=3. Multiplying by u gives u²−3u−1=0. Since u>0, u=(3+√13)/2. Squaring gives x=(11+3√13)/2."
-        },
-
-
-        {
-            id: 45,
-
-            question:
-`Solve:
-
-x^(2/3) = 16.`,
-
-            options: [
-                "x = 8",
-                "x = 16",
-                "x = 64",
-                "x = ±64"
-            ],
-
-            answer: "D",
-
-            explanation:
-                "Let t=∛x. Then t²=16, so t=±4. Therefore x=t³=±64."
-        },
-
-
-        {
-            id: 46,
-
-            question:
-`Solve:
-
-x^(3/2) = 27,
-
-x > 0.`,
-
-            options: [
-                "3",
-                "6",
-                "9",
-                "27"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "Raise both sides to the power 2/3: x=27^(2/3)=9."
-        },
-
-
-        {
-            id: 47,
-
-            question:
-`Solve:
-
-x⁻² = 16.`,
-
-            options: [
-                "x = 1/4 only",
-                "x = −1/4 only",
-                "x = ±1/4",
-                "x = ±4"
-            ],
-
-            answer: "C",
-
-            explanation:
-                "x⁻²=1/x²=16, so x²=1/16. Therefore x=±1/4."
-        },
-
-
-        {
-            id: 48,
-
-            question:
-`If
-
-x^(1/2) = y^(1/3),
-
-which relationship follows?`,
-
-            options: [
-                "x² = y³",
-                "x³ = y²",
-                "x² = y³ only when x=y",
-                "x³ = y³"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Raise both sides to the sixth power: x³=y²."
-        },
-
-
-        {
-            id: 49,
-
-            question:
-`Simplify completely:
-
-(a^(2/3)b^(-1/2))⁶
-——————————————
-a²b⁻³`,
-
-            options: [
-                "a²b⁰",
-                "a²",
-                "a⁴b⁻³",
-                "a⁶b⁻⁶"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "The numerator becomes a⁴b⁻³. Dividing by a²b⁻³ gives a²."
-        },
-
-
-        {
-            id: 50,
-
-            question:
-`🔥 CHALLENGE
-
-If
-
-2ˣ + 2⁻ˣ = 5,
-
-find:
-
-2^(2x) + 2^(-2x).`,
-
-            options: [
-                "21",
-                "23",
-                "25",
-                "27"
-            ],
-
-            answer: "B",
-
-            explanation:
-                "Square the given equation: (2ˣ+2⁻ˣ)²=25. This gives 2^(2x)+2^(-2x)+2=25. Therefore the required value is 23."
+            explanation: "Differentiate each term: d(e²ˣ)/dx = 2e²ˣ and d(3x⁴)/dx = 12x³. Therefore f'(x) = 2e²ˣ + 12x³."
         }
 
     ]
-
 };
 
 
 /* =========================================
-   SETTINGS
+   SETTINGS — VERSION 2
 ========================================= */
 
 const COMPLETION_KEY =
-    "conquerorsLabs_MATH101_completed";
+    `conquerorsLabs_MATH101_completed_v${QUIZ_CONFIG.quizVersion}`;
 
 const RESULT_ID_KEY =
-    "conquerorsLabs_MATH101_result_id";
+    `conquerorsLabs_MATH101_result_id_v${QUIZ_CONFIG.quizVersion}`;
 
 const QUIZ_ID =
-    "math101";
+    QUIZ_CONFIG.quizId;
 
 const PASS_MARK =
-    50;
+    QUIZ_CONFIG.passMark;
 
 const questions =
     QUIZ_CONFIG.questions.slice(
@@ -1348,33 +495,22 @@ document.addEventListener(
 function initQuiz() {
 
     if (!questions.length) {
-
-        questionContainer.innerHTML =
-            "<p>No questions available.</p>";
-
+        questionContainer.textContent =
+            "No questions available.";
         return;
     }
-
 
     if (
         !QUIZ_CONFIG.allowRetake &&
-        localStorage.getItem(
-            COMPLETION_KEY
-        ) === "true"
+        localStorage.getItem(COMPLETION_KEY) === "true"
     ) {
-
         showAlreadyCompleted();
-
         return;
     }
 
-
     renderNavigator();
-
     showQuestion();
-
     updateProgress();
-
     startTimer();
 }
 
@@ -1385,144 +521,70 @@ function initQuiz() {
 
 function showQuestion() {
 
-    const q =
-        questions[currentQuestion];
+    const q = questions[currentQuestion];
 
     questionContainer.innerHTML = "";
 
+    const card = document.createElement("div");
+    card.className = "question-card";
 
-    const card =
-        document.createElement("div");
-
-    card.className =
-        "question-card";
-
-
-    const number =
-        document.createElement("div");
-
-    number.className =
-        "question-number";
-
+    const number = document.createElement("div");
+    number.className = "question-number";
     number.textContent =
         `QUESTION ${currentQuestion + 1}`;
 
-
-    const heading =
-        document.createElement("h2");
-
-    heading.textContent =
-        q.question;
-
+    const heading = document.createElement("h2");
+    heading.textContent = q.question;
 
     const optionsContainer =
         document.createElement("div");
 
-    optionsContainer.className =
-        "options-container";
+    optionsContainer.className = "options-container";
 
+    q.options.forEach((optionText, index) => {
 
-    q.options.forEach(
-        (optionText, index) => {
+        const letter = String.fromCharCode(65 + index);
 
-            const letter =
-                String.fromCharCode(
-                    65 + index
-                );
+        const option = document.createElement("button");
+        option.type = "button";
+        option.className = "option";
 
-
-            const option =
-                document.createElement("button");
-
-            option.type = "button";
-
-            option.className = "option";
-
-
-            if (
-                userAnswers[currentQuestion] ===
-                letter
-            ) {
-
-                option.classList.add(
-                    "selected"
-                );
-            }
-
-
-            const optionLetter =
-                document.createElement("span");
-
-            optionLetter.className =
-                "option-letter";
-
-            optionLetter.textContent =
-                letter;
-
-
-            const text =
-                document.createElement("span");
-
-            text.className =
-                "option-text";
-
-            text.textContent =
-                optionText;
-
-
-            option.appendChild(
-                optionLetter
-            );
-
-            option.appendChild(
-                text
-            );
-
-
-            option.addEventListener(
-                "click",
-                () => {
-
-                    if (quizSubmitted) {
-                        return;
-                    }
-
-                    userAnswers[
-                        currentQuestion
-                    ] = letter;
-
-                    showQuestion();
-
-                    updateProgress();
-
-                    renderNavigator();
-                }
-            );
-
-
-            optionsContainer.appendChild(
-                option
-            );
+        if (userAnswers[currentQuestion] === letter) {
+            option.classList.add("selected");
         }
-    );
 
+        const optionLetter = document.createElement("span");
+        optionLetter.className = "option-letter";
+        optionLetter.textContent = letter;
+
+        const text = document.createElement("span");
+        text.className = "option-text";
+        text.textContent = optionText;
+
+        option.appendChild(optionLetter);
+        option.appendChild(text);
+
+        option.addEventListener("click", () => {
+
+            if (quizSubmitted) return;
+
+            userAnswers[currentQuestion] = letter;
+
+            showQuestion();
+            updateProgress();
+            renderNavigator();
+        });
+
+        optionsContainer.appendChild(option);
+    });
 
     card.appendChild(number);
-
     card.appendChild(heading);
+    card.appendChild(optionsContainer);
 
-    card.appendChild(
-        optionsContainer
-    );
-
-
-    questionContainer.appendChild(
-        card
-    );
-
+    questionContainer.appendChild(card);
 
     updateNavigationButtons();
-
     updateProgress();
 }
 
@@ -1531,49 +593,32 @@ function showQuestion() {
    NAVIGATION
 ========================================= */
 
-prevBtn.addEventListener(
-    "click",
-    () => {
+prevBtn.addEventListener("click", () => {
 
-        if (currentQuestion > 0) {
-
-            currentQuestion--;
-
-            showQuestion();
-
-            renderNavigator();
-        }
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion();
+        renderNavigator();
     }
-);
+});
 
 
-nextBtn.addEventListener(
-    "click",
-    () => {
+nextBtn.addEventListener("click", () => {
 
-        if (
-            currentQuestion <
-            questions.length - 1
-        ) {
-
-            currentQuestion++;
-
-            showQuestion();
-
-            renderNavigator();
-        }
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        showQuestion();
+        renderNavigator();
     }
-);
+});
 
 
 function updateNavigationButtons() {
 
-    prevBtn.disabled =
-        currentQuestion === 0;
+    prevBtn.disabled = currentQuestion === 0;
 
     nextBtn.disabled =
-        currentQuestion ===
-        questions.length - 1;
+        currentQuestion === questions.length - 1;
 }
 
 
@@ -1585,63 +630,34 @@ function renderNavigator() {
 
     questionNavigator.innerHTML = "";
 
+    questions.forEach((_, index) => {
 
-    questions.forEach(
-        (_, index) => {
+        const button = document.createElement("button");
 
-            const button =
-                document.createElement("button");
+        button.type = "button";
+        button.className = "question-number-btn";
+        button.textContent = index + 1;
 
-            button.type = "button";
-
-            button.className =
-                "question-number-btn";
-
-            button.textContent =
-                index + 1;
-
-
-            if (userAnswers[index]) {
-
-                button.classList.add(
-                    "answered"
-                );
-            }
-
-
-            if (
-                index === currentQuestion
-            ) {
-
-                button.classList.add(
-                    "current"
-                );
-            }
-
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    if (quizSubmitted) {
-                        return;
-                    }
-
-                    currentQuestion =
-                        index;
-
-                    showQuestion();
-
-                    renderNavigator();
-                }
-            );
-
-
-            questionNavigator.appendChild(
-                button
-            );
+        if (userAnswers[index]) {
+            button.classList.add("answered");
         }
-    );
+
+        if (index === currentQuestion) {
+            button.classList.add("current");
+        }
+
+        button.addEventListener("click", () => {
+
+            if (quizSubmitted) return;
+
+            currentQuestion = index;
+
+            showQuestion();
+            renderNavigator();
+        });
+
+        questionNavigator.appendChild(button);
+    });
 }
 
 
@@ -1652,28 +668,16 @@ function renderNavigator() {
 function updateProgress() {
 
     const answered =
-        userAnswers.filter(
-            answer => answer !== null
-        ).length;
-
+        userAnswers.filter(answer => answer !== null).length;
 
     const percentage =
-        (answered /
-            questions.length) *
-        100;
-
+        (answered / questions.length) * 100;
 
     answeredCount.textContent =
         `${answered} answered`;
 
-
     questionCount.textContent =
-        `Question ${
-            currentQuestion + 1
-        } of ${
-            questions.length
-        }`;
-
+        `Question ${currentQuestion + 1} of ${questions.length}`;
 
     progressFill.style.width =
         `${percentage}%`;
@@ -1688,73 +692,37 @@ function startTimer() {
 
     updateTimerDisplay();
 
+    timerInterval = setInterval(() => {
 
-    timerInterval =
-        setInterval(
-            () => {
+        timeRemaining--;
 
-                timeRemaining--;
+        updateTimerDisplay();
 
-                updateTimerDisplay();
+        if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            submitQuiz(true);
+        }
 
-
-                if (
-                    timeRemaining <= 0
-                ) {
-
-                    clearInterval(
-                        timerInterval
-                    );
-
-                    submitQuiz(true);
-                }
-
-            },
-            1000
-        );
+    }, 1000);
 }
 
 
 function updateTimerDisplay() {
 
-    const minutes =
-        Math.floor(
-            timeRemaining / 60
-        );
-
-
-    const seconds =
-        timeRemaining % 60;
-
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
 
     timer.textContent =
         `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 
+    timerBox.classList.remove("warning", "danger");
 
-    timerBox.classList.remove(
-        "warning",
-        "danger"
-    );
-
-
-    if (
-        timeRemaining <= 300 &&
-        timeRemaining > 60
-    ) {
-
-        timerBox.classList.add(
-            "warning"
-        );
+    if (timeRemaining <= 300 && timeRemaining > 60) {
+        timerBox.classList.add("warning");
     }
 
-
-    if (
-        timeRemaining <= 60
-    ) {
-
-        timerBox.classList.add(
-            "danger"
-        );
+    if (timeRemaining <= 60) {
+        timerBox.classList.add("danger");
     }
 }
 
@@ -1763,43 +731,26 @@ function updateTimerDisplay() {
    SUBMIT MODAL
 ========================================= */
 
-submitBtn.addEventListener(
-    "click",
-    () => {
+submitBtn.addEventListener("click", () => {
 
-        if (quizSubmitted) {
-            return;
-        }
+    if (quizSubmitted) return;
 
-        submitModal.classList.remove(
-            "hidden"
-        );
-    }
-);
+    submitModal.classList.remove("hidden");
+});
 
 
-cancelSubmit.addEventListener(
-    "click",
-    () => {
+cancelSubmit.addEventListener("click", () => {
 
-        submitModal.classList.add(
-            "hidden"
-        );
-    }
-);
+    submitModal.classList.add("hidden");
+});
 
 
-confirmSubmit.addEventListener(
-    "click",
-    () => {
+confirmSubmit.addEventListener("click", () => {
 
-        submitModal.classList.add(
-            "hidden"
-        );
+    submitModal.classList.add("hidden");
 
-        openNameModal();
-    }
-);
+    openNameModal();
+});
 
 
 /* =========================================
@@ -1808,81 +759,48 @@ confirmSubmit.addEventListener(
 
 function openNameModal() {
 
-    studentNameInput.value =
-        "";
+    studentNameInput.value = "";
 
-    nameError.style.display =
-        "none";
+    nameError.style.display = "none";
 
-    nameModal.classList.remove(
-        "hidden"
-    );
+    nameModal.classList.remove("hidden");
 
-    setTimeout(
-        () => {
-            studentNameInput.focus();
-        },
-        100
-    );
+    setTimeout(() => {
+        studentNameInput.focus();
+    }, 100);
 }
 
 
-cancelName.addEventListener(
-    "click",
-    () => {
+cancelName.addEventListener("click", () => {
 
-        nameModal.classList.add(
-            "hidden"
-        );
+    nameModal.classList.add("hidden");
+});
+
+
+confirmName.addEventListener("click", () => {
+
+    const name = studentNameInput.value.trim();
+
+    if (!name) {
+        nameError.style.display = "block";
+        studentNameInput.focus();
+        return;
     }
-);
+
+    studentName = name.substring(0, 60);
+
+    nameModal.classList.add("hidden");
+
+    submitQuiz(false);
+});
 
 
-confirmName.addEventListener(
-    "click",
-    () => {
+studentNameInput.addEventListener("keydown", event => {
 
-        const name =
-            studentNameInput.value.trim();
-
-
-        if (!name) {
-
-            nameError.style.display =
-                "block";
-
-            studentNameInput.focus();
-
-            return;
-        }
-
-
-        studentName =
-            name.substring(0, 60);
-
-
-        nameModal.classList.add(
-            "hidden"
-        );
-
-
-        submitQuiz(false);
+    if (event.key === "Enter") {
+        confirmName.click();
     }
-);
-
-
-studentNameInput.addEventListener(
-    "keydown",
-    event => {
-
-        if (
-            event.key === "Enter"
-        ) {
-
-            confirmName.click();
-        }
-    }
-);
+});
 
 
 /* =========================================
@@ -1899,39 +817,22 @@ async function saveQuizResult(
 
     try {
 
-        const {
-            data,
-            error
-        } =
+        const { data, error } =
             await supabaseClient.rpc(
                 "submit_quiz_result",
                 {
-                    p_student_name:
-                        studentName || "Anonymous",
-
-                    p_quiz_id:
-                        QUIZ_ID,
-
-                    p_quiz_title:
-                        QUIZ_CONFIG.title,
-
-                    p_score:
-                        score,
-
-                    p_total_questions:
-                        totalQuestions,
-
-                    p_percentage:
-                        percentage,
-
+                    p_student_name: studentName || "Anonymous",
+                    p_quiz_id: QUIZ_ID,
+                    p_quiz_title: QUIZ_CONFIG.title,
+                    p_score: score,
+                    p_total_questions: totalQuestions,
+                    p_percentage: percentage,
                     p_qualified_for_leaderboard:
                         qualifiedForLeaderboard
                 }
             );
 
-
         if (error) {
-
             console.error(
                 "MATH 101 result save error:",
                 error
@@ -1939,7 +840,6 @@ async function saveQuizResult(
 
             return null;
         }
-
 
         return data;
 
@@ -1959,148 +859,69 @@ async function saveQuizResult(
    SUBMIT QUIZ
 ========================================= */
 
-async function submitQuiz(
-    automatic = false
-) {
+async function submitQuiz(automatic = false) {
 
-    if (quizSubmitted) {
-        return;
-    }
-
+    if (quizSubmitted) return;
 
     quizSubmitted = true;
 
-
-    clearInterval(
-        timerInterval
-    );
-
+    clearInterval(timerInterval);
 
     let correct = 0;
-
     let wrong = 0;
-
     let unanswered = 0;
 
+    questions.forEach((question, index) => {
 
-    questions.forEach(
-        (question, index) => {
+        const selected = userAnswers[index];
 
-            const selected =
-                userAnswers[index];
-
-
-            if (!selected) {
-
-                unanswered++;
-
-            }
-
-            else if (
-                selected ===
-                question.answer
-            ) {
-
-                correct++;
-
-            }
-
-            else {
-
-                wrong++;
-            }
+        if (!selected) {
+            unanswered++;
+        } else if (selected === question.answer) {
+            correct++;
+        } else {
+            wrong++;
         }
-    );
+    });
 
-
-    const total =
-        questions.length;
-
+    const total = questions.length;
 
     const percentage =
-        Math.round(
-            (correct / total) * 100
-        );
-
+        Math.round((correct / total) * 100);
 
     const qualifiedForLeaderboard =
         percentage >= PASS_MARK;
 
-
-    if (
-        !QUIZ_CONFIG.allowRetake
-    ) {
-
-        localStorage.setItem(
-            COMPLETION_KEY,
-            "true"
-        );
+    if (!QUIZ_CONFIG.allowRetake) {
+        localStorage.setItem(COMPLETION_KEY, "true");
     }
 
-
-    /*
-        SAVE RESULT THROUGH SUPABASE RPC
-    */
-
-    const resultId =
-        await saveQuizResult(
-            studentName,
-            correct,
-            total,
-            percentage,
-            qualifiedForLeaderboard
-        );
-
-
-    /*
-        SAVE THE RESULT ID LOCALLY
-        SO LEADERBOARD PAGE CAN
-        SHOW THIS STUDENT'S RESULT.
-    */
+    const resultId = await saveQuizResult(
+        studentName,
+        correct,
+        total,
+        percentage,
+        qualifiedForLeaderboard
+    );
 
     if (resultId) {
-
-        localStorage.setItem(
-            RESULT_ID_KEY,
-            resultId
-        );
+        localStorage.setItem(RESULT_ID_KEY, resultId);
     }
 
-
-    const saveSuccessful =
-        Boolean(resultId);
-
-
-    /*
-        CHECK LEADERBOARD
-    */
+    const saveSuccessful = Boolean(resultId);
 
     let leaderboardOpen = false;
 
-
     try {
 
-        const {
-            data,
-            error
-        } =
+        const { data, error } =
             await supabaseClient
                 .from("leaderboard_settings")
-                .select(
-                    "leaderboard_enabled, pass_mark"
-                )
-                .eq(
-                    "quiz_id",
-                    QUIZ_ID
-                )
+                .select("leaderboard_enabled, pass_mark")
+                .eq("quiz_id", QUIZ_ID)
                 .single();
 
-
-        if (
-            !error &&
-            data
-        ) {
-
+        if (!error && data) {
             leaderboardOpen =
                 data.leaderboard_enabled === true;
         }
@@ -2113,21 +934,9 @@ async function submitQuiz(
         );
     }
 
+    quizSection.classList.add("hidden");
 
-    quizSection.classList.add(
-        "hidden"
-    );
-
-
-    resultSection.classList.remove(
-        "hidden"
-    );
-
-
-    /*
-        IF LEADERBOARD IS CLOSED,
-        HIDE SCORE COMPLETELY.
-    */
+    resultSection.classList.remove("hidden");
 
     if (!leaderboardOpen) {
 
@@ -2139,7 +948,6 @@ async function submitQuiz(
 
         return;
     }
-
 
     showNormalResult(
         correct,
@@ -2168,86 +976,45 @@ function showNormalResult(
 ) {
 
     const icon =
-        resultSection.querySelector(
-            ".result-icon"
-        );
+        resultSection.querySelector(".result-icon");
 
     const label =
-        resultSection.querySelector(
-            ".result-label"
-        );
+        resultSection.querySelector(".result-label");
 
+    icon.textContent = "✓";
 
-    icon.textContent =
-        "✓";
+    icon.classList.remove("hidden");
 
-    icon.classList.remove(
-        "hidden"
-    );
+    label.textContent = "QUIZ COMPLETE";
 
+    label.classList.remove("hidden");
 
-    label.textContent =
-        "QUIZ COMPLETE";
-
-    label.classList.remove(
-        "hidden"
-    );
-
-
-    document.getElementById(
-        "resultScore"
-    ).textContent =
+    document.getElementById("resultScore").textContent =
         `${correct}/${total}`;
 
-    document.getElementById(
-        "resultScore"
-    ).classList.remove(
-        "hidden"
-    );
+    document.getElementById("resultScore")
+        .classList.remove("hidden");
 
-
-    document.getElementById(
-        "resultPercentage"
-    ).textContent =
+    document.getElementById("resultPercentage").textContent =
         `${percentage}%`;
 
-    document.getElementById(
-        "resultPercentage"
-    ).classList.remove(
-        "hidden"
-    );
+    document.getElementById("resultPercentage")
+        .classList.remove("hidden");
 
-
-    document.getElementById(
-        "correctCount"
-    ).textContent =
+    document.getElementById("correctCount").textContent =
         correct;
 
-
-    document.getElementById(
-        "wrongCount"
-    ).textContent =
+    document.getElementById("wrongCount").textContent =
         wrong;
 
-
-    document.getElementById(
-        "unansweredCount"
-    ).textContent =
+    document.getElementById("unansweredCount").textContent =
         unanswered;
 
-
-    document.querySelector(
-        ".result-stats"
-    ).classList.remove(
-        "hidden"
-    );
-
+    document.querySelector(".result-stats")
+        .classList.remove("hidden");
 
     const resultMessage =
-        document.getElementById(
-            "resultMessage"
-        );
-
+        document.getElementById("resultMessage");
 
     if (automatic) {
 
@@ -2270,32 +1037,17 @@ function showNormalResult(
             "The questions exposed some weak spots. Study the corrections and attack them again.";
     }
 
-
     if (saveSuccessful) {
-
         resultMessage.textContent +=
             " Your result has been recorded.";
     }
 
+    reviewBtn.classList.remove("hidden");
 
-    reviewBtn.classList.remove(
-        "hidden"
-    );
-
-
-    if (
-        QUIZ_CONFIG.allowRetake
-    ) {
-
-        retakeBtn.classList.remove(
-            "hidden"
-        );
-
+    if (QUIZ_CONFIG.allowRetake) {
+        retakeBtn.classList.remove("hidden");
     } else {
-
-        retakeBtn.classList.add(
-            "hidden"
-        );
+        retakeBtn.classList.add("hidden");
     }
 }
 
@@ -2304,55 +1056,33 @@ function showNormalResult(
    LOCKED RESULT
 ========================================= */
 
-function showLockedResult(
-    message
-) {
+function showLockedResult(message) {
 
     resultSection
         .querySelector(".result-icon")
         .classList.add("hidden");
 
-
     resultSection
         .querySelector(".result-label")
         .classList.add("hidden");
 
+    document.getElementById("resultScore")
+        .classList.add("hidden");
 
-    document.getElementById(
-        "resultScore"
-    ).classList.add("hidden");
+    document.getElementById("resultPercentage")
+        .classList.add("hidden");
 
+    document.querySelector(".result-stats")
+        .classList.add("hidden");
 
-    document.getElementById(
-        "resultPercentage"
-    ).classList.add("hidden");
+    reviewBtn.classList.add("hidden");
 
+    retakeBtn.classList.add("hidden");
 
-    document.querySelector(
-        ".result-stats"
-    ).classList.add("hidden");
+    reviewSection.classList.add("hidden");
 
-
-    reviewBtn.classList.add(
-        "hidden"
-    );
-
-
-    retakeBtn.classList.add(
-        "hidden"
-    );
-
-
-    reviewSection.classList.add(
-        "hidden"
-    );
-
-
-    document.getElementById(
-        "resultMessage"
-    ).textContent =
+    document.getElementById("resultMessage").textContent =
         message;
-
 
     window.scrollTo({
         top: 0,
@@ -2365,164 +1095,101 @@ function showLockedResult(
    REVIEW
 ========================================= */
 
-reviewBtn.addEventListener(
-    "click",
-    () => {
+reviewBtn.addEventListener("click", () => {
 
-        reviewSection.classList.toggle(
-            "hidden"
-        );
+    reviewSection.classList.toggle("hidden");
 
+    if (!reviewSection.classList.contains("hidden")) {
 
-        if (
-            !reviewSection.classList.contains(
-                "hidden"
-            )
-        ) {
+        renderReview();
 
-            renderReview();
-
-            reviewSection.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+        reviewSection.scrollIntoView({
+            behavior: "smooth"
+        });
     }
-);
+});
 
 
 function renderReview() {
 
     reviewContainer.innerHTML = "";
 
+    questions.forEach((question, index) => {
 
-    questions.forEach(
-        (question, index) => {
+        const selected = userAnswers[index];
 
-            const selected =
-                userAnswers[index];
+        const correct =
+            selected === question.answer;
 
+        const card = document.createElement("div");
 
-            const correct =
-                selected ===
-                question.answer;
+        card.className =
+            `review-card ${correct ? "correct" : "wrong"}`;
 
+        const number = document.createElement("div");
 
-            const card =
-                document.createElement(
-                    "div"
-                );
+        number.className = "review-question-number";
 
+        number.textContent =
+            `QUESTION ${index + 1}`;
 
-            card.className =
-                `review-card ${
-                    correct
-                        ? "correct"
-                        : "wrong"
-                }`;
+        const questionText = document.createElement("div");
 
+        questionText.className = "review-question";
 
-            const number =
-                document.createElement(
-                    "div"
-                );
+        questionText.textContent = question.question;
 
-            number.className =
-                "review-question-number";
+        const selectedAnswer = selected
+            ? `${selected}. ${question.options[selected.charCodeAt(0) - 65]}`
+            : "Not answered";
 
-            number.textContent =
-                `QUESTION ${index + 1}`;
+        const correctAnswer =
+            `${question.answer}. ${question.options[question.answer.charCodeAt(0) - 65]}`;
 
+        const yourAnswer = document.createElement("div");
 
-            const questionText =
-                document.createElement(
-                    "div"
-                );
+        yourAnswer.className = "review-answer";
 
-            questionText.className =
-                "review-question";
+        const yourLabel = document.createElement("strong");
+        yourLabel.textContent = "Your answer: ";
 
-            questionText.textContent =
-                question.question;
+        yourAnswer.appendChild(yourLabel);
+        yourAnswer.appendChild(
+            document.createTextNode(selectedAnswer)
+        );
 
+        const answer = document.createElement("div");
 
-            const selectedAnswer =
-                selected
-                    ? `${selected}. ${
-                        question.options[
-                            selected.charCodeAt(0) - 65
-                        ]
-                    }`
-                    : "Not answered";
+        answer.className = "review-answer";
 
+        const answerLabel = document.createElement("strong");
+        answerLabel.textContent = "Correct answer: ";
 
-            const correctAnswer =
-                `${question.answer}. ${
-                    question.options[
-                        question.answer.charCodeAt(0) - 65
-                    ]
-                }`;
+        answer.appendChild(answerLabel);
+        answer.appendChild(
+            document.createTextNode(correctAnswer)
+        );
 
+        const correction = document.createElement("div");
 
-            const yourAnswer =
-                document.createElement(
-                    "div"
-                );
+        correction.className = "review-correction";
 
-            yourAnswer.className =
-                "review-answer";
+        const correctionLabel = document.createElement("strong");
+        correctionLabel.textContent = "🧠 JOT THIS: ";
 
-            yourAnswer.innerHTML =
-                `<strong>Your answer:</strong> ${selectedAnswer}`;
+        correction.appendChild(correctionLabel);
+        correction.appendChild(
+            document.createTextNode(question.explanation)
+        );
 
+        card.appendChild(number);
+        card.appendChild(questionText);
+        card.appendChild(yourAnswer);
+        card.appendChild(answer);
+        card.appendChild(correction);
 
-            const answer =
-                document.createElement(
-                    "div"
-                );
-
-            answer.className =
-                "review-answer";
-
-            answer.innerHTML =
-                `<strong>Correct answer:</strong> ${correctAnswer}`;
-
-
-            const correction =
-                document.createElement(
-                    "div"
-                );
-
-            correction.className =
-                "review-correction";
-
-            correction.innerHTML =
-                `<strong>🧠 JOT THIS:</strong> ${question.explanation}`;
-
-
-            card.appendChild(number);
-
-            card.appendChild(
-                questionText
-            );
-
-            card.appendChild(
-                yourAnswer
-            );
-
-            card.appendChild(
-                answer
-            );
-
-            card.appendChild(
-                correction
-            );
-
-
-            reviewContainer.appendChild(
-                card
-            );
-        }
-    );
+        reviewContainer.appendChild(card);
+    });
 }
 
 
@@ -2532,81 +1199,41 @@ function renderReview() {
 
 function showAlreadyCompleted() {
 
-    quizSection.classList.add(
-        "hidden"
-    );
+    quizSection.classList.add("hidden");
 
-
-    resultSection.classList.remove(
-        "hidden"
-    );
-
+    resultSection.classList.remove("hidden");
 
     const icon =
-        resultSection.querySelector(
-            ".result-icon"
-        );
+        resultSection.querySelector(".result-icon");
 
     const label =
-        resultSection.querySelector(
-            ".result-label"
-        );
+        resultSection.querySelector(".result-label");
 
+    icon.textContent = "🔒";
 
-    icon.textContent =
-        "🔒";
+    icon.classList.remove("hidden");
 
-    icon.classList.remove(
-        "hidden"
-    );
+    label.textContent = "ATTEMPT COMPLETED";
 
+    label.classList.remove("hidden");
 
-    label.textContent =
-        "ATTEMPT COMPLETED";
-
-    label.classList.remove(
-        "hidden"
-    );
-
-
-    document.getElementById(
-        "resultScore"
-    ).textContent =
+    document.getElementById("resultScore").textContent =
         "LOCKED";
 
-    document.getElementById(
-        "resultScore"
-    ).classList.remove(
-        "hidden"
-    );
+    document.getElementById("resultScore")
+        .classList.remove("hidden");
 
+    document.getElementById("resultPercentage").textContent = "";
 
-    document.getElementById(
-        "resultPercentage"
-    ).textContent = "";
+    document.querySelector(".result-stats")
+        .classList.add("hidden");
 
+    document.getElementById("resultMessage").textContent =
+        "You have already completed this MATH 101 Differentiation CBT on this browser/device. Retakes are currently disabled.";
 
-    document.querySelector(
-        ".result-stats"
-    ).classList.add(
-        "hidden"
-    );
+    reviewBtn.classList.add("hidden");
 
-
-    document.getElementById(
-        "resultMessage"
-    ).textContent =
-        "You have already completed this MATH 101 CBT on this browser/device. Retakes are currently disabled.";
-
-
-    reviewBtn.classList.add(
-        "hidden"
-    );
-
-
-    retakeBtn.classList.add(
-        "hidden"
-    );
+    retakeBtn.classList.add("hidden");
 }
 
 
@@ -2614,23 +1241,13 @@ function showAlreadyCompleted() {
    RETAKE
 ========================================= */
 
-retakeBtn.addEventListener(
-    "click",
-    () => {
+retakeBtn.addEventListener("click", () => {
 
-        if (
-            !QUIZ_CONFIG.allowRetake
-        ) {
-
-            return;
-        }
-
-
-        localStorage.removeItem(
-            COMPLETION_KEY
-        );
-
-
-        location.reload();
+    if (!QUIZ_CONFIG.allowRetake) {
+        return;
     }
-);
+
+    localStorage.removeItem(COMPLETION_KEY);
+
+    location.reload();
+});
