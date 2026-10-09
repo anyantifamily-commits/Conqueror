@@ -27,7 +27,7 @@ const QUIZZES = {
 
     "math101": {
         title: "MATH 101",
-        resultKey: "conquerorsLabs_MATH101_result_id"
+        resultKey: "conquerorsLabs_MATH101_result_id_v2"
     }
 
 };
