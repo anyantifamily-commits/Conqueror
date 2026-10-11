@@ -11,7 +11,7 @@ const QUIZ_CONFIG = {
     title: "BIO 101 — Energy Metabolism",
 
     // Increment this number for a completely new set.
-    quizVersion: 3,
+    quizVersion: 4,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
