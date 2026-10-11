@@ -1,512 +1,570 @@
 /* =================================================
    CONQUERORS LABS
-   BIO 101 CBT — EMBRYOLOGY
+   BIO 101 CBT — ENERGY METABOLISM
 ================================================= */
 
-
 /* =================================================
-   ✏️ EASY-EDIT QUIZ CONFIGURATION
+   EASY-EDIT QUIZ CONFIGURATION
 ================================================= */
 
 const QUIZ_CONFIG = {
+    title: "BIO 101 — Energy Metabolism",
 
-    title: "BIO 101 — Embryology",
-
-    /*
-       IMPORTANT:
-       Change ONLY this number when you replace
-       this quiz with a completely new question set.
-
-       Example:
-       Current set = 2
-       Next new set = 3
-       Next one = 4
-    */
+    // Increment this number for a completely new set.
     quizVersion: 3,
 
-    /*
-       DO NOT CHANGE THIS unless you intentionally
-       want to create a completely separate leaderboard.
-    */
+    // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
 
-    timeLimit: 20,
-
-    maxQuestions: 35,
-
+    timeLimit: 60,
+    maxQuestions: 40,
     passMark: 50,
-
     allowRetake: false,
-
-
-    /* =============================================
-       35 BIO 101 — EMBRYOLOGY QUESTIONS
-    ============================================= */
 
     questions: [
 
+        // =========================================
+        // PART 1: ENERGY METABOLISM
+        // =========================================
+
         {
             id: 1,
-            question: "What is the primary definition of embryology?",
+            question: "During carbohydrate oxidation, which molecule is formed from pyruvate before it enters the Krebs cycle?",
             options: [
-                "The study of aging and senescence",
-                "The study of developmental events that occur during the prenatal stage",
-                "The study of postnatal human anatomy",
-                "The study of genetic mutations exclusively"
+                "Pyruvate",
+                "Acetyl coenzyme A (acetyl-CoA)",
+                "Lactic acid",
+                "Oxaloacetate"
             ],
-            answer: "The study of developmental events that occur during the prenatal stage",
-            explanation: "Embryology is the study of developmental events that occur during the prenatal stage."
+            answer: "Acetyl coenzyme A (acetyl-CoA)",
+            explanation: "Pyruvate is converted into acetyl-CoA by the pyruvate dehydrogenase complex. Acetyl-CoA then enters the Krebs cycle. Not every dietary fuel follows exactly the same pathway."
         },
 
         {
             id: 2,
-            question: "How long does the embryonic period last compared to the fetal period?",
+            question: "The breakdown of complex energy-rich molecules into simpler molecules, usually releasing energy, is called:",
             options: [
-                "Embryonic: first 8 weeks; Fetal: remaining 30 weeks",
-                "Embryonic: first 12 weeks; Fetal: remaining 28 weeks",
-                "Embryonic: first 4 weeks; Fetal: remaining 36 weeks",
-                "Embryonic: first 20 weeks; Fetal: remaining 20 weeks"
+                "Anabolism",
+                "Catabolism",
+                "Glycolysis",
+                "Phosphorylation"
             ],
-            answer: "Embryonic: first 8 weeks; Fetal: remaining 30 weeks",
-            explanation: "The embryonic period lasts approximately the first 8 weeks after fertilization, followed by the fetal period."
+            answer: "Catabolism",
+            explanation: "Catabolism breaks down complex molecules into simpler products and releases usable energy, which can be captured in ATP and reduced coenzymes."
         },
 
         {
             id: 3,
-            question: "What is the single mono-nucleated cell produced by the fusion of a spermatozoon and a mature ovum called?",
+            question: "The process of building large, complex molecules from smaller ones is known as:",
             options: [
-                "Morula",
-                "Blastocyst",
-                "Zygote",
-                "Gastrula"
+                "Catabolism",
+                "Anabolism",
+                "Hydrolysis",
+                "Oxidation"
             ],
-            answer: "Zygote",
-            explanation: "The zygote is the single cell formed when a spermatozoon fuses with a mature ovum."
+            answer: "Anabolism",
+            explanation: "Anabolism is the constructive part of metabolism. It uses energy and small precursors to build molecules such as proteins and nucleic acids."
         },
 
         {
             id: 4,
-            question: "Which enzyme is released by the sperm to allow penetration of the zona pellucida and cell membrane surrounding the ovum?",
+            question: "During digestion, polysaccharides are broken down into simpler units primarily consisting of:",
             options: [
-                "Amylase",
-                "Hyaluronidase",
-                "Lipase",
-                "Pepsin"
+                "Amino acids",
+                "Fatty acids",
+                "Simple sugars",
+                "Nucleotides"
             ],
-            answer: "Hyaluronidase",
-            explanation: "Hyaluronidase helps sperm penetrate the surrounding cells and contributes to the process of fertilization."
+            answer: "Simple sugars",
+            explanation: "Digestive enzymes break polysaccharides such as starch into smaller carbohydrates, ultimately producing monosaccharides such as glucose."
         },
 
         {
             id: 5,
-            question: "What is the most common site of conception in the female reproductive tract?",
+            question: "During digestion, proteins are broken down into:",
             options: [
-                "Uterine cavity",
-                "Cervical canal",
-                "Ampulla of the fallopian tube",
-                "Ovary surface"
+                "Amino acids",
+                "Fatty acids",
+                "Simple sugars",
+                "Nucleotides"
             ],
-            answer: "Ampulla of the fallopian tube",
-            explanation: "The ampulla of the uterine or fallopian tube is the most common site of fertilization."
+            answer: "Amino acids",
+            explanation: "Proteases and peptidases break proteins into peptides and ultimately amino acids, which can be absorbed and used by the body."
         },
 
         {
             id: 6,
-            question: "How many total chromosomes does a normal human somatic cell contain?",
+            question: "What are the main products of the digestion of dietary triglycerides?",
             options: [
-                "23",
-                "44",
-                "46",
-                "48"
+                "Sugars and glycerol",
+                "Fatty acids and monoacylglycerols",
+                "Amino acids",
+                "Nucleotides"
             ],
-            answer: "46",
-            explanation: "A normal human somatic cell contains 46 chromosomes arranged in 23 pairs."
+            answer: "Fatty acids and monoacylglycerols",
+            explanation: "Pancreatic lipase mainly breaks triglycerides into free fatty acids and monoacylglycerols. Glycerol may also be produced. Cholesterol is not a normal breakdown product of triglycerides."
         },
 
         {
             id: 7,
-            question: "Which parent's sex chromosomes determine the sex of the developing child?",
+            question: "Nucleic acids are digested into smaller components that include:",
             options: [
-                "The mother",
-                "The father",
-                "Both contribute equally to sex determination",
-                "Neither; it is determined randomly post-fertilization"
+                "Nucleotides",
+                "Fatty acids",
+                "Amino acids",
+                "Triglycerides"
             ],
-            answer: "The father",
-            explanation: "The mother contributes an X chromosome, while the father contributes either X or Y, determining chromosomal sex."
+            answer: "Nucleotides",
+            explanation: "Nucleases break DNA and RNA into smaller units, including nucleotides. Further digestion can release nitrogenous bases, sugars and phosphate."
         },
 
         {
             id: 8,
-            question: "What phrase describes the series of rapid mitotic divisions without cell growth that immediately follow fertilization?",
+            question: "Where does glycolysis take place in a eukaryotic cell?",
             options: [
-                "Cleavage",
-                "Gastrulation",
-                "Neurulation",
-                "Maturation"
+                "In the mitochondrial matrix",
+                "In the cytosol",
+                "In the nucleus",
+                "On the inner mitochondrial membrane"
             ],
-            answer: "Cleavage",
-            explanation: "Cleavage consists of rapid mitotic divisions of the zygote without an increase in overall size."
+            answer: "In the cytosol",
+            explanation: "Glycolysis occurs in the cytosol. It converts glucose into pyruvate through a sequence of enzyme-catalysed reactions."
         },
 
         {
             id: 9,
-            question: "Approximately how many days post-fertilization does the morula enter the uterine cavity?",
+            question: "The process that breaks fatty acids into two-carbon acetyl-CoA units is called:",
             options: [
-                "1 day",
-                "2 days",
-                "4 days",
-                "7 days"
+                "Deamination",
+                "Beta-oxidation",
+                "Glycolysis",
+                "Glycogenesis"
             ],
-            answer: "4 days",
-            explanation: "The morula reaches the uterine cavity at approximately the fourth day after fertilization."
+            answer: "Beta-oxidation",
+            explanation: "Beta-oxidation removes two-carbon units from fatty acyl-CoA molecules, producing acetyl-CoA, NADH and FADH₂."
         },
 
         {
             id: 10,
-            question: "What is a cluster of cells resembling a mulberry formed during early cleavage called?",
+            question: "Which process removes an amino group from an amino acid during amino acid catabolism?",
             options: [
-                "Blastocyst",
-                "Morula",
-                "Gastrula",
-                "Placenta"
+                "Beta-oxidation",
+                "Deamination",
+                "Glycolysis",
+                "Glycogenesis"
             ],
-            answer: "Morula",
-            explanation: "The morula is a solid ball of cells formed during early cleavage and resembles a mulberry."
+            answer: "Deamination",
+            explanation: "Deamination removes an amino group from an amino acid. The remaining carbon skeleton can enter energy metabolism through different pathways, depending on the amino acid."
         },
+
+        // =========================================
+        // PART 2: GLYCOLYSIS
+        // =========================================
 
         {
             id: 11,
-            question: "What are the two distinct cell types that emerge in a late blastocyst?",
+            question: "How many molecules of pyruvate are produced from one molecule of glucose during glycolysis?",
             options: [
-                "Ectoderm and Endoderm",
-                "Trophoblast and Inner cell mass (embryoblast)",
-                "Cytotrophoblast and Syncytiotrophoblast",
-                "Epiblast and Hypoblast"
+                "One",
+                "Two",
+                "Three",
+                "Four"
             ],
-            answer: "Trophoblast and Inner cell mass (embryoblast)",
-            explanation: "The late blastocyst consists mainly of the outer trophoblast and the inner cell mass, also called the embryoblast."
+            answer: "Two",
+            explanation: "One six-carbon glucose molecule is split and processed to yield two three-carbon pyruvate molecules."
         },
 
         {
             id: 12,
-            question: "Which hormone is produced by the trophoblasts starting on day 6 to maintain the corpus luteum and prevent menstruation?",
+            question: "Which statement correctly describes glycolysis in relation to oxygen?",
             options: [
-                "Estrogen",
-                "Progesterone",
-                "Human chorionic gonadotropin (hCG)",
-                "Oxytocin"
+                "It directly requires oxygen",
+                "It does not directly require oxygen",
+                "It occurs only inside mitochondria",
+                "It occurs only during photosynthesis"
             ],
-            answer: "Human chorionic gonadotropin (hCG)",
-            explanation: "hCG produced by trophoblastic tissue maintains the corpus luteum, allowing progesterone production to continue."
+            answer: "It does not directly require oxygen",
+            explanation: "Glycolysis does not use oxygen directly and can occur whether oxygen is available or not. The fate of pyruvate and the regeneration of NAD⁺ depend on cellular conditions."
         },
 
         {
             id: 13,
-            question: "On which day after fertilization is the process of implantation typically completed?",
+            question: "Which vitamin-derived coenzyme is directly required for the oxidation step of glycolysis?",
             options: [
-                "3rd to 4th day",
-                "6th day",
-                "10th to 11th day",
-                "20th day"
+                "Vitamin C-derived ascorbate",
+                "Vitamin B3-derived NAD⁺",
+                "Vitamin A-derived retinal",
+                "Vitamin D-derived calcitriol"
             ],
-            answer: "10th to 11th day",
-            explanation: "Implantation is generally completed by approximately the 10th to 11th day after fertilization."
+            answer: "Vitamin B3-derived NAD⁺",
+            explanation: "NAD⁺ is derived from niacin, vitamin B3, and accepts electrons during the glyceraldehyde-3-phosphate oxidation step of glycolysis. Thiamin, vitamin B1, is important in other energy-metabolism reactions, especially pyruvate oxidation."
         },
 
         {
             id: 14,
-            question: "What name is given to the deeper type of penetration where the human blastocyst is covered on all sides by the endometrium?",
+            question: "What is the product of the first phosphorylation of glucose during glycolysis?",
             options: [
-                "Superficial implantation",
-                "Interstitial implantation",
-                "Ectopic implantation",
-                "Tubal implantation"
+                "Fructose-1,6-bisphosphate",
+                "Glucose-6-phosphate",
+                "Pyruvate",
+                "Glyceraldehyde-3-phosphate"
             ],
-            answer: "Interstitial implantation",
-            explanation: "Interstitial implantation occurs when the blastocyst becomes completely embedded within the endometrium."
+            answer: "Glucose-6-phosphate",
+            explanation: "Hexokinase transfers a phosphate group from ATP to glucose, forming glucose-6-phosphate and ADP."
         },
 
         {
             id: 15,
-            question: "During gastrulation, a single-layered blastula is reorganized into what structure?",
+            question: "Which molecule is formed when fructose-6-phosphate is phosphorylated during glycolysis?",
             options: [
-                "Bilaminar disc",
-                "Trilaminar structure known as the gastrula",
-                "Neural tube",
-                "Morula"
+                "Fructose-1,6-bisphosphate",
+                "Phosphoenolpyruvate",
+                "3-phosphoglycerate",
+                "Lactate"
             ],
-            answer: "Trilaminar structure known as the gastrula",
-            explanation: "Gastrulation reorganizes the embryo into a trilaminar structure containing the three primary germ layers."
+            answer: "Fructose-1,6-bisphosphate",
+            explanation: "Phosphofructokinase-1 uses ATP to convert fructose-6-phosphate into fructose-1,6-bisphosphate. This is a major regulatory step in glycolysis."
         },
 
         {
             id: 16,
-            question: "What are the three primary germ layers formed during gastrulation?",
+            question: "What is the net ATP yield from one molecule of glucose during glycolysis?",
             options: [
-                "Ectoderm, mesoderm, endoderm",
-                "Trophoblast, epiblast, hypoblast",
-                "Amnion, chorion, yolk sac",
-                "Sclerotome, myotome, dermatome"
+                "One ATP",
+                "Two ATP",
+                "Three ATP",
+                "Four ATP"
             ],
-            answer: "Ectoderm, mesoderm, endoderm",
-            explanation: "The three primary germ layers are ectoderm, mesoderm, and endoderm."
+            answer: "Two ATP",
+            explanation: "Glycolysis produces four ATP but uses two ATP in its early steps, giving a net gain of two ATP per glucose molecule."
         },
 
         {
             id: 17,
-            question: "Which embryonic structure gives rise to the nervous system, including the brain and spinal cord?",
+            question: "Which statement best describes the main products of glycolysis per glucose molecule?",
             options: [
-                "Notochord",
-                "Neural tube",
-                "Primitive streak",
-                "Yolk sac"
+                "Two pyruvate, two net ATP and two NADH",
+                "One pyruvate, four net ATP and one NADH",
+                "Two acetyl-CoA, six ATP and six FADH₂",
+                "Two lactate, no ATP and no NADH"
             ],
-            answer: "Neural tube",
-            explanation: "The neural tube develops into the central nervous system, including the brain and spinal cord."
+            answer: "Two pyruvate, two net ATP and two NADH",
+            explanation: "The overall products of glycolysis per glucose include two pyruvate, two net ATP, two NADH and water. The exact energy yield from later respiration depends on how reducing equivalents are transferred and used."
         },
 
         {
             id: 18,
-            question: "Around what day does the mesoderm form as a third layer between the epiblast and hypoblast?",
+            question: "When oxygen availability or mitochondrial oxidation is insufficient, pyruvate may be converted into which product in human cells?",
             options: [
-                "Day 8",
-                "Day 10",
-                "Day 16",
-                "Day 21"
+                "Acetyl-CoA",
+                "Lactate",
+                "Citrate",
+                "Oxaloacetate"
             ],
-            answer: "Day 16",
-            explanation: "During gastrulation, mesoderm develops around the third week, approximately day 16."
+            answer: "Lactate",
+            explanation: "Lactate dehydrogenase converts pyruvate into lactate while oxidising NADH to NAD⁺. This helps glycolysis continue producing ATP when oxidative metabolism cannot meet the cell's needs."
         },
 
         {
             id: 19,
-            question: "What paired mesodermal bodies develop on either side of the developing neural tube to give rise to the skeleton and muscle tissue?",
+            question: "Which enzyme catalyses the conversion of glucose into glucose-6-phosphate in glycolysis?",
             options: [
-                "Somites",
-                "Villi",
-                "Pharyngeal arches",
-                "Lacunae"
+                "Phosphofructokinase-1",
+                "Hexokinase",
+                "Enolase",
+                "Pyruvate kinase"
             ],
-            answer: "Somites",
-            explanation: "Somites are paired blocks of paraxial mesoderm that contribute to the axial skeleton and skeletal muscles."
+            answer: "Hexokinase",
+            explanation: "Hexokinase catalyses the first step of glycolysis in most tissues by transferring a phosphate group from ATP to glucose."
         },
 
         {
             id: 20,
-            question: "What layer of the decidua is in direct contact with the base of the blastocyst and becomes the maternal portion of the placenta?",
+            question: "Which enzyme catalyses the final ATP-producing step of glycolysis, forming pyruvate?",
             options: [
-                "Decidua parietalis",
-                "Decidua capsularis",
-                "Decidua basalis",
-                "Decidua vera"
+                "Pyruvate kinase",
+                "Hexokinase",
+                "Aldolase",
+                "Triose phosphate isomerase"
             ],
-            answer: "Decidua basalis",
-            explanation: "The decidua basalis lies beneath the implanted blastocyst and forms the maternal component of the placenta."
+            answer: "Pyruvate kinase",
+            explanation: "Pyruvate kinase transfers a phosphate group from phosphoenolpyruvate to ADP, producing ATP and pyruvate."
         },
+
+        // =========================================
+        // PART 3: KREBS CYCLE
+        // =========================================
 
         {
             id: 21,
-            question: "During which week of embryonic life are the four limb buds considered most vulnerable to teratogens?",
+            question: "Where does the Krebs cycle occur in eukaryotic cells?",
             options: [
-                "Week 3",
-                "Week 5",
-                "Week 7",
-                "Week 8"
+                "In the cytosol",
+                "In the mitochondrial matrix",
+                "In the nucleus",
+                "On the outer cell membrane"
             ],
-            answer: "Week 5",
-            explanation: "The limb buds develop during the embryonic period and are particularly susceptible to teratogens during this stage."
+            answer: "In the mitochondrial matrix",
+            explanation: "Most Krebs cycle reactions occur in the mitochondrial matrix. Succinate dehydrogenase is an important exception because it is embedded in the inner mitochondrial membrane."
         },
 
         {
             id: 22,
-            question: "How is the size of an embryo or young fetus measured during the first half of pregnancy?",
+            question: "Acetyl-CoA combines with oxaloacetate at the start of the Krebs cycle to form:",
             options: [
-                "Crown-heel length (CHL)",
-                "Crown-rump length (CRL)",
-                "Total body weight",
-                "Biparietal diameter"
+                "Citrate",
+                "Malate",
+                "Fumarate",
+                "Isocitrate"
             ],
-            answer: "Crown-rump length (CRL)",
-            explanation: "Crown-rump length is commonly used to measure the size of an embryo or young fetus during early pregnancy."
+            answer: "Citrate",
+            explanation: "Citrate synthase combines the two-carbon acetyl group from acetyl-CoA with four-carbon oxaloacetate to form six-carbon citrate."
         },
 
         {
             id: 23,
-            question: "What rule is used to calculate the age of a fetus in lunar months from its length in centimeters?",
+            question: "Which molecule is formed when citrate is rearranged by aconitase?",
             options: [
-                "Naegele's rule",
-                "Haase's rule (length divided by 5)",
-                "Rule of nines",
-                "McDonald's rule"
+                "Alpha-ketoglutarate",
+                "Isocitrate",
+                "Succinate",
+                "Succinyl-CoA"
             ],
-            answer: "Haase's rule (length divided by 5)",
-            explanation: "Haase's rule uses fetal length to estimate fetal age in lunar months during the appropriate stage of development."
+            answer: "Isocitrate",
+            explanation: "Aconitase converts citrate into its isomer, isocitrate, through the intermediate cis-aconitate."
         },
 
         {
             id: 24,
-            question: "What is the approximate duration of a single lunar month in the context of pregnancy calculation?",
+            question: "During the conversion of isocitrate into alpha-ketoglutarate, which waste product is released?",
             options: [
-                "20 days",
-                "28 days",
-                "30 days",
-                "31 days"
+                "Water",
+                "Carbon dioxide",
+                "Molecular oxygen",
+                "Ammonia"
             ],
-            answer: "28 days",
-            explanation: "A lunar month in obstetric calculations is approximately 28 days, or four weeks."
+            answer: "Carbon dioxide",
+            explanation: "Isocitrate dehydrogenase catalyses an oxidative decarboxylation. Carbon dioxide is released and NADH is produced."
         },
 
         {
             id: 25,
-            question: "By the end of which lunar month have all major organ systems formed in the embryo/fetus?",
+            question: "During the conversion of succinyl-CoA to succinate, which high-energy nucleotide is directly produced in the usual mammalian reaction?",
             options: [
-                "First lunar month",
-                "Second lunar month",
-                "Third lunar month",
-                "Fifth lunar month"
+                "GTP",
+                "AMP",
+                "Cyclic AMP",
+                "UTP"
             ],
-            answer: "Third lunar month",
-            explanation: "By the end of the third lunar month, the major organ systems have formed, although they continue to mature."
+            answer: "GTP",
+            explanation: "Succinyl-CoA synthetase produces GTP in the usual reaction in many mammalian tissues. Some tissue-specific forms produce ATP instead. This is an example of substrate-level phosphorylation."
         },
 
         {
             id: 26,
-            question: "What cheesy, white substance covers the skin of the fetus around the sixth lunar month?",
+            question: "During the oxidation of succinate to fumarate, FAD is reduced to:",
             options: [
-                "Lanugo",
-                "Vernix caseosa",
-                "Brown fat",
-                "Surfactant"
+                "NADH",
+                "FADH₂",
+                "NADPH",
+                "Acetyl-CoA"
             ],
-            answer: "Vernix caseosa",
-            explanation: "Vernix caseosa is a white, cheesy protective substance covering the fetal skin."
+            answer: "FADH₂",
+            explanation: "Succinate dehydrogenase oxidises succinate to fumarate and transfers electrons to FAD, forming FADH₂. The enzyme is also Complex II of the electron transport chain."
         },
 
         {
             id: 27,
-            question: "What is the function of the brown fat present in the neck and sternal area of a developing fetus?",
+            question: "Which molecule is formed when fumarate is hydrated in the Krebs cycle?",
             options: [
-                "Oxygen transport",
-                "Heat production",
-                "Waste filtration",
-                "Bone ossification"
+                "Malate",
+                "Citrate",
+                "Succinate",
+                "Oxaloacetate"
             ],
-            answer: "Heat production",
-            explanation: "Brown fat produces heat through thermogenesis and helps the newborn maintain body temperature."
+            answer: "Malate",
+            explanation: "Fumarase adds water to fumarate, forming malate. This is a hydration reaction rather than hydrolysis."
         },
 
         {
             id: 28,
-            question: "What fine, soft body hair becomes visible on the fetus during the sixth lunar month?",
+            question: "Which molecule is regenerated when malate is oxidised at the end of the Krebs cycle?",
             options: [
-                "Vernix",
-                "Lanugo",
-                "Cilia",
-                "Scalp hair"
+                "Oxaloacetate",
+                "Pyruvate",
+                "Acetyl-CoA",
+                "Isocitrate"
             ],
-            answer: "Lanugo",
-            explanation: "Lanugo is the fine, soft hair that develops over the fetal body during prenatal development."
+            answer: "Oxaloacetate",
+            explanation: "Malate dehydrogenase oxidises malate to oxaloacetate and produces NADH. Oxaloacetate can then combine with another acetyl-CoA molecule."
         },
 
         {
             id: 29,
-            question: "What structures are contained within the fully formed umbilical cord?",
+            question: "How many turns of the Krebs cycle are needed to process the two acetyl-CoA molecules produced from one glucose molecule?",
             options: [
-                "One umbilical artery and two umbilical veins",
-                "Two umbilical arteries and one umbilical vein",
-                "Two umbilical arteries and two umbilical veins",
-                "One umbilical artery and one umbilical vein"
+                "One turn",
+                "Two turns",
+                "Three turns",
+                "Four turns"
             ],
-            answer: "Two umbilical arteries and one umbilical vein",
-            explanation: "A normal umbilical cord contains two umbilical arteries and one umbilical vein."
+            answer: "Two turns",
+            explanation: "One glucose generally produces two pyruvate molecules, which can form two acetyl-CoA molecules. Each acetyl-CoA requires one turn of the Krebs cycle."
         },
 
         {
             id: 30,
-            question: "During which week of development do the eyelid folds fuse, remaining closed until the seventh month?",
+            question: "How many NADH molecules are produced by the Krebs cycle itself per glucose molecule, assuming both acetyl-CoA molecules enter the cycle?",
             options: [
-                "Fourth week",
-                "Sixth week",
-                "Eighth week",
-                "Tenth week"
+                "Two",
+                "Four",
+                "Six",
+                "Eight"
             ],
-            answer: "Eighth week",
-            explanation: "The eyelids develop and fuse during the embryonic period, remaining closed until approximately the seventh month."
+            answer: "Six",
+            explanation: "Each turn of the Krebs cycle produces three NADH. Since one glucose yields two acetyl-CoA molecules and therefore two turns, the cycle produces six NADH in total. Pyruvate oxidation produces additional NADH outside the cycle."
         },
+
+        // =========================================
+        // PART 4: ELECTRON TRANSPORT CHAIN
+        // =========================================
 
         {
             id: 31,
-            question: "What germ layer gives rise to the epithelial lining and glands of the digestive and respiratory tracts?",
+            question: "At the end of the mitochondrial electron transport chain, molecular oxygen accepts electrons and combines with protons to form:",
             options: [
-                "Ectoderm",
-                "Mesoderm",
-                "Endoderm",
-                "Neural crest"
+                "Carbon dioxide",
+                "Water",
+                "Lactic acid",
+                "Glucose"
             ],
-            answer: "Endoderm",
-            explanation: "Endoderm gives rise to much of the epithelial lining and glands of the digestive and respiratory systems."
+            answer: "Water",
+            explanation: "Oxygen is the final electron acceptor in the mitochondrial electron transport chain. It accepts electrons and combines with protons to form water."
         },
 
         {
             id: 32,
-            question: "What is the approximate weight of the embryo at the end of the fourth week of life?",
+            question: "Which vitamin is the precursor of the NAD⁺ and NADP⁺ coenzymes?",
             options: [
-                "5 mg",
-                "50 mg",
-                "1000 mg",
-                "3400 g"
+                "Thiamin (B1)",
+                "Riboflavin (B2)",
+                "Niacin (B3)",
+                "Pantothenic acid (B5)"
             ],
-            answer: "5 mg",
-            explanation: "The embryo weighs only a few milligrams at the end of the fourth week, approximately 5 mg."
+            answer: "Niacin (B3)",
+            explanation: "Niacin is vitamin B3 and is used to synthesise NAD⁺ and NADP⁺. These coenzymes transfer electrons in many metabolic reactions."
         },
 
         {
             id: 33,
-            question: "When do fetal movements (quickening) typically begin to be felt by the mother?",
+            question: "Which vitamin is the precursor of flavin adenine dinucleotide (FAD)?",
             options: [
-                "End of the 3rd lunar month",
-                "End of the 5th lunar month",
-                "End of the 7th lunar month",
-                "End of the 9th lunar month"
+                "Riboflavin (B2)",
+                "Niacin (B3)",
+                "Thiamin (B1)",
+                "Biotin (B7)"
             ],
-            answer: "End of the 5th lunar month",
-            explanation: "Quickening, or the mother's perception of fetal movement, typically begins around the fifth lunar month."
+            answer: "Riboflavin (B2)",
+            explanation: "Riboflavin is vitamin B2 and is used to form FAD and FMN, which function as electron-carrying cofactors in metabolic reactions."
         },
 
         {
             id: 34,
-            question: "What layer of the trophoblast is responsible for producing the hormone hCG?",
+            question: "Which coenzyme in mitochondrial Complex I accepts electrons from NADH early in the electron transport chain?",
             options: [
-                "Syncytiotrophoblast",
-                "Cytotrophoblast",
-                "Amnion",
-                "Chorionic plate"
+                "Flavin mononucleotide (FMN)",
+                "Coenzyme Q",
+                "Cytochrome c",
+                "Cytochrome a"
             ],
-            answer: "Syncytiotrophoblast",
-            explanation: "The syncytiotrophoblast produces human chorionic gonadotropin (hCG), which helps maintain the corpus luteum during early pregnancy."
+            answer: "Flavin mononucleotide (FMN)",
+            explanation: "FMN accepts electrons from NADH in Complex I and passes them through the complex's electron-transfer centres toward coenzyme Q."
         },
 
         {
             id: 35,
-            question: "What is the term for the bleeding that sometimes occurs around the 13th day after fertilization due to increased blood flow into the lacunar space?",
+            question: "Which electron carrier moves within the inner mitochondrial membrane and transfers electrons from Complexes I and II to Complex III?",
             options: [
-                "Menstrual bleeding",
-                "Implantation bleeding",
-                "Breakthrough bleeding",
-                "Decidual hemorrhage"
+                "Cytochrome c",
+                "Coenzyme Q",
+                "FMN",
+                "NAD⁺"
             ],
-            answer: "Implantation bleeding",
-            explanation: "Implantation bleeding may occur around the time implantation becomes established and is associated with vascular changes in the endometrium."
+            answer: "Coenzyme Q",
+            explanation: "Coenzyme Q, also called ubiquinone, is a lipid-soluble carrier that moves within the inner mitochondrial membrane and transfers electrons to Complex III."
+        },
+
+        {
+            id: 36,
+            question: "What structural feature do cytochromes share with haemoglobin and myoglobin?",
+            options: [
+                "Iron-containing heme groups",
+                "Globin polypeptide chains in every case",
+                "Lipid bilayers",
+                "FMN groups"
+            ],
+            answer: "Iron-containing heme groups",
+            explanation: "Cytochromes, haemoglobin and myoglobin contain heme groups with iron. Their proteins and functions differ, but the heme group is an important shared structural feature."
+        },
+
+        {
+            id: 37,
+            question: "Which small electron-transfer protein moves along the outer surface of the inner mitochondrial membrane from Complex III toward Complex IV?",
+            options: [
+                "Cytochrome b",
+                "Cytochrome c",
+                "Cytochrome a",
+                "Cytochrome c₁"
+            ],
+            answer: "Cytochrome c",
+            explanation: "Cytochrome c is a small, water-soluble protein that transfers electrons from Complex III to Complex IV along the membrane surface. It does not diffuse freely within the lipid bilayer."
+        },
+
+        {
+            id: 38,
+            question: "What is the process called in which the proton gradient drives ATP synthase to produce ATP?",
+            options: [
+                "Substrate-level phosphorylation",
+                "Oxidative phosphorylation",
+                "Photophosphorylation",
+                "Glycogenolysis"
+            ],
+            answer: "Oxidative phosphorylation",
+            explanation: "The electron transport chain establishes a proton gradient across the inner mitochondrial membrane. As protons flow back through ATP synthase, the enzyme uses that energy to produce ATP."
+        },
+
+        {
+            id: 39,
+            question: "Approximately how many ATP molecules are associated with the oxidation of one mitochondrial NADH under modern estimates?",
+            options: [
+                "One ATP",
+                "Two ATP",
+                "About 2.5 ATP",
+                "About four ATP"
+            ],
+            answer: "About 2.5 ATP",
+            explanation: "The modern average estimate is approximately 2.5 ATP per mitochondrial NADH. Some older textbooks use a value of 3 ATP, but the actual yield depends on cellular conditions and how electrons enter the mitochondria."
+        },
+
+        {
+            id: 40,
+            question: "Which process is characteristic of photosynthetic organisms rather than a normal energy-requiring process in human cells?",
+            options: [
+                "Mechanical work",
+                "Active transport",
+                "Photosynthesis",
+                "Biosynthesis of cellular molecules"
+            ],
+            answer: "Photosynthesis",
+            explanation: "Human cells use ATP for mechanical work, active transport and biosynthesis. Photosynthesis is characteristic of plants, algae and certain microorganisms; ATP is also used within photosynthetic pathways."
         }
 
     ]
-
 };
 
 
 /* =================================================
-   🔒 DO NOT EDIT BELOW THIS LINE
+   DO NOT EDIT BELOW THIS LINE
 ================================================= */
 
 
@@ -519,7 +577,6 @@ const COMPLETION_KEY =
 
 const RESULT_ID_KEY =
     `conquerorsLabs_BIO101_result_id_v${QUIZ_CONFIG.quizVersion}`;
-
 
 const questions =
     QUIZ_CONFIG.questions.slice(
@@ -647,9 +704,7 @@ if (questions.length === 0) {
 } else {
 
     if (quizMain) {
-
         quizMain.style.display = "none";
-
     }
 
 }
@@ -758,14 +813,23 @@ function showAlreadyCompleted() {
     if (quizMain)
         quizMain.style.display = "block";
 
-    document.querySelector(".question-card").style.display =
-        "none";
+    const questionCard =
+        document.querySelector(".question-card");
 
-    document.querySelector(".navigation").style.display =
-        "none";
+    const navigation =
+        document.querySelector(".navigation");
 
-    document.querySelector(".navigator-card").style.display =
-        "none";
+    const navigatorCard =
+        document.querySelector(".navigator-card");
+
+    if (questionCard)
+        questionCard.style.display = "none";
+
+    if (navigation)
+        navigation.style.display = "none";
+
+    if (navigatorCard)
+        navigatorCard.style.display = "none";
 
     if (submitBtn)
         submitBtn.style.display = "none";
@@ -832,9 +896,7 @@ function showQuestion() {
             if (
                 userAnswers[currentQuestion] === option
             ) {
-
                 optionButton.classList.add("selected");
-
             }
 
             const letter =
@@ -906,47 +968,55 @@ function selectAnswer(answer) {
    NEXT
 ========================================= */
 
-nextBtn.addEventListener(
-    "click",
-    () => {
+if (nextBtn) {
 
-        if (
-            currentQuestion <
-            questions.length - 1
-        ) {
+    nextBtn.addEventListener(
+        "click",
+        () => {
 
-            currentQuestion++;
+            if (
+                currentQuestion <
+                questions.length - 1
+            ) {
 
-            showQuestion();
+                currentQuestion++;
 
-        } else {
+                showQuestion();
 
-            submitQuiz();
+            } else {
+
+                submitQuiz();
+
+            }
 
         }
+    );
 
-    }
-);
+}
 
 
 /* =========================================
    PREVIOUS
 ========================================= */
 
-previousBtn.addEventListener(
-    "click",
-    () => {
+if (previousBtn) {
 
-        if (currentQuestion > 0) {
+    previousBtn.addEventListener(
+        "click",
+        () => {
 
-            currentQuestion--;
+            if (currentQuestion > 0) {
 
-            showQuestion();
+                currentQuestion--;
+
+                showQuestion();
+
+            }
 
         }
+    );
 
-    }
-);
+}
 
 
 /* =========================================
@@ -1092,31 +1162,35 @@ function updateTimerDisplay() {
    SUBMIT BUTTON
 ========================================= */
 
-submitBtn.addEventListener(
-    "click",
-    () => {
+if (submitBtn) {
 
-        const unanswered =
-            userAnswers.filter(
-                answer => answer === null
-            ).length;
+    submitBtn.addEventListener(
+        "click",
+        () => {
 
-        if (unanswered > 0) {
+            const unanswered =
+                userAnswers.filter(
+                    answer => answer === null
+                ).length;
 
-            const proceed =
-                confirm(
-                    `You have ${unanswered} unanswered question(s). Submit anyway?`
-                );
+            if (unanswered > 0) {
 
-            if (!proceed)
-                return;
+                const proceed =
+                    confirm(
+                        `You have ${unanswered} unanswered question(s). Submit anyway?`
+                    );
+
+                if (!proceed)
+                    return;
+
+            }
+
+            submitQuiz();
 
         }
+    );
 
-        submitQuiz();
-
-    }
-);
+}
 
 
 /* =========================================
@@ -1141,9 +1215,7 @@ async function submitQuiz(timeUp = false) {
                 userAnswers[index] ===
                 question.answer
             ) {
-
                 score++;
-
             }
 
         }
@@ -1292,7 +1364,6 @@ async function getLeaderboardSettings() {
 
         }
 
-
         return {
 
             ...data,
@@ -1356,7 +1427,6 @@ async function saveQuizResult(
                 }
             );
 
-
         if (error) {
 
             console.error(
@@ -1368,12 +1438,10 @@ async function saveQuizResult(
 
         }
 
-
         console.log(
-            "🔥 DATABASE INSERT SUCCESSFUL!",
+            "DATABASE INSERT SUCCESSFUL!",
             data
         );
-
 
         return data;
 
@@ -1397,52 +1465,47 @@ async function saveQuizResult(
 
 function showLockedResult(message) {
 
-    document.querySelector(
-        ".question-card"
-    ).style.display = "none";
+    const questionCard =
+        document.querySelector(".question-card");
 
-    document.querySelector(
-        ".navigation"
-    ).style.display = "none";
+    const navigation =
+        document.querySelector(".navigation");
 
-    document.querySelector(
-        ".navigator-card"
-    ).style.display = "none";
+    const navigatorCard =
+        document.querySelector(".navigator-card");
 
+    if (questionCard)
+        questionCard.style.display = "none";
+
+    if (navigation)
+        navigation.style.display = "none";
+
+    if (navigatorCard)
+        navigatorCard.style.display = "none";
 
     if (submitBtn)
         submitBtn.style.display = "none";
 
-
     if (resultSection)
         resultSection.style.display = "block";
-
 
     if (resultScore)
         resultScore.textContent = "🔒";
 
-
     if (resultPercentage)
-        resultPercentage.textContent =
-            "RESULT LOCKED";
-
+        resultPercentage.textContent = "RESULT LOCKED";
 
     if (resultMessage)
-        resultMessage.textContent =
-            message;
-
+        resultMessage.textContent = message;
 
     if (reviewBtn)
         reviewBtn.style.display = "none";
 
-
     if (reviewContainer)
         reviewContainer.innerHTML = "";
 
-
     if (retakeBtn)
         retakeBtn.style.display = "none";
-
 
     window.scrollTo({
         top: 0,
@@ -1462,64 +1525,62 @@ function showResults(
     timeUp
 ) {
 
-    document.querySelector(
-        ".question-card"
-    ).style.display = "none";
+    const questionCard =
+        document.querySelector(".question-card");
 
+    const navigation =
+        document.querySelector(".navigation");
 
-    document.querySelector(
-        ".navigation"
-    ).style.display = "none";
+    const navigatorCard =
+        document.querySelector(".navigator-card");
 
+    if (questionCard)
+        questionCard.style.display = "none";
 
-    document.querySelector(
-        ".navigator-card"
-    ).style.display = "none";
+    if (navigation)
+        navigation.style.display = "none";
 
+    if (navigatorCard)
+        navigatorCard.style.display = "none";
 
-    submitBtn.style.display = "none";
+    if (submitBtn)
+        submitBtn.style.display = "none";
 
+    if (resultSection)
+        resultSection.style.display = "block";
 
-    resultSection.style.display = "block";
+    if (resultScore)
+        resultScore.textContent =
+            `${score} / ${questions.length}`;
 
+    if (resultPercentage)
+        resultPercentage.textContent =
+            `${percentage}%`;
 
-    resultScore.textContent =
-        `${score} / ${questions.length}`;
+    if (resultMessage) {
 
+        if (timeUp) {
 
-    resultPercentage.textContent =
-        `${percentage}%`;
-
-
-    if (timeUp) {
-
-        resultMessage.textContent =
-            "Time is up. Your answers have been submitted.";
-
-    } else {
-
-        resultMessage.textContent =
-            getResultMessage(percentage);
-
-    }
-
-
-    if (retakeBtn) {
-
-        if (QUIZ_CONFIG.allowRetake) {
-
-            retakeBtn.style.display =
-                "inline-flex";
+            resultMessage.textContent =
+                "Time is up. Your answers have been submitted.";
 
         } else {
 
-            retakeBtn.style.display =
-                "none";
+            resultMessage.textContent =
+                getResultMessage(percentage);
 
         }
 
     }
 
+    if (retakeBtn) {
+
+        retakeBtn.style.display =
+            QUIZ_CONFIG.allowRetake
+                ? "inline-flex"
+                : "none";
+
+    }
 
     window.scrollTo({
         top: 0,
@@ -1533,9 +1594,7 @@ function showResults(
    RESULT MESSAGE
 ========================================= */
 
-function getResultMessage(
-    percentage
-) {
+function getResultMessage(percentage) {
 
     if (percentage >= 80)
         return "Excellent work. Keep pushing.";
@@ -1555,107 +1614,89 @@ function getResultMessage(
    REVIEW ANSWERS
 ========================================= */
 
-reviewBtn.addEventListener(
-    "click",
-    () => {
+if (reviewBtn) {
 
-        reviewContainer.innerHTML = "";
+    reviewBtn.addEventListener(
+        "click",
+        () => {
 
+            reviewContainer.innerHTML = "";
 
-        questions.forEach(
-            (question, index) => {
+            questions.forEach(
+                (question, index) => {
 
-                const userAnswer =
-                    userAnswers[index];
+                    const userAnswer =
+                        userAnswers[index];
 
-                const correct =
-                    userAnswer === question.answer;
+                    const correct =
+                        userAnswer === question.answer;
 
+                    const review =
+                        document.createElement("div");
 
-                const review =
-                    document.createElement("div");
+                    review.className =
+                        "review-item";
 
-                review.className =
-                    "review-item";
+                    const questionElement =
+                        document.createElement("p");
 
+                    questionElement.className =
+                        "review-question";
 
-                const questionElement =
-                    document.createElement("p");
+                    questionElement.textContent =
+                        `${index + 1}. ${question.question}`;
 
-                questionElement.className =
-                    "review-question";
+                    const userAnswerElement =
+                        document.createElement("p");
 
-                questionElement.textContent =
-                    `${index + 1}. ${question.question}`;
+                    userAnswerElement.className =
+                        `review-answer ${
+                            correct
+                                ? "review-correct"
+                                : "review-wrong"
+                        }`;
 
+                    userAnswerElement.textContent =
+                        `Your answer: ${
+                            userAnswer ?? "Not answered"
+                        }`;
 
-                const userAnswerElement =
-                    document.createElement("p");
+                    const correctAnswerElement =
+                        document.createElement("p");
 
-                userAnswerElement.className =
-                    `review-answer ${
-                        correct
-                            ? "review-correct"
-                            : "review-wrong"
-                    }`;
+                    correctAnswerElement.className =
+                        "review-answer review-correct";
 
-                userAnswerElement.textContent =
-                    `Your answer: ${
-                        userAnswer ?? "Not answered"
-                    }`;
+                    correctAnswerElement.textContent =
+                        `Correct answer: ${question.answer}`;
 
+                    const explanationElement =
+                        document.createElement("p");
 
-                const correctAnswerElement =
-                    document.createElement("p");
+                    explanationElement.className =
+                        "review-explanation";
 
-                correctAnswerElement.className =
-                    "review-answer review-correct";
+                    explanationElement.textContent =
+                        question.explanation;
 
-                correctAnswerElement.textContent =
-                    `Correct answer: ${question.answer}`;
+                    review.appendChild(questionElement);
+                    review.appendChild(userAnswerElement);
+                    review.appendChild(correctAnswerElement);
+                    review.appendChild(explanationElement);
 
+                    reviewContainer.appendChild(review);
 
-                const explanationElement =
-                    document.createElement("p");
+                }
+            );
 
-                explanationElement.className =
-                    "review-explanation";
+            reviewContainer.scrollIntoView({
+                behavior: "smooth"
+            });
 
-                explanationElement.textContent =
-                    question.explanation;
+        }
+    );
 
-
-                review.appendChild(
-                    questionElement
-                );
-
-                review.appendChild(
-                    userAnswerElement
-                );
-
-                review.appendChild(
-                    correctAnswerElement
-                );
-
-                review.appendChild(
-                    explanationElement
-                );
-
-
-                reviewContainer.appendChild(
-                    review
-                );
-
-            }
-        );
-
-
-        reviewContainer.scrollIntoView({
-            behavior: "smooth"
-        });
-
-    }
-);
+}
 
 
 /* =========================================
@@ -1683,12 +1724,15 @@ if (retakeBtn) {
    BACK TO HOME
 ========================================= */
 
-homeBtn.addEventListener(
-    "click",
-    () => {
+if (homeBtn) {
 
-        window.location.href =
-            "index.html";
+    homeBtn.addEventListener(
+        "click",
+        () => {
 
-    }
-);
+            window.location.href = "index.html";
+
+        }
+    );
+
+}
