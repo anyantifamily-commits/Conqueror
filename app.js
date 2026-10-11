@@ -42,7 +42,7 @@ const QUIZ_CONFIG = {
     },
 
     MATH101: {
-        enabled: false,
+        enabled: true,
         name: "MATH 101",
         url: "math101.html"
     }
