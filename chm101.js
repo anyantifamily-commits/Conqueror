@@ -1,425 +1,312 @@
 
-
 /* =========================================
    CONQUERORS LABS
-   CHM 101 — ACIDS, BASES & BUFFERS
+   CHM 101 — ATOMIC STRUCTURE
 ========================================= */
 
 const QUIZ_CONFIG = {
+    title: "CHM 101 — Atomic Structure",
 
-    title: "CHM 101 — Acids, Bases & Buffers",
-
+    quizVersion: 1,
     timeLimit: 20,
-
-    maxQuestions: 30,
-
+    maxQuestions: 40,
     allowRetake: false,
 
-    quizId: "chm101",
-
+    quizId: "chm101-atomic-structure",
     passMark: 50,
 
     questions: [
-
         {
             id: 1,
-            question: "What is the characteristic pH value of an acidic solution at 25°C?",
-            options: [
-                "pH > 7",
-                "pH = 7",
-                "pH < 7",
-                "pH = 14"
-            ],
-            answer: "pH < 7",
-            explanation: "At 25°C, an acidic aqueous solution has a pH below 7."
+            question: "Which subatomic particle carries a positive electrical charge?",
+            options: ["Electron", "Proton", "Neutron", "Positron"],
+            answer: "Proton",
+            explanation: "A proton has a relative charge of +1 and is located in the atomic nucleus. An electron has a −1 charge, while a neutron has no net charge."
         },
-
         {
             id: 2,
-            question: "Which of the following is a physical property commonly associated with bases?",
-            options: [
-                "Sour taste",
-                "Slippery feel",
-                "Turns moist blue litmus red",
-                "Always harmless when dilute"
-            ],
-            answer: "Slippery feel",
-            explanation: "Many basic solutions feel slippery. Never taste or touch chemicals to identify them."
+            question: "Where is the vast majority of an atom's mass concentrated?",
+            options: ["In the electron cloud", "In the nucleus", "In the valence shell", "Equally throughout the atom"],
+            answer: "In the nucleus",
+            explanation: "The nucleus contains protons and neutrons, which account for almost all the atom's mass. Electrons have a much smaller mass."
         },
-
         {
             id: 3,
-            question: "What colour change occurs when an acid acts on moist blue litmus paper?",
-            options: [
-                "It turns red",
-                "It turns blue",
-                "It becomes colourless",
-                "It turns yellow"
-            ],
-            answer: "It turns red",
-            explanation: "Acids turn moist blue litmus paper red."
+            question: "Which subatomic particle has a negligible mass in ordinary mass-number calculations?",
+            options: ["Proton", "Neutron", "Electron", "Alpha particle"],
+            answer: "Electron",
+            explanation: "An electron has about 1/1836 the mass of a proton. Mass number counts the nucleons—protons and neutrons—without including electrons."
         },
-
         {
             id: 4,
-            question: "According to Arrhenius theory, an acid in aqueous solution is a substance that:",
-            options: [
-                "Accepts protons",
-                "Donates an electron pair",
-                "Produces H⁺ ions in water",
-                "Produces OH⁻ ions in water"
-            ],
-            answer: "Produces H⁺ ions in water",
-            explanation: "An Arrhenius acid increases the concentration of H⁺, more accurately represented in water as H₃O⁺."
+            question: "What does the atomic number (Z) of an element represent?",
+            options: ["The total number of protons and neutrons", "The number of outer-shell electrons", "The number of protons in the nucleus", "The atom's mass in atomic mass units"],
+            answer: "The number of protons in the nucleus",
+            explanation: "Atomic number is the number of protons in an atom's nucleus. It identifies the element. In a neutral atom, it also equals the number of electrons."
         },
-
         {
             id: 5,
-            question: "What term describes a base that dissolves in water to produce an alkaline solution?",
-            options: [
-                "Salt",
-                "Alkali",
-                "Buffer",
-                "Indicator"
-            ],
-            answer: "Alkali",
-            explanation: "An alkali is a water-soluble base that produces OH⁻ ions in aqueous solution."
+            question: "Isotopes of the same element differ in their number of:",
+            options: ["Protons", "Electrons in neutral atoms", "Neutrons", "Electron shells"],
+            answer: "Neutrons",
+            explanation: "Isotopes have the same number of protons but different numbers of neutrons, so they have different mass numbers."
         },
-
         {
             id: 6,
-            question: "What is the pH of a neutral aqueous solution at 25°C?",
-            options: [
-                "0",
-                "5",
-                "7",
-                "14"
-            ],
-            answer: "7",
-            explanation: "At 25°C, a neutral aqueous solution has pH 7 because [H⁺] equals [OH⁻]."
+            question: "Which scientist discovered the electron through cathode-ray experiments?",
+            options: ["Ernest Rutherford", "J. J. Thomson", "John Dalton", "Niels Bohr"],
+            answer: "J. J. Thomson",
+            explanation: "J. J. Thomson's cathode-ray experiments in 1897 provided evidence for the electron as a negatively charged subatomic particle."
         },
-
         {
             id: 7,
-            question: "Which of the following is a strong acid in water?",
-            options: [
-                "HF",
-                "H₂S",
-                "HNO₃",
-                "HCN"
-            ],
-            answer: "HNO₃",
-            explanation: "Nitric acid ionizes essentially completely in dilute aqueous solution, unlike the other listed acids."
+            question: "What major conclusion came from Rutherford's gold-foil experiment?",
+            options: ["Electrons occupy fixed circular orbits", "Atoms are indivisible solid spheres", "Atoms have a small, dense, positively charged nucleus", "Neutrons are outside the nucleus"],
+            answer: "Atoms have a small, dense, positively charged nucleus",
+            explanation: "Most alpha particles passed through the foil, but a few were strongly deflected. Rutherford concluded that positive charge and most atomic mass occupy a tiny nucleus."
         },
-
         {
             id: 8,
-            question: "Under the Brønsted–Lowry definition, an acid is a:",
-            options: [
-                "Proton donor",
-                "Proton acceptor",
-                "Electron-pair donor",
-                "Electron-pair acceptor"
-            ],
-            answer: "Proton donor",
-            explanation: "A Brønsted–Lowry acid donates a proton, H⁺, to another species."
+            question: "What is an atom or molecule called after gaining or losing electrons and acquiring a net charge?",
+            options: ["Isotope", "Ion", "Isomer", "Allotrope"],
+            answer: "Ion",
+            explanation: "An ion is a charged atom or group of atoms. Losing electrons produces a positive ion, while gaining electrons produces a negative ion."
         },
-
         {
             id: 9,
-            question: "How does Lewis theory define a Lewis acid?",
-            options: [
-                "Proton donor",
-                "Proton acceptor",
-                "Electron-pair donor",
-                "Electron-pair acceptor"
-            ],
-            answer: "Electron-pair acceptor",
-            explanation: "A Lewis acid accepts an electron pair to form a coordinate covalent bond."
+            question: "What is a negatively charged ion called?",
+            options: ["Cation", "Anion", "Proton", "Nucleon"],
+            answer: "Anion",
+            explanation: "An anion has gained electrons and therefore has more electrons than protons. A cation is positively charged."
         },
-
         {
             id: 10,
-            question: "What is the ionic product of water, Kᵥ (Kw), at 25°C?",
-            options: [
-                "1.00 × 10⁻⁷",
-                "1.00 × 10⁻¹⁴",
-                "1.8 × 10⁻⁵",
-                "1.1 × 10⁻⁸"
-            ],
-            answer: "1.00 × 10⁻¹⁴",
-            explanation: "At 25°C, Kw = [H⁺][OH⁻] = 1.00 × 10⁻¹⁴."
+            question: "What is the maximum number of electrons in the first shell (n = 1)?",
+            options: ["2", "8", "18", "32"],
+            answer: "2",
+            explanation: "The maximum shell capacity is given by 2n². For n = 1, the capacity is 2(1)² = 2 electrons."
         },
-
         {
             id: 11,
-            question: "When ammonium chloride dissolves in water, what type of solution does it produce?",
-            options: [
-                "Acidic solution",
-                "Neutral solution",
-                "Basic solution",
-                "A solution that is always buffered"
-            ],
-            answer: "Acidic solution",
-            explanation: "NH₄Cl is a salt of a strong acid and a weak base. The NH₄⁺ ion reacts with water, making the solution acidic. Strictly, NH₄Cl is a normal salt, not an acid salt in the structural classification."
+            question: "Which quantum number describes an electron's principal energy level or shell?",
+            options: ["Principal quantum number (n)", "Azimuthal quantum number (l)", "Magnetic quantum number (mₗ)", "Spin quantum number (mₛ)"],
+            answer: "Principal quantum number (n)",
+            explanation: "The principal quantum number n identifies the main shell and is associated with the electron's energy and average distance from the nucleus."
         },
-
         {
             id: 12,
-            question: "Which equation is commonly used to calculate the pH of a buffer containing a weak acid and its conjugate-base salt?",
-            options: [
-                "Ostwald's dilution law",
-                "Henderson–Hasselbalch equation",
-                "Arrhenius rate equation",
-                "Ionic product equation alone"
-            ],
-            answer: "Henderson–Hasselbalch equation",
-            explanation: "For an acidic buffer, pH = pKa + log([conjugate base]/[weak acid])."
+            question: "What is the general shape of an s-orbital?",
+            options: ["Dumbbell-shaped", "Spherical", "Cloverleaf-shaped", "Irregular and directionless"],
+            answer: "Spherical",
+            explanation: "An s-orbital has spherical symmetry around the nucleus. The p-orbitals are generally dumbbell-shaped, while many d-orbitals have more complex shapes."
         },
-
         {
             id: 13,
-            question: "What is the relationship between Ka and pKa?",
-            options: [
-                "A larger Ka corresponds to a smaller pKa and generally a stronger acid",
-                "A larger Ka corresponds to a larger pKa and a weaker acid",
-                "A smaller Ka always corresponds to a smaller pKa",
-                "Ka and pKa are unrelated to acid strength"
-            ],
-            answer: "A larger Ka corresponds to a smaller pKa and generally a stronger acid",
-            explanation: "pKa = −log Ka. A larger Ka means greater acid dissociation and a smaller pKa."
+            question: "What is the maximum number of electrons in a complete set of p-orbitals?",
+            options: ["2", "6", "10", "14"],
+            answer: "6",
+            explanation: "A p-subshell contains three orbitals. Each orbital holds a maximum of two electrons, giving 3 × 2 = 6 electrons."
         },
-
         {
             id: 14,
-            question: "What is the primary role of buffer solutions in living organisms?",
-            options: [
-                "Accelerate all chemical reactions",
-                "Resist sudden changes in pH",
-                "Neutralize every ion completely",
-                "Act as the main source of energy"
-            ],
-            answer: "Resist sudden changes in pH",
-            explanation: "Buffers minimize pH changes when small amounts of acid or base are added."
+            question: "Which principle states that electrons occupy the lowest available energy orbitals first?",
+            options: ["Aufbau principle", "Pauli exclusion principle", "Hund's rule", "Heisenberg uncertainty principle"],
+            answer: "Aufbau principle",
+            explanation: "The Aufbau principle describes the general filling order of orbitals from lower to higher energy in ground-state electron configurations."
         },
-
         {
             id: 15,
-            question: "Which indicators are generally suitable for a strong acid–strong base titration?",
-            options: [
-                "Methyl orange only",
-                "Phenolphthalein only",
-                "Both methyl orange and phenolphthalein",
-                "Neither indicator"
-            ],
-            answer: "Both methyl orange and phenolphthalein",
-            explanation: "A strong acid–strong base titration has a steep pH change near its equivalence point, so both indicators can be suitable."
+            question: "Which rule says that orbitals of equal energy are singly occupied before electrons pair up?",
+            options: ["Aufbau principle", "Pauli exclusion principle", "Hund's rule", "Octet rule"],
+            answer: "Hund's rule",
+            explanation: "Hund's rule states that electrons occupy degenerate orbitals singly with parallel spins before pairing, giving the lowest-energy arrangement."
         },
-
         {
             id: 16,
-            question: "Which statement correctly describes phenolphthalein in aqueous solution?",
-            options: [
-                "Pink below pH 4 and yellow above pH 5",
-                "Red below pH 3 and yellow above pH 4",
-                "Colourless below about pH 8.2 and pink in its transition range of about pH 8.2–10.0",
-                "Blue above pH 9 and colourless below pH 8"
-            ],
-            answer: "Colourless below about pH 8.2 and pink in its transition range of about pH 8.2–10.0",
-            explanation: "Phenolphthalein is colourless in acidic and near-neutral solutions and changes to pink over an approximate pH range of 8.2–10.0."
+            question: "What is the ground-state electron configuration of neutral carbon (Z = 6)?",
+            options: ["1s² 2s⁴", "1s² 2s² 2p²", "1s⁶", "1s² 2p⁴"],
+            answer: "1s² 2s² 2p²",
+            explanation: "Carbon has six electrons. Filling the orbitals in order gives 1s² 2s² 2p², for a total of 2 + 2 + 2 = 6 electrons."
         },
-
         {
             id: 17,
-            question: "Which of the following is a diprotic acid?",
-            options: [
-                "HCl",
-                "HNO₃",
-                "H₂SO₄",
-                "H₃PO₄"
-            ],
-            answer: "H₂SO₄",
-            explanation: "Sulfuric acid can donate two protons per molecule, making it diprotic. Phosphoric acid is triprotic."
+            question: "How many valence electrons does a neutral oxygen atom (Z = 8) have?",
+            options: ["2", "4", "6", "8"],
+            answer: "6",
+            explanation: "Oxygen's electron configuration is 1s² 2s² 2p⁴. Its outer shell is n = 2 and contains 2 + 4 = 6 electrons."
         },
-
         {
             id: 18,
-            question: "In Ostwald's dilution law, what does α represent?",
-            options: [
-                "Molar concentration",
-                "Degree of dissociation",
-                "Dissociation constant",
-                "Ionic product of water"
-            ],
-            answer: "Degree of dissociation",
-            explanation: "The symbol α represents the fraction of the original electrolyte that dissociates into ions."
+            question: "Why do main-group elements in the same periodic-table group generally have similar chemical properties?",
+            options: ["They have the same total number of electrons", "They have the same number of protons", "They generally have the same number of valence electrons", "They have the same number of occupied shells"],
+            answer: "They generally have the same number of valence electrons",
+            explanation: "For main-group elements, the number of valence electrons strongly influences bonding and reactivity. Elements in the same group generally share the same outer-shell electron pattern."
         },
-
         {
             id: 19,
-            question: "What type of solution is generally produced when a salt of a weak acid and a strong base dissolves in water?",
-            options: [
-                "Acidic, with pH < 7",
-                "Neutral, with pH = 7",
-                "Basic, with pH > 7",
-                "Always exactly pH 7"
-            ],
-            answer: "Basic, with pH > 7",
-            explanation: "The conjugate base of the weak acid reacts with water to produce OH⁻, making the solution basic at 25°C."
+            question: "An atom has 6 protons, 6 neutrons, and 6 electrons. What is its mass number?",
+            options: ["6", "12", "18", "0"],
+            answer: "12",
+            explanation: "Mass number A = protons + neutrons = 6 + 6 = 12. Electrons are not included in the mass number."
         },
-
         {
             id: 20,
-            question: "Which substance acts as a Lewis base by donating an electron pair?",
-            options: [
-                "AlCl₃",
-                "Cu²⁺",
-                "NH₃",
-                "BCl₃"
-            ],
-            answer: "NH₃",
-            explanation: "Ammonia has a lone pair on nitrogen that it can donate to a Lewis acid."
+            question: "Which neutral atom has the electron configuration 1s² 2s² 2p⁶ 3s² 3p¹?",
+            options: ["Sodium (Na)", "Magnesium (Mg)", "Aluminum (Al)", "Silicon (Si)"],
+            answer: "Aluminum (Al)",
+            explanation: "The configuration contains 2 + 2 + 6 + 2 + 1 = 13 electrons. A neutral atom with atomic number 13 is aluminum."
         },
-
         {
             id: 21,
-            question: "What is the pH of a 0.20 M HNO₃ solution, assuming complete ionization?",
-            options: [
-                "0.40",
-                "0.70",
-                "1.30",
-                "7.00"
-            ],
-            answer: "0.70",
-            explanation: "HNO₃ is a strong monoprotic acid, so [H⁺] = 0.20 M. pH = −log(0.20) ≈ 0.70."
+            question: "Which particles are collectively called nucleons?",
+            options: ["Protons only", "Neutrons only", "Protons and neutrons", "Protons and electrons"],
+            answer: "Protons and neutrons",
+            explanation: "Nucleons are the particles found in the nucleus: protons and neutrons. Electrons occupy orbitals around the nucleus."
         },
-
         {
             id: 22,
-            question: "What is the pH of a 0.20 M H₂SO₄ solution if [H⁺] is given as 0.40 mol dm⁻³?",
-            options: [
-                "0.40",
-                "0.70",
-                "1.00",
-                "1.40"
-            ],
-            answer: "0.40",
-            explanation: "Using the stated hydrogen-ion concentration, pH = −log(0.40) ≈ 0.398, which rounds to 0.40."
+            question: "What is the net electrical charge of a neutral, uncombined atom?",
+            options: ["Positive", "Negative", "Zero", "Always equal to its group number"],
+            answer: "Zero",
+            explanation: "A neutral atom has equal numbers of positively charged protons and negatively charged electrons, so their charges cancel."
         },
-
         {
             id: 23,
-            question: "For a weak monoprotic acid of concentration c, which expression approximates [H⁺] when dissociation is small?",
-            options: [
-                "[H⁺] ≈ √(Ka c)",
-                "[H⁺] = c / Ka",
-                "[H⁺] = Ka / c²",
-                "[H⁺] = c²Ka"
-            ],
-            answer: "[H⁺] ≈ √(Ka c)",
-            explanation: "For a weak acid with small dissociation, Ka ≈ [H⁺]²/c, giving [H⁺] ≈ √(Ka c)."
+            question: "Which of these basic subatomic particles was discovered after the electron and proton?",
+            options: ["Electron", "Proton", "Neutron", "Photon"],
+            answer: "Neutron",
+            explanation: "James Chadwick discovered the neutron in 1932. It helped explain atomic mass and the existence of isotopes."
         },
-
         {
             id: 24,
-            question: "What is the pH of a 0.05 M NaOH solution at 25°C, assuming complete dissociation?",
-            options: [
-                "1.30",
-                "7.00",
-                "12.70",
-                "13.00"
-            ],
-            answer: "12.70",
-            explanation: "[OH⁻] = 0.05 M. pOH = −log(0.05) ≈ 1.30, so pH = 14.00 − 1.30 = 12.70."
+            question: "Which type of orbital corresponds to an azimuthal quantum number l = 2?",
+            options: ["s-orbital", "p-orbital", "d-orbital", "f-orbital"],
+            answer: "d-orbital",
+            explanation: "The azimuthal quantum number identifies subshell type: l = 0 is s, l = 1 is p, l = 2 is d, and l = 3 is f."
         },
-
         {
             id: 25,
-            question: "Which expression gives the approximate pH of a weak base of concentration c at 25°C?",
-            options: [
-                "pH = ½pKa − ½log c",
-                "pH = pKw − ½pKb + ½log c",
-                "pH = −log[OH⁻]",
-                "pH = pKa + log([salt]/[acid])"
-            ],
-            answer: "pH = pKw − ½pKb + ½log c",
-            explanation: "For a weak base, pOH ≈ ½(pKb − log c). Therefore pH = pKw − pOH."
+            question: "According to the Pauli exclusion principle, two electrons occupying the same orbital must have:",
+            options: ["The same spin", "Opposite spins", "Different principal quantum numbers", "Different orbital shapes"],
+            answer: "Opposite spins",
+            explanation: "Two electrons in one orbital must have opposite spins. No two electrons in an atom can have the same set of all four quantum numbers."
         },
-
         {
             id: 26,
-            question: "How is buffer capacity, β, defined?",
-            options: [
-                "Change in pH divided by moles of acid or base added per litre",
-                "Moles of strong acid or base added per litre divided by the resulting pH change",
-                "[H⁺][OH⁻]",
-                "Ka multiplied by Kb"
-            ],
-            answer: "Moles of strong acid or base added per litre divided by the resulting pH change",
-            explanation: "Buffer capacity is the amount of strong acid or base added per unit volume, divided by the resulting change in pH. Its units are commonly mol dm⁻³ per pH unit."
+            question: "Which electromagnetic radiation has the highest photon energy and shortest wavelength?",
+            options: ["Radio waves", "Infrared radiation", "Visible light", "Gamma rays"],
+            answer: "Gamma rays",
+            explanation: "Photon energy is E = hν and wavelength is inversely related to frequency. Gamma rays have very high frequencies and very short wavelengths."
         },
-
         {
             id: 27,
-            question: "What is the approximate useful pH transition range of an acid–base indicator with pKa value pKa(In)?",
-            options: [
-                "pH = pKa(In) ± 1",
-                "pH = pKa(In) ± 7",
-                "pH = 2 × pKa(In)",
-                "pH = pKa(In) / 2"
-            ],
-            answer: "pH = pKa(In) ± 1",
-            explanation: "An indicator typically changes colour over a range of approximately one pH unit below to one pH unit above its pKa."
+            question: "What happens when an electron moves from a higher energy level to a lower one?",
+            options: ["It absorbs a photon", "It emits a photon", "It becomes a neutron", "The atom's mass number changes"],
+            answer: "It emits a photon",
+            explanation: "The electron releases the energy difference between the two levels as a photon. Absorption occurs when an electron moves to a higher energy level."
         },
-
         {
             id: 28,
-            question: "Why is no ordinary visual indicator generally suitable for a weak acid–weak base titration?",
-            options: [
-                "The colour change is always instantaneous",
-                "There is usually no sufficiently sharp pH change at the equivalence point",
-                "Both reactants must be insoluble",
-                "The pH always remains exactly 7"
-            ],
-            answer: "There is usually no sufficiently sharp pH change at the equivalence point",
-            explanation: "Weak acid–weak base titrations generally lack a steep pH jump, making a visual indicator endpoint unreliable."
+            question: "Which statement correctly defines relative atomic mass (Aᵣ)?",
+            options: ["The mass of one proton in grams", "The weighted mean mass of an element's atoms relative to one-twelfth the mass of a carbon-12 atom", "The number of nucleons in the most stable isotope", "The electron mass multiplied by the atomic number"],
+            answer: "The weighted mean mass of an element's atoms relative to one-twelfth the mass of a carbon-12 atom",
+            explanation: "Relative atomic mass is a weighted average based on the natural abundances of an element's isotopes, compared with 1/12 of the mass of a carbon-12 atom. It has no unit."
         },
-
         {
             id: 29,
-            question: "When a small amount of strong base is added to a buffer containing a weak acid and its conjugate-base salt, what happens?",
-            options: [
-                "The acid concentration increases and the salt concentration decreases",
-                "The acid concentration decreases and the conjugate-base concentration increases",
-                "Both concentrations increase",
-                "Both concentrations remain unchanged"
-            ],
-            answer: "The acid concentration decreases and the conjugate-base concentration increases",
-            explanation: "The added OH⁻ reacts with the weak acid, converting some HA into A⁻ and water."
+            question: "How many orbitals are present in a d-subshell?",
+            options: ["1", "3", "5", "7"],
+            answer: "5",
+            explanation: "A d-subshell has five orbitals. Since each orbital can hold two electrons, a complete d-subshell can contain up to 10 electrons."
         },
-
         {
             id: 30,
-            question: "What is the relationship between Kw, Ka and Kb for a conjugate acid–base pair in water?",
-            options: [
-                "Kw = Ka + Kb",
-                "Kw = Ka / Kb",
-                "Kw = Ka × Kb",
-                "Kw = √(Ka × Kb)"
-            ],
-            answer: "Kw = Ka × Kb",
-            explanation: "For a conjugate acid–base pair, Ka × Kb = Kw at the same temperature."
+            question: "Which element has the chemical symbol K?",
+            options: ["Krypton", "Potassium", "Phosphorus", "Sodium"],
+            answer: "Potassium",
+            explanation: "K is the symbol for potassium, derived from its Latin name, kalium. Sodium has the symbol Na."
+        },
+        {
+            id: 31,
+            question: "An atom has 11 protons, 12 neutrons, and 10 electrons. What is its net charge?",
+            options: ["+1", "−1", "0", "+2"],
+            answer: "+1",
+            explanation: "Net charge = protons − electrons = 11 − 10 = +1. The number of neutrons affects mass number, not electrical charge."
+        },
+        {
+            id: 32,
+            question: "The Bohr model was particularly successful in explaining the line-emission spectrum of which element?",
+            options: ["Carbon", "Hydrogen", "Uranium", "Iron"],
+            answer: "Hydrogen",
+            explanation: "Bohr's model explains hydrogen's line spectrum using quantized electron energy levels. It is less successful for multi-electron atoms."
+        },
+        {
+            id: 33,
+            question: "What are the horizontal rows of the periodic table called?",
+            options: ["Groups", "Families", "Periods", "Blocks"],
+            answer: "Periods",
+            explanation: "Horizontal rows are periods. Vertical columns are groups or families."
+        },
+        {
+            id: 34,
+            question: "Which group of elements is generally very unreactive because its members have filled valence shells?",
+            options: ["Alkali metals", "Halogens", "Noble gases", "Transition metals"],
+            answer: "Noble gases",
+            explanation: "Noble gases have filled outer electron shells in their ground states, making them relatively unreactive under ordinary conditions."
+        },
+        {
+            id: 35,
+            question: "What is the general valence-shell electron configuration of Group 2 elements?",
+            options: ["ns¹", "ns²", "ns² np¹", "ns² np⁵"],
+            answer: "ns²",
+            explanation: "Group 2 elements have two electrons in their outermost s-subshell, represented by ns². They commonly form ions with a +2 charge."
+        },
+        {
+            id: 36,
+            question: "Which species is isoelectronic with neon (10 electrons)?",
+            options: ["Na⁺", "Mg", "F", "Li⁺"],
+            answer: "Na⁺",
+            explanation: "Sodium has 11 electrons when neutral. Na⁺ has lost one electron, leaving 10—equal to the number in neon. Neutral Mg has 12, neutral F has 9, and Li⁺ has 2."
+        },
+        {
+            id: 37,
+            question: "What property measures an atom's ability to attract shared electrons in a chemical bond?",
+            options: ["Ionization energy", "Electronegativity", "Electron affinity", "Atomic radius"],
+            answer: "Electronegativity",
+            explanation: "Electronegativity describes how strongly an atom attracts shared bonding electrons. Ionization energy measures the energy needed to remove an electron."
+        },
+        {
+            id: 38,
+            question: "What is the energy required to remove an electron from a gaseous atom in its ground state called?",
+            options: ["Electronegativity", "Lattice energy", "Ionization energy", "Activation energy"],
+            answer: "Ionization energy",
+            explanation: "First ionization energy is the energy required to remove one electron from each atom in one mole of gaseous atoms, forming gaseous +1 ions."
+        },
+        {
+            id: 39,
+            question: "What generally happens to atomic radius as you move down a group in the periodic table?",
+            options: ["It decreases", "It increases", "It remains completely constant", "It changes randomly"],
+            answer: "It increases",
+            explanation: "Moving down a group adds occupied electron shells. Increased distance from the nucleus generally outweighs the increased nuclear charge, so atomic radius increases."
+        },
+        {
+            id: 40,
+            question: "Which scientist proposed that matter, including electrons, has wave-like properties?",
+            options: ["Louis de Broglie", "Max Planck", "Albert Einstein", "Ernest Rutherford"],
+            answer: "Louis de Broglie",
+            explanation: "Louis de Broglie proposed that particles have an associated wavelength, λ = h/p. Electron diffraction later provided experimental evidence for the wave-like behaviour of electrons."
         }
-
     ]
-
 };
+
+
 /* =========================================
    COMPLETION LOCK
+   Increase quizVersion to allow a new attempt.
 ========================================= */
 
 const COMPLETION_KEY =
-    "conquerorsLabs_CHM101_completed";
+    `conquerorsLabs_CHM101_completed_v${QUIZ_CONFIG.quizVersion}`;
 
 
 /* =========================================
@@ -427,7 +314,7 @@ const COMPLETION_KEY =
 ========================================= */
 
 const RESULT_ID_KEY =
-    "conquerorsLabs_CHM101_result_id";
+    `conquerorsLabs_CHM101_result_id_v${QUIZ_CONFIG.quizVersion}`;
 
 
 /* =========================================
@@ -435,197 +322,87 @@ const RESULT_ID_KEY =
 ========================================= */
 
 const questions =
-    QUIZ_CONFIG.questions.slice(
-        0,
-        QUIZ_CONFIG.maxQuestions
-    );
+    QUIZ_CONFIG.questions.slice(0, QUIZ_CONFIG.maxQuestions);
 
 let currentQuestion = 0;
-
-let answers =
-    new Array(questions.length).fill(null);
-
-let timeRemaining =
-    QUIZ_CONFIG.timeLimit * 60;
-
-let timerInterval =
-    null;
-
-let quizSubmitted =
-    false;
-
-let pendingSubmission =
-    false;
+let answers = new Array(questions.length).fill(null);
+let timeRemaining = QUIZ_CONFIG.timeLimit * 60;
+let timerInterval = null;
+let quizSubmitted = false;
+let pendingSubmission = false;
 
 
 /* =========================================
    DOM ELEMENTS
 ========================================= */
 
-const quizTitle =
-    document.getElementById("quizTitle");
-
-const timer =
-    document.getElementById("timer");
-
-const timerBox =
-    document.querySelector(".timer-box");
-
-const progressText =
-    document.getElementById("progressText");
-
-const answeredText =
-    document.getElementById("answeredText");
-
-const progressBar =
-    document.getElementById("progressBar");
-
-const questionNumber =
-    document.getElementById("questionNumber");
-
-const questionText =
-    document.getElementById("questionText");
-
-const optionsContainer =
-    document.getElementById("optionsContainer");
-
-const previousBtn =
-    document.getElementById("previousBtn");
-
-const nextBtn =
-    document.getElementById("nextBtn");
-
-const questionNavigator =
-    document.getElementById("questionNavigator");
-
-const submitBtn =
-    document.getElementById("submitBtn");
-
-const questionArea =
-    document.getElementById("questionArea");
-
-const navigatorCard =
-    document.querySelector(".navigator-card");
-
-const resultSection =
-    document.getElementById("resultSection");
-
-const resultScore =
-    document.getElementById("resultScore");
-
-const resultPercentage =
-    document.getElementById("resultPercentage");
-
-const resultMessage =
-    document.getElementById("resultMessage");
-
-const correctCount =
-    document.getElementById("correctCount");
-
-const wrongCount =
-    document.getElementById("wrongCount");
-
-const unansweredCount =
-    document.getElementById("unansweredCount");
-
-const reviewBtn =
-    document.getElementById("reviewBtn");
-
-const retakeBtn =
-    document.getElementById("retakeBtn");
-
-const reviewSection =
-    document.getElementById("reviewSection");
-
-const reviewContainer =
-    document.getElementById("reviewContainer");
-
-const submitModal =
-    document.getElementById("submitModal");
-
-const modalText =
-    document.getElementById("modalText");
-
-const cancelSubmitBtn =
-    document.getElementById("cancelSubmitBtn");
-
-const confirmSubmitBtn =
-    document.getElementById("confirmSubmitBtn");
+const quizTitle = document.getElementById("quizTitle");
+const timer = document.getElementById("timer");
+const timerBox = document.querySelector(".timer-box");
+const progressText = document.getElementById("progressText");
+const answeredText = document.getElementById("answeredText");
+const progressBar = document.getElementById("progressBar");
+const questionNumber = document.getElementById("questionNumber");
+const questionText = document.getElementById("questionText");
+const optionsContainer = document.getElementById("optionsContainer");
+const previousBtn = document.getElementById("previousBtn");
+const nextBtn = document.getElementById("nextBtn");
+const questionNavigator = document.getElementById("questionNavigator");
+const submitBtn = document.getElementById("submitBtn");
+const questionArea = document.getElementById("questionArea");
+const navigatorCard = document.querySelector(".navigator-card");
+const resultSection = document.getElementById("resultSection");
+const resultScore = document.getElementById("resultScore");
+const resultPercentage = document.getElementById("resultPercentage");
+const resultMessage = document.getElementById("resultMessage");
+const correctCount = document.getElementById("correctCount");
+const wrongCount = document.getElementById("wrongCount");
+const unansweredCount = document.getElementById("unansweredCount");
+const reviewBtn = document.getElementById("reviewBtn");
+const retakeBtn = document.getElementById("retakeBtn");
+const reviewSection = document.getElementById("reviewSection");
+const reviewContainer = document.getElementById("reviewContainer");
+const submitModal = document.getElementById("submitModal");
+const modalText = document.getElementById("modalText");
+const cancelSubmitBtn = document.getElementById("cancelSubmitBtn");
+const confirmSubmitBtn = document.getElementById("confirmSubmitBtn");
 
 
 /* =========================================
    NAME MODAL ELEMENTS
 ========================================= */
 
-const nameModal =
-    document.getElementById("nameModal");
-
-const studentNameInput =
-    document.getElementById(
-        "studentNameInput"
-    );
-
-const nameError =
-    document.getElementById(
-        "nameError"
-    );
-
-const cancelNameBtn =
-    document.getElementById(
-        "cancelNameBtn"
-    );
-
-const continueNameBtn =
-    document.getElementById(
-        "continueNameBtn"
-    );
+const nameModal = document.getElementById("nameModal");
+const studentNameInput = document.getElementById("studentNameInput");
+const nameError = document.getElementById("nameError");
+const cancelNameBtn = document.getElementById("cancelNameBtn");
+const continueNameBtn = document.getElementById("continueNameBtn");
 
 
 /* =========================================
    INITIALIZE
 ========================================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-
-        if (quizTitle) {
-
-            quizTitle.textContent =
-                QUIZ_CONFIG.title;
-
-        }
-
-
-        if (questions.length === 0) {
-
-            alert(
-                "No questions have been added to this CBT yet."
-            );
-
-            return;
-
-        }
-
-
-        if (
-            !QUIZ_CONFIG.allowRetake &&
-            localStorage.getItem(
-                COMPLETION_KEY
-            ) === "true"
-        ) {
-
-            showAlreadyCompleted();
-
-            return;
-
-        }
-
-
-        initializeQuiz();
-
+document.addEventListener("DOMContentLoaded", () => {
+    if (quizTitle) {
+        quizTitle.textContent = QUIZ_CONFIG.title;
     }
-);
+
+    if (questions.length === 0) {
+        alert("No questions have been added to this CBT yet.");
+        return;
+    }
+
+    if (
+        !QUIZ_CONFIG.allowRetake &&
+        localStorage.getItem(COMPLETION_KEY) === "true"
+    ) {
+        showAlreadyCompleted();
+        return;
+    }
+
+    initializeQuiz();
+});
 
 
 /* =========================================
@@ -633,15 +410,10 @@ document.addEventListener(
 ========================================= */
 
 function initializeQuiz() {
-
     buildNavigator();
-
     renderQuestion();
-
     updateProgress();
-
     startTimer();
-
 }
 
 
@@ -650,117 +422,45 @@ function initializeQuiz() {
 ========================================= */
 
 function renderQuestion() {
-
-    const question =
-        questions[currentQuestion];
-
-
+    const question = questions[currentQuestion];
     if (!question) return;
 
+    questionNumber.textContent = currentQuestion + 1;
+    questionText.textContent = question.question;
+    optionsContainer.innerHTML = "";
 
-    questionNumber.textContent =
-        currentQuestion + 1;
+    question.options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "option";
 
-
-    questionText.textContent =
-        question.question;
-
-
-    optionsContainer.innerHTML =
-        "";
-
-
-    question.options.forEach(
-        (option, index) => {
-
-            const button =
-                document.createElement(
-                    "button"
-                );
-
-            button.type =
-                "button";
-
-            button.className =
-                "option";
-
-
-            if (
-                answers[currentQuestion] ===
-                option
-            ) {
-
-                button.classList.add(
-                    "selected"
-                );
-
-            }
-
-
-            const letter =
-                document.createElement(
-                    "span"
-                );
-
-            letter.className =
-                "option-letter";
-
-            letter.textContent =
-                String.fromCharCode(
-                    65 + index
-                );
-
-
-            const text =
-                document.createElement(
-                    "span"
-                );
-
-            text.className =
-                "option-text";
-
-            text.textContent =
-                option;
-
-
-            button.appendChild(letter);
-
-            button.appendChild(text);
-
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    selectAnswer(
-                        option
-                    );
-
-                }
-            );
-
-
-            optionsContainer.appendChild(
-                button
-            );
-
+        if (answers[currentQuestion] === option) {
+            button.classList.add("selected");
         }
-    );
 
+        const letter = document.createElement("span");
+        letter.className = "option-letter";
+        letter.textContent = String.fromCharCode(65 + index);
 
-    previousBtn.disabled =
-        currentQuestion === 0;
+        const text = document.createElement("span");
+        text.className = "option-text";
+        text.textContent = option;
 
+        button.appendChild(letter);
+        button.appendChild(text);
 
-    nextBtn.disabled =
-        currentQuestion ===
-        questions.length - 1;
+        button.addEventListener("click", () => {
+            selectAnswer(option);
+        });
 
+        optionsContainer.appendChild(button);
+    });
+
+    previousBtn.disabled = currentQuestion === 0;
+    nextBtn.disabled = currentQuestion === questions.length - 1;
 
     updateNavigator();
-
     updateProgress();
-
 }
 
 
@@ -769,198 +469,85 @@ function renderQuestion() {
 ========================================= */
 
 function selectAnswer(option) {
+    if (quizSubmitted || pendingSubmission) return;
 
-    if (quizSubmitted) return;
-
-    answers[currentQuestion] =
-        option;
-
+    answers[currentQuestion] = option;
     renderQuestion();
-
 }
 
 
 /* =========================================
-   NEXT
+   NEXT / PREVIOUS
 ========================================= */
 
-nextBtn.addEventListener(
-    "click",
-    () => {
-
-        if (
-            currentQuestion <
-            questions.length - 1
-        ) {
-
-            currentQuestion++;
-
-            renderQuestion();
-
-            scrollToQuestion();
-
-        }
-
+nextBtn.addEventListener("click", () => {
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        renderQuestion();
+        scrollToQuestion();
     }
-);
+});
 
-
-/* =========================================
-   PREVIOUS
-========================================= */
-
-previousBtn.addEventListener(
-    "click",
-    () => {
-
-        if (
-            currentQuestion > 0
-        ) {
-
-            currentQuestion--;
-
-            renderQuestion();
-
-            scrollToQuestion();
-
-        }
-
+previousBtn.addEventListener("click", () => {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        renderQuestion();
+        scrollToQuestion();
     }
-);
-
-
-/* =========================================
-   SCROLL
-========================================= */
+});
 
 function scrollToQuestion() {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
 /* =========================================
-   NAVIGATOR
+   QUESTION NAVIGATOR
 ========================================= */
 
 function buildNavigator() {
+    questionNavigator.innerHTML = "";
 
-    questionNavigator.innerHTML =
-        "";
+    questions.forEach((_, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "question-number-btn";
+        button.textContent = index + 1;
 
+        button.addEventListener("click", () => {
+            if (quizSubmitted || pendingSubmission) return;
 
-    questions.forEach(
-        (_, index) => {
+            currentQuestion = index;
+            renderQuestion();
+            scrollToQuestion();
+        });
 
-            const button =
-                document.createElement(
-                    "button"
-                );
-
-            button.type =
-                "button";
-
-            button.className =
-                "question-number-btn";
-
-            button.textContent =
-                index + 1;
-
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    currentQuestion =
-                        index;
-
-                    renderQuestion();
-
-                    scrollToQuestion();
-
-                }
-            );
-
-
-            questionNavigator.appendChild(
-                button
-            );
-
-        }
-    );
-
+        questionNavigator.appendChild(button);
+    });
 }
-
-
-/* =========================================
-   UPDATE NAVIGATOR
-========================================= */
 
 function updateNavigator() {
+    const buttons = questionNavigator.querySelectorAll(".question-number-btn");
 
-    const buttons =
-        questionNavigator.querySelectorAll(
-            ".question-number-btn"
-        );
-
-
-    buttons.forEach(
-        (button, index) => {
-
-            button.classList.toggle(
-                "answered",
-                answers[index] !== null
-            );
-
-
-            button.classList.toggle(
-                "current",
-                index === currentQuestion
-            );
-
-        }
-    );
-
+    buttons.forEach((button, index) => {
+        button.classList.toggle("answered", answers[index] !== null);
+        button.classList.toggle("current", index === currentQuestion);
+    });
 }
 
 
 /* =========================================
-   UPDATE PROGRESS
+   PROGRESS
 ========================================= */
 
 function updateProgress() {
+    const answered = answers.filter(answer => answer !== null).length;
+    const total = questions.length;
+    const percentage = ((currentQuestion + 1) / total) * 100;
 
-    const answered =
-        answers.filter(
-            answer => answer !== null
-        ).length;
-
-
-    const total =
-        questions.length;
-
-
-    const percentage =
-        ((currentQuestion + 1) / total) * 100;
-
-
-    progressText.textContent =
-        `Question ${
-            currentQuestion + 1
-        } of ${total}`;
-
-
-    answeredText.textContent =
-        `${answered} answered`;
-
-
-    progressBar.style.width =
-        `${percentage}%`;
-
+    progressText.textContent = `Question ${currentQuestion + 1} of ${total}`;
+    answeredText.textContent = `${answered} answered`;
+    progressBar.style.width = `${percentage}%`;
 }
 
 
@@ -969,96 +556,49 @@ function updateProgress() {
 ========================================= */
 
 function startTimer() {
+    clearInterval(timerInterval);
+    if (quizSubmitted || timeRemaining <= 0) return;
 
     updateTimerDisplay();
 
+    timerInterval = setInterval(() => {
+        if (quizSubmitted) {
+            clearInterval(timerInterval);
+            return;
+        }
 
-    timerInterval =
-        setInterval(
-            () => {
+        if (pendingSubmission) return;
 
-                if (quizSubmitted) {
+        timeRemaining--;
+        updateTimerDisplay();
 
-                    clearInterval(
-                        timerInterval
-                    );
-
-                    return;
-
-                }
-
-
-                timeRemaining--;
-
-                updateTimerDisplay();
-
-
-                if (
-                    timeRemaining <= 0
-                ) {
-
-                    clearInterval(
-                        timerInterval
-                    );
-
-                    autoSubmit();
-
-                }
-
-            },
-            1000
-        );
-
+        if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            autoSubmit();
+        }
+    }, 1000);
 }
 
-
-/* =========================================
-   TIMER DISPLAY
-========================================= */
-
 function updateTimerDisplay() {
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
 
-    const minutes =
-        Math.floor(
-            timeRemaining / 60
-        );
-
-    const seconds =
-        timeRemaining % 60;
-
-
-    timer.textContent =
-        `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-
-
-    timerBox.classList.remove(
-        "warning",
-        "danger"
-    );
-
-
-    if (
-        timeRemaining <= 300 &&
-        timeRemaining > 60
-    ) {
-
-        timerBox.classList.add(
-            "warning"
-        );
-
+    if (timer) {
+        timer.textContent =
+            `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
     }
 
+    if (timerBox) {
+        timerBox.classList.remove("warning", "danger");
 
-    if (
-        timeRemaining <= 60
-    ) {
+        if (timeRemaining <= 300 && timeRemaining > 60) {
+            timerBox.classList.add("warning");
+        }
 
-        timerBox.classList.add(
-            "danger"
-        );
-
+        if (timeRemaining <= 60) {
+            timerBox.classList.add("danger");
+        }
     }
-
 }
 
 
@@ -1066,74 +606,30 @@ function updateTimerDisplay() {
    SUBMIT BUTTON
 ========================================= */
 
-submitBtn.addEventListener(
-    "click",
-    () => {
+submitBtn.addEventListener("click", () => {
+    if (quizSubmitted || pendingSubmission) return;
 
-        if (quizSubmitted) return;
+    const unanswered = answers.filter(answer => answer === null).length;
 
-
-        const unanswered =
-            answers.filter(
-                answer => answer === null
-            ).length;
-
-
-        if (unanswered > 0) {
-
-            modalText.textContent =
-                `You still have ${unanswered} unanswered question${
-                    unanswered === 1 ? "" : "s"
-                }. Are you sure you want to submit?`;
-
-        } else {
-
-            modalText.textContent =
-                "You have answered all 30 questions. Are you ready to submit?";
-
-        }
-
-
-        submitModal.classList.remove(
-            "hidden"
-        );
-
+    if (unanswered > 0) {
+        modalText.textContent =
+            `You still have ${unanswered} unanswered question${unanswered === 1 ? "" : "s"}. Are you sure you want to submit?`;
+    } else {
+        modalText.textContent =
+            `You have answered all ${questions.length} questions. Are you ready to submit?`;
     }
-);
 
+    submitModal.classList.remove("hidden");
+});
 
-/* =========================================
-   CANCEL SUBMIT
-========================================= */
+cancelSubmitBtn.addEventListener("click", () => {
+    submitModal.classList.add("hidden");
+});
 
-cancelSubmitBtn.addEventListener(
-    "click",
-    () => {
-
-        submitModal.classList.add(
-            "hidden"
-        );
-
-    }
-);
-
-
-/* =========================================
-   CONFIRM SUBMIT
-========================================= */
-
-confirmSubmitBtn.addEventListener(
-    "click",
-    () => {
-
-        submitModal.classList.add(
-            "hidden"
-        );
-
-        submitQuiz();
-
-    }
-);
+confirmSubmitBtn.addEventListener("click", () => {
+    submitModal.classList.add("hidden");
+    submitQuiz();
+});
 
 
 /* =========================================
@@ -1141,13 +637,8 @@ confirmSubmitBtn.addEventListener(
 ========================================= */
 
 function autoSubmit() {
-
-    alert(
-        "Time is up! Your CBT will now be submitted automatically."
-    );
-
+    alert("Time is up! Your CBT will now be submitted automatically.");
     submitQuiz();
-
 }
 
 
@@ -1156,86 +647,12 @@ function autoSubmit() {
 ========================================= */
 
 async function submitQuiz() {
-
-    if (
-        quizSubmitted ||
-        pendingSubmission
-    ) return;
-
+    if (quizSubmitted || pendingSubmission) return;
 
     pendingSubmission = true;
-
-
-    clearInterval(
-        timerInterval
-    );
-
-
-    let correct =
-        0;
-
-    let wrong =
-        0;
-
-    let unanswered =
-        0;
-
-
-    questions.forEach(
-        (question, index) => {
-
-            const userAnswer =
-                answers[index];
-
-
-            if (userAnswer === null) {
-
-                unanswered++;
-
-            } else if (
-                userAnswer === question.answer
-            ) {
-
-                correct++;
-
-            } else {
-
-                wrong++;
-
-            }
-
-        }
-    );
-
-
-    const total =
-        questions.length;
-
-
-    const percentage =
-        Math.round(
-            (correct / total) * 100
-        );
-
-
-    const qualifiedForLeaderboard =
-        percentage >= QUIZ_CONFIG.passMark;
-
-
-    /*
-        Ask for name through the
-        custom in-page modal.
-    */
+    clearInterval(timerInterval);
 
     openNameModal();
-
-
-    /*
-        Do not lock the quiz or save
-        anything until the student
-        actually provides a name.
-    */
-
 }
 
 
@@ -1244,30 +661,14 @@ async function submitQuiz() {
 ========================================= */
 
 function openNameModal() {
+    if (nameError) nameError.classList.add("hidden");
+    if (studentNameInput) studentNameInput.value = "";
 
-    nameError.classList.add(
-        "hidden"
-    );
+    nameModal.classList.remove("hidden");
 
-
-    studentNameInput.value =
-        "";
-
-
-    nameModal.classList.remove(
-        "hidden"
-    );
-
-
-    setTimeout(
-        () => {
-
-            studentNameInput.focus();
-
-        },
-        100
-    );
-
+    setTimeout(() => {
+        studentNameInput.focus();
+    }, 100);
 }
 
 
@@ -1275,58 +676,32 @@ function openNameModal() {
    CANCEL NAME
 ========================================= */
 
-cancelNameBtn.addEventListener(
-    "click",
-    () => {
+cancelNameBtn.addEventListener("click", () => {
+    if (quizSubmitted) return;
 
-        nameModal.classList.add(
-            "hidden"
-        );
+    nameModal.classList.add("hidden");
+    pendingSubmission = false;
 
-
-        pendingSubmission = false;
-
-
+    if (timeRemaining > 0) {
         startTimer();
-
     }
-);
+});
 
 
 /* =========================================
    CONTINUE NAME
 ========================================= */
 
-continueNameBtn.addEventListener(
-    "click",
-    () => {
+continueNameBtn.addEventListener("click", () => {
+    processNameSubmission();
+});
 
+studentNameInput.addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+        event.preventDefault();
         processNameSubmission();
-
     }
-);
-
-
-/* =========================================
-   ENTER KEY
-========================================= */
-
-studentNameInput.addEventListener(
-    "keydown",
-    (event) => {
-
-        if (
-            event.key === "Enter"
-        ) {
-
-            event.preventDefault();
-
-            processNameSubmission();
-
-        }
-
-    }
-);
+});
 
 
 /* =========================================
@@ -1334,229 +709,109 @@ studentNameInput.addEventListener(
 ========================================= */
 
 async function processNameSubmission() {
+    if (quizSubmitted) return;
 
-    const studentName =
-        studentNameInput.value.trim();
-
+    const studentName = studentNameInput.value.trim();
 
     if (!studentName) {
-
-        nameError.textContent =
-            "Please enter your name.";
-
-        nameError.classList.remove(
-            "hidden"
-        );
-
+        nameError.textContent = "Please enter your name.";
+        nameError.classList.remove("hidden");
         studentNameInput.focus();
-
         return;
-
     }
 
+    nameError.classList.add("hidden");
+    continueNameBtn.disabled = true;
+    continueNameBtn.textContent = "SAVING...";
 
-    nameError.classList.add(
-        "hidden"
+    const correct = calculateCorrectAnswers();
+    const total = questions.length;
+    const unanswered = calculateUnanswered();
+    const wrong = total - correct - unanswered;
+    const percentage = Math.round((correct / total) * 100);
+    const qualifiedForLeaderboard = percentage >= QUIZ_CONFIG.passMark;
+
+    const resultId = await saveQuizResult(
+        studentName,
+        correct,
+        total,
+        percentage,
+        qualifiedForLeaderboard
     );
 
-
-    continueNameBtn.disabled =
-        true;
-
-    continueNameBtn.textContent =
-        "SAVING...";
-
-
-    const correct =
-        calculateCorrectAnswers();
-
-    const total =
-        questions.length;
-
-    const unanswered =
-        calculateUnanswered();
-
-    const wrong =
-        total -
-        correct -
-        unanswered;
-
-    const percentage =
-        Math.round(
-            (correct / total) * 100
-        );
-
-    const qualifiedForLeaderboard =
-        percentage >= QUIZ_CONFIG.passMark;
-
-
-    const resultId =
-        await saveQuizResult(
-            studentName,
-            correct,
-            total,
-            percentage,
-            qualifiedForLeaderboard
-        );
-
-
     if (!resultId) {
-
-        continueNameBtn.disabled =
-            false;
-
-        continueNameBtn.textContent =
-            "CONTINUE";
+        continueNameBtn.disabled = false;
+        continueNameBtn.textContent = "CONTINUE";
 
         nameError.textContent =
             "Your result could not be saved. Please try again.";
+        nameError.classList.remove("hidden");
 
-        nameError.classList.remove(
-            "hidden"
-        );
+        pendingSubmission = false;
 
-        pendingSubmission =
-            false;
-
-        startTimer();
-
+        if (timeRemaining > 0) startTimer();
         return;
-
     }
 
+    localStorage.setItem(RESULT_ID_KEY, resultId);
 
-    /*
-        Store the Supabase result UUID.
-        The leaderboard page uses this
-        to retrieve the student's
-        personal result later.
-    */
-
-    localStorage.setItem(
-        RESULT_ID_KEY,
-        resultId
-    );
-
-
-    /*
-        Result has now been safely saved.
-        Only now lock the attempt.
-    */
-
-    quizSubmitted =
-        true;
-
-    pendingSubmission =
-        false;
-
+    quizSubmitted = true;
+    pendingSubmission = false;
 
     if (!QUIZ_CONFIG.allowRetake) {
-
-        localStorage.setItem(
-            COMPLETION_KEY,
-            "true"
-        );
-
+        localStorage.setItem(COMPLETION_KEY, "true");
     }
 
+    clearInterval(timerInterval);
+    nameModal.classList.add("hidden");
 
-    clearInterval(
-        timerInterval
-    );
-
-
-    nameModal.classList.add(
-        "hidden"
-    );
-
-
-    const leaderboardSettings =
-        await getLeaderboardSettings();
-
+    const leaderboardSettings = await getLeaderboardSettings();
 
     if (!leaderboardSettings) {
-
         showLockedResult(
-            "Your quiz was submitted successfully. Your result is temporarily locked while the leaderboard is being prepared.please join Conqueror Labs WhatsApp channel to be notified when the result drops. Thank you 🌹"
+            "Your quiz was submitted successfully. Your result is temporarily locked while the leaderboard is being prepared. Please join the Conquerors Labs WhatsApp channel to be notified when results are released. Thank you 🌹"
         );
-
         return;
-
     }
-
 
     const leaderboardIsEnabled =
         leaderboardSettings.leaderboard_enabled === true ||
         leaderboardSettings.leaderboard_enabled === "true";
 
-
     if (!leaderboardIsEnabled) {
-
         showLockedResult(
-            "Your quiz has been submitted successfully. Your result and leaderboard position are currently locked. Results will be available when the leaderboard is opened.Please join the Conqueror Labs WhatsApp channel to be notified when the result drops 🌹"
+            "Your quiz has been submitted successfully. Your result and leaderboard position are currently locked. Results will be available when the leaderboard is opened. Please join the Conquerors Labs WhatsApp channel for updates 🌹"
         );
-
         return;
-
     }
 
-
-    showResults(
-        correct,
-        wrong,
-        unanswered,
-        percentage
-    );
-
+    showResults(correct, wrong, unanswered, percentage);
 }
 
 
 /* =========================================
-   CALCULATE CORRECT
+   CALCULATE SCORES
 ========================================= */
 
 function calculateCorrectAnswers() {
+    let correct = 0;
 
-    let correct =
-        0;
-
-
-    questions.forEach(
-        (question, index) => {
-
-            if (
-                answers[index] ===
-                question.answer
-            ) {
-
-                correct++;
-
-            }
-
+    questions.forEach((question, index) => {
+        if (answers[index] === question.answer) {
+            correct++;
         }
-    );
-
+    });
 
     return correct;
-
 }
-
-
-/* =========================================
-   CALCULATE UNANSWERED
-========================================= */
 
 function calculateUnanswered() {
-
-    return answers.filter(
-        answer => answer === null
-    ).length;
-
+    return answers.filter(answer => answer === null).length;
 }
 
 
 /* =========================================
-   SAVE QUIZ RESULT
+   SAVE QUIZ RESULT TO SUPABASE
 ========================================= */
 
 async function saveQuizResult(
@@ -1566,78 +821,35 @@ async function saveQuizResult(
     percentage,
     qualifiedForLeaderboard
 ) {
-
     try {
-
-        const { data, error } =
-            await supabaseClient.rpc(
-                "submit_quiz_result",
-                {
-                    p_student_name:
-                        studentName,
-
-                    p_quiz_id:
-                        QUIZ_CONFIG.quizId,
-
-                    p_quiz_title:
-                        QUIZ_CONFIG.title,
-
-                    p_score:
-                        score,
-
-                    p_total_questions:
-                        totalQuestions,
-
-                    p_percentage:
-                        percentage,
-
-                    p_qualified_for_leaderboard:
-                        qualifiedForLeaderboard
-                }
-            );
-
-
-        if (error) {
-
-            console.error(
-                "Quiz result save error:",
-                error
-            );
-
-            return false;
-
-        }
-
-
-        /*
-            The RPC returns the UUID of
-            the newly created quiz result.
-        */
-
-        if (!data) {
-
-            console.error(
-                "Quiz result save error: No result ID returned."
-            );
-
-            return false;
-
-        }
-
-
-        return data;
-
-    } catch (error) {
-
-        console.error(
-            "Quiz result JavaScript error:",
-            error
+        const { data, error } = await supabaseClient.rpc(
+            "submit_quiz_result",
+            {
+                p_student_name: studentName,
+                p_quiz_id: QUIZ_CONFIG.quizId,
+                p_quiz_title: QUIZ_CONFIG.title,
+                p_score: score,
+                p_total_questions: totalQuestions,
+                p_percentage: percentage,
+                p_qualified_for_leaderboard: qualifiedForLeaderboard
+            }
         );
 
+        if (error) {
+            console.error("Quiz result save error:", error);
+            return false;
+        }
+
+        if (!data) {
+            console.error("Quiz result save error: No result ID returned.");
+            return false;
+        }
+
+        return data;
+    } catch (error) {
+        console.error("Quiz result JavaScript error:", error);
         return false;
-
     }
-
 }
 
 
@@ -1646,55 +858,28 @@ async function saveQuizResult(
 ========================================= */
 
 async function getLeaderboardSettings() {
-
     try {
-
-        const { data, error } =
-            await supabaseClient
-                .from("leaderboard_settings")
-                .select(
-                    "quiz_id, leaderboard_enabled, pass_mark"
-                )
-                .eq(
-                    "quiz_id",
-                    QUIZ_CONFIG.quizId
-                )
-                .single();
-
+        const { data, error } = await supabaseClient
+            .from("leaderboard_settings")
+            .select("quiz_id, leaderboard_enabled, pass_mark")
+            .eq("quiz_id", QUIZ_CONFIG.quizId)
+            .single();
 
         if (error) {
-
-            console.error(
-                "Leaderboard settings error:",
-                error
-            );
-
+            console.error("Leaderboard settings error:", error);
             return null;
-
         }
 
-
         return {
-
             ...data,
-
             leaderboard_enabled:
                 data.leaderboard_enabled === true ||
                 data.leaderboard_enabled === "true"
-
         };
-
     } catch (error) {
-
-        console.error(
-            "Leaderboard settings JavaScript error:",
-            error
-        );
-
+        console.error("Leaderboard settings JavaScript error:", error);
         return null;
-
     }
-
 }
 
 
@@ -1702,72 +887,24 @@ async function getLeaderboardSettings() {
    SHOW RESULTS
 ========================================= */
 
-function showResults(
-    correct,
-    wrong,
-    unanswered,
-    percentage
-) {
+function showResults(correct, wrong, unanswered, percentage) {
+    correctCount.textContent = correct;
+    wrongCount.textContent = wrong;
+    unansweredCount.textContent = unanswered;
 
-    correctCount.textContent =
-        correct;
+    resultScore.textContent = `${correct} / ${questions.length}`;
+    resultPercentage.textContent = `${percentage}%`;
+    resultMessage.textContent = getResultMessage(percentage);
 
-    wrongCount.textContent =
-        wrong;
+    questionArea.classList.add("hidden");
+    navigatorCard.classList.add("hidden");
+    submitBtn.classList.add("hidden");
 
-    unansweredCount.textContent =
-        unanswered;
+    resultSection.classList.remove("hidden");
+    reviewBtn.classList.remove("hidden");
+    retakeBtn.classList.add("hidden");
 
-
-    resultScore.textContent =
-        `${correct} / ${questions.length}`;
-
-
-    resultPercentage.textContent =
-        `${percentage}%`;
-
-
-    resultMessage.textContent =
-        getResultMessage(
-            percentage
-        );
-
-
-    questionArea.classList.add(
-        "hidden"
-    );
-
-
-    navigatorCard.classList.add(
-        "hidden"
-    );
-
-
-    submitBtn.classList.add(
-        "hidden"
-    );
-
-
-    resultSection.classList.remove(
-        "hidden"
-    );
-
-
-    reviewBtn.classList.remove(
-        "hidden"
-    );
-
-
-    retakeBtn.classList.add(
-        "hidden"
-    );
-
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
@@ -1776,62 +913,20 @@ function showResults(
 ========================================= */
 
 function showLockedResult(message) {
+    questionArea.classList.add("hidden");
+    navigatorCard.classList.add("hidden");
+    submitBtn.classList.add("hidden");
 
-    questionArea.classList.add(
-        "hidden"
-    );
+    resultSection.classList.remove("hidden");
 
+    resultScore.textContent = "🔒";
+    resultPercentage.textContent = "";
+    resultMessage.textContent = message;
 
-    navigatorCard.classList.add(
-        "hidden"
-    );
+    if (reviewBtn) reviewBtn.classList.add("hidden");
+    if (retakeBtn) retakeBtn.classList.add("hidden");
 
-
-    submitBtn.classList.add(
-        "hidden"
-    );
-
-
-    resultSection.classList.remove(
-        "hidden"
-    );
-
-
-    resultScore.textContent =
-        "🔒";
-
-
-    resultPercentage.textContent =
-        "";
-
-
-    resultMessage.textContent =
-        message;
-
-
-    if (reviewBtn) {
-
-        reviewBtn.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    if (retakeBtn) {
-
-        retakeBtn.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
@@ -1839,47 +934,28 @@ function showLockedResult(message) {
    RESULT MESSAGE
 ========================================= */
 
-function getResultMessage(
-    percentage
-) {
-
+function getResultMessage(percentage) {
     if (percentage >= 90) {
-
-        return "Outstanding! You conquered CHM 101 at a very high level. 🔥";
-
+        return "Outstanding! You conquered CHM 101 Atomic Structure at a very high level. 🔥";
     }
-
 
     if (percentage >= 80) {
-
-        return "Excellent performance! Your CHM 101 foundation is looking strong. 🧪";
-
+        return "Excellent performance! Your atomic structure foundation is strong. 🧪";
     }
-
 
     if (percentage >= 70) {
-
-        return "Great job! You have a solid grasp of the material. Keep sharpening it.";
-
+        return "Great job! You have a solid grasp of atomic structure. Keep sharpening it.";
     }
-
 
     if (percentage >= 60) {
-
         return "Good attempt. Review the corrections carefully and strengthen the weaker areas.";
-
     }
-
 
     if (percentage >= 50) {
-
         return "You have a foundation to build on. Use the corrections to lock in the concepts.";
-
     }
 
-
     return "This is your starting point. Review the corrections, learn from the misses, and come back stronger.";
-
 }
 
 
@@ -1887,193 +963,70 @@ function getResultMessage(
    REVIEW BUTTON
 ========================================= */
 
-reviewBtn.addEventListener(
-    "click",
-    () => {
+reviewBtn.addEventListener("click", () => {
+    generateReview();
 
-        generateReview();
-
-
-        reviewSection.classList.remove(
-            "hidden"
-        );
-
-
-        reviewSection.scrollIntoView({
-            behavior: "smooth"
-        });
-
-    }
-);
+    reviewSection.classList.remove("hidden");
+    reviewSection.scrollIntoView({ behavior: "smooth" });
+});
 
 
 /* =========================================
-   GENERATE REVIEW
+   GENERATE ANSWER REVIEW
 ========================================= */
 
 function generateReview() {
+    reviewContainer.innerHTML = "";
 
-    reviewContainer.innerHTML =
-        "";
+    questions.forEach((question, index) => {
+        const userAnswer = answers[index];
+        const isCorrect = userAnswer === question.answer;
 
+        const card = document.createElement("div");
+        card.className = `review-card ${isCorrect ? "correct" : "wrong"}`;
 
-    questions.forEach(
-        (question, index) => {
+        const number = document.createElement("div");
+        number.className = "review-question-number";
+        number.textContent = `QUESTION ${index + 1}`;
 
-            const userAnswer =
-                answers[index];
+        const questionText = document.createElement("div");
+        questionText.className = "review-question";
+        questionText.textContent = question.question;
 
+        const yourAnswer = document.createElement("div");
+        yourAnswer.className = "review-answer";
 
-            const isCorrect =
-                userAnswer ===
-                question.answer;
+        const yourLabel = document.createElement("strong");
+        yourLabel.textContent = "Your answer: ";
 
+        yourAnswer.appendChild(yourLabel);
+        yourAnswer.appendChild(
+            document.createTextNode(userAnswer ?? "Not answered")
+        );
 
-            const card =
-                document.createElement(
-                    "div"
-                );
+        const correctAnswer = document.createElement("div");
+        correctAnswer.className = "review-answer";
 
+        const correctLabel = document.createElement("strong");
+        correctLabel.textContent = "Correct answer: ";
 
-            card.className =
-                `review-card ${
-                    isCorrect
-                        ? "correct"
-                        : "wrong"
-                }`;
+        correctAnswer.appendChild(correctLabel);
+        correctAnswer.appendChild(
+            document.createTextNode(question.answer)
+        );
 
+        const correction = document.createElement("div");
+        correction.className = "review-correction";
+        correction.textContent = `💡 Explanation: ${question.explanation}`;
 
-            const questionNumber =
-                document.createElement(
-                    "div"
-                );
+        card.appendChild(number);
+        card.appendChild(questionText);
+        card.appendChild(yourAnswer);
+        card.appendChild(correctAnswer);
+        card.appendChild(correction);
 
-            questionNumber.className =
-                "review-question-number";
-
-            questionNumber.textContent =
-                `QUESTION ${index + 1}`;
-
-
-            const questionText =
-                document.createElement(
-                    "div"
-                );
-
-            questionText.className =
-                "review-question";
-
-            questionText.textContent =
-                question.question;
-
-
-            const yourAnswer =
-                document.createElement(
-                    "div"
-                );
-
-            yourAnswer.className =
-                "review-answer";
-
-
-            const yourAnswerLabel =
-                document.createElement(
-                    "strong"
-                );
-
-            yourAnswerLabel.textContent =
-                "Your answer: ";
-
-
-            const yourAnswerValue =
-                document.createTextNode(
-                    userAnswer ??
-                    "Not answered"
-                );
-
-
-            yourAnswer.appendChild(
-                yourAnswerLabel
-            );
-
-            yourAnswer.appendChild(
-                yourAnswerValue
-            );
-
-
-            const correctAnswer =
-                document.createElement(
-                    "div"
-                );
-
-            correctAnswer.className =
-                "review-answer";
-
-
-            const correctLabel =
-                document.createElement(
-                    "strong"
-                );
-
-            correctLabel.textContent =
-                "Correct answer: ";
-
-
-            const correctValue =
-                document.createTextNode(
-                    question.answer
-                );
-
-
-            correctAnswer.appendChild(
-                correctLabel
-            );
-
-            correctAnswer.appendChild(
-                correctValue
-            );
-
-
-            const correction =
-                document.createElement(
-                    "div"
-                );
-
-            correction.className =
-                "review-correction";
-
-            correction.textContent =
-                `💡 Correction: ${question.explanation}`;
-
-
-            card.appendChild(
-                questionNumber
-            );
-
-            card.appendChild(
-                questionText
-            );
-
-            card.appendChild(
-                yourAnswer
-            );
-
-            card.appendChild(
-                correctAnswer
-            );
-
-            card.appendChild(
-                correction
-            );
-
-
-            reviewContainer.appendChild(
-                card
-            );
-
-        }
-    );
-
+        reviewContainer.appendChild(card);
+    });
 }
 
 
@@ -2081,28 +1034,12 @@ function generateReview() {
    RETAKE
 ========================================= */
 
-retakeBtn.addEventListener(
-    "click",
-    () => {
+retakeBtn.addEventListener("click", () => {
+    if (!QUIZ_CONFIG.allowRetake) return;
 
-        if (
-            !QUIZ_CONFIG.allowRetake
-        ) {
-
-            return;
-
-        }
-
-
-        localStorage.removeItem(
-            COMPLETION_KEY
-        );
-
-
-        location.reload();
-
-    }
-);
+    localStorage.removeItem(COMPLETION_KEY);
+    location.reload();
+});
 
 
 /* =========================================
@@ -2110,92 +1047,23 @@ retakeBtn.addEventListener(
 ========================================= */
 
 function showAlreadyCompleted() {
+    quizSubmitted = true;
 
-    quizSubmitted =
-        true;
+    if (questionArea) questionArea.classList.add("hidden");
+    if (navigatorCard) navigatorCard.classList.add("hidden");
+    if (submitBtn) submitBtn.classList.add("hidden");
+    if (resultSection) resultSection.classList.remove("hidden");
 
-
-    if (questionArea) {
-
-        questionArea.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    if (navigatorCard) {
-
-        navigatorCard.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    if (submitBtn) {
-
-        submitBtn.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    if (resultSection) {
-
-        resultSection.classList.remove(
-            "hidden"
-        );
-
-    }
-
-
-    if (resultScore) {
-
-        resultScore.textContent =
-            "✓";
-
-    }
-
-
-    if (resultPercentage) {
-
-        resultPercentage.textContent =
-            "";
-
-    }
-
+    if (resultScore) resultScore.textContent = "✓";
+    if (resultPercentage) resultPercentage.textContent = "";
 
     if (resultMessage) {
-
         resultMessage.textContent =
             "You have already completed this CBT. Only one attempt is allowed.";
-
     }
 
+    if (reviewBtn) reviewBtn.classList.add("hidden");
+    if (retakeBtn) retakeBtn.classList.add("hidden");
 
-    if (reviewBtn) {
-
-        reviewBtn.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    if (retakeBtn) {
-
-        retakeBtn.classList.add(
-            "hidden"
-        );
-
-    }
-
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
