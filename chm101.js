@@ -7,7 +7,7 @@
 const QUIZ_CONFIG = {
     title: "CHM 101 — Atomic Structure",
 
-    quizVersion: 1,
+    quizVersion: 2,
     timeLimit: 20,
     maxQuestions: 40,
     allowRetake: false,
