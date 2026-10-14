@@ -17,7 +17,7 @@ const QUIZZES = {
 
     "chm101": {
         title: "CHM 101",
-        resultKey: "conquerorsLabs_CHM101_result_id"
+        resultKey: "conquerorsLabs_CHM101_result_id_v2"
     },
 
     "phy101": {
