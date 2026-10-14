@@ -30,7 +30,7 @@ const QUIZ_CONFIG = {
     },
 
     CHM101: {
-        enabled: false,
+        enabled: true,
         name: "CHM 101",
         url: "chm101.html"
     },
