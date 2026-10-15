@@ -1,38 +1,42 @@
-
 /* =========================================
-   CONQUERORS LABS
-   LEADERBOARD SYSTEM
+   CONQUERORS LABS — LEADERBOARD
 ========================================= */
-
-/* QUIZ CONFIGURATIONS */
 
 const QUIZZES = {
     "bio101-cell-biology": {
         title: "BIO 101",
+        databaseQuizId: "bio101-cell-biology",
         resultKey: "conquerorsLabs_BIO101_result_id_v4"
+    },
+
+    // Both IDs lead to the same CHM leaderboard.
+    "chm101": {
+        title: "CHM 101",
+        databaseQuizId: "chm101-atomic-structure",
+        resultKey: "conquerorsLabs_CHM101_result_id_v2"
     },
 
     "chm101-atomic-structure": {
         title: "CHM 101",
+        databaseQuizId: "chm101-atomic-structure",
         resultKey: "conquerorsLabs_CHM101_result_id_v2"
     },
 
     "phy101": {
         title: "PHY 101",
+        databaseQuizId: "phy101",
         resultKey: "conquerorsLabs_PHY101_result_id_v2"
     },
 
     "math101": {
         title: "MATH 101",
+        databaseQuizId: "math101",
         resultKey: "conquerorsLabs_MATH101_result_id_v2"
     }
 };
 
-/* CURRENT QUIZ */
-
 let currentQuizId = "bio101-cell-biology";
-
-/* DOM ELEMENTS */
+let leaderboardRequestNumber = 0;
 
 const quizTitle = document.getElementById("quizTitle");
 const quizStatus = document.getElementById("quizStatus");
@@ -41,21 +45,35 @@ const topThree = document.getElementById("topThree");
 const rankingList = document.getElementById("rankingList");
 const emptyState = document.getElementById("emptyState");
 const lockedState = document.getElementById("lockedState");
+
 const personalResult = document.getElementById("personalResult");
-const personalResultHeading = document.getElementById("personalResultHeading");
-const personalResultIcon = document.getElementById("personalResultIcon");
-const personalResultMessage = document.getElementById("personalResultMessage");
-const personalResultDescription = document.getElementById("personalResultDescription");
+const personalResultHeading =
+    document.getElementById("personalResultHeading");
+const personalResultIcon =
+    document.getElementById("personalResultIcon");
+const personalResultMessage =
+    document.getElementById("personalResultMessage");
+const personalResultDescription =
+    document.getElementById("personalResultDescription");
 const personalScore = document.getElementById("personalScore");
-const personalPercentage = document.getElementById("personalPercentage");
+const personalPercentage =
+    document.getElementById("personalPercentage");
 const personalRank = document.getElementById("personalRank");
 const personalRankStat = document.getElementById("personalRankStat");
-const courseButtons = document.querySelectorAll(".course-button");
 
-/* INITIALIZE */
+const courseButtons = document.querySelectorAll(".course-button");
 
 document.addEventListener("DOMContentLoaded", () => {
     setupCourseButtons();
+
+    const initialButton = Array.from(courseButtons).find(
+        button => button.dataset.quiz === currentQuizId
+    );
+
+    if (initialButton) {
+        updateActiveButton(initialButton);
+    }
+
     loadLeaderboard(currentQuizId);
 });
 
@@ -66,63 +84,73 @@ function setupCourseButtons() {
         button.addEventListener("click", () => {
             const quizId = button.dataset.quiz;
 
-            if (quizId === currentQuizId) {
-                // Reload the selected leaderboard when clicked again.
-                loadLeaderboard(quizId);
+            if (!quizId) {
+                console.error(
+                    "[Leaderboard] Button is missing its data-quiz attribute."
+                );
                 return;
             }
 
             currentQuizId = quizId;
             updateActiveButton(button);
-            loadLeaderboard(currentQuizId);
+            loadLeaderboard(quizId);
         });
     });
 }
 
-/* ACTIVE COURSE BUTTON */
-
 function updateActiveButton(activeButton) {
     courseButtons.forEach(button => {
-        button.classList.remove("active");
+        button.classList.toggle("active", button === activeButton);
     });
-
-    activeButton.classList.add("active");
 }
 
 /* LOAD LEADERBOARD */
 
 async function loadLeaderboard(quizId) {
+    const requestNumber = ++leaderboardRequestNumber;
+    const quiz = QUIZZES[quizId];
+
     resetLeaderboardDisplay();
 
-    console.log("[Leaderboard] Selected quiz ID:", quizId);
-
-    const quiz = QUIZZES[quizId];
+    console.log("[Leaderboard] Selected button ID:", quizId);
 
     if (!quiz) {
         showError(`Course ID "${quizId}" is not configured in QUIZZES.`);
         return;
     }
 
+    // Update the title immediately for the selected course.
     quizTitle.textContent = quiz.title;
+
+    const databaseQuizId = quiz.databaseQuizId;
+
+    console.log("[Leaderboard] Database quiz ID:", databaseQuizId);
+
+    if (
+        typeof supabaseClient === "undefined" ||
+        !supabaseClient
+    ) {
+        showError(
+            "Supabase is unavailable. Check supabase.js and its script order."
+        );
+        return;
+    }
+
     quizStatus.textContent = "Loading leaderboard...";
 
     try {
-        if (typeof supabaseClient === "undefined" || !supabaseClient) {
-            throw new Error(
-                "supabaseClient is unavailable. Check supabase.js and script order."
-            );
-        }
-
-        /* GET LEADERBOARD SETTINGS */
-
         const {
             data: settings,
             error: settingsError
         } = await supabaseClient
             .from("leaderboard_settings")
-            .select("quiz_id, quiz_title, leaderboard_enabled, pass_mark")
-            .eq("quiz_id", quizId)
+            .select(
+                "quiz_id, quiz_title, leaderboard_enabled, pass_mark"
+            )
+            .eq("quiz_id", databaseQuizId)
             .maybeSingle();
+
+        if (requestNumber !== leaderboardRequestNumber) return;
 
         console.log("[Leaderboard] Settings:", settings);
         console.log("[Leaderboard] Settings error:", settingsError);
@@ -134,10 +162,13 @@ async function loadLeaderboard(quizId) {
 
         if (!settings) {
             showLocked(
-                `No leaderboard_settings row found for "${quizId}".`
+                `No leaderboard settings found for "${databaseQuizId}".`
             );
             return;
         }
+
+        // Keep the configured title authoritative.
+        quizTitle.textContent = quiz.title;
 
         const currentPassMark = Number(settings.pass_mark ?? 50);
         passMark.textContent = `${currentPassMark}%`;
@@ -147,25 +178,24 @@ async function loadLeaderboard(quizId) {
             settings.leaderboard_enabled === "true";
 
         if (!enabled) {
-            showLocked("The leaderboard for this course is currently locked.");
+            showLocked(
+                `The ${quiz.title} leaderboard is currently locked.`
+            );
             return;
         }
-
-        /* GET PUBLIC TOP 50 */
 
         quizStatus.textContent = "Fetching the conquerors...";
 
         const {
             data,
             error
-        } = await supabaseClient.rpc(
-            "get_quiz_leaderboard",
-            {
-                target_quiz_id: quizId
-            }
-        );
+        } = await supabaseClient.rpc("get_quiz_leaderboard", {
+            target_quiz_id: databaseQuizId
+        });
 
-        console.log("[Leaderboard] RPC quiz ID:", quizId);
+        if (requestNumber !== leaderboardRequestNumber) return;
+
+        console.log("[Leaderboard] RPC quiz ID:", databaseQuizId);
         console.log("[Leaderboard] Returned students:", data);
         console.log("[Leaderboard] RPC error:", error);
 
@@ -175,41 +205,46 @@ async function loadLeaderboard(quizId) {
         }
 
         if (!Array.isArray(data)) {
-            showError(
-                `Unexpected leaderboard response. Expected an array, received ${typeof data}.`
-            );
+            showError("The leaderboard returned an unexpected response.");
             return;
         }
 
         if (data.length === 0) {
-            quizStatus.textContent =
-                `No qualifying students returned for "${quizId}".`;
-
+            quizStatus.textContent = "No qualifying students yet.";
             showEmpty();
         } else {
             quizStatus.textContent =
-                `${data.length} conqueror${data.length === 1 ? "" : "s"} currently ranked`;
+                `${data.length} conqueror${data.length === 1 ? "" : "s"} ranked`;
 
             renderTopThree(data);
             renderRanking(data);
         }
 
-        await loadPersonalResult(quizId, currentPassMark);
+        await loadPersonalResult(
+            quiz,
+            currentPassMark,
+            requestNumber
+        );
 
     } catch (error) {
+        if (requestNumber !== leaderboardRequestNumber) return;
+
         console.error("[Leaderboard] Loading exception:", error);
-        showError(`Leaderboard error: ${error.message || String(error)}`);
+
+        showError(
+            `Leaderboard error: ${error.message || String(error)}`
+        );
     }
 }
 
-/* LOAD PERSONAL RESULT */
+/* PERSONAL RESULT */
 
-async function loadPersonalResult(quizId, currentPassMark) {
+async function loadPersonalResult(
+    quiz,
+    currentPassMark,
+    requestNumber
+) {
     hidePersonalResult();
-
-    const quiz = QUIZZES[quizId];
-
-    if (!quiz) return;
 
     const storedResultId = localStorage.getItem(quiz.resultKey);
 
@@ -219,12 +254,11 @@ async function loadPersonalResult(quizId, currentPassMark) {
         const {
             data,
             error
-        } = await supabaseClient.rpc(
-            "get_my_quiz_result",
-            {
-                target_result_id: storedResultId
-            }
-        );
+        } = await supabaseClient.rpc("get_my_quiz_result", {
+            target_result_id: storedResultId
+        });
+
+        if (requestNumber !== leaderboardRequestNumber) return;
 
         console.log("[Leaderboard] Personal result:", data);
         console.log("[Leaderboard] Personal result error:", error);
@@ -233,16 +267,19 @@ async function loadPersonalResult(quizId, currentPassMark) {
 
         const result = Array.isArray(data) ? data[0] : data;
 
-        if (!result || result.quiz_id !== quizId) return;
+        if (!result) return;
+
+        if (result.quiz_id !== quiz.databaseQuizId) return;
 
         displayPersonalResult(result, currentPassMark);
 
     } catch (error) {
-        console.error("[Leaderboard] Personal result exception:", error);
+        console.error(
+            "[Leaderboard] Personal result exception:",
+            error
+        );
     }
 }
-
-/* DISPLAY PERSONAL RESULT */
 
 function displayPersonalResult(result, currentPassMark) {
     const score = Number(result.score ?? 0);
@@ -251,7 +288,9 @@ function displayPersonalResult(result, currentPassMark) {
     const rank = Number(result.rank ?? 0);
 
     personalScore.textContent = `${score} / ${totalQuestions}`;
-    personalPercentage.textContent = `${formatPercentage(percentage)}%`;
+    personalPercentage.textContent =
+        `${formatPercentage(percentage)}%`;
+
     personalRank.textContent = rank > 0 ? `#${rank}` : "-";
     personalRankStat.hidden = percentage < currentPassMark;
 
@@ -261,7 +300,7 @@ function displayPersonalResult(result, currentPassMark) {
         personalResultMessage.textContent =
             "You didn't qualify for the leaderboard.";
         personalResultDescription.textContent =
-            `A minimum score of ${formatPercentage(currentPassMark)}% is required to qualify.`;
+            `A minimum score of ${formatPercentage(currentPassMark)}% is required.`;
 
     } else if (rank >= 1 && rank <= 50) {
         personalResultHeading.textContent = "You Made the Top 50";
@@ -275,7 +314,7 @@ function displayPersonalResult(result, currentPassMark) {
         personalResultHeading.textContent = "You Passed";
         personalResultIcon.textContent = "✓";
         personalResultMessage.textContent =
-            "You passed the quiz, but did not make the Top 50.";
+            "You passed, but did not make the Top 50.";
         personalResultDescription.textContent =
             "Keep studying and aim higher on your next attempt.";
     }
@@ -283,21 +322,23 @@ function displayPersonalResult(result, currentPassMark) {
     personalResult.hidden = false;
 }
 
-/* HIDE PERSONAL RESULT */
-
 function hidePersonalResult() {
-    personalResult.hidden = true;
+    if (personalResult) personalResult.hidden = true;
 }
 
-/* RESET DISPLAY */
+/* RESET */
 
 function resetLeaderboardDisplay() {
-    topThree.innerHTML = "";
-    rankingList.innerHTML = "";
-    emptyState.hidden = true;
-    lockedState.hidden = true;
+    if (topThree) topThree.replaceChildren();
+    if (rankingList) rankingList.replaceChildren();
+
+    if (emptyState) emptyState.hidden = true;
+    if (lockedState) lockedState.hidden = true;
+
     hidePersonalResult();
-    quizStatus.textContent = "Loading leaderboard...";
+
+    if (quizStatus) quizStatus.textContent = "Loading leaderboard...";
+    if (passMark) passMark.textContent = "50%";
 }
 
 /* TOP THREE */
@@ -312,16 +353,12 @@ function renderTopThree(data) {
     if (third) topThree.appendChild(createTopCard(third, "third"));
 }
 
-/* RANK EMBLEM */
-
 function getRankIcon(rank) {
     if (rank === 1) return "scholar-supreme.png";
     if (rank === 2) return "book-conqueror.png";
     if (rank === 3) return "general-of-book.png";
     return "";
 }
-
-/* CREATE TOP CARD */
 
 function createTopCard(student, position) {
     const card = document.createElement("div");
@@ -331,49 +368,51 @@ function createTopCard(student, position) {
     const title = student.title || getRankTitle(rank);
     const rankIcon = getRankIcon(rank);
 
-    card.innerHTML = `
-        <div class="medal">
-            <img
-                src="${escapeHTML(rankIcon)}"
-                alt="${escapeHTML(title)}"
-                class="rank-emblem"
-            >
-        </div>
+    const medal = document.createElement("div");
+    medal.className = "medal";
 
-        <span class="top-position">
-            ${getOrdinal(rank)} PLACE
-        </span>
+    if (rankIcon) {
+        const image = document.createElement("img");
+        image.src = rankIcon;
+        image.alt = title;
+        image.className = "rank-emblem";
+        medal.appendChild(image);
+    }
 
-        <div class="top-name">
-            ${escapeHTML(student.student_name)}
-        </div>
+    const positionLabel = document.createElement("span");
+    positionLabel.className = "top-position";
+    positionLabel.textContent = `${getOrdinal(rank)} PLACE`;
 
-        <div class="top-title">
-            ${escapeHTML(title)}
-        </div>
+    const name = document.createElement("div");
+    name.className = "top-name";
+    name.textContent = student.student_name ?? "Student";
 
-        <div class="top-score">
-            ${formatPercentage(student.percentage)}
-            <span>%</span>
-        </div>
-    `;
+    const titleElement = document.createElement("div");
+    titleElement.className = "top-title";
+    titleElement.textContent = title;
+
+    const score = document.createElement("div");
+    score.className = "top-score";
+    score.append(document.createTextNode(formatPercentage(student.percentage)));
+
+    const percent = document.createElement("span");
+    percent.textContent = "%";
+    score.appendChild(percent);
+
+    card.append(medal, positionLabel, name, titleElement, score);
 
     return card;
 }
 
-/* RANKING LIST */
+/* REMAINING RANKS */
 
 function renderRanking(data) {
-    const remaining = data.filter(
-        student => Number(student.rank) > 3
-    );
-
-    remaining.forEach(student => {
-        rankingList.appendChild(createRankCard(student));
-    });
+    data
+        .filter(student => Number(student.rank) > 3)
+        .forEach(student => {
+            rankingList.appendChild(createRankCard(student));
+        });
 }
-
-/* CREATE RANK CARD */
 
 function createRankCard(student) {
     const card = document.createElement("div");
@@ -387,32 +426,40 @@ function createRankCard(student) {
 
     const title = student.title || getRankTitle(rank);
 
-    card.innerHTML = `
-        <div class="rank-number">#${rank}</div>
+    const rankNumber = document.createElement("div");
+    rankNumber.className = "rank-number";
+    rankNumber.textContent = `#${rank}`;
 
-        <div class="rank-info">
-            <div class="rank-name">
-                ${escapeHTML(student.student_name)}
-            </div>
+    const info = document.createElement("div");
+    info.className = "rank-info";
 
-            <div class="rank-title">
-                ${escapeHTML(title)}
-            </div>
-        </div>
+    const name = document.createElement("div");
+    name.className = "rank-name";
+    name.textContent = student.student_name ?? "Student";
 
-        <div class="rank-score">
-            <strong>${formatPercentage(student.percentage)}%</strong>
-            <span>
-                ${student.score ?? "-"} /
-                ${student.total_questions ?? "-"}
-            </span>
-        </div>
-    `;
+    const titleElement = document.createElement("div");
+    titleElement.className = "rank-title";
+    titleElement.textContent = title;
+
+    info.append(name, titleElement);
+
+    const score = document.createElement("div");
+    score.className = "rank-score";
+
+    const percentage = document.createElement("strong");
+    percentage.textContent = `${formatPercentage(student.percentage)}%`;
+
+    const details = document.createElement("span");
+    details.textContent =
+        `${student.score ?? "-"} / ${student.total_questions ?? "-"}`;
+
+    score.append(percentage, details);
+    card.append(rankNumber, info, score);
 
     return card;
 }
 
-/* RANK TITLES */
+/* TITLES AND FORMATTING */
 
 function getRankTitle(rank) {
     if (rank === 1) return "Scholar Supreme";
@@ -420,8 +467,6 @@ function getRankTitle(rank) {
     if (rank === 3) return "General of Book";
     return "Conqueror";
 }
-
-/* ORDINAL NUMBERS */
 
 function getOrdinal(number) {
     if (number % 100 >= 11 && number % 100 <= 13) {
@@ -436,70 +481,58 @@ function getOrdinal(number) {
     }
 }
 
-/* FORMAT PERCENTAGE */
-
 function formatPercentage(value) {
     const number = Number(value);
 
-    if (Number.isNaN(number)) return "0";
+    if (!Number.isFinite(number)) return "0";
 
     return number.toFixed(2).replace(/\.00$/, "");
 }
 
-/* EMPTY STATE */
+/* STATES */
 
 function showEmpty() {
-    topThree.innerHTML = "";
-    rankingList.innerHTML = "";
-    emptyState.hidden = false;
-    lockedState.hidden = true;
+    if (topThree) topThree.replaceChildren();
+    if (rankingList) rankingList.replaceChildren();
+
+    if (emptyState) emptyState.hidden = false;
+    if (lockedState) lockedState.hidden = true;
 }
 
-/* LOCKED STATE */
-
 function showLocked(message) {
-    topThree.innerHTML = "";
-    rankingList.innerHTML = "";
-    emptyState.hidden = true;
-    lockedState.hidden = false;
+    if (topThree) topThree.replaceChildren();
+    if (rankingList) rankingList.replaceChildren();
+
+    if (emptyState) emptyState.hidden = true;
+    if (lockedState) lockedState.hidden = false;
+
     hidePersonalResult();
 
-    quizStatus.textContent = message;
+    if (quizStatus) quizStatus.textContent = message;
 
-    const heading = lockedState.querySelector("h3");
-    const paragraph = lockedState.querySelector("p");
+    const heading = lockedState?.querySelector("h3");
+    const paragraph = lockedState?.querySelector("p");
 
     if (heading) heading.textContent = "Leaderboard unavailable";
     if (paragraph) paragraph.textContent = message;
 }
 
-/* ERROR STATE */
-
 function showError(message) {
-    console.error("[Leaderboard] Displaying error:", message);
+    console.error("[Leaderboard] Error:", message);
 
-    topThree.innerHTML = "";
-    rankingList.innerHTML = "";
-    emptyState.hidden = true;
-    lockedState.hidden = false;
+    if (topThree) topThree.replaceChildren();
+    if (rankingList) rankingList.replaceChildren();
+
+    if (emptyState) emptyState.hidden = true;
+    if (lockedState) lockedState.hidden = false;
+
     hidePersonalResult();
 
-    quizStatus.textContent = message;
+    if (quizStatus) quizStatus.textContent = message;
 
-    const heading = lockedState.querySelector("h3");
-    const paragraph = lockedState.querySelector("p");
+    const heading = lockedState?.querySelector("h3");
+    const paragraph = lockedState?.querySelector("p");
 
     if (heading) heading.textContent = "Unable to load leaderboard";
     if (paragraph) paragraph.textContent = message;
-}
-
-/* HTML SECURITY */
-
-function escapeHTML(value) {
-    return String(value ?? "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
 }
