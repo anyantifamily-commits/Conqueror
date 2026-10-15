@@ -5,31 +5,35 @@
 const QUIZZES = {
     "bio101-cell-biology": {
         title: "BIO 101",
+        settingsQuizId: "bio101-cell-biology",
         databaseQuizId: "bio101-cell-biology",
         resultKey: "conquerorsLabs_BIO101_result_id_v4"
     },
 
-    // Both IDs lead to the same CHM leaderboard.
     "chm101": {
         title: "CHM 101",
+        settingsQuizId: "chm101",
         databaseQuizId: "chm101-atomic-structure",
         resultKey: "conquerorsLabs_CHM101_result_id_v2"
     },
 
     "chm101-atomic-structure": {
         title: "CHM 101",
+        settingsQuizId: "chm101",
         databaseQuizId: "chm101-atomic-structure",
         resultKey: "conquerorsLabs_CHM101_result_id_v2"
     },
 
     "phy101": {
         title: "PHY 101",
+        settingsQuizId: "phy101",
         databaseQuizId: "phy101",
         resultKey: "conquerorsLabs_PHY101_result_id_v2"
     },
 
     "math101": {
         title: "MATH 101",
+        settingsQuizId: "math101",
         databaseQuizId: "math101",
         resultKey: "conquerorsLabs_MATH101_result_id_v2"
     }
@@ -119,12 +123,13 @@ async function loadLeaderboard(quizId) {
         return;
     }
 
-    // Update the title immediately for the selected course.
     quizTitle.textContent = quiz.title;
 
+    const settingsQuizId = quiz.settingsQuizId || quiz.databaseQuizId;
     const databaseQuizId = quiz.databaseQuizId;
 
-    console.log("[Leaderboard] Database quiz ID:", databaseQuizId);
+    console.log("[Leaderboard] Settings quiz ID:", settingsQuizId);
+    console.log("[Leaderboard] Results quiz ID:", databaseQuizId);
 
     if (
         typeof supabaseClient === "undefined" ||
@@ -147,7 +152,7 @@ async function loadLeaderboard(quizId) {
             .select(
                 "quiz_id, quiz_title, leaderboard_enabled, pass_mark"
             )
-            .eq("quiz_id", databaseQuizId)
+            .eq("quiz_id", settingsQuizId)
             .maybeSingle();
 
         if (requestNumber !== leaderboardRequestNumber) return;
@@ -162,12 +167,11 @@ async function loadLeaderboard(quizId) {
 
         if (!settings) {
             showLocked(
-                `No leaderboard settings found for "${databaseQuizId}".`
+                `No leaderboard settings found for "${settingsQuizId}".`
             );
             return;
         }
 
-        // Keep the configured title authoritative.
         quizTitle.textContent = quiz.title;
 
         const currentPassMark = Number(settings.pass_mark ?? 50);
