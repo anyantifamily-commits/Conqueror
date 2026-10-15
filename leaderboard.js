@@ -15,7 +15,7 @@ const QUIZZES = {
         resultKey: "conquerorsLabs_BIO101_result_id_v4"
     },
 
-    "chm101": {
+    "chm101-atomic-structure": {
         title: "CHM 101",
         resultKey: "conquerorsLabs_CHM101_result_id_v2"
     },
