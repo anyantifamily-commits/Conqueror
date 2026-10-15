@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
@@ -16,8 +11,7 @@
 
     <title>CONQUERORS LABS</title>
 
-    <link rel="stylesheet" href="style.css?v=46">
-<script src="app.js?v=46"></script>
+    <link rel="stylesheet" href="style.css?v=47">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -26,58 +20,25 @@
 </head>
 
 <body>
-
-    <!-- =====================================
-         BACKGROUND
-    ====================================== -->
-
     <div class="background-overlay"></div>
 
-
-    <!-- =====================================
-         NAVBAR
-    ====================================== -->
-
+    <!-- NAVBAR -->
     <header class="navbar">
-
         <div class="brand">
-
-            <div class="brand-icon">
-                ⚗
-            </div>
-
+            <div class="brand-icon">⚗</div>
             <div>
                 <h1>CONQUERORS</h1>
                 <span>LABS</span>
             </div>
-
         </div>
 
-        <a
-            href="#quizzes"
-            class="nav-button"
-        >
-            CBT
-        </a>
-
+        <a href="#quizzes" class="nav-button">CBT</a>
     </header>
 
-
-    <!-- =====================================
-         MAIN
-    ====================================== -->
-
     <main>
-
-
-        <!-- =================================
-             HERO
-        ================================== -->
-
+        <!-- HERO -->
         <section class="hero">
-
             <div class="hero-content">
-
                 <div class="hero-badge">
                     <span></span>
                     ACADEMIC TRAINING GROUND
@@ -94,384 +55,203 @@
                     and prepare yourself to conquer your courses.
                 </p>
 
-                <a
-                    href="#quizzes"
-                    class="hero-button"
-                >
-                    ENTER THE LAB
-                    <span>→</span>
+                <a href="#quizzes" class="hero-button">
+                    ENTER THE LAB <span>→</span>
                 </a>
-
             </div>
-
         </section>
 
-
-        <!-- =================================
-             CGPA CALCULATOR
-        ================================== -->
-
+        <!-- CGPA CALCULATOR -->
         <section class="cgpa-section">
-
             <div class="cgpa-card">
-
-                <div class="cgpa-card-icon">
-                    ∑
-                </div>
+                <div class="cgpa-card-icon">∑</div>
 
                 <div class="cgpa-card-content">
-
-                    <span class="section-label">
-                        STUDENT TOOL
-                    </span>
-
-                    <h3>
-                        CGPA Calculator
-                    </h3>
-
+                    <span class="section-label">STUDENT TOOL</span>
+                    <h3>CGPA Calculator</h3>
                     <p>
                         Calculate your GPA and CGPA quickly,
                         accurately, and without the stress.
                     </p>
-
                 </div>
 
-                <a
-                    href="cgpa.html"
-                    class="cgpa-card-button"
-                >
-                    CALCULATE CGPA
-                    <span>→</span>
+                <a href="cgpa.html" class="cgpa-card-button">
+                    CALCULATE CGPA <span>→</span>
                 </a>
-
             </div>
-
         </section>
 
-
-        <!-- =================================
-             LEADERBOARD
-        ================================== -->
-
+        <!-- LEADERBOARD -->
         <section class="leaderboard-section">
-
-            <a
-                href="leaderboard.html"
-                class="leaderboard-card"
-            >
-
-                <div class="leaderboard-icon">
-                    🏆
-                </div>
+            <a href="leaderboard.html" class="leaderboard-card">
+                <div class="leaderboard-icon">🏆</div>
 
                 <div class="leaderboard-card-content">
-
-                    <span class="section-label">
-                        CONQUERORS RANKING
-                    </span>
-
-                    <h3>
-                        Leaderboard
-                    </h3>
-
+                    <span class="section-label">CONQUERORS RANKING</span>
+                    <h3>Leaderboard</h3>
                     <p>
                         See who is conquering the courses.
                         Climb the ranks, earn your title,
                         and make your mark.
                     </p>
-
                 </div>
 
                 <div class="leaderboard-card-button">
-                    VIEW LEADERBOARD
-                    <span>→</span>
+                    VIEW LEADERBOARD <span>→</span>
                 </div>
-
             </a>
-
         </section>
 
-
-        <!-- =================================
-             CBT SECTION
-        ================================== -->
-
-        <section
-            class="quiz-section"
-            id="quizzes"
-        >
-
+        <!-- CBT COURSES -->
+        <section class="quiz-section" id="quizzes">
             <div class="section-heading">
-
-                <span class="section-label">
-                    CBT ARENA
-                </span>
-
-                <h3>
-                    Choose Your Course
-                </h3>
-
+                <span class="section-label">CBT ARENA</span>
+                <h3>Choose Your Course</h3>
                 <p>
                     Select a subject and put your knowledge to the test.
                 </p>
-
             </div>
 
-
             <div class="quiz-grid">
-
-
                 <!-- BIOLOGY -->
-
-                <article
-                    class="quiz-card"
-                    data-subject="BIO101"
-                >
-
-                    <div class="subject-icon biology">
-                        🧬
-                    </div>
+                <article class="quiz-card" data-subject="BIO101">
+                    <div class="subject-icon biology">🧬</div>
 
                     <div class="quiz-info">
-
-                        <span class="course-code">
-                            BIO 101
-                        </span>
-
-                        <h4>
-                        ENERGY METABOLISM.💪🔥
-                        </h4>
-
+                        <span class="course-code">BIO 101</span>
+                        <h4>ENERGY METABOLISM. 💪🔥</h4>
                         <p>
                             Test your understanding of biological concepts.
                         </p>
-
                     </div>
 
                     <button
                         class="quiz-button"
+                        type="button"
                         onclick="openQuiz('BIO101')"
                     >
-                        START CBT
-                        <span>→</span>
+                        START CBT <span>→</span>
                     </button>
-
                 </article>
 
-
                 <!-- CHEMISTRY -->
-
-                <article
-                    class="quiz-card"
-                    data-subject="CHM101"
-                >
-
-                    <div class="subject-icon chemistry">
-                        ⚗️
-                    </div>
+                <article class="quiz-card" data-subject="CHM101">
+                    <div class="subject-icon chemistry">⚗️</div>
 
                     <div class="quiz-info">
-
-                        <span class="course-code">
-                            CHM 101
-                        </span>
-
-                        <h4>
-                            ATOMIC STRUCTURE. ☄️
-                        </h4>
-
+                        <span class="course-code">CHM 101</span>
+                        <h4>ATOMIC STRUCTURE. ☄️</h4>
                         <p>
                             Challenge yourself with chemistry questions.
                         </p>
-
                     </div>
 
                     <button
                         class="quiz-button"
+                        type="button"
                         onclick="openQuiz('CHM101')"
                     >
-                        START CBT
-                        <span>→</span>
+                        START CBT <span>→</span>
                     </button>
-
                 </article>
 
-
                 <!-- PHYSICS -->
-
-                <article
-                    class="quiz-card"
-                    data-subject="PHY101"
-                >
-
-                    <div class="subject-icon physics">
-                        ⚡
-                    </div>
+                <article class="quiz-card" data-subject="PHY101">
+                    <div class="subject-icon physics">⚡</div>
 
                     <div class="quiz-info">
-
-                        <span class="course-code">
-                            PHY 101
-                        </span>
-
-                        <h4>
-                            PROJECTILES, CIRCULAR MOTION. ⏳️
-                        </h4>
-
+                        <span class="course-code">PHY 101</span>
+                        <h4>PROJECTILES, CIRCULAR MOTION. ⏳</h4>
                         <p>
                             Put your physics knowledge under pressure.
                         </p>
-
                     </div>
 
                     <button
                         class="quiz-button"
+                        type="button"
                         onclick="openQuiz('PHY101')"
                     >
-                        START CBT
-                        <span>→</span>
+                        START CBT <span>→</span>
                     </button>
-
                 </article>
 
-
                 <!-- MATHEMATICS -->
-
-                <article
-                    class="quiz-card"
-                    data-subject="MATH101"
-                >
-
-                    <div class="subject-icon mathematics">
-                        ∑
-                    </div>
+                <article class="quiz-card" data-subject="MATH101">
+                    <div class="subject-icon mathematics">∑</div>
 
                     <div class="quiz-info">
-
-                        <span class="course-code">
-                            MATH 101 & 102
-                        </span>
-
-                        <h4>
-                            DIFFERENTIAL CALCULUS. 😭
-                        </h4>
-
-                        <p>
-                            Solve, calculate, and conquer.
-                        </p>
-
+                        <span class="course-code">MATH 101 &amp; 102</span>
+                        <h4>DIFFERENTIAL CALCULUS. 😭</h4>
+                        <p>Solve, calculate, and conquer.</p>
                     </div>
 
                     <button
                         class="quiz-button"
+                        type="button"
                         onclick="openQuiz('MATH101')"
                     >
-                        START CBT
-                        <span>→</span>
+                        START CBT <span>→</span>
                     </button>
-
                 </article>
-
             </div>
-
         </section>
 
-
-        <!-- =================================
-             SCIENTIST OF THE WEEK
-        ================================== -->
-
+        <!-- SCIENTIST OF THE WEEK -->
         <section class="scientist-section">
-
             <div class="section-heading">
-
-                <span class="section-label">
-                    WEEKLY INSPIRATION
-                </span>
-
-                <h3>
-                    Scientist of the Week
-                </h3>
-
+                <span class="section-label">WEEKLY INSPIRATION</span>
+                <h3>Scientist of the Week</h3>
                 <p>
                     Discover the minds that changed our understanding
                     of the world.
                 </p>
-
             </div>
 
-
             <article class="scientist-card">
-
                 <div class="scientist-image-container">
-
                     <img
                         id="scientistImage"
                         src="shirley-ann.jpg"
-                        alt="Scientist of the Week"
+                        alt="Dr. Shirley Ann Jackson"
                     >
-
                 </div>
 
-
                 <div class="scientist-content">
-
-                    <span
-                        class="scientist-tag"
-                        id="scientistField"
-                    >
-                       PHYSICIST 
+                    <span class="scientist-tag" id="scientistField">
+                        PHYSICIST
                     </span>
 
-                    <h4 id="scientistName">
-                        Dr. Shirley Ann Jackson
-                    </h4>
+                    <h4 id="scientistName">Dr. Shirley Ann Jackson</h4>
 
                     <blockquote id="scientistQuote">
-                        "Aim for the stars,but keep your feet on the ground."
+                        "Aim for the stars, but keep your feet on the ground."
                     </blockquote>
 
                     <p id="scientistBio">
-                    Dr. Shirley Ann Jackson (b. 1946) is a theoretical physicist and the first Black woman to earn a Ph.D. from MIT.
-​Her research at Bell Labs enabled fiber optics, touch-tone phones, and caller ID. She also chaired the U.S. Nuclear Regulatory Commission and received the National Medal of Science.
-
+                        Dr. Shirley Ann Jackson is a theoretical physicist
+                        and the first Black woman to earn a Ph.D. from MIT.
+                        Her research at Bell Labs contributed to technologies
+                        associated with telecommunications. She also chaired
+                        the U.S. Nuclear Regulatory Commission and received
+                        the National Medal of Science.
                     </p>
-
                 </div>
-
             </article>
-
         </section>
 
-
-        <!-- =================================
-             WHATSAPP
-        ================================== -->
-
+        <!-- WHATSAPP COMMUNITY -->
         <section class="community-section">
-
             <div class="community-card">
-
-                <div class="community-icon">
-                    💬
-                </div>
+                <div class="community-icon">💬</div>
 
                 <div>
-
-                    <span class="section-label">
-                        JOIN THE COMMUNITY
-                    </span>
-
-                    <h3>
-                        Stay connected with
-                        the Conquerors.
-                    </h3>
-
+                    <span class="section-label">JOIN THE COMMUNITY</span>
+                    <h3>Stay connected with the Conquerors.</h3>
                     <p>
                         Get updates, new CBT announcements,
                         challenges and more on our WhatsApp Channel.
                     </p>
-
                 </div>
 
                 <a
@@ -479,40 +259,20 @@
                     class="whatsapp-button"
                     id="whatsappButton"
                 >
-                    JOIN WHATSAPP
-                    <span>→</span>
+                    JOIN WHATSAPP <span>→</span>
                 </a>
-
             </div>
-
         </section>
-
     </main>
 
-
-    <!-- =====================================
-         FOOTER
-    ====================================== -->
-
+    <!-- FOOTER -->
     <footer>
-
-        <div class="footer-brand">
-            ⚗ CONQUERORS LABS
-        </div>
-
-        <p>
-            Learn. Practice. Conquer.
-        </p>
-
-        <span>
-            © 2026 CONQUERORS LABS
-        </span>
-
+        <div class="footer-brand">⚗ CONQUERORS LABS</div>
+        <p>Learn. Practice. Conquer.</p>
+        <span>© 2026 CONQUERORS LABS</span>
     </footer>
 
-
-    <script src="app.js"></script>
-
+    <!-- Load once, after the page content -->
+    <script src="app.js?v=47"></script>
 </body>
-
 </html>
