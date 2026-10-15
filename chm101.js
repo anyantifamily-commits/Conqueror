@@ -12,7 +12,7 @@ const QUIZ_CONFIG = {
     maxQuestions: 40,
     allowRetake: false,
 
-    quizId: "chm101",
+    quizId: "chm101-atomic-structure",
     passMark: 50,
 
     questions: [
