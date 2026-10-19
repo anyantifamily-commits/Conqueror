@@ -28,7 +28,7 @@ const QUIZZES = {
         title: "PHY 101",
         settingsQuizId: "phy101",
         databaseQuizId: "phy101",
-        resultKey: "conquerorsLabs_PHY101_result_id_v2"
+        resultKey: "conquerorsLabs_PHY101_result_id_v3"
     },
 
     "math101": {
