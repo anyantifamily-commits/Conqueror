@@ -1,273 +1,274 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100608">
+    <meta name="description" content="CONQUERORS LABS — Learn. Practice. Conquer. Your academic training ground.">
 
-    <meta
-        name="description"
-        content="CONQUERORS LABS — Learn. Practice. Conquer."
-    >
+    <title>CONQUERORS LABS | Learn. Practice. Conquer.</title>
 
-    <title>CONQUERORS LABS</title>
-
-    <link rel="stylesheet" href="style.css?v=60">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
+    <link rel="stylesheet" href="style.css?v=61">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="background-overlay"></div>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient-grid"></div>
 
-    <!-- NAVBAR -->
     <header class="navbar">
-        <div class="brand">
+        <a href="#" class="brand" aria-label="Conquerors Labs home">
             <div class="brand-icon">⚗</div>
-            <div>
+            <div class="brand-name">
                 <h1>CONQUERORS</h1>
                 <span>LABS</span>
             </div>
-        </div>
+        </a>
 
-        <a href="#quizzes" class="nav-button">CBT</a>
+        <nav class="nav-links">
+            <a href="#quizzes">CBT Arena</a>
+            <a href="#scientist">Scientists</a>
+        </nav>
+
+        <a href="#quizzes" class="nav-button">
+            ENTER CBT <span>↗</span>
+        </a>
     </header>
 
     <main>
         <!-- HERO -->
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
+            <div class="hero-content reveal">
                 <div class="hero-badge">
-                    <span></span>
+                    <span class="status-dot"></span>
                     ACADEMIC TRAINING GROUND
                 </div>
 
+                <p class="hero-eyebrow">YOUR NEXT LEVEL STARTS HERE</p>
+
                 <h2>
-                    Learn.
-                    <span>Practice.</span>
-                    Conquer.
+                    Learn<span class="red-dot">.</span><br>
+                    <span class="hero-highlight">Practice.</span><br>
+                    Conquer<span class="red-dot">.</span>
                 </h2>
 
-                <p>
-                    Test your knowledge, sharpen your understanding,
-                    and prepare yourself to conquer your courses.
+                <p class="hero-description">
+                    Knowledge is your weapon. Discipline is your advantage.
+                    Step into the arena, sharpen your understanding, and
+                    prepare to conquer your courses.
                 </p>
 
-                <a href="#quizzes" class="hero-button">
-                    ENTER THE LAB <span>→</span>
-                </a>
+                <div class="hero-actions">
+                    <a href="#quizzes" class="hero-button">
+                        ENTER THE LAB <span>↗</span>
+                    </a>
+                    <a href="#tools" class="hero-secondary">
+                        Explore student tools <span>↓</span>
+                    </a>
+                </div>
+
+                <div class="hero-footer-note">
+                    <span class="note-line"></span>
+                    BUILT FOR THE ONES WHO BREAK BOUNDS
+                </div>
             </div>
-        </section>
 
-        <!-- CGPA CALCULATOR -->
-        <section class="cgpa-section">
-            <div class="cgpa-card">
-                <div class="cgpa-card-icon">∑</div>
-
-                <div class="cgpa-card-content">
-                    <span class="section-label">STUDENT TOOL</span>
-                    <h3>CGPA Calculator</h3>
-                    <p>
-                        Calculate your GPA and CGPA quickly,
-                        accurately, and without the stress.
-                    </p>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="science-ring ring-one"></div>
+                <div class="science-ring ring-two"></div>
+                <div class="science-ring ring-three"></div>
+                <div class="science-core">⚗</div>
+                <span class="science-particle particle-one"></span>
+                <span class="science-particle particle-two"></span>
+                <span class="science-particle particle-three"></span>
+                <span class="science-particle particle-four"></span>
+                <div class="visual-caption">
+                    <span>KNOWLEDGE</span>
+                    <span class="caption-divider"></span>
+                    <span>PRECISION</span>
                 </div>
-
-                <a href="cgpa.html" class="cgpa-card-button">
-                    CALCULATE CGPA <span>→</span>
-                </a>
             </div>
-        </section>
 
-        <!-- LEADERBOARD -->
-        <section class="leaderboard-section">
-            <a href="leaderboard.html" class="leaderboard-card">
-                <div class="leaderboard-icon">🏆</div>
-
-                <div class="leaderboard-card-content">
-                    <span class="section-label">CONQUERORS RANKING</span>
-                    <h3>Leaderboard</h3>
-                    <p>
-                        See who is conquering the courses.
-                        Climb the ranks, earn your title,
-                        and make your mark.
-                    </p>
-                </div>
-
-                <div class="leaderboard-card-button">
-                    VIEW LEADERBOARD <span>→</span>
-                </div>
+            <a href="#tools" class="scroll-cue" aria-label="Scroll down">
+                <span></span>
             </a>
+        </section>
+
+        <!-- STUDENT TOOLS -->
+        <section class="tools-section" id="tools">
+            <div class="section-heading reveal">
+                <span class="section-label">YOUR ADVANTAGE</span>
+                <h3>Tools for the <span>journey.</span></h3>
+                <p>Everything you need to track your progress and stay competitive.</p>
+            </div>
+
+            <div class="tools-grid">
+                <a href="cgpa.html" class="feature-card reveal">
+                    <div class="feature-top">
+                        <div class="feature-icon">∑</div>
+                        <span class="feature-arrow">↗</span>
+                    </div>
+                    <span class="feature-label">STUDENT TOOL 01</span>
+                    <h4>CGPA Calculator</h4>
+                    <p>Calculate your GPA and CGPA with clarity and confidence.</p>
+                    <span class="feature-link">CALCULATE CGPA <span>→</span></span>
+                </a>
+
+                <a href="leaderboard.html" class="feature-card feature-card-red reveal">
+                    <div class="feature-top">
+                        <div class="feature-icon">♛</div>
+                        <span class="feature-arrow">↗</span>
+                    </div>
+                    <span class="feature-label">STUDENT TOOL 02</span>
+                    <h4>Leaderboard</h4>
+                    <p>Discover the top performers, follow the rankings, and earn your place.</p>
+                    <span class="feature-link">VIEW RANKINGS <span>→</span></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- LEADERBOARD STRIP -->
+        <section class="rank-strip reveal">
+            <div class="rank-strip-icon">✦</div>
+            <div class="rank-strip-copy">
+                <span>THE CONQUERORS STANDARD</span>
+                <h3>Don't just study. <span>Dominate.</span></h3>
+            </div>
+            <a href="leaderboard.html" class="rank-strip-link">CHASE EXCELLENCE ↗</a>
         </section>
 
         <!-- CBT COURSES -->
         <section class="quiz-section" id="quizzes">
-            <div class="section-heading">
-                <span class="section-label">CBT ARENA</span>
-                <h3>Choose Your Course</h3>
-                <p>
-                    Select a subject and put your knowledge to the test.
-                </p>
+            <div class="section-heading reveal">
+                <span class="section-label">THE CBT ARENA</span>
+                <h3>Choose your <span>battle.</span></h3>
+                <p>Select a course, test your understanding, and keep getting better.</p>
             </div>
 
             <div class="quiz-grid">
-                <!-- BIOLOGY -->
-                <article class="quiz-card" data-subject="BIO101">
-                    <div class="subject-icon biology">🧬</div>
-
-                    <div class="quiz-info">
-                        <span class="course-code">BIO 101</span>
-                        <h4>ENERGY METABOLISM. 💪🔥</h4>
-                        <p>
-                            Test your understanding of biological concepts.
-                        </p>
+                <article class="quiz-card reveal" data-subject="BIO101">
+                    <div class="course-top">
+                        <div class="subject-icon biology">🧬</div>
+                        <span class="course-number">01 / BIO</span>
                     </div>
-
-                    <button
-                        class="quiz-button"
-                        type="button"
-                        onclick="openQuiz('BIO101')"
-                    >
-                        START CBT <span>→</span>
+                    <span class="course-code">BIO 101</span>
+                    <h4>Energy Metabolism <span>✦</span></h4>
+                    <p>Explore biological processes and challenge your understanding of life.</p>
+                    <button class="quiz-button" type="button" onclick="openQuiz('BIO101')">
+                        <span>START CBT</span><span class="button-arrow">↗</span>
                     </button>
                 </article>
 
-                <!-- CHEMISTRY -->
-                <article class="quiz-card" data-subject="CHM101">
-                    <div class="subject-icon chemistry">⚗️</div>
-
-                    <div class="quiz-info">
-                        <span class="course-code">CHM 101</span>
-                        <h4>ATOMIC STRUCTURE. ☄️</h4>
-                        <p>
-                            Challenge yourself with chemistry questions.
-                        </p>
+                <article class="quiz-card reveal" data-subject="CHM101">
+                    <div class="course-top">
+                        <div class="subject-icon chemistry">⚗️</div>
+                        <span class="course-number">02 / CHM</span>
                     </div>
-
-                    <button
-                        class="quiz-button"
-                        type="button"
-                        onclick="openQuiz('CHM101')"
-                    >
-                        START CBT <span>→</span>
+                    <span class="course-code">CHM 101</span>
+                    <h4>Atomic Structure <span>✦</span></h4>
+                    <p>Put your chemical knowledge to the test, one question at a time.</p>
+                    <button class="quiz-button" type="button" onclick="openQuiz('CHM101')">
+                        <span>START CBT</span><span class="button-arrow">↗</span>
                     </button>
                 </article>
 
-                <!-- PHYSICS -->
-                <article class="quiz-card" data-subject="PHY101">
-                    <div class="subject-icon physics">⚡</div>
-
-                    <div class="quiz-info">
-                        <span class="course-code">PHY 101</span>
-                        <h4>MOTION. 🚘</h4>
-                        <p>
-                            Put your physics knowledge under pressure.
-                        </p>
+                <article class="quiz-card reveal" data-subject="PHY101">
+                    <div class="course-top">
+                        <div class="subject-icon physics">⚡</div>
+                        <span class="course-number">03 / PHY</span>
                     </div>
-
-                    <button
-                        class="quiz-button"
-                        type="button"
-                        onclick="openQuiz('PHY101')"
-                    >
-                        START CBT <span>→</span>
+                    <span class="course-code">PHY 101</span>
+                    <h4>Motion <span>✦</span></h4>
+                    <p>Apply physical principles, sharpen your reasoning, and solve with precision.</p>
+                    <button class="quiz-button" type="button" onclick="openQuiz('PHY101')">
+                        <span>START CBT</span><span class="button-arrow">↗</span>
                     </button>
                 </article>
 
-                <!-- MATHEMATICS -->
-                <article class="quiz-card" data-subject="MATH101">
-                    <div class="subject-icon mathematics">∑</div>
-
-                    <div class="quiz-info">
-                        <span class="course-code">MATH 101 &amp; 102</span>
-                        <h4>DIFFERENTIAL CALCULUS. 😭</h4>
-                        <p>Solve, calculate, and conquer.</p>
+                <article class="quiz-card reveal" data-subject="MATH101">
+                    <div class="course-top">
+                        <div class="subject-icon mathematics">∑</div>
+                        <span class="course-number">04 / MTH</span>
                     </div>
-
-                    <button
-                        class="quiz-button"
-                        type="button"
-                        onclick="openQuiz('MATH101')"
-                    >
-                        START CBT <span>→</span>
+                    <span class="course-code">MATH 101 &amp; 102</span>
+                    <h4>Differential Calculus <span>✦</span></h4>
+                    <p>Work through mathematical problems and build confidence with every attempt.</p>
+                    <button class="quiz-button" type="button" onclick="openQuiz('MATH101')">
+                        <span>START CBT</span><span class="button-arrow">↗</span>
                     </button>
                 </article>
             </div>
         </section>
 
         <!-- SCIENTIST OF THE WEEK -->
-        <section class="scientist-section">
-            <div class="section-heading">
-                <span class="section-label">WEEKLY INSPIRATION</span>
-                <h3>Scientist of the Week</h3>
-                <p>
-                    Discover the minds that changed our understanding
-                    of the world.
-                </p>
+        <section class="scientist-section" id="scientist">
+            <div class="section-heading reveal">
+                <span class="section-label">MINDS THAT MOVE THE WORLD</span>
+                <h3>Scientist of the <span>Week.</span></h3>
+                <p>Ideas can change the world. Discover the people who dare to explore them.</p>
             </div>
 
-            <article class="scientist-card">
+            <article class="scientist-card reveal">
                 <div class="scientist-image-container">
-                    <img
-                        id="scientistImage"
-                        src="elon-musk.jpg"
-                        alt="Elon Musk"
-                    >
+                    <div class="scientist-image-glow"></div>
+                    <img id="scientistImage" src="elon-musk.jpg" alt="Elon Musk">
+                    <span class="image-corner image-corner-one"></span>
+                    <span class="image-corner image-corner-two"></span>
+                    <span class="scientist-image-label">FEATURED PROFILE</span>
                 </div>
 
                 <div class="scientist-content">
                     <span class="scientist-tag" id="scientistField">
-                        TECH ENTREPRENEUR,ENGINEER AND APPLIED PHYSICIST.
+                        TECH ENTREPRENEUR, ENGINEER AND APPLIED PHYSICIST
                     </span>
-
-                    <h4 id="scientistName"> Elon Musk</h4>
-
+                    <h4 id="scientistName">Elon Musk</h4>
+                    <div class="quote-mark">“</div>
                     <blockquote id="scientistQuote">
-                        ​"When something is important enough, you do it even if the odds are not in your favor."
+                        When something is important enough, you do it even if the odds are not in your favor.
                     </blockquote>
-
                     <p id="scientistBio">
-                        ​Elon Musk is a visionary engineer, technology entrepreneur, and inventor best known for founding SpaceX and leading Tesla. Beyond revolutionizing commercial space travel and electric vehicles, his work spans artificial intelligence, neural interfaces, and sustainable energy. Through his bold engineering feats, he continuously pushes the boundaries of human space exploration and technological innovation.
+                        Elon Musk is a technology entrepreneur known for his work with
+                        Tesla and SpaceX, spanning electric vehicles, sustainable energy,
+                        and commercial space exploration.
                     </p>
+                    <div class="scientist-bottom-line">
+                        <span class="scientist-line"></span>
+                        <span>THINK BOLDLY. QUESTION EVERYTHING.</span>
+                    </div>
                 </div>
             </article>
         </section>
 
-        <!-- WHATSAPP COMMUNITY -->
+        <!-- COMMUNITY -->
         <section class="community-section">
-            <div class="community-card">
-                <div class="community-icon">💬</div>
-
-                <div>
-                    <span class="section-label">JOIN THE COMMUNITY</span>
-                    <h3>Stay connected with the Conquerors.</h3>
-                    <p>
-                        Get updates, new CBT announcements,
-                        challenges and more on our WhatsApp Channel.
-                    </p>
+            <div class="community-card reveal">
+                <div class="community-glow"></div>
+                <div class="community-icon">✉</div>
+                <div class="community-copy">
+                    <span class="section-label">THE COMMUNITY</span>
+                    <h3>Stay in the <span>loop.</span></h3>
+                    <p>Get new CBT announcements, challenges, updates, and important information on our WhatsApp Channel.</p>
                 </div>
-
-                <a
-                    href="#"
-                    class="whatsapp-button"
-                    id="whatsappButton"
-                >
-                    JOIN WHATSAPP <span>→</span>
+                <a href="#" class="whatsapp-button" id="whatsappButton">
+                    JOIN THE CHANNEL <span>↗</span>
                 </a>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-brand">⚗ CONQUERORS LABS</div>
+    <footer class="site-footer">
+        <a href="#" class="footer-brand">
+            <span>⚗</span> CONQUERORS LABS
+        </a>
         <p>Learn. Practice. Conquer.</p>
-        <span>© 2026 CONQUERORS LABS</span>
+        <span class="footer-copyright">© 2026 CONQUERORS LABS. BUILT FOR EXCELLENCE.</span>
     </footer>
 
-    <!-- Load once, after the page content -->
-    <script src="app.js?v=60"></script>
+    <script src="app.js?v=61"></script>
 </body>
 </html>
