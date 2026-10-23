@@ -1,7 +1,8 @@
+
 /* =========================================
    CONQUERORS LABS
-   MATH 101 — DIFFERENTIATION
-   QUIZ ENGINE — VERSION 2
+   MATH 101 — POLYNOMIALS
+   QUIZ ENGINE — VERSION 3
 ========================================= */
 
 
@@ -10,353 +11,288 @@
 ========================================= */
 
 const QUIZ_CONFIG = {
-    title: "MATH 101 & 102 — Differentiation",
+    title: "MATH 101 — Polynomials",
     quizId: "math101",
-    quizVersion: 2,
+    quizVersion: 3,
     timeLimit: 30,
-    maxQuestions: 30,
+    maxQuestions: 25,
     allowRetake: false,
     passMark: 50,
 
     questions: [
 
         // =====================================
-        // PART 1: EASY QUESTIONS
+        // PART 1: BASIC OPERATIONS
         // =====================================
 
         {
             id: 1,
-            question: "What is the derivative of f(x) = x⁶ with respect to x?",
-            options: ["6x⁵", "x⁵", "6x⁶", "5x⁶"],
+            question: "What is the degree of the product P(x)Q(x), where P(x) = 3x³ − 2x + 1 and Q(x) = 4x² + 5x − 7?",
+            options: ["5", "6", "8", "9"],
             answer: "A",
-            explanation: "Using the power rule, d(xⁿ)/dx = nxⁿ⁻¹. Therefore, d(x⁶)/dx = 6x⁵."
+            explanation: "The degree of a product of nonzero polynomials is the sum of their degrees. Therefore, deg(PQ) = 3 + 2 = 5."
         },
 
         {
             id: 2,
-            question: "What is the derivative of any constant function, such as f(x) = 12?",
-            options: ["12", "1", "0", "12x"],
+            question: "What is the leading coefficient of P(x) = 5 − 2x² + 7x⁴ − x³?",
+            options: ["5", "−2", "7", "−1"],
             answer: "C",
-            explanation: "The derivative of a constant is zero because its value does not change as x changes."
+            explanation: "Arrange the polynomial in descending powers: 7x⁴ − x³ − 2x² + 5. The leading term is 7x⁴, so its coefficient is 7."
         },
 
         {
             id: 3,
-            question: "Find the derivative of f(x) = 4x³ − 5x² + 7.",
+            question: "Expand and simplify (2x − 3)(x² + 3x − 1).",
             options: [
-                "12x² − 10x",
-                "7x² − 10x + 7",
-                "12x² − 5x",
-                "4x² − 10x"
+                "2x³ + 3x² − 11x + 3",
+                "2x³ + 3x² − 11x − 3",
+                "2x³ − 3x² + 9x + 3",
+                "2x³ + 9x² − 11x + 3"
             ],
             answer: "A",
-            explanation: "Differentiate each term: 4x³ gives 12x², −5x² gives −10x, and the constant 7 gives 0."
+            explanation: "Expanding gives 2x³ + 6x² − 2x − 3x² − 9x + 3. Combining like terms gives 2x³ + 3x² − 11x + 3."
         },
+
+
+        // =====================================
+        // PART 2: REMAINDER AND FACTOR THEOREMS
+        // =====================================
 
         {
             id: 4,
-            question: "What is the derivative of f(x) = √x?",
-            options: [
-                "1/(2√x)",
-                "2√x",
-                "1/√x",
-                "−1/(2√x)"
-            ],
-            answer: "A",
-            explanation: "Rewrite √x as x^(1/2). The power rule gives (1/2)x^(−1/2) = 1/(2√x), for x > 0."
+            question: "What is the remainder when P(x) = x³ − 4x² + 2x − 5 is divided by (x − 3)?",
+            options: ["−10", "−8", "−2", "4"],
+            answer: "B",
+            explanation: "By the Remainder Theorem, the remainder is P(3). P(3) = 27 − 36 + 6 − 5 = −8."
         },
 
         {
             id: 5,
-            question: "What is the derivative of the natural exponential function f(x) = eˣ?",
-            options: ["xeˣ⁻¹", "eˣ", "ln(x)", "1"],
-            answer: "B",
-            explanation: "The exponential function eˣ is its own derivative: d(eˣ)/dx = eˣ."
+            question: "Find the remainder when P(x) = 2x⁴ − 3x² + 5x − 1 is divided by (x + 1).",
+            options: ["−7", "−5", "−1", "3"],
+            answer: "A",
+            explanation: "By the Remainder Theorem, the remainder is P(−1). This gives 2(1) − 3(1) − 5 − 1 = −7."
         },
 
         {
             id: 6,
-            question: "What is the derivative of f(x) = ln(x) for x > 0?",
-            options: ["eˣ", "1/x", "x", "1/ln(x)"],
-            answer: "B",
-            explanation: "The standard derivative rule for the natural logarithm is d(ln x)/dx = 1/x."
+            question: "If (x − 2) is a factor of P(x) = x³ − kx² + 3x − 2, find k.",
+            options: ["1", "2", "3", "4"],
+            answer: "C",
+            explanation: "By the Factor Theorem, P(2) = 0. Thus 8 − 4k + 6 − 2 = 0, so 12 − 4k = 0 and k = 3."
         },
 
         {
             id: 7,
-            question: "Find the derivative of f(x) = sin(x).",
-            options: ["−cos(x)", "sin(x)", "cos(x)", "−sin(x)"],
-            answer: "C",
-            explanation: "The derivative of sin(x) is cos(x)."
+            question: "If (x + 1) is a factor of P(x) = x³ + ax² − 5x + 3, find a.",
+            options: ["−9", "−7", "3", "7"],
+            answer: "B",
+            explanation: "Since (x + 1) is a factor, P(−1) = 0. Therefore, −1 + a + 5 + 3 = 0, giving a + 7 = 0 and a = −7."
         },
 
         {
             id: 8,
-            question: "Find the derivative of f(x) = cos(x).",
-            options: ["−sin(x)", "sin(x)", "cos(x)", "−cos(x)"],
+            question: "A polynomial P(x) leaves a remainder of 4 when divided by (x − 1) and −2 when divided by (x + 2). Find the remainder when divided by (x − 1)(x + 2).",
+            options: [
+                "2x + 2",
+                "2x − 2",
+                "x + 3",
+                "x − 3"
+            ],
             answer: "A",
-            explanation: "The derivative of cos(x) is −sin(x)."
+            explanation: "The remainder must be linear, R(x) = Ax + B. Since R(1) = 4, A + B = 4. Since R(−2) = −2, −2A + B = −2. Subtracting gives 3A = 6, so A = 2 and B = 2. Hence R(x) = 2x + 2."
         },
+
+
+        // =====================================
+        // PART 3: VIETA'S FORMULAS
+        // =====================================
 
         {
             id: 9,
-            question: "What is the derivative of f(x) = 1/x?",
-            options: ["1/x²", "−1/x²", "−1/x", "x⁻²"],
+            question: "What is the sum of the roots of 3x² − 12x + 5 = 0?",
+            options: ["−4", "4", "5/3", "−5/3"],
             answer: "B",
-            explanation: "Rewrite 1/x as x⁻¹. Applying the power rule gives −x⁻² = −1/x²."
+            explanation: "For ax² + bx + c = 0, the sum of the roots is −b/a. Therefore, the sum is −(−12)/3 = 4."
         },
 
         {
             id: 10,
-            question: "Find the derivative of f(x) = 9x².",
-            options: ["9x", "18x", "18x²", "2x"],
+            question: "What is the product of the roots of 2x³ − 6x² + 4x − 8 = 0?",
+            options: ["−4", "4", "−2", "2"],
             answer: "B",
-            explanation: "Using the power rule, d(9x²)/dx = 9 × 2x = 18x."
+            explanation: "For ax³ + bx² + cx + d = 0, the product of the three roots is −d/a. Therefore, the product is −(−8)/2 = 4."
         },
 
         {
             id: 11,
-            question: "What is the derivative of f(x) = 3ˣ?",
-            options: ["3ˣ ln(3)", "x3ˣ⁻¹", "3ˣ/ln(3)", "3ˣ"],
+            question: "If α and β are the roots of x² − 5x + 3 = 0, find 1/α + 1/β.",
+            options: ["5/3", "3/5", "−5/3", "−3/5"],
             answer: "A",
-            explanation: "For an exponential function aˣ, the derivative is aˣ ln(a). Therefore, d(3ˣ)/dx = 3ˣ ln(3)."
+            explanation: "Using Vieta's formulas, α + β = 5 and αβ = 3. Thus 1/α + 1/β = (α + β)/(αβ) = 5/3."
         },
 
         {
             id: 12,
-            question: "Find the derivative of f(x) = 4sin(x) + 2cos(x).",
-            options: [
-                "4cos(x) − 2sin(x)",
-                "−4sin(x) − 2cos(x)",
-                "4cos(x) + 2sin(x)",
-                "−4cos(x) + 2sin(x)"
-            ],
+            question: "If α, β and γ are the roots of x³ − 7x² + 14x − 8 = 0, find α² + β² + γ².",
+            options: ["21", "35", "49", "77"],
             answer: "A",
-            explanation: "Differentiate each term: 4sin(x) gives 4cos(x), while 2cos(x) gives −2sin(x)."
+            explanation: "Vieta's formulas give α + β + γ = 7 and αβ + βγ + γα = 14. Therefore, α² + β² + γ² = (α + β + γ)² − 2(αβ + βγ + γα) = 49 − 28 = 21."
         },
 
         {
             id: 13,
-            question: "What is the derivative of f(x) = 5∛x?",
+            question: "Which quadratic equation has roots that are twice the roots of x² − 4x + 3 = 0?",
             options: [
-                "(5/3)x⁻²ᐟ³",
-                "15x²ᐟ³",
-                "(3/5)x²ᐟ³",
-                "5x⁻²ᐟ³"
+                "x² − 8x + 6 = 0",
+                "x² − 8x + 12 = 0",
+                "x² − 4x + 12 = 0",
+                "2x² − 8x + 6 = 0"
             ],
-            answer: "A",
-            explanation: "Rewrite 5∛x as 5x^(1/3). The power rule gives (5/3)x^(−2/3)."
+            answer: "B",
+            explanation: "The original roots have sum 4 and product 3. Doubling both roots makes their sum 8 and product 12. The required equation is x² − 8x + 12 = 0."
         },
+
+
+        // =====================================
+        // PART 4: RATIONAL ROOTS AND COMPLEX ROOTS
+        // =====================================
 
         {
             id: 14,
-            question: "Find the derivative of f(x) = −6x⁻².",
-            options: [
-                "12x⁻³",
-                "−12x⁻³",
-                "12x⁻¹",
-                "−3x⁻³"
-            ],
-            answer: "A",
-            explanation: "The power rule gives −6 × (−2)x⁻³ = 12x⁻³."
+            question: "According to the Rational Root Theorem, which option is a potential rational root of 2x³ − 3x² + 5x − 3 = 0?",
+            options: ["2/3", "1/2", "4/3", "3/4"],
+            answer: "B",
+            explanation: "Possible rational roots have numerators that divide the constant term and denominators that divide the leading coefficient. The candidates include ±1, ±3, ±1/2 and ±3/2. Therefore, 1/2 is a possible rational root."
         },
 
         {
             id: 15,
-            question: "What is the derivative of f(x) = 7π with respect to x?",
-            options: ["7", "7π", "0", "π"],
+            question: "A polynomial with real coefficients has 3 − 2i as a root. Which other root must it have?",
+            options: [
+                "−3 + 2i",
+                "−3 − 2i",
+                "3 + 2i",
+                "2 − 3i"
+            ],
             answer: "C",
-            explanation: "7π is constant with respect to x. The derivative of a constant is zero."
+            explanation: "For a polynomial with real coefficients, every non-real complex root occurs with its complex conjugate. The conjugate of 3 − 2i is 3 + 2i."
         },
-
-
-        // =====================================
-        // PART 2: MEDIUM QUESTIONS
-        // =====================================
 
         {
             id: 16,
-            question: "Using the product rule, find the derivative of f(x) = x³eˣ.",
-            options: [
-                "3x²eˣ",
-                "x³eˣ + 3x²eˣ",
-                "3x²e²ˣ",
-                "x³eˣ"
-            ],
-            answer: "B",
-            explanation: "The product rule states (uv)' = u'v + uv'. Here u = x³ and v = eˣ, so f'(x) = 3x²eˣ + x³eˣ."
+            question: "A monic cubic polynomial with real coefficients has roots 2 and 1 + i. Find its constant term.",
+            options: ["−4", "4", "−2", "2"],
+            answer: "A",
+            explanation: "Because the coefficients are real, 1 − i must also be a root. The product of the roots is 2(1 + i)(1 − i) = 2(2) = 4. For a monic cubic, the constant term is the negative of the product, so it is −4."
         },
 
         {
             id: 17,
-            question: "Using the quotient rule, find the derivative of f(x) = x/(x − 1).",
-            options: [
-                "1/(x − 1)²",
-                "−1/(x − 1)²",
-                "(2x − 1)/(x − 1)²",
-                "1/(x − 1)"
-            ],
-            answer: "B",
-            explanation: "Using the quotient rule, f'(x) = [(x − 1) − x]/(x − 1)² = −1/(x − 1)²."
+            question: "What is the maximum possible number of positive real roots of P(x) = x⁴ − 3x³ + 2x² − 5x + 1 according to Descartes' Rule of Signs?",
+            options: ["1", "2", "3", "4"],
+            answer: "D",
+            explanation: "The signs of the coefficients are +, −, +, −, +, giving four sign changes. Descartes' Rule of Signs permits at most four positive real roots, counting multiplicity."
         },
+
+
+        // =====================================
+        // PART 5: PARTIAL FRACTIONS
+        // =====================================
 
         {
             id: 18,
-            question: "Using the chain rule, find the derivative of f(x) = (2x² + 3)⁵.",
+            question: "What is the correct form of the partial fraction decomposition of (2x + 1)/[(x − 2)(x + 3)]?",
             options: [
-                "5(2x² + 3)⁴",
-                "10x(2x² + 3)⁴",
-                "20x(2x² + 3)⁴",
-                "40x(2x² + 3)⁴"
+                "A/(x − 2) + B/(x + 3)",
+                "A/(x − 2) + (Bx + C)/(x + 3)",
+                "(Ax + B)/(x − 2) + C/(x + 3)",
+                "A/(x − 2)² + B/(x + 3)"
             ],
-            answer: "C",
-            explanation: "The chain rule gives 5(2x² + 3)⁴ × 4x = 20x(2x² + 3)⁴."
+            answer: "A",
+            explanation: "The denominator contains two distinct linear factors. Each factor requires a constant numerator, giving A/(x − 2) + B/(x + 3)."
         },
 
         {
             id: 19,
-            question: "Find the derivative of f(x) = sin(3x²).",
-            options: [
-                "cos(3x²)",
-                "6x cos(3x²)",
-                "−6x sin(3x²)",
-                "3x cos(3x²)"
-            ],
-            answer: "B",
-            explanation: "By the chain rule, differentiate the outer sine function and multiply by the derivative of 3x², which is 6x."
+            question: "When (5x + 7)/[(x + 1)(x + 3)] = A/(x + 1) + B/(x + 3), find A.",
+            options: ["1", "2", "3", "4"],
+            answer: "A",
+            explanation: "Multiplying through gives 5x + 7 = A(x + 3) + B(x + 1). Setting x = −1 gives 2 = 2A, so A = 1."
         },
 
         {
             id: 20,
-            question: "Find the derivative of f(x) = e⁴ˣ.",
-            options: ["e⁴ˣ", "4e⁴ˣ", "4xe⁴ˣ⁻¹", "(1/4)e⁴ˣ"],
-            answer: "B",
-            explanation: "By the chain rule, d(e⁴ˣ)/dx = e⁴ˣ × 4 = 4e⁴ˣ."
+            question: "What is the correct form of the partial fraction decomposition of (x² + 3)/[(x − 1)²(x + 2)]?",
+            options: [
+                "A/(x − 1) + B/(x − 1)² + C/(x + 2)",
+                "A/(x − 1) + (Bx + C)/(x − 1)² + D/(x + 2)",
+                "(Ax + B)/(x − 1)² + C/(x + 2)",
+                "A/(x − 1)² + B/(x + 2)"
+            ],
+            answer: "A",
+            explanation: "For a repeated linear factor (x − 1)², include terms for both powers: A/(x − 1) and B/(x − 1)². The distinct linear factor (x + 2) contributes C/(x + 2)."
         },
+
+
+        // =====================================
+        // PART 6: POLYNOMIAL IDENTITIES AND PROPERTIES
+        // =====================================
 
         {
             id: 21,
-            question: "Find the derivative of f(x) = ln(3x² + 2).",
-            options: [
-                "6x/(3x² + 2)",
-                "3/(3x² + 2)",
-                "6x/x",
-                "1/(6x)"
-            ],
-            answer: "A",
-            explanation: "Using the chain rule, the derivative is (1/(3x² + 2)) × 6x = 6x/(3x² + 2)."
+            question: "What is the sum of all coefficients in the expansion of P(x) = (2x² − 3x + 2)⁴?",
+            options: ["0", "1", "16", "81"],
+            answer: "B",
+            explanation: "The sum of coefficients of a polynomial is P(1). Here P(1) = (2 − 3 + 2)⁴ = 1⁴ = 1."
         },
 
         {
             id: 22,
-            question: "What is the derivative of f(x) = tan(x)?",
-            options: ["cot(x)", "sec²(x)", "−csc²(x)", "sec(x)tan(x)"],
+            question: "If a polynomial satisfies P(−x) = P(x) for every real x, what type of polynomial is it?",
+            options: [
+                "Odd polynomial",
+                "Even polynomial",
+                "Invertible polynomial",
+                "Orthogonal polynomial"
+            ],
             answer: "B",
-            explanation: "The standard derivative rule is d(tan x)/dx = sec²(x), wherever tan(x) is defined."
+            explanation: "An even polynomial satisfies P(−x) = P(x). An odd polynomial instead satisfies P(−x) = −P(x)."
         },
 
         {
             id: 23,
-            question: "What is the derivative of f(x) = csc(x)?",
+            question: "Find the quotient when x³ − 3x² + 3x − 1 is divided by (x − 1).",
             options: [
-                "sec(x)tan(x)",
-                "−csc(x)cot(x)",
-                "csc²(x)",
-                "−sec(x)"
+                "x² + 2x + 1",
+                "x² − 2x + 1",
+                "x² − 3x + 1",
+                "x² + 1"
             ],
             answer: "B",
-            explanation: "The derivative of csc(x) is −csc(x)cot(x)."
+            explanation: "The numerator is (x − 1)³. Dividing by (x − 1) gives (x − 1)² = x² − 2x + 1."
         },
 
         {
             id: 24,
-            question: "Find the derivative of f(x) = x sin(x).",
+            question: "For what values of m does x² − mx + 9 = 0 have real and equal roots?",
             options: [
-                "x cos(x)",
-                "sin(x) + x cos(x)",
-                "sin(x) − x cos(x)",
-                "−x sin(x)"
+                "m = ±3",
+                "m = ±6",
+                "m = 9",
+                "m = 0"
             ],
             answer: "B",
-            explanation: "By the product rule, f'(x) = 1 × sin(x) + x × cos(x) = sin(x) + x cos(x)."
+            explanation: "Real and equal roots require the discriminant to be zero. Thus (−m)² − 4(1)(9) = 0, so m² − 36 = 0 and m = ±6."
         },
 
         {
             id: 25,
-            question: "Find the derivative of f(x) = x²/(x + 2).",
-            options: [
-                "(x² + 4x)/(x + 2)²",
-                "2x/(x + 2)²",
-                "1/(x + 2)²",
-                "(x² + 2)/(x + 2)²"
-            ],
-            answer: "A",
-            explanation: "The quotient rule gives [2x(x + 2) − x²]/(x + 2)². Simplifying the numerator gives x² + 4x."
-        },
-
-        {
-            id: 26,
-            question: "Find the derivative of f(x) = √(x² + 9).",
-            options: [
-                "1/(2√(x² + 9))",
-                "x/√(x² + 9)",
-                "2x/√(x² + 9)",
-                "x/(2√(x² + 9))"
-            ],
+            question: "How many real linear factors does P(x) = x³ − 1 have when factored completely over the real numbers?",
+            options: ["0", "1", "2", "3"],
             answer: "B",
-            explanation: "Rewrite the function as (x² + 9)^(1/2). The chain rule gives (1/2)(x² + 9)^(−1/2) × 2x = x/√(x² + 9)."
-        },
-
-        {
-            id: 27,
-            question: "Find the second derivative f''(x) of f(x) = 2x³ − 5x² + 4x − 1.",
-            options: [
-                "6x² − 10x + 4",
-                "12x − 10",
-                "12x",
-                "6 − 10x"
-            ],
-            answer: "B",
-            explanation: "First derivative: f'(x) = 6x² − 10x + 4. Differentiating again gives f''(x) = 12x − 10."
-        },
-
-        {
-            id: 28,
-            question: "Find the derivative of f(x) = x² ln(x) for x > 0.",
-            options: [
-                "2x ln(x)",
-                "x(2ln(x) + 1)",
-                "x² + ln(x)",
-                "2/x"
-            ],
-            answer: "B",
-            explanation: "Using the product rule, f'(x) = 2x ln(x) + x²(1/x) = 2x ln(x) + x = x(2ln(x) + 1)."
-        },
-
-        {
-            id: 29,
-            question: "Find the derivative of f(x) = cos(5x).",
-            options: [
-                "−5sin(5x)",
-                "5sin(5x)",
-                "−5cos(5x)",
-                "sin(5x)"
-            ],
-            answer: "A",
-            explanation: "By the chain rule, the derivative is −sin(5x) × 5 = −5sin(5x)."
-        },
-
-        {
-            id: 30,
-            question: "Find the derivative of f(x) = e²ˣ + 3x⁴.",
-            options: [
-                "2e²ˣ + 12x³",
-                "e²ˣ + 12x³",
-                "2e²ˣ + 3x³",
-                "4e²ˣ + 12x³"
-            ],
-            answer: "A",
-            explanation: "Differentiate each term: d(e²ˣ)/dx = 2e²ˣ and d(3x⁴)/dx = 12x³. Therefore f'(x) = 2e²ˣ + 12x³."
+            explanation: "Factor x³ − 1 = (x − 1)(x² + x + 1). The quadratic factor has discriminant 1 − 4 = −3, so it has no real roots. Therefore, there is one real linear factor, x − 1."
         }
 
     ]
@@ -364,7 +300,7 @@ const QUIZ_CONFIG = {
 
 
 /* =========================================
-   SETTINGS — VERSION 2
+   SETTINGS — VERSION 3
 ========================================= */
 
 const COMPLETION_KEY =
@@ -595,7 +531,7 @@ function showQuestion() {
 
 prevBtn.addEventListener("click", () => {
 
-    if (currentQuestion > 0) {
+    if (currentQuestion > 0 && !quizSubmitted) {
         currentQuestion--;
         showQuestion();
         renderNavigator();
@@ -605,7 +541,10 @@ prevBtn.addEventListener("click", () => {
 
 nextBtn.addEventListener("click", () => {
 
-    if (currentQuestion < questions.length - 1) {
+    if (
+        currentQuestion < questions.length - 1 &&
+        !quizSubmitted
+    ) {
         currentQuestion++;
         showQuestion();
         renderNavigator();
@@ -615,10 +554,12 @@ nextBtn.addEventListener("click", () => {
 
 function updateNavigationButtons() {
 
-    prevBtn.disabled = currentQuestion === 0;
+    prevBtn.disabled =
+        currentQuestion === 0 || quizSubmitted;
 
     nextBtn.disabled =
-        currentQuestion === questions.length - 1;
+        currentQuestion === questions.length - 1 ||
+        quizSubmitted;
 }
 
 
@@ -693,6 +634,11 @@ function startTimer() {
     updateTimerDisplay();
 
     timerInterval = setInterval(() => {
+
+        if (quizSubmitted) {
+            clearInterval(timerInterval);
+            return;
+        }
 
         timeRemaining--;
 
@@ -778,6 +724,8 @@ cancelName.addEventListener("click", () => {
 
 
 confirmName.addEventListener("click", () => {
+
+    if (quizSubmitted) return;
 
     const name = studentNameInput.value.trim();
 
@@ -867,6 +815,10 @@ async function submitQuiz(automatic = false) {
 
     clearInterval(timerInterval);
 
+    submitBtn.disabled = true;
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+
     let correct = 0;
     let wrong = 0;
     let unanswered = 0;
@@ -942,7 +894,7 @@ async function submitQuiz(automatic = false) {
 
         showLockedResult(
             saveSuccessful
-                ? "Your MATH 101 result has been submitted successfully. The leaderboard is currently closed. Your score will become visible when the leaderboard is opened."
+                ? "Your MATH 101 Polynomials result has been submitted successfully. The leaderboard is currently closed. Your score will become visible when the leaderboard is opened."
                 : "Your quiz has been completed, but your result could not be confirmed on the server. Please contact CONQUERORS LABS."
         );
 
@@ -1229,7 +1181,7 @@ function showAlreadyCompleted() {
         .classList.add("hidden");
 
     document.getElementById("resultMessage").textContent =
-        "You have already completed this MATH 101 Differentiation CBT on this browser/device. Retakes are currently disabled.";
+        "You have already completed this MATH 101 Polynomials CBT on this browser/device. Retakes are currently disabled.";
 
     reviewBtn.classList.add("hidden");
 
