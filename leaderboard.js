@@ -35,7 +35,7 @@ const QUIZZES = {
         title: "MATH 101",
         settingsQuizId: "math101",
         databaseQuizId: "math101",
-        resultKey: "conquerorsLabs_MATH101_result_id_v2"
+        resultKey: "conquerorsLabs_MATH101_result_id_v3"
     }
 };
 
