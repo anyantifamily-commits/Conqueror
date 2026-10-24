@@ -48,7 +48,7 @@ body::before {
     inset: 0;
 
     background:
-        url("cq.jpg")
+        url("cq.png")
         center / cover
         no-repeat;
 
