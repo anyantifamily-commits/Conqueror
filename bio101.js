@@ -1,6 +1,6 @@
 /* =================================================
    CONQUERORS LABS
-   BIO 101 CBT — ENERGY METABOLISM
+   BIO 101 CBT — CELL BIOLOGY II
 ================================================= */
 
 /* =================================================
@@ -8,555 +8,445 @@
 ================================================= */
 
 const QUIZ_CONFIG = {
-    title: "BIO 101 — Energy Metabolism",
+    title: "BIO 101 — Cell Biology II",
 
-    // Increment this number for a completely new set.
-    quizVersion: 4,
+    // New question set: version 5.
+    quizVersion: 5,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
 
     timeLimit: 60,
-    maxQuestions: 40,
+    maxQuestions: 30,
     passMark: 50,
     allowRetake: false,
 
     questions: [
 
         // =========================================
-        // PART 1: ENERGY METABOLISM
+        // PART 1: BIOLOGICAL ORGANIZATION
         // =========================================
 
         {
             id: 1,
-            question: "During carbohydrate oxidation, which molecule is formed from pyruvate before it enters the Krebs cycle?",
+            question: "What is the correct hierarchical order of biological organization from simplest to most complex?",
             options: [
-                "Pyruvate",
-                "Acetyl coenzyme A (acetyl-CoA)",
-                "Lactic acid",
-                "Oxaloacetate"
+                "Organ, Tissue, Cell, Organ System",
+                "Cell, Tissue, Organ, Organ System",
+                "Tissue, Cell, Organ System, Organ",
+                "Organ System, Organ, Cell, Tissue"
             ],
-            answer: "Acetyl coenzyme A (acetyl-CoA)",
-            explanation: "Pyruvate is converted into acetyl-CoA by the pyruvate dehydrogenase complex. Acetyl-CoA then enters the Krebs cycle. Not every dietary fuel follows exactly the same pathway."
+            answer: "Cell, Tissue, Organ, Organ System",
+            explanation: "The correct order is cell → tissue → organ → organ system. Cells form tissues, different tissues combine to form organs, and organs work together in organ systems."
         },
 
         {
             id: 2,
-            question: "The breakdown of complex energy-rich molecules into simpler molecules, usually releasing energy, is called:",
+            question: "Which organism is commonly cited as an example of a colonial organism whose individual cells may survive independently when separated?",
             options: [
-                "Anabolism",
-                "Catabolism",
-                "Glycolysis",
-                "Phosphorylation"
+                "Amoeba",
+                "Volvox",
+                "Paramecium",
+                "Hydra"
             ],
-            answer: "Catabolism",
-            explanation: "Catabolism breaks down complex molecules into simpler products and releases usable energy, which can be captured in ATP and reduced coenzymes."
+            answer: "Volvox",
+            explanation: "Volvox is a colonial green alga. Its cells live together in an organized colony, although the degree of independence varies among species and cell types."
         },
 
         {
             id: 3,
-            question: "The process of building large, complex molecules from smaller ones is known as:",
+            question: "What does the Colonial Theory propose about the evolution of multicellular organisms?",
             options: [
-                "Catabolism",
-                "Anabolism",
-                "Hydrolysis",
-                "Oxidation"
+                "Multicellular organisms evolved from single-celled organisms through random mutations alone.",
+                "Cooperation among cells of the same species led to the development of multicellular organisms.",
+                "Tissues can survive independently after separation from a multicellular organism.",
+                "Organs function completely independently of organ systems."
             ],
-            answer: "Anabolism",
-            explanation: "Anabolism is the constructive part of metabolism. It uses energy and small precursors to build molecules such as proteins and nucleic acids."
+            answer: "Cooperation among cells of the same species led to the development of multicellular organisms.",
+            explanation: "The colonial theory proposes that multicellular organisms evolved from groups or colonies of unicellular organisms. Increasing cooperation and specialization among cells contributed to multicellularity."
         },
 
         {
             id: 4,
-            question: "During digestion, polysaccharides are broken down into simpler units primarily consisting of:",
+            question: "A group of connected cells with similar structures working together to perform a particular function is known as a:",
             options: [
-                "Amino acids",
-                "Fatty acids",
-                "Simple sugars",
-                "Nucleotides"
+                "Organ",
+                "Tissue",
+                "Organ system",
+                "Colony"
             ],
-            answer: "Simple sugars",
-            explanation: "Digestive enzymes break polysaccharides such as starch into smaller carbohydrates, ultimately producing monosaccharides such as glucose."
+            answer: "Tissue",
+            explanation: "A tissue consists of cells organized to perform particular functions. Different tissues can combine to form an organ."
         },
 
         {
             id: 5,
-            question: "During digestion, proteins are broken down into:",
+            question: "Which organ functions as part of both the endocrine system and the digestive system?",
             options: [
-                "Amino acids",
-                "Fatty acids",
-                "Simple sugars",
-                "Nucleotides"
+                "Liver",
+                "Pancreas",
+                "Kidney",
+                "Spleen"
             ],
-            answer: "Amino acids",
-            explanation: "Proteases and peptidases break proteins into peptides and ultimately amino acids, which can be absorbed and used by the body."
+            answer: "Pancreas",
+            explanation: "The pancreas has an endocrine function because it releases hormones such as insulin and glucagon into the blood. It also has an exocrine digestive function because it releases digestive enzymes into the small intestine."
         },
+
+        // =========================================
+        // PART 2: EXTRACELLULAR FLUID AND ELEMENTS
+        // =========================================
 
         {
             id: 6,
-            question: "What are the main products of the digestion of dietary triglycerides?",
+            question: "Cells in multicellular organisms are surrounded by a fluid called:",
             options: [
-                "Sugars and glycerol",
-                "Fatty acids and monoacylglycerols",
-                "Amino acids",
-                "Nucleotides"
+                "Cytosol",
+                "Intracellular fluid",
+                "Extracellular fluid (ECF)",
+                "Nucleoplasm"
             ],
-            answer: "Fatty acids and monoacylglycerols",
-            explanation: "Pancreatic lipase mainly breaks triglycerides into free fatty acids and monoacylglycerols. Glycerol may also be produced. Cholesterol is not a normal breakdown product of triglycerides."
+            answer: "Extracellular fluid (ECF)",
+            explanation: "Extracellular fluid is outside the cells. It includes interstitial fluid and blood plasma and provides the environment through which nutrients, gases and waste products are exchanged."
         },
 
         {
             id: 7,
-            question: "Nucleic acids are digested into smaller components that include:",
+            question: "Trace elements such as copper, zinc and manganese are important in the body primarily because they contribute to:",
             options: [
-                "Nucleotides",
-                "Fatty acids",
-                "Amino acids",
-                "Triglycerides"
+                "Providing structural rigidity to bones",
+                "Enzyme activity",
+                "Maintaining osmotic balance as the principal extracellular ions",
+                "Fat storage"
             ],
-            answer: "Nucleotides",
-            explanation: "Nucleases break DNA and RNA into smaller units, including nucleotides. Further digestion can release nitrogenous bases, sugars and phosphate."
+            answer: "Enzyme activity",
+            explanation: "Copper, zinc and manganese serve as cofactors for various enzymes. They are required in small quantities for normal biochemical reactions and cellular functions."
         },
 
         {
             id: 8,
-            question: "Where does glycolysis take place in a eukaryotic cell?",
+            question: "According to the classification used in this course material, how many major ways do cells exchange materials with the extracellular fluid?",
             options: [
-                "In the mitochondrial matrix",
-                "In the cytosol",
-                "In the nucleus",
-                "On the inner mitochondrial membrane"
+                "Three",
+                "Four",
+                "Five",
+                "Six"
             ],
-            answer: "In the cytosol",
-            explanation: "Glycolysis occurs in the cytosol. It converts glucose into pyruvate through a sequence of enzyme-catalysed reactions."
+            answer: "Five",
+            explanation: "The expected answer in this question set is five. The exact number can depend on how a course groups transport processes, so use the specific classification taught in your lecture notes."
         },
+
+        // =========================================
+        // PART 3: EPITHELIAL TISSUE
+        // =========================================
 
         {
             id: 9,
-            question: "The process that breaks fatty acids into two-carbon acetyl-CoA units is called:",
+            question: "How are epithelial tissues primarily classified according to the number of cell layers?",
             options: [
-                "Deamination",
-                "Beta-oxidation",
-                "Glycolysis",
-                "Glycogenesis"
+                "Simple and stratified",
+                "Squamous, cuboidal and columnar",
+                "Loose and dense",
+                "Voluntary and involuntary"
             ],
-            answer: "Beta-oxidation",
-            explanation: "Beta-oxidation removes two-carbon units from fatty acyl-CoA molecules, producing acetyl-CoA, NADH and FADH₂."
+            answer: "Simple and stratified",
+            explanation: "Simple epithelium has one cell layer, whereas stratified epithelium has two or more layers. Squamous, cuboidal and columnar describe cell shapes rather than the number of layers."
         },
 
         {
             id: 10,
-            question: "Which process removes an amino group from an amino acid during amino acid catabolism?",
+            question: "Epithelial cells that are flattened, thin and spread out are described as:",
             options: [
-                "Beta-oxidation",
-                "Deamination",
-                "Glycolysis",
-                "Glycogenesis"
+                "Cuboidal",
+                "Columnar",
+                "Squamous",
+                "Transitional"
             ],
-            answer: "Deamination",
-            explanation: "Deamination removes an amino group from an amino acid. The remaining carbon skeleton can enter energy metabolism through different pathways, depending on the amino acid."
+            answer: "Squamous",
+            explanation: "Squamous epithelial cells are thin and flattened, resembling scales. Their shape allows efficient diffusion and filtration in locations such as alveoli and parts of the kidney."
         },
 
         // =========================================
-        // PART 2: GLYCOLYSIS
+        // PART 4: CONNECTIVE TISSUE
         // =========================================
 
         {
             id: 11,
-            question: "How many molecules of pyruvate are produced from one molecule of glucose during glycolysis?",
+            question: "Which connective tissue supports epithelia and forms a network around blood vessels, nerves and some internal organs?",
             options: [
-                "One",
-                "Two",
-                "Three",
-                "Four"
+                "Adipose tissue",
+                "Loose connective tissue",
+                "Bone tissue",
+                "Hyaline cartilage"
             ],
-            answer: "Two",
-            explanation: "One six-carbon glucose molecule is split and processed to yield two three-carbon pyruvate molecules."
+            answer: "Loose connective tissue",
+            explanation: "Loose connective tissue supports and binds surrounding tissues. It is commonly found beneath epithelia and around blood vessels, nerves and organs."
         },
 
         {
             id: 12,
-            question: "Which statement correctly describes glycolysis in relation to oxygen?",
+            question: "Which connective tissue provides tensile strength and support in structures such as tendons and ligaments?",
             options: [
-                "It directly requires oxygen",
-                "It does not directly require oxygen",
-                "It occurs only inside mitochondria",
-                "It occurs only during photosynthesis"
+                "Loose connective tissue",
+                "Fibrous connective tissue",
+                "Adipose tissue",
+                "Cartilage"
             ],
-            answer: "It does not directly require oxygen",
-            explanation: "Glycolysis does not use oxygen directly and can occur whether oxygen is available or not. The fate of pyruvate and the regeneration of NAD⁺ depend on cellular conditions."
+            answer: "Fibrous connective tissue",
+            explanation: "Dense fibrous connective tissue contains abundant collagen fibres. Tendons connect muscles to bones, while ligaments connect bones to other bones and help stabilize joints."
         },
 
         {
             id: 13,
-            question: "Which vitamin-derived coenzyme is directly required for the oxidation step of glycolysis?",
+            question: "What are the mature cells found in cartilage called?",
             options: [
-                "Vitamin C-derived ascorbate",
-                "Vitamin B3-derived NAD⁺",
-                "Vitamin A-derived retinal",
-                "Vitamin D-derived calcitriol"
+                "Osteocytes",
+                "Adipocytes",
+                "Chondrocytes",
+                "Fibroblasts"
             ],
-            answer: "Vitamin B3-derived NAD⁺",
-            explanation: "NAD⁺ is derived from niacin, vitamin B3, and accepts electrons during the glyceraldehyde-3-phosphate oxidation step of glycolysis. Thiamin, vitamin B1, is important in other energy-metabolism reactions, especially pyruvate oxidation."
+            answer: "Chondrocytes",
+            explanation: "Chondrocytes are mature cartilage cells. They occupy spaces called lacunae and help maintain the cartilage extracellular matrix."
         },
 
         {
             id: 14,
-            question: "What is the product of the first phosphorylation of glucose during glycolysis?",
+            question: "Which substance is a major component of the proteoglycans found in cartilage extracellular matrix?",
             options: [
-                "Fructose-1,6-bisphosphate",
-                "Glucose-6-phosphate",
-                "Pyruvate",
-                "Glyceraldehyde-3-phosphate"
+                "Hydroxyapatite",
+                "Chondroitin sulfate",
+                "Haemoglobin",
+                "Fibrinogen"
             ],
-            answer: "Glucose-6-phosphate",
-            explanation: "Hexokinase transfers a phosphate group from ATP to glucose, forming glucose-6-phosphate and ADP."
+            answer: "Chondroitin sulfate",
+            explanation: "Chondroitin sulfate is a glycosaminoglycan found in cartilage proteoglycans. Together with collagen and other matrix components, it helps cartilage resist compression and retain water."
         },
+
+        // =========================================
+        // PART 5: BONE TISSUE
+        // =========================================
 
         {
             id: 15,
-            question: "Which molecule is formed when fructose-6-phosphate is phosphorylated during glycolysis?",
+            question: "In mature bone, which calcium phosphate mineral gives the extracellular matrix much of its hardness?",
             options: [
-                "Fructose-1,6-bisphosphate",
-                "Phosphoenolpyruvate",
-                "3-phosphoglycerate",
-                "Lactate"
+                "Chondroitin sulfate",
+                "Hydroxyapatite",
+                "Calcium carbonate",
+                "Keratin"
             ],
-            answer: "Fructose-1,6-bisphosphate",
-            explanation: "Phosphofructokinase-1 uses ATP to convert fructose-6-phosphate into fructose-1,6-bisphosphate. This is a major regulatory step in glycolysis."
+            answer: "Hydroxyapatite",
+            explanation: "Hydroxyapatite is a calcium phosphate mineral deposited in bone matrix. It combines with collagen and other matrix components to give bone strength and rigidity."
         },
 
         {
             id: 16,
-            question: "What is the net ATP yield from one molecule of glucose during glycolysis?",
+            question: "Which bone cells are primarily responsible for producing collagen and new bone matrix?",
             options: [
-                "One ATP",
-                "Two ATP",
-                "Three ATP",
-                "Four ATP"
+                "Osteoclasts",
+                "Osteocytes",
+                "Osteoblasts",
+                "Osteogenic cells"
             ],
-            answer: "Two ATP",
-            explanation: "Glycolysis produces four ATP but uses two ATP in its early steps, giving a net gain of two ATP per glucose molecule."
+            answer: "Osteoblasts",
+            explanation: "Osteoblasts synthesize osteoid, the organic portion of bone matrix, which subsequently becomes mineralized. Osteocytes maintain bone tissue, while osteoclasts resorb bone."
         },
 
         {
             id: 17,
-            question: "Which statement best describes the main products of glycolysis per glucose molecule?",
+            question: "What is the main function of osteoclasts in bone tissue?",
             options: [
-                "Two pyruvate, two net ATP and two NADH",
-                "One pyruvate, four net ATP and one NADH",
-                "Two acetyl-CoA, six ATP and six FADH₂",
-                "Two lactate, no ATP and no NADH"
+                "Form new bone matrix",
+                "Act as stem cells for bone repair",
+                "Resorb bone and release its minerals",
+                "Maintain mature bone tissue"
             ],
-            answer: "Two pyruvate, two net ATP and two NADH",
-            explanation: "The overall products of glycolysis per glucose include two pyruvate, two net ATP, two NADH and water. The exact energy yield from later respiration depends on how reducing equivalents are transferred and used."
+            answer: "Resorb bone and release its minerals",
+            explanation: "Osteoclasts break down bone matrix during bone resorption. This supports bone remodeling and helps regulate the release of minerals such as calcium into the bloodstream."
         },
+
+        // =========================================
+        // PART 6: ADIPOSE TISSUE AND BLOOD
+        // =========================================
 
         {
             id: 18,
-            question: "When oxygen availability or mitochondrial oxidation is insufficient, pyruvate may be converted into which product in human cells?",
+            question: "Adipose tissue consists largely of cells called adipocytes that are specialized primarily for:",
             options: [
-                "Acetyl-CoA",
-                "Lactate",
-                "Citrate",
-                "Oxaloacetate"
+                "Mineral storage",
+                "Fat storage",
+                "Oxygen transport",
+                "Producing electrical impulses"
             ],
-            answer: "Lactate",
-            explanation: "Lactate dehydrogenase converts pyruvate into lactate while oxidising NADH to NAD⁺. This helps glycolysis continue producing ATP when oxidative metabolism cannot meet the cell's needs."
+            answer: "Fat storage",
+            explanation: "Adipocytes store energy in the form of triglycerides. Adipose tissue also provides insulation, cushioning and endocrine signals that influence metabolism."
         },
 
         {
             id: 19,
-            question: "Which enzyme catalyses the conversion of glucose into glucose-6-phosphate in glycolysis?",
+            question: "If the same amount of stored chemical energy were stored as carbohydrates instead of fat, approximately how much extra body mass might be required under the comparison used in this course material?",
             options: [
-                "Phosphofructokinase-1",
-                "Hexokinase",
-                "Enolase",
-                "Pyruvate kinase"
+                "About 10 kg",
+                "About 25 kg",
+                "About 45 kg",
+                "About 100 kg"
             ],
-            answer: "Hexokinase",
-            explanation: "Hexokinase catalyses the first step of glycolysis in most tissues by transferring a phosphate group from ATP to glucose."
+            answer: "About 45 kg",
+            explanation: "The expected answer in this question set is approximately 45 kg. The exact estimate depends on the assumed energy stores, the energy density of the substances and how much associated water is included in the comparison."
         },
 
         {
             id: 20,
-            question: "Which enzyme catalyses the final ATP-producing step of glycolysis, forming pyruvate?",
+            question: "What is the fluid extracellular matrix in which blood cells are suspended called?",
             options: [
-                "Pyruvate kinase",
-                "Hexokinase",
-                "Aldolase",
-                "Triose phosphate isomerase"
+                "Interstitial fluid",
+                "Lymph",
+                "Plasma",
+                "Serum"
             ],
-            answer: "Pyruvate kinase",
-            explanation: "Pyruvate kinase transfers a phosphate group from phosphoenolpyruvate to ADP, producing ATP and pyruvate."
+            answer: "Plasma",
+            explanation: "Blood plasma is the liquid component of blood in which red blood cells, white blood cells and platelets are suspended. Serum is the fluid remaining after blood has clotted."
         },
-
-        // =========================================
-        // PART 3: KREBS CYCLE
-        // =========================================
 
         {
             id: 21,
-            question: "Where does the Krebs cycle occur in eukaryotic cells?",
+            question: "What is the approximate lifespan of a normal human red blood cell (erythrocyte)?",
             options: [
-                "In the cytosol",
-                "In the mitochondrial matrix",
-                "In the nucleus",
-                "On the outer cell membrane"
+                "30 days",
+                "60 days",
+                "90 days",
+                "120 days"
             ],
-            answer: "In the mitochondrial matrix",
-            explanation: "Most Krebs cycle reactions occur in the mitochondrial matrix. Succinate dehydrogenase is an important exception because it is embedded in the inner mitochondrial membrane."
+            answer: "120 days",
+            explanation: "A normal human red blood cell circulates for approximately 120 days before it is removed, mainly by macrophages in the spleen, liver and other reticuloendothelial tissues."
         },
 
         {
             id: 22,
-            question: "Acetyl-CoA combines with oxaloacetate at the start of the Krebs cycle to form:",
+            question: "Platelets circulating in blood plasma are best described as:",
             options: [
-                "Citrate",
-                "Malate",
-                "Fumarate",
-                "Isocitrate"
+                "Specialized nucleated cells",
+                "Membrane-bound fragments derived from megakaryocytes",
+                "Variants of white blood cells",
+                "Protein crystals"
             ],
-            answer: "Citrate",
-            explanation: "Citrate synthase combines the two-carbon acetyl group from acetyl-CoA with four-carbon oxaloacetate to form six-carbon citrate."
+            answer: "Membrane-bound fragments derived from megakaryocytes",
+            explanation: "Platelets are small, membrane-bound cell fragments released by megakaryocytes in the bone marrow. They lack a nucleus and are important in blood clotting and haemostasis."
         },
+
+        // =========================================
+        // PART 7: MUSCLE TISSUE
+        // =========================================
 
         {
             id: 23,
-            question: "Which molecule is formed when citrate is rearranged by aconitase?",
+            question: "Muscle contraction depends primarily on the interaction between which two proteins?",
             options: [
-                "Alpha-ketoglutarate",
-                "Isocitrate",
-                "Succinate",
-                "Succinyl-CoA"
+                "Collagen and elastin",
+                "Actin and myosin",
+                "Thrombin and fibrinogen",
+                "Albumin and globulin"
             ],
-            answer: "Isocitrate",
-            explanation: "Aconitase converts citrate into its isomer, isocitrate, through the intermediate cis-aconitate."
+            answer: "Actin and myosin",
+            explanation: "Actin and myosin interact to generate force during muscle contraction. Their sliding interaction is regulated by calcium and associated proteins."
         },
 
         {
             id: 24,
-            question: "During the conversion of isocitrate into alpha-ketoglutarate, which waste product is released?",
+            question: "Skeletal muscle cells are elongated, cylindrical and are commonly called:",
             options: [
-                "Water",
-                "Carbon dioxide",
-                "Molecular oxygen",
-                "Ammonia"
+                "Muscle fibres",
+                "Spindle cells",
+                "Intercalated discs",
+                "Glial cells"
             ],
-            answer: "Carbon dioxide",
-            explanation: "Isocitrate dehydrogenase catalyses an oxidative decarboxylation. Carbon dioxide is released and NADH is produced."
+            answer: "Muscle fibres",
+            explanation: "Skeletal muscle cells are long, cylindrical and multinucleated. Because of their elongated shape, they are commonly referred to as muscle fibres."
         },
 
         {
             id: 25,
-            question: "During the conversion of succinyl-CoA to succinate, which high-energy nucleotide is directly produced in the usual mammalian reaction?",
+            question: "What is the specialized junction connecting adjacent cardiac muscle cells called?",
             options: [
-                "GTP",
-                "AMP",
-                "Cyclic AMP",
-                "UTP"
+                "Neuromuscular junction",
+                "Intercalated disc",
+                "Node of Ranvier",
+                "Z-line"
             ],
-            answer: "GTP",
-            explanation: "Succinyl-CoA synthetase produces GTP in the usual reaction in many mammalian tissues. Some tissue-specific forms produce ATP instead. This is an example of substrate-level phosphorylation."
+            answer: "Intercalated disc",
+            explanation: "Intercalated discs connect adjacent cardiac muscle cells. They contain structures that provide mechanical attachment and electrical communication, allowing the heart muscle to contract in a coordinated manner."
         },
 
         {
             id: 26,
-            question: "During the oxidation of succinate to fumarate, FAD is reduced to:",
+            question: "How are smooth muscle cells typically described?",
             options: [
-                "NADH",
-                "FADH₂",
-                "NADPH",
-                "Acetyl-CoA"
+                "Long, striated and multinucleated",
+                "Short, branched and striated",
+                "Spindle-shaped and non-striated",
+                "Large, flat squamous cells"
             ],
-            answer: "FADH₂",
-            explanation: "Succinate dehydrogenase oxidises succinate to fumarate and transfers electrons to FAD, forming FADH₂. The enzyme is also Complex II of the electron transport chain."
+            answer: "Spindle-shaped and non-striated",
+            explanation: "Smooth muscle cells are typically spindle-shaped, have a single centrally located nucleus and lack the visible striations characteristic of skeletal and cardiac muscle."
         },
+
+        // =========================================
+        // PART 8: NERVOUS TISSUE
+        // =========================================
 
         {
             id: 27,
-            question: "Which molecule is formed when fumarate is hydrated in the Krebs cycle?",
+            question: "What is a major function of glial cells in nervous tissue?",
             options: [
-                "Malate",
-                "Citrate",
-                "Succinate",
-                "Oxaloacetate"
+                "Transmit electrical signals along long distances as their primary role",
+                "Support neurons, provide metabolic assistance and help maintain electrical insulation",
+                "Produce red blood cells",
+                "Contract to move body parts"
             ],
-            answer: "Malate",
-            explanation: "Fumarase adds water to fumarate, forming malate. This is a hydration reaction rather than hydrolysis."
+            answer: "Support neurons, provide metabolic assistance and help maintain electrical insulation",
+            explanation: "Glial cells support and protect neurons, regulate their environment and provide metabolic assistance. Some glial cells, such as oligodendrocytes and Schwann cells, form myelin around axons."
         },
 
         {
             id: 28,
-            question: "Which molecule is regenerated when malate is oxidised at the end of the Krebs cycle?",
+            question: "What is the principal function of dendrites in a typical neuron?",
             options: [
-                "Oxaloacetate",
-                "Pyruvate",
-                "Acetyl-CoA",
-                "Isocitrate"
+                "Convert electrical signals to chemical signals for muscle cells",
+                "Receive incoming signals and convey their effects toward the cell body",
+                "Form the myelin sheath around the axon",
+                "Release neurotransmitters from the terminal branches as their main function"
             ],
-            answer: "Oxaloacetate",
-            explanation: "Malate dehydrogenase oxidises malate to oxaloacetate and produces NADH. Oxaloacetate can then combine with another acetyl-CoA molecule."
+            answer: "Receive incoming signals and convey their effects toward the cell body",
+            explanation: "Dendrites receive signals from other cells. These inputs produce changes in the neuron's membrane potential that are integrated with other inputs and can influence whether an action potential is generated."
         },
+
+        // =========================================
+        // PART 9: ORGAN SYSTEMS AND CELL STRUCTURE
+        // =========================================
 
         {
             id: 29,
-            question: "How many turns of the Krebs cycle are needed to process the two acetyl-CoA molecules produced from one glucose molecule?",
+            question: "How many major organ systems are commonly identified in humans?",
             options: [
-                "One turn",
-                "Two turns",
-                "Three turns",
-                "Four turns"
+                "Nine",
+                "Ten",
+                "Eleven",
+                "Twelve"
             ],
-            answer: "Two turns",
-            explanation: "One glucose generally produces two pyruvate molecules, which can form two acetyl-CoA molecules. Each acetyl-CoA requires one turn of the Krebs cycle."
+            answer: "Eleven",
+            explanation: "Human anatomy is commonly organized into eleven major organ systems. The exact grouping can vary slightly between textbooks, but eleven is the standard answer in many introductory biology courses."
         },
 
         {
             id: 30,
-            question: "How many NADH molecules are produced by the Krebs cycle itself per glucose molecule, assuming both acetyl-CoA molecules enter the cycle?",
+            question: "What are the three major parts of a typical human cell?",
             options: [
-                "Two",
-                "Four",
-                "Six",
-                "Eight"
+                "Cell membrane, nucleus and cytoplasm",
+                "Cell wall, cell membrane and nucleus",
+                "Mitochondria, nucleus and cytoplasm",
+                "Ribosome, cytoplasm and membrane"
             ],
-            answer: "Six",
-            explanation: "Each turn of the Krebs cycle produces three NADH. Since one glucose yields two acetyl-CoA molecules and therefore two turns, the cycle produces six NADH in total. Pyruvate oxidation produces additional NADH outside the cycle."
-        },
-
-        // =========================================
-        // PART 4: ELECTRON TRANSPORT CHAIN
-        // =========================================
-
-        {
-            id: 31,
-            question: "At the end of the mitochondrial electron transport chain, molecular oxygen accepts electrons and combines with protons to form:",
-            options: [
-                "Carbon dioxide",
-                "Water",
-                "Lactic acid",
-                "Glucose"
-            ],
-            answer: "Water",
-            explanation: "Oxygen is the final electron acceptor in the mitochondrial electron transport chain. It accepts electrons and combines with protons to form water."
-        },
-
-        {
-            id: 32,
-            question: "Which vitamin is the precursor of the NAD⁺ and NADP⁺ coenzymes?",
-            options: [
-                "Thiamin (B1)",
-                "Riboflavin (B2)",
-                "Niacin (B3)",
-                "Pantothenic acid (B5)"
-            ],
-            answer: "Niacin (B3)",
-            explanation: "Niacin is vitamin B3 and is used to synthesise NAD⁺ and NADP⁺. These coenzymes transfer electrons in many metabolic reactions."
-        },
-
-        {
-            id: 33,
-            question: "Which vitamin is the precursor of flavin adenine dinucleotide (FAD)?",
-            options: [
-                "Riboflavin (B2)",
-                "Niacin (B3)",
-                "Thiamin (B1)",
-                "Biotin (B7)"
-            ],
-            answer: "Riboflavin (B2)",
-            explanation: "Riboflavin is vitamin B2 and is used to form FAD and FMN, which function as electron-carrying cofactors in metabolic reactions."
-        },
-
-        {
-            id: 34,
-            question: "Which coenzyme in mitochondrial Complex I accepts electrons from NADH early in the electron transport chain?",
-            options: [
-                "Flavin mononucleotide (FMN)",
-                "Coenzyme Q",
-                "Cytochrome c",
-                "Cytochrome a"
-            ],
-            answer: "Flavin mononucleotide (FMN)",
-            explanation: "FMN accepts electrons from NADH in Complex I and passes them through the complex's electron-transfer centres toward coenzyme Q."
-        },
-
-        {
-            id: 35,
-            question: "Which electron carrier moves within the inner mitochondrial membrane and transfers electrons from Complexes I and II to Complex III?",
-            options: [
-                "Cytochrome c",
-                "Coenzyme Q",
-                "FMN",
-                "NAD⁺"
-            ],
-            answer: "Coenzyme Q",
-            explanation: "Coenzyme Q, also called ubiquinone, is a lipid-soluble carrier that moves within the inner mitochondrial membrane and transfers electrons to Complex III."
-        },
-
-        {
-            id: 36,
-            question: "What structural feature do cytochromes share with haemoglobin and myoglobin?",
-            options: [
-                "Iron-containing heme groups",
-                "Globin polypeptide chains in every case",
-                "Lipid bilayers",
-                "FMN groups"
-            ],
-            answer: "Iron-containing heme groups",
-            explanation: "Cytochromes, haemoglobin and myoglobin contain heme groups with iron. Their proteins and functions differ, but the heme group is an important shared structural feature."
-        },
-
-        {
-            id: 37,
-            question: "Which small electron-transfer protein moves along the outer surface of the inner mitochondrial membrane from Complex III toward Complex IV?",
-            options: [
-                "Cytochrome b",
-                "Cytochrome c",
-                "Cytochrome a",
-                "Cytochrome c₁"
-            ],
-            answer: "Cytochrome c",
-            explanation: "Cytochrome c is a small, water-soluble protein that transfers electrons from Complex III to Complex IV along the membrane surface. It does not diffuse freely within the lipid bilayer."
-        },
-
-        {
-            id: 38,
-            question: "What is the process called in which the proton gradient drives ATP synthase to produce ATP?",
-            options: [
-                "Substrate-level phosphorylation",
-                "Oxidative phosphorylation",
-                "Photophosphorylation",
-                "Glycogenolysis"
-            ],
-            answer: "Oxidative phosphorylation",
-            explanation: "The electron transport chain establishes a proton gradient across the inner mitochondrial membrane. As protons flow back through ATP synthase, the enzyme uses that energy to produce ATP."
-        },
-
-        {
-            id: 39,
-            question: "Approximately how many ATP molecules are associated with the oxidation of one mitochondrial NADH under modern estimates?",
-            options: [
-                "One ATP",
-                "Two ATP",
-                "About 2.5 ATP",
-                "About four ATP"
-            ],
-            answer: "About 2.5 ATP",
-            explanation: "The modern average estimate is approximately 2.5 ATP per mitochondrial NADH. Some older textbooks use a value of 3 ATP, but the actual yield depends on cellular conditions and how electrons enter the mitochondria."
-        },
-
-        {
-            id: 40,
-            question: "Which process is characteristic of photosynthetic organisms rather than a normal energy-requiring process in human cells?",
-            options: [
-                "Mechanical work",
-                "Active transport",
-                "Photosynthesis",
-                "Biosynthesis of cellular molecules"
-            ],
-            answer: "Photosynthesis",
-            explanation: "Human cells use ATP for mechanical work, active transport and biosynthesis. Photosynthesis is characteristic of plants, algae and certain microorganisms; ATP is also used within photosynthetic pathways."
+            answer: "Cell membrane, nucleus and cytoplasm",
+            explanation: "A typical human cell has a plasma membrane, cytoplasm and nucleus. The plasma membrane forms the boundary, the cytoplasm contains the cytosol and organelles, and the nucleus houses most of the cell's genetic material."
         }
 
     ]
@@ -726,6 +616,7 @@ if (startQuizBtn) {
             if (!enteredName) {
 
                 studentNameInput.focus();
+
                 studentNameInput.style.borderColor =
                     "#ff7373";
 
@@ -736,6 +627,7 @@ if (startQuizBtn) {
             if (enteredName.length < 2) {
 
                 studentNameInput.focus();
+
                 studentNameInput.style.borderColor =
                     "#ff7373";
 
