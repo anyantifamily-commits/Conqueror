@@ -1824,3 +1824,160 @@ button:focus-visible {
         transform: translateY(0) scale(1);
     }
 }
+
+/* =========================================
+   CONQUERORS LABS — LARGE ANIMATED PNG ICONS
+========================================= */
+
+/* Give the icons more room in each course card */
+.quiz-card .course-top {
+    min-height: 140px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Large icon containers */
+.quiz-card .subject-icon {
+    width: 116px;
+    height: 116px;
+    min-width: 116px;
+    flex: 0 0 116px;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+    overflow: visible;
+
+    border: 1px solid rgba(255, 73, 98, 0.22);
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 41, 72, 0.13),
+            rgba(255, 41, 72, 0.025) 72%
+        );
+
+    box-shadow: 0 0 25px rgba(255, 41, 72, 0.06);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Make the actual PNG fill its container */
+.quiz-card .subject-icon img.course-icon-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center;
+
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+
+    transform-origin: center;
+    animation: conquerIconFloat 3.2s ease-in-out infinite;
+
+    will-change: transform;
+}
+
+/* Stagger the animation between subjects */
+.quiz-card[data-subject="BIO101"] .course-icon-image {
+    animation-delay: 0s;
+}
+
+.quiz-card[data-subject="CHM101"] .course-icon-image {
+    animation-delay: -0.8s;
+}
+
+.quiz-card[data-subject="PHY101"] .course-icon-image {
+    animation-delay: -1.6s;
+}
+
+.quiz-card[data-subject="MATH101"] .course-icon-image {
+    animation-delay: -2.4s;
+}
+
+/* Gentle floating animation */
+@keyframes conquerIconFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-7px) scale(1.045);
+    }
+}
+
+/* Highlight the icons when a course card is hovered */
+.quiz-card:hover .subject-icon {
+    border-color: rgba(255, 73, 98, 0.55);
+    box-shadow:
+        0 0 28px rgba(255, 41, 72, 0.13),
+        inset 0 0 18px rgba(255, 41, 72, 0.04);
+}
+
+.quiz-card:hover .subject-icon img.course-icon-image {
+    animation: conquerIconHover 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes conquerIconHover {
+    from {
+        transform: translateY(0) scale(1.025);
+    }
+
+    to {
+        transform: translateY(-4px) scale(1.085);
+    }
+}
+
+/* Ensure course numbers remain above decorative effects */
+.quiz-card .course-number {
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile optimization */
+@media (max-width: 650px) {
+    .quiz-card .course-top {
+        min-height: 124px;
+        margin-bottom: 18px;
+    }
+
+    .quiz-card .subject-icon {
+        width: 104px;
+        height: 104px;
+        min-width: 104px;
+        flex-basis: 104px;
+        border-radius: 18px;
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .quiz-card .course-top {
+        min-height: 112px;
+    }
+
+    .quiz-card .subject-icon {
+        width: 94px;
+        height: 94px;
+        min-width: 94px;
+        flex-basis: 94px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .quiz-card .subject-icon img.course-icon-image,
+    .quiz-card:hover .subject-icon img.course-icon-image {
+        animation: none;
+        will-change: auto;
+    }
+}
