@@ -21,7 +21,7 @@ const QUIZZES = {
         title: "CHM 101",
         settingsQuizId: "chm101",
         databaseQuizId: "chm101-atomic-structure",
-        resultKey: "conquerorsLabs_CHM101_result_id_v2"
+        resultKey: "conquerorsLabs_CHM101_result_id_v3"
     },
 
     "phy101": {
