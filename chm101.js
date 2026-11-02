@@ -1,15 +1,15 @@
 
 /* =========================================
    CONQUERORS LABS
-   CHM 101 — ATOMIC STRUCTURE
+   CHM 101 — MATTER, ENERGY & THERMODYNAMICS
 ========================================= */
 
 const QUIZ_CONFIG = {
-    title: "CHM 101 — Atomic Structure",
+    title: "CHM 101 — Matter, Energy & Thermodynamics",
 
-    quizVersion: 2,
+    quizVersion: 3,
     timeLimit: 20,
-    maxQuestions: 40,
+    maxQuestions: 30,
     allowRetake: false,
 
     quizId: "chm101-atomic-structure",
@@ -18,283 +18,258 @@ const QUIZ_CONFIG = {
     questions: [
         {
             id: 1,
-            question: "Which subatomic particle carries a positive electrical charge?",
-            options: ["Electron", "Proton", "Neutron", "Positron"],
-            answer: "Proton",
-            explanation: "A proton has a relative charge of +1 and is located in the atomic nucleus. An electron has a −1 charge, while a neutron has no net charge."
+            question: "What is the SI unit of energy?",
+            options: ["Calorie", "Newton", "Joule", "Watt"],
+            answer: "Joule",
+            explanation: "The joule (J) is the SI unit of energy. A calorie is a non-SI unit, a newton measures force, and a watt measures power."
         },
         {
             id: 2,
-            question: "Where is the vast majority of an atom's mass concentrated?",
-            options: ["In the electron cloud", "In the nucleus", "In the valence shell", "Equally throughout the atom"],
-            answer: "In the nucleus",
-            explanation: "The nucleus contains protons and neutrons, which account for almost all the atom's mass. Electrons have a much smaller mass."
+            question: "Which equation describes the kinetic energy of an object of mass m moving with velocity v?",
+            options: ["Ek = mgh", "Ek = ½mv²", "Ek = ½mv", "Ek = mv²"],
+            answer: "Ek = ½mv²",
+            explanation: "Kinetic energy is given by Ek = ½mv², where m is mass and v is velocity."
         },
         {
             id: 3,
-            question: "Which subatomic particle has a negligible mass in ordinary mass-number calculations?",
-            options: ["Proton", "Neutron", "Electron", "Alpha particle"],
-            answer: "Electron",
-            explanation: "An electron has about 1/1836 the mass of a proton. Mass number counts the nucleons—protons and neutrons—without including electrons."
+            question: "Which thermodynamic system allows both matter and energy to cross its boundary?",
+            options: ["Closed system", "Isolated system", "Open system", "Adiabatic system"],
+            answer: "Open system",
+            explanation: "An open system exchanges both matter and energy with its surroundings."
         },
         {
             id: 4,
-            question: "What does the atomic number (Z) of an element represent?",
-            options: ["The total number of protons and neutrons", "The number of outer-shell electrons", "The number of protons in the nucleus", "The atom's mass in atomic mass units"],
-            answer: "The number of protons in the nucleus",
-            explanation: "Atomic number is the number of protons in an atom's nucleus. It identifies the element. In a neutral atom, it also equals the number of electrons."
+            question: "The universe is considered which type of thermodynamic system?",
+            options: ["Open system", "Closed system", "Isolated system", "Isothermal system"],
+            answer: "Isolated system",
+            explanation: "The universe is treated as an isolated system because it has no surroundings with which to exchange matter or energy."
         },
         {
             id: 5,
-            question: "Isotopes of the same element differ in their number of:",
-            options: ["Protons", "Electrons in neutral atoms", "Neutrons", "Electron shells"],
-            answer: "Neutrons",
-            explanation: "Isotopes have the same number of protons but different numbers of neutrons, so they have different mass numbers."
+            question: "Which of the following is an intensive thermodynamic property?",
+            options: ["Mass", "Volume", "Boiling point", "Internal energy"],
+            answer: "Boiling point",
+            explanation: "Boiling point is an intensive property because it does not depend on the amount of substance present."
         },
         {
             id: 6,
-            question: "Which scientist discovered the electron through cathode-ray experiments?",
-            options: ["Ernest Rutherford", "J. J. Thomson", "John Dalton", "Niels Bohr"],
-            answer: "J. J. Thomson",
-            explanation: "J. J. Thomson's cathode-ray experiments in 1897 provided evidence for the electron as a negatively charged subatomic particle."
+            question: "Which of the following is an extensive thermodynamic property?",
+            options: ["Temperature", "Density", "Enthalpy", "Refractive index"],
+            answer: "Enthalpy",
+            explanation: "Enthalpy is extensive because its value depends on the amount of substance in the system."
         },
         {
             id: 7,
-            question: "What major conclusion came from Rutherford's gold-foil experiment?",
-            options: ["Electrons occupy fixed circular orbits", "Atoms are indivisible solid spheres", "Atoms have a small, dense, positively charged nucleus", "Neutrons are outside the nucleus"],
-            answer: "Atoms have a small, dense, positively charged nucleus",
-            explanation: "Most alpha particles passed through the foil, but a few were strongly deflected. Rutherford concluded that positive charge and most atomic mass occupy a tiny nucleus."
+            question: "Which thermodynamic process occurs at constant temperature?",
+            options: ["Adiabatic", "Isobaric", "Isochoric", "Isothermal"],
+            answer: "Isothermal",
+            explanation: "An isothermal process occurs at constant temperature, so the temperature change is zero."
         },
         {
             id: 8,
-            question: "What is an atom or molecule called after gaining or losing electrons and acquiring a net charge?",
-            options: ["Isotope", "Ion", "Isomer", "Allotrope"],
-            answer: "Ion",
-            explanation: "An ion is a charged atom or group of atoms. Losing electrons produces a positive ion, while gaining electrons produces a negative ion."
+            question: "A thermodynamic process in which no heat is exchanged with the surroundings is called:",
+            options: ["Cyclic process", "Adiabatic process", "Isothermal process", "Isobaric process"],
+            answer: "Adiabatic process",
+            explanation: "An adiabatic process involves no heat transfer between the system and its surroundings; q = 0."
         },
         {
             id: 9,
-            question: "What is a negatively charged ion called?",
-            options: ["Cation", "Anion", "Proton", "Nucleon"],
-            answer: "Anion",
-            explanation: "An anion has gained electrons and therefore has more electrons than protons. A cation is positively charged."
+            question: "What is the change in internal energy of a system after a complete cyclic process?",
+            options: ["Greater than zero", "Less than zero", "Zero", "Infinite"],
+            answer: "Zero",
+            explanation: "Internal energy is a state function. Since a cyclic process returns the system to its initial state, its net change in internal energy is zero."
         },
         {
             id: 10,
-            question: "What is the maximum number of electrons in the first shell (n = 1)?",
-            options: ["2", "8", "18", "32"],
-            answer: "2",
-            explanation: "The maximum shell capacity is given by 2n². For n = 1, the capacity is 2(1)² = 2 electrons."
+            question: "Which of the following is a path function rather than a state function?",
+            options: ["Internal energy", "Enthalpy", "Work", "Volume"],
+            answer: "Work",
+            explanation: "Work depends on the path taken between two states. Internal energy, enthalpy and volume are state functions."
         },
         {
             id: 11,
-            question: "Which quantum number describes an electron's principal energy level or shell?",
-            options: ["Principal quantum number (n)", "Azimuthal quantum number (l)", "Magnetic quantum number (mₗ)", "Spin quantum number (mₛ)"],
-            answer: "Principal quantum number (n)",
-            explanation: "The principal quantum number n identifies the main shell and is associated with the electron's energy and average distance from the nucleus."
+            question: "Which expression represents the First Law of Thermodynamics using the chemistry sign convention?",
+            options: ["ΔE = q − w", "ΔE = q + w", "ΔE = w − q", "ΔE = q/w"],
+            answer: "ΔE = q + w",
+            explanation: "The First Law is ΔE = q + w, where q is heat absorbed by the system and w is work done on the system."
         },
         {
             id: 12,
-            question: "What is the general shape of an s-orbital?",
-            options: ["Dumbbell-shaped", "Spherical", "Cloverleaf-shaped", "Irregular and directionless"],
-            answer: "Spherical",
-            explanation: "An s-orbital has spherical symmetry around the nucleus. The p-orbitals are generally dumbbell-shaped, while many d-orbitals have more complex shapes."
+            question: "When heat enters a thermodynamic system from its surroundings, what is the sign of q?",
+            options: ["Positive (+q)", "Negative (−q)", "Zero", "Dependent only on pressure"],
+            answer: "Positive (+q)",
+            explanation: "Heat absorbed by the system is assigned a positive sign under the chemistry sign convention."
         },
         {
             id: 13,
-            question: "What is the maximum number of electrons in a complete set of p-orbitals?",
-            options: ["2", "6", "10", "14"],
-            answer: "6",
-            explanation: "A p-subshell contains three orbitals. Each orbital holds a maximum of two electrons, giving 3 × 2 = 6 electrons."
+            question: "According to the chemistry sign convention, what is the sign of work done by the system on its surroundings?",
+            options: ["Positive (+w)", "Negative (−w)", "Zero", "Undefined"],
+            answer: "Negative (−w)",
+            explanation: "Work done by the system is negative because energy leaves the system through work."
         },
         {
             id: 14,
-            question: "Which principle states that electrons occupy the lowest available energy orbitals first?",
-            options: ["Aufbau principle", "Pauli exclusion principle", "Hund's rule", "Heisenberg uncertainty principle"],
-            answer: "Aufbau principle",
-            explanation: "The Aufbau principle describes the general filling order of orbitals from lower to higher energy in ground-state electron configurations."
+            question: "What is the expression for expansion or compression work against constant external pressure?",
+            options: ["W = −PexΔV", "W = PexΔV", "W = −nRT ln V", "W = PV/T"],
+            answer: "W = −PexΔV",
+            explanation: "At constant external pressure, work is W = −PexΔV. Expansion gives negative work, while compression gives positive work."
         },
         {
             id: 15,
-            question: "Which rule says that orbitals of equal energy are singly occupied before electrons pair up?",
-            options: ["Aufbau principle", "Pauli exclusion principle", "Hund's rule", "Octet rule"],
-            answer: "Hund's rule",
-            explanation: "Hund's rule states that electrons occupy degenerate orbitals singly with parallel spins before pairing, giving the lowest-energy arrangement."
+            question: "What is the work done during free expansion against zero external pressure?",
+            options: ["+1 J", "−PΔV", "Zero", "nRT"],
+            answer: "Zero",
+            explanation: "For free expansion, external pressure is zero. Since W = −PexΔV, the work done is zero."
         },
         {
             id: 16,
-            question: "What is the ground-state electron configuration of neutral carbon (Z = 6)?",
-            options: ["1s² 2s⁴", "1s² 2s² 2p²", "1s⁶", "1s² 2p⁴"],
-            answer: "1s² 2s² 2p²",
-            explanation: "Carbon has six electrons. Filling the orbitals in order gives 1s² 2s² 2p², for a total of 2 + 2 + 2 = 6 electrons."
+            question: "Which expression gives the work done during the reversible isothermal expansion of an ideal gas?",
+            options: [
+                "W = −PΔV",
+                "W = −nRT ln(V₂/V₁)",
+                "W = −CΔT",
+                "W = mcΔT"
+            ],
+            answer: "W = −nRT ln(V₂/V₁)",
+            explanation: "For a reversible isothermal expansion of an ideal gas, work is W = −nRT ln(V₂/V₁), using the chemistry sign convention."
         },
         {
             id: 17,
-            question: "How many valence electrons does a neutral oxygen atom (Z = 8) have?",
-            options: ["2", "4", "6", "8"],
-            answer: "6",
-            explanation: "Oxygen's electron configuration is 1s² 2s² 2p⁴. Its outer shell is n = 2 and contains 2 + 4 = 6 electrons."
+            question: "A gas absorbs 35.0 J of heat and does 15.0 J of work. What is its change in internal energy?",
+            options: ["+50.0 J", "−20.0 J", "+20.0 J", "−50.0 J"],
+            answer: "+20.0 J",
+            explanation: "Using ΔE = q + w, heat absorbed is +35.0 J and work done by the gas is −15.0 J. Therefore, ΔE = 35.0 − 15.0 = +20.0 J."
         },
         {
             id: 18,
-            question: "Why do main-group elements in the same periodic-table group generally have similar chemical properties?",
-            options: ["They have the same total number of electrons", "They have the same number of protons", "They generally have the same number of valence electrons", "They have the same number of occupied shells"],
-            answer: "They generally have the same number of valence electrons",
-            explanation: "For main-group elements, the number of valence electrons strongly influences bonding and reactivity. Elements in the same group generally share the same outer-shell electron pattern."
+            question: "Specific heat capacity is the heat required to raise the temperature of:",
+            options: [
+                "One mole of a substance by one kelvin",
+                "One gram of a substance by one degree Celsius or kelvin",
+                "One litre of a substance by one degree Celsius",
+                "One kilogram of a substance by ten degrees Celsius"
+            ],
+            answer: "One gram of a substance by one degree Celsius or kelvin",
+            explanation: "Specific heat capacity is the heat required to raise the temperature of a unit mass of a substance by one degree. The gram-based option is the common chemistry convention."
         },
         {
             id: 19,
-            question: "An atom has 6 protons, 6 neutrons, and 6 electrons. What is its mass number?",
-            options: ["6", "12", "18", "0"],
-            answer: "12",
-            explanation: "Mass number A = protons + neutrons = 6 + 6 = 12. Electrons are not included in the mass number."
+            question: "Which equation relates heat transferred to mass, specific heat capacity and temperature change?",
+            options: ["q = mCΔT", "q = mΔT/C", "q = C + mΔT", "q = C/(mΔT)"],
+            answer: "q = mCΔT",
+            explanation: "The heat equation is q = mCΔT, where m is mass, C is specific heat capacity and ΔT is the temperature change."
         },
         {
             id: 20,
-            question: "Which neutral atom has the electron configuration 1s² 2s² 2p⁶ 3s² 3p¹?",
-            options: ["Sodium (Na)", "Magnesium (Mg)", "Aluminum (Al)", "Silicon (Si)"],
-            answer: "Aluminum (Al)",
-            explanation: "The configuration contains 2 + 2 + 6 + 2 + 1 = 13 electrons. A neutral atom with atomic number 13 is aluminum."
+            question: "What is the direct conversion of a solid into a gas without passing through the liquid state called?",
+            options: ["Melting", "Condensation", "Sublimation", "Deposition"],
+            answer: "Sublimation",
+            explanation: "Sublimation is the direct change from solid to gas. Deposition is the reverse process."
         },
         {
             id: 21,
-            question: "Which particles are collectively called nucleons?",
-            options: ["Protons only", "Neutrons only", "Protons and neutrons", "Protons and electrons"],
-            answer: "Protons and neutrons",
-            explanation: "Nucleons are the particles found in the nucleus: protons and neutrons. Electrons occupy orbitals around the nucleus."
+            question: "Is vaporization an endothermic or exothermic process?",
+            options: [
+                "Endothermic; heat enters the system",
+                "Exothermic; heat leaves the system",
+                "Neither endothermic nor exothermic",
+                "Adiabatic"
+            ],
+            answer: "Endothermic; heat enters the system",
+            explanation: "Vaporization requires energy to overcome intermolecular attractions, so heat is absorbed by the substance."
         },
         {
             id: 22,
-            question: "What is the net electrical charge of a neutral, uncombined atom?",
-            options: ["Positive", "Negative", "Zero", "Always equal to its group number"],
-            answer: "Zero",
-            explanation: "A neutral atom has equal numbers of positively charged protons and negatively charged electrons, so their charges cancel."
+            question: "What thermodynamic quantity represents the heat exchanged during a process at constant pressure?",
+            options: ["Internal energy", "Enthalpy change (ΔH)", "Work function", "Entropy"],
+            answer: "Enthalpy change (ΔH)",
+            explanation: "At constant pressure, the heat exchanged is equal to the enthalpy change, provided only pressure-volume work occurs."
         },
         {
             id: 23,
-            question: "Which of these basic subatomic particles was discovered after the electron and proton?",
-            options: ["Electron", "Proton", "Neutron", "Photon"],
-            answer: "Neutron",
-            explanation: "James Chadwick discovered the neutron in 1932. It helped explain atomic mass and the existence of isotopes."
+            question: "Which apparatus measures the heat gained or lost during a physical or chemical process?",
+            options: ["Barometer", "Thermostat", "Calorimeter", "Manometer"],
+            answer: "Calorimeter",
+            explanation: "A calorimeter is used to measure heat changes during physical and chemical processes."
         },
         {
             id: 24,
-            question: "Which type of orbital corresponds to an azimuthal quantum number l = 2?",
-            options: ["s-orbital", "p-orbital", "d-orbital", "f-orbital"],
-            answer: "d-orbital",
-            explanation: "The azimuthal quantum number identifies subshell type: l = 0 is s, l = 1 is p, l = 2 is d, and l = 3 is f."
+            question: "In a bomb calorimeter, which operates at constant volume, what is the relationship between the heat of the system and the heat of the calorimeter?",
+            options: [
+                "qsystem = +100 kJ",
+                "qsystem = 0",
+                "qsystem = −qcalorimeter",
+                "qsystem = qwater"
+            ],
+            answer: "qsystem = −qcalorimeter",
+            explanation: "Assuming the calorimeter is insulated, heat lost by the reacting system is gained by the calorimeter, and vice versa. Their heat changes are equal in magnitude and opposite in sign."
         },
         {
             id: 25,
-            question: "According to the Pauli exclusion principle, two electrons occupying the same orbital must have:",
-            options: ["The same spin", "Opposite spins", "Different principal quantum numbers", "Different orbital shapes"],
-            answer: "Opposite spins",
-            explanation: "Two electrons in one orbital must have opposite spins. No two electrons in an atom can have the same set of all four quantum numbers."
+            question: "What happens to the enthalpy change when a thermochemical equation is reversed?",
+            options: [
+                "It is multiplied by two",
+                "It remains unchanged",
+                "Its sign is reversed",
+                "It becomes zero"
+            ],
+            answer: "Its sign is reversed",
+            explanation: "Reversing a reaction reverses the direction of heat transfer, so the sign of its enthalpy change also reverses."
         },
         {
             id: 26,
-            question: "Which electromagnetic radiation has the highest photon energy and shortest wavelength?",
-            options: ["Radio waves", "Infrared radiation", "Visible light", "Gamma rays"],
-            answer: "Gamma rays",
-            explanation: "Photon energy is E = hν and wavelength is inversely related to frequency. Gamma rays have very high frequencies and very short wavelengths."
+            question: "If all coefficients in a balanced thermochemical equation are multiplied by two, what happens to ΔH?",
+            options: [
+                "It is divided by two",
+                "It is multiplied by two",
+                "It is squared",
+                "It remains unchanged"
+            ],
+            answer: "It is multiplied by two",
+            explanation: "Enthalpy is an extensive property. Multiplying the reaction equation by two also doubles its enthalpy change."
         },
         {
             id: 27,
-            question: "What happens when an electron moves from a higher energy level to a lower one?",
-            options: ["It absorbs a photon", "It emits a photon", "It becomes a neutron", "The atom's mass number changes"],
-            answer: "It emits a photon",
-            explanation: "The electron releases the energy difference between the two levels as a photon. Absorption occurs when an electron moves to a higher energy level."
+            question: "What does Hess's Law state?",
+            options: [
+                "Energy can be created in multi-step reactions",
+                "The enthalpy change of an overall reaction equals the sum of the enthalpy changes of its steps",
+                "Heat transfer depends strictly on the path taken",
+                "Pressure is inversely proportional to volume in every cyclic process"
+            ],
+            answer: "The enthalpy change of an overall reaction equals the sum of the enthalpy changes of its steps",
+            explanation: "Hess's Law follows from enthalpy being a state function. The overall enthalpy change is the sum of the changes for the individual steps."
         },
         {
             id: 28,
-            question: "Which statement correctly defines relative atomic mass (Aᵣ)?",
-            options: ["The mass of one proton in grams", "The weighted mean mass of an element's atoms relative to one-twelfth the mass of a carbon-12 atom", "The number of nucleons in the most stable isotope", "The electron mass multiplied by the atomic number"],
-            answer: "The weighted mean mass of an element's atoms relative to one-twelfth the mass of a carbon-12 atom",
-            explanation: "Relative atomic mass is a weighted average based on the natural abundances of an element's isotopes, compared with 1/12 of the mass of a carbon-12 atom. It has no unit."
+            question: "Which pressure and temperature are commonly used as standard conditions in introductory thermochemistry?",
+            options: [
+                "0 atm and 0°C",
+                "1 atm and 25°C",
+                "2 atm and 100°C",
+                "10 atm and 298 K"
+            ],
+            answer: "1 atm and 25°C",
+            explanation: "Many introductory chemistry texts use 1 atm and 298 K (25°C) as standard conditions. Modern standard pressure is 1 bar, so follow the convention specified in your course."
         },
         {
             id: 29,
-            question: "How many orbitals are present in a d-subshell?",
-            options: ["1", "3", "5", "7"],
-            answer: "5",
-            explanation: "A d-subshell has five orbitals. Since each orbital can hold two electrons, a complete d-subshell can contain up to 10 electrons."
+            question: "What is the standard enthalpy of formation of an element in its standard state?",
+            options: ["+1 kJ/mol", "−1 kJ/mol", "Zero", "Undefined"],
+            answer: "Zero",
+            explanation: "The standard enthalpy of formation of an element in its most stable standard state is defined as zero."
         },
         {
             id: 30,
-            question: "Which element has the chemical symbol K?",
-            options: ["Krypton", "Potassium", "Phosphorus", "Sodium"],
-            answer: "Potassium",
-            explanation: "K is the symbol for potassium, derived from its Latin name, kalium. Sodium has the symbol Na."
-        },
-        {
-            id: 31,
-            question: "An atom has 11 protons, 12 neutrons, and 10 electrons. What is its net charge?",
-            options: ["+1", "−1", "0", "+2"],
-            answer: "+1",
-            explanation: "Net charge = protons − electrons = 11 − 10 = +1. The number of neutrons affects mass number, not electrical charge."
-        },
-        {
-            id: 32,
-            question: "The Bohr model was particularly successful in explaining the line-emission spectrum of which element?",
-            options: ["Carbon", "Hydrogen", "Uranium", "Iron"],
-            answer: "Hydrogen",
-            explanation: "Bohr's model explains hydrogen's line spectrum using quantized electron energy levels. It is less successful for multi-electron atoms."
-        },
-        {
-            id: 33,
-            question: "What are the horizontal rows of the periodic table called?",
-            options: ["Groups", "Families", "Periods", "Blocks"],
-            answer: "Periods",
-            explanation: "Horizontal rows are periods. Vertical columns are groups or families."
-        },
-        {
-            id: 34,
-            question: "Which group of elements is generally very unreactive because its members have filled valence shells?",
-            options: ["Alkali metals", "Halogens", "Noble gases", "Transition metals"],
-            answer: "Noble gases",
-            explanation: "Noble gases have filled outer electron shells in their ground states, making them relatively unreactive under ordinary conditions."
-        },
-        {
-            id: 35,
-            question: "What is the general valence-shell electron configuration of Group 2 elements?",
-            options: ["ns¹", "ns²", "ns² np¹", "ns² np⁵"],
-            answer: "ns²",
-            explanation: "Group 2 elements have two electrons in their outermost s-subshell, represented by ns². They commonly form ions with a +2 charge."
-        },
-        {
-            id: 36,
-            question: "Which species is isoelectronic with neon (10 electrons)?",
-            options: ["Na⁺", "Mg", "F", "Li⁺"],
-            answer: "Na⁺",
-            explanation: "Sodium has 11 electrons when neutral. Na⁺ has lost one electron, leaving 10—equal to the number in neon. Neutral Mg has 12, neutral F has 9, and Li⁺ has 2."
-        },
-        {
-            id: 37,
-            question: "What property measures an atom's ability to attract shared electrons in a chemical bond?",
-            options: ["Ionization energy", "Electronegativity", "Electron affinity", "Atomic radius"],
-            answer: "Electronegativity",
-            explanation: "Electronegativity describes how strongly an atom attracts shared bonding electrons. Ionization energy measures the energy needed to remove an electron."
-        },
-        {
-            id: 38,
-            question: "What is the energy required to remove an electron from a gaseous atom in its ground state called?",
-            options: ["Electronegativity", "Lattice energy", "Ionization energy", "Activation energy"],
-            answer: "Ionization energy",
-            explanation: "First ionization energy is the energy required to remove one electron from each atom in one mole of gaseous atoms, forming gaseous +1 ions."
-        },
-        {
-            id: 39,
-            question: "What generally happens to atomic radius as you move down a group in the periodic table?",
-            options: ["It decreases", "It increases", "It remains completely constant", "It changes randomly"],
-            answer: "It increases",
-            explanation: "Moving down a group adds occupied electron shells. Increased distance from the nucleus generally outweighs the increased nuclear charge, so atomic radius increases."
-        },
-        {
-            id: 40,
-            question: "Which scientist proposed that matter, including electrons, has wave-like properties?",
-            options: ["Louis de Broglie", "Max Planck", "Albert Einstein", "Ernest Rutherford"],
-            answer: "Louis de Broglie",
-            explanation: "Louis de Broglie proposed that particles have an associated wavelength, λ = h/p. Electron diffraction later provided experimental evidence for the wave-like behaviour of electrons."
+            question: "How is the standard enthalpy change of a reaction calculated using standard enthalpies of formation?",
+            options: [
+                "ΣΔH°f(reactants) − ΣΔH°f(products)",
+                "ΣΔH°f(products) − ΣΔH°f(reactants)",
+                "ΣΔH°f(products) × ΣΔH°f(reactants)",
+                "ΣΔH°f(products) / ΣΔH°f(reactants)"
+            ],
+            answer: "ΣΔH°f(products) − ΣΔH°f(reactants)",
+            explanation: "The standard enthalpy change is calculated by subtracting the sum of the standard enthalpies of formation of the reactants from that of the products, including balanced equation coefficients."
         }
     ]
 };
@@ -936,15 +911,15 @@ function showLockedResult(message) {
 
 function getResultMessage(percentage) {
     if (percentage >= 90) {
-        return "Outstanding! You conquered CHM 101 Atomic Structure at a very high level. 🔥";
+        return "Outstanding! You conquered CHM 101 at a very high level. 🔥";
     }
 
     if (percentage >= 80) {
-        return "Excellent performance! Your atomic structure foundation is strong. 🧪";
+        return "Excellent performance! Your thermodynamics foundation is strong. 🧪";
     }
 
     if (percentage >= 70) {
-        return "Great job! You have a solid grasp of atomic structure. Keep sharpening it.";
+        return "Great job! You have a solid grasp of the concepts. Keep sharpening it.";
     }
 
     if (percentage >= 60) {
