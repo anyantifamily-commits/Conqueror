@@ -32,7 +32,7 @@ const QUIZ_CONFIG = {
     },
 
     MATH101: {
-        enabled: true,
+        enabled: false,
         name: "MATH 101 & 102",
         url: "math101.html"
     }
