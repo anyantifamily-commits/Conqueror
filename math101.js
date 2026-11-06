@@ -1,7 +1,6 @@
-
 /* =========================================
    CONQUERORS LABS
-   MATH 101 — POLYNOMIALS
+   MATH 101 — INTEGRAL CALCULUS
    QUIZ ENGINE — VERSION 3
 ========================================= */
 
@@ -11,288 +10,431 @@
 ========================================= */
 
 const QUIZ_CONFIG = {
-    title: "MATH 101 — Polynomials",
+    title: "MATH 101 — Integral Calculus",
     quizId: "math101",
-    quizVersion: 3,
+    quizVersion: 4,
     timeLimit: 30,
-    maxQuestions: 25,
+    maxQuestions: 30,
     allowRetake: false,
     passMark: 50,
 
     questions: [
 
         // =====================================
-        // PART 1: BASIC OPERATIONS
+        // PART 1: INDEFINITE INTEGRALS & BASIC POWER RULE
         // =====================================
 
         {
             id: 1,
-            question: "What is the degree of the product P(x)Q(x), where P(x) = 3x³ − 2x + 1 and Q(x) = 4x² + 5x − 7?",
-            options: ["5", "6", "8", "9"],
-            answer: "A",
-            explanation: "The degree of a product of nonzero polynomials is the sum of their degrees. Therefore, deg(PQ) = 3 + 2 = 5."
+            question: "What is the indefinite integral ∫x⁴ dx?",
+            options: [
+                "4x³ + C",
+                "x⁵/5 + C",
+                "5x⁵ + C",
+                "x⁴/4 + C"
+            ],
+            answer: "B",
+            explanation: "Using the power rule, increase the power by 1 and divide by the new power: ∫x⁴ dx = x⁵/5 + C."
         },
 
         {
             id: 2,
-            question: "What is the leading coefficient of P(x) = 5 − 2x² + 7x⁴ − x³?",
-            options: ["5", "−2", "7", "−1"],
-            answer: "C",
-            explanation: "Arrange the polynomial in descending powers: 7x⁴ − x³ − 2x² + 5. The leading term is 7x⁴, so its coefficient is 7."
+            question: "Evaluate ∫(3x² + 4x − 5) dx.",
+            options: [
+                "6x + 4 + C",
+                "x³ + 2x² − 5x + C",
+                "3x³ + 4x² − 5x + C",
+                "x³ + 4x² − 5x + C"
+            ],
+            answer: "B",
+            explanation: "Integrate each term separately: ∫3x²dx = x³, ∫4xdx = 2x², and ∫−5dx = −5x."
         },
 
         {
             id: 3,
-            question: "Expand and simplify (2x − 3)(x² + 3x − 1).",
+            question: "What is ∫7 dx?",
             options: [
-                "2x³ + 3x² − 11x + 3",
-                "2x³ + 3x² − 11x − 3",
-                "2x³ − 3x² + 9x + 3",
-                "2x³ + 9x² − 11x + 3"
+                "0",
+                "7",
+                "7x + C",
+                "7x² + C"
             ],
-            answer: "A",
-            explanation: "Expanding gives 2x³ + 6x² − 2x − 3x² − 9x + 3. Combining like terms gives 2x³ + 3x² − 11x + 3."
+            answer: "C",
+            explanation: "The integral of a constant k is kx + C. Therefore, ∫7 dx = 7x + C."
         },
-
-
-        // =====================================
-        // PART 2: REMAINDER AND FACTOR THEOREMS
-        // =====================================
 
         {
             id: 4,
-            question: "What is the remainder when P(x) = x³ − 4x² + 2x − 5 is divided by (x − 3)?",
-            options: ["−10", "−8", "−2", "4"],
-            answer: "B",
-            explanation: "By the Remainder Theorem, the remainder is P(3). P(3) = 27 − 36 + 6 − 5 = −8."
+            question: "Find ∫1/x³ dx.",
+            options: [
+                "−1/(2x²) + C",
+                "1/(4x⁴) + C",
+                "−3/x⁴ + C",
+                "ln|x³| + C"
+            ],
+            answer: "A",
+            explanation: "Rewrite x⁻³ and apply the power rule: x⁻²/−2 + C = −1/(2x²) + C."
         },
 
         {
             id: 5,
-            question: "Find the remainder when P(x) = 2x⁴ − 3x² + 5x − 1 is divided by (x + 1).",
-            options: ["−7", "−5", "−1", "3"],
-            answer: "A",
-            explanation: "By the Remainder Theorem, the remainder is P(−1). This gives 2(1) − 3(1) − 5 − 1 = −7."
+            question: "Evaluate ∫√x dx.",
+            options: [
+                "1/(2√x) + C",
+                "(2/3)x³ᐟ² + C",
+                "(3/2)x³ᐟ² + C",
+                "x¹ᐟ² + C"
+            ],
+            answer: "B",
+            explanation: "Since √x = x¹ᐟ², the power rule gives x³ᐟ²/(3/2) = (2/3)x³ᐟ² + C."
         },
 
         {
             id: 6,
-            question: "If (x − 2) is a factor of P(x) = x³ − kx² + 3x − 2, find k.",
-            options: ["1", "2", "3", "4"],
-            answer: "C",
-            explanation: "By the Factor Theorem, P(2) = 0. Thus 8 − 4k + 6 − 2 = 0, so 12 − 4k = 0 and k = 3."
+            question: "Evaluate ∫(x³ − 1/x²) dx.",
+            options: [
+                "x⁴/4 + 1/x + C",
+                "x⁴/4 − 1/x + C",
+                "3x² + 2/x³ + C",
+                "x⁴/4 + ln|x²| + C"
+            ],
+            answer: "A",
+            explanation: "Rewrite 1/x² as x⁻². Integrating gives x⁴/4 − (−x⁻¹) = x⁴/4 + 1/x + C."
         },
+
+
+        // =====================================
+        // PART 2: EXPONENTIAL, LOGARITHMIC &
+        // TRIGONOMETRIC INTEGRALS
+        // =====================================
 
         {
             id: 7,
-            question: "If (x + 1) is a factor of P(x) = x³ + ax² − 5x + 3, find a.",
-            options: ["−9", "−7", "3", "7"],
-            answer: "B",
-            explanation: "Since (x + 1) is a factor, P(−1) = 0. Therefore, −1 + a + 5 + 3 = 0, giving a + 7 = 0 and a = −7."
+            question: "What is ∫eˣ dx?",
+            options: [
+                "eˣ + C",
+                "xeˣ⁻¹ + C",
+                "eˣ⁺¹/(x + 1) + C",
+                "ln(eˣ) + C"
+            ],
+            answer: "A",
+            explanation: "The derivative of eˣ is eˣ, so its antiderivative is also eˣ + C."
         },
 
         {
             id: 8,
-            question: "A polynomial P(x) leaves a remainder of 4 when divided by (x − 1) and −2 when divided by (x + 2). Find the remainder when divided by (x − 1)(x + 2).",
+            question: "What is ∫1/x dx for x ≠ 0?",
             options: [
-                "2x + 2",
-                "2x − 2",
-                "x + 3",
-                "x − 3"
+                "−1/x² + C",
+                "1 + C",
+                "ln|x| + C",
+                "eˣ + C"
             ],
-            answer: "A",
-            explanation: "The remainder must be linear, R(x) = Ax + B. Since R(1) = 4, A + B = 4. Since R(−2) = −2, −2A + B = −2. Subtracting gives 3A = 6, so A = 2 and B = 2. Hence R(x) = 2x + 2."
+            answer: "C",
+            explanation: "The standard reciprocal integral is ∫(1/x)dx = ln|x| + C."
         },
-
-
-        // =====================================
-        // PART 3: VIETA'S FORMULAS
-        // =====================================
 
         {
             id: 9,
-            question: "What is the sum of the roots of 3x² − 12x + 5 = 0?",
-            options: ["−4", "4", "5/3", "−5/3"],
+            question: "Evaluate ∫cos(x) dx.",
+            options: [
+                "−sin(x) + C",
+                "sin(x) + C",
+                "−cos(x) + C",
+                "tan(x) + C"
+            ],
             answer: "B",
-            explanation: "For ax² + bx + c = 0, the sum of the roots is −b/a. Therefore, the sum is −(−12)/3 = 4."
+            explanation: "Since d/dx[sin(x)] = cos(x), the integral of cos(x) is sin(x) + C."
         },
 
         {
             id: 10,
-            question: "What is the product of the roots of 2x³ − 6x² + 4x − 8 = 0?",
-            options: ["−4", "4", "−2", "2"],
+            question: "Evaluate ∫sin(x) dx.",
+            options: [
+                "cos(x) + C",
+                "−cos(x) + C",
+                "sin(x) + C",
+                "−sin(x) + C"
+            ],
             answer: "B",
-            explanation: "For ax³ + bx² + cx + d = 0, the product of the three roots is −d/a. Therefore, the product is −(−8)/2 = 4."
+            explanation: "Since d/dx[cos(x)] = −sin(x), the antiderivative of sin(x) is −cos(x) + C."
         },
 
         {
             id: 11,
-            question: "If α and β are the roots of x² − 5x + 3 = 0, find 1/α + 1/β.",
-            options: ["5/3", "3/5", "−5/3", "−3/5"],
+            question: "What is ∫sec²(x) dx?",
+            options: [
+                "tan(x) + C",
+                "−cot(x) + C",
+                "sec(x)tan(x) + C",
+                "2sec(x) + C"
+            ],
             answer: "A",
-            explanation: "Using Vieta's formulas, α + β = 5 and αβ = 3. Thus 1/α + 1/β = (α + β)/(αβ) = 5/3."
+            explanation: "The derivative of tan(x) is sec²(x), so ∫sec²(x)dx = tan(x) + C."
         },
 
         {
             id: 12,
-            question: "If α, β and γ are the roots of x³ − 7x² + 14x − 8 = 0, find α² + β² + γ².",
-            options: ["21", "35", "49", "77"],
-            answer: "A",
-            explanation: "Vieta's formulas give α + β + γ = 7 and αβ + βγ + γα = 14. Therefore, α² + β² + γ² = (α + β + γ)² − 2(αβ + βγ + γα) = 49 − 28 = 21."
+            question: "Find ∫e³ˣ dx.",
+            options: [
+                "3e³ˣ + C",
+                "(1/3)e³ˣ + C",
+                "e³ˣ + C",
+                "(1/4)e⁴ˣ + C"
+            ],
+            answer: "B",
+            explanation: "Using substitution or the exponential rule, ∫e³ˣdx = (1/3)e³ˣ + C."
         },
+
+
+        // =====================================
+        // PART 3: DEFINITE INTEGRALS &
+        // FUNDAMENTAL THEOREM OF CALCULUS
+        // =====================================
 
         {
             id: 13,
-            question: "Which quadratic equation has roots that are twice the roots of x² − 4x + 3 = 0?",
+            question: "Evaluate ∫₀³ 2x dx.",
             options: [
-                "x² − 8x + 6 = 0",
-                "x² − 8x + 12 = 0",
-                "x² − 4x + 12 = 0",
-                "2x² − 8x + 6 = 0"
+                "3",
+                "6",
+                "9",
+                "18"
             ],
-            answer: "B",
-            explanation: "The original roots have sum 4 and product 3. Doubling both roots makes their sum 8 and product 12. The required equation is x² − 8x + 12 = 0."
+            answer: "C",
+            explanation: "An antiderivative of 2x is x². Evaluating from 0 to 3 gives 3² − 0² = 9."
         },
-
-
-        // =====================================
-        // PART 4: RATIONAL ROOTS AND COMPLEX ROOTS
-        // =====================================
 
         {
             id: 14,
-            question: "According to the Rational Root Theorem, which option is a potential rational root of 2x³ − 3x² + 5x − 3 = 0?",
-            options: ["2/3", "1/2", "4/3", "3/4"],
-            answer: "B",
-            explanation: "Possible rational roots have numerators that divide the constant term and denominators that divide the leading coefficient. The candidates include ±1, ±3, ±1/2 and ±3/2. Therefore, 1/2 is a possible rational root."
+            question: "What is the value of ∫₁² 3x² dx?",
+            options: [
+                "7",
+                "8",
+                "9",
+                "12"
+            ],
+            answer: "A",
+            explanation: "An antiderivative is x³. Therefore, [x³]₁² = 2³ − 1³ = 8 − 1 = 7."
         },
 
         {
             id: 15,
-            question: "A polynomial with real coefficients has 3 − 2i as a root. Which other root must it have?",
+            question: "Evaluate ∫₀¹(x² + 1) dx.",
             options: [
-                "−3 + 2i",
-                "−3 − 2i",
-                "3 + 2i",
-                "2 − 3i"
+                "1/3",
+                "4/3",
+                "2",
+                "2/3"
             ],
-            answer: "C",
-            explanation: "For a polynomial with real coefficients, every non-real complex root occurs with its complex conjugate. The conjugate of 3 − 2i is 3 + 2i."
+            answer: "B",
+            explanation: "Integrate to x³/3 + x. Evaluating from 0 to 1 gives 1/3 + 1 = 4/3."
         },
 
         {
             id: 16,
-            question: "A monic cubic polynomial with real coefficients has roots 2 and 1 + i. Find its constant term.",
-            options: ["−4", "4", "−2", "2"],
-            answer: "A",
-            explanation: "Because the coefficients are real, 1 − i must also be a root. The product of the roots is 2(1 + i)(1 − i) = 2(2) = 4. For a monic cubic, the constant term is the negative of the product, so it is −4."
+            question: "Evaluate ∫₀π sin(x) dx.",
+            options: [
+                "0",
+                "1",
+                "2",
+                "−2"
+            ],
+            answer: "C",
+            explanation: "An antiderivative of sin(x) is −cos(x). Thus −cos(π) − [−cos(0)] = 1 + 1 = 2."
         },
 
         {
             id: 17,
-            question: "What is the maximum possible number of positive real roots of P(x) = x⁴ − 3x³ + 2x² − 5x + 1 according to Descartes' Rule of Signs?",
-            options: ["1", "2", "3", "4"],
-            answer: "D",
-            explanation: "The signs of the coefficients are +, −, +, −, +, giving four sign changes. Descartes' Rule of Signs permits at most four positive real roots, counting multiplicity."
+            question: "What is the value of ∫₁ᵉ (1/x) dx?",
+            options: [
+                "0",
+                "1",
+                "e",
+                "e − 1"
+            ],
+            answer: "B",
+            explanation: "The antiderivative is ln|x|. Therefore, ln(e) − ln(1) = 1 − 0 = 1."
         },
-
-
-        // =====================================
-        // PART 5: PARTIAL FRACTIONS
-        // =====================================
 
         {
             id: 18,
-            question: "What is the correct form of the partial fraction decomposition of (2x + 1)/[(x − 2)(x + 3)]?",
+            question: "If ∫₀⁴ f(x) dx = 10, what is ∫₀⁴ 3f(x) dx?",
             options: [
-                "A/(x − 2) + B/(x + 3)",
-                "A/(x − 2) + (Bx + C)/(x + 3)",
-                "(Ax + B)/(x − 2) + C/(x + 3)",
-                "A/(x − 2)² + B/(x + 3)"
+                "10",
+                "13",
+                "30",
+                "40"
             ],
-            answer: "A",
-            explanation: "The denominator contains two distinct linear factors. Each factor requires a constant numerator, giving A/(x − 2) + B/(x + 3)."
+            answer: "C",
+            explanation: "By the constant multiple rule, ∫₀⁴3f(x)dx = 3∫₀⁴f(x)dx = 3(10) = 30."
         },
+
+
+        // =====================================
+        // PART 4: INTEGRATION BY SUBSTITUTION
+        // =====================================
 
         {
             id: 19,
-            question: "When (5x + 7)/[(x + 1)(x + 3)] = A/(x + 1) + B/(x + 3), find A.",
-            options: ["1", "2", "3", "4"],
-            answer: "A",
-            explanation: "Multiplying through gives 5x + 7 = A(x + 3) + B(x + 1). Setting x = −1 gives 2 = 2A, so A = 1."
+            question: "Evaluate ∫(2x + 1)⁴ dx.",
+            options: [
+                "(2x + 1)⁵/5 + C",
+                "(2x + 1)⁵/10 + C",
+                "4(2x + 1)³ + C",
+                "(2x + 1)⁵/2 + C"
+            ],
+            answer: "B",
+            explanation: "Let u = 2x + 1, so du = 2dx. Therefore, the integral is (1/2)(u⁵/5) = (2x + 1)⁵/10 + C."
         },
 
         {
             id: 20,
-            question: "What is the correct form of the partial fraction decomposition of (x² + 3)/[(x − 1)²(x + 2)]?",
+            question: "Find ∫2x cos(x²) dx.",
             options: [
-                "A/(x − 1) + B/(x − 1)² + C/(x + 2)",
-                "A/(x − 1) + (Bx + C)/(x − 1)² + D/(x + 2)",
-                "(Ax + B)/(x − 1)² + C/(x + 2)",
-                "A/(x − 1)² + B/(x + 2)"
+                "sin(x²) + C",
+                "−sin(x²) + C",
+                "x²sin(x²) + C",
+                "2sin(x²) + C"
             ],
             answer: "A",
-            explanation: "For a repeated linear factor (x − 1)², include terms for both powers: A/(x − 1) and B/(x − 1)². The distinct linear factor (x + 2) contributes C/(x + 2)."
+            explanation: "Let u = x², so du = 2x dx. The integral becomes ∫cos(u)du = sin(u) + C = sin(x²) + C."
         },
-
-
-        // =====================================
-        // PART 6: POLYNOMIAL IDENTITIES AND PROPERTIES
-        // =====================================
 
         {
             id: 21,
-            question: "What is the sum of all coefficients in the expansion of P(x) = (2x² − 3x + 2)⁴?",
-            options: ["0", "1", "16", "81"],
-            answer: "B",
-            explanation: "The sum of coefficients of a polynomial is P(1). Here P(1) = (2 − 3 + 2)⁴ = 1⁴ = 1."
+            question: "Evaluate ∫xeˣ² dx.",
+            options: [
+                "eˣ² + C",
+                "2eˣ² + C",
+                "(1/2)eˣ² + C",
+                "(x²/2)eˣ² + C"
+            ],
+            answer: "C",
+            explanation: "Let u = x², so du = 2x dx. Hence ∫xeˣ²dx = (1/2)∫eᵘdu = (1/2)eˣ² + C."
         },
 
         {
             id: 22,
-            question: "If a polynomial satisfies P(−x) = P(x) for every real x, what type of polynomial is it?",
+            question: "Find ∫[2x/(x² + 1)] dx.",
             options: [
-                "Odd polynomial",
-                "Even polynomial",
-                "Invertible polynomial",
-                "Orthogonal polynomial"
+                "1/(x² + 1) + C",
+                "ln(x² + 1) + C",
+                "2ln|x² + 1| + C",
+                "(x² + 1)² + C"
             ],
             answer: "B",
-            explanation: "An even polynomial satisfies P(−x) = P(x). An odd polynomial instead satisfies P(−x) = −P(x)."
+            explanation: "Let u = x² + 1, so du = 2x dx. The integral becomes ∫du/u = ln|u| + C = ln(x² + 1) + C."
         },
 
         {
             id: 23,
-            question: "Find the quotient when x³ − 3x² + 3x − 1 is divided by (x − 1).",
+            question: "Evaluate ∫sin(5x) dx.",
             options: [
-                "x² + 2x + 1",
-                "x² − 2x + 1",
-                "x² − 3x + 1",
-                "x² + 1"
+                "5cos(5x) + C",
+                "−(1/5)cos(5x) + C",
+                "(1/5)cos(5x) + C",
+                "−cos(5x) + C"
             ],
             answer: "B",
-            explanation: "The numerator is (x − 1)³. Dividing by (x − 1) gives (x − 1)² = x² − 2x + 1."
+            explanation: "Let u = 5x, so du = 5dx. Therefore, ∫sin(5x)dx = −(1/5)cos(5x) + C."
         },
 
         {
             id: 24,
-            question: "For what values of m does x² − mx + 9 = 0 have real and equal roots?",
+            question: "Find ∫3x²(x³ + 2)⁵ dx.",
             options: [
-                "m = ±3",
-                "m = ±6",
-                "m = 9",
-                "m = 0"
+                "(x³ + 2)⁶/6 + C",
+                "(x³ + 2)⁶ + C",
+                "(x³ + 2)⁶/18 + C",
+                "15x(x³ + 2)⁴ + C"
             ],
-            answer: "B",
-            explanation: "Real and equal roots require the discriminant to be zero. Thus (−m)² − 4(1)(9) = 0, so m² − 36 = 0 and m = ±6."
+            answer: "A",
+            explanation: "Let u = x³ + 2, so du = 3x²dx. Therefore, ∫u⁵du = u⁶/6 + C."
         },
+
+
+        // =====================================
+        // PART 5: BASIC APPLICATIONS &
+        // INTEGRATION BY PARTS
+        // =====================================
 
         {
             id: 25,
-            question: "How many real linear factors does P(x) = x³ − 1 have when factored completely over the real numbers?",
-            options: ["0", "1", "2", "3"],
+            question: "Find the area bounded by y = x², the x-axis, x = 0 and x = 3.",
+            options: [
+                "3",
+                "9",
+                "18",
+                "27"
+            ],
             answer: "B",
-            explanation: "Factor x³ − 1 = (x − 1)(x² + x + 1). The quadratic factor has discriminant 1 − 4 = −3, so it has no real roots. Therefore, there is one real linear factor, x − 1."
+            explanation: "The area is ∫₀³x²dx = [x³/3]₀³ = 27/3 = 9."
+        },
+
+        {
+            id: 26,
+            question: "Find the area under y = 2x from x = 1 to x = 4.",
+            options: [
+                "8",
+                "12",
+                "15",
+                "16"
+            ],
+            answer: "C",
+            explanation: "The area is ∫₁⁴2x dx = [x²]₁⁴ = 16 − 1 = 15."
+        },
+
+        {
+            id: 27,
+            question: "Using integration by parts, evaluate ∫xeˣ dx.",
+            options: [
+                "xeˣ + C",
+                "xeˣ − eˣ + C",
+                "(x²/2)eˣ + C",
+                "eˣ − xeˣ + C"
+            ],
+            answer: "B",
+            explanation: "Take u = x and dv = eˣdx. Then du = dx and v = eˣ. Therefore ∫xeˣdx = xeˣ − ∫eˣdx = xeˣ − eˣ + C."
+        },
+
+        {
+            id: 28,
+            question: "What is the average value of f(x) = 4x on [0, 2]?",
+            options: [
+                "2",
+                "4",
+                "8",
+                "16"
+            ],
+            answer: "B",
+            explanation: "Average value = 1/(2 − 0) × ∫₀²4x dx = (1/2)[2x²]₀² = 4."
+        },
+
+        {
+            id: 29,
+            question: "Evaluate ∫1/(1 + x²) dx.",
+            options: [
+                "ln(1 + x²) + C",
+                "arctan(x) + C",
+                "arcsin(x) + C",
+                "−1/x + C"
+            ],
+            answer: "B",
+            explanation: "The standard inverse-trigonometric integral is ∫1/(1 + x²)dx = arctan(x) + C."
+        },
+
+        {
+            id: 30,
+            question: "Evaluate ∫1/√(1 − x²) dx.",
+            options: [
+                "arcsin(x) + C",
+                "arccos(x) + C",
+                "arctan(x) + C",
+                "ln|√(1 − x²)| + C"
+            ],
+            answer: "A",
+            explanation: "The standard inverse-trigonometric integral is ∫1/√(1 − x²)dx = arcsin(x) + C."
         }
 
     ]
@@ -894,7 +1036,7 @@ async function submitQuiz(automatic = false) {
 
         showLockedResult(
             saveSuccessful
-                ? "Your MATH 101 Polynomials result has been submitted successfully. The leaderboard is currently closed. Your score will become visible when the leaderboard is opened."
+                ? "Your MATH 101 Integral Calculus result has been submitted successfully. The leaderboard is currently closed. Your score will become visible when the leaderboard is opened."
                 : "Your quiz has been completed, but your result could not be confirmed on the server. Please contact CONQUERORS LABS."
         );
 
@@ -1181,7 +1323,7 @@ function showAlreadyCompleted() {
         .classList.add("hidden");
 
     document.getElementById("resultMessage").textContent =
-        "You have already completed this MATH 101 Polynomials CBT on this browser/device. Retakes are currently disabled.";
+        "You have already completed this MATH 101 Integral Calculus CBT on this browser/device. Retakes are currently disabled.";
 
     reviewBtn.classList.add("hidden");
 
