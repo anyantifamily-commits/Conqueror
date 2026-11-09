@@ -1,276 +1,342 @@
 
 /* =========================================
    CONQUERORS LABS
-   CHM 101 — MATTER, ENERGY & THERMODYNAMICS
+   CHM 101 — CHEMICAL KINETICS
 ========================================= */
 
 const QUIZ_CONFIG = {
-    title: "CHM 101 — Matter, Energy & Thermodynamics",
+    title: "CHM 101 — Chemical Kinetics",
 
     quizVersion: 3,
     timeLimit: 20,
-    maxQuestions: 30,
+    maxQuestions: 25,
     allowRetake: false,
 
     quizId: "chm101-atomic-structure",
     passMark: 50,
 
     questions: [
+
         {
             id: 1,
-            question: "What is the SI unit of energy?",
-            options: ["Calorie", "Newton", "Joule", "Watt"],
-            answer: "Joule",
-            explanation: "The joule (J) is the SI unit of energy. A calorie is a non-SI unit, a newton measures force, and a watt measures power."
+            question: "For the gaseous reaction 3X + Y → 2Z, how does the rate of disappearance of X relate to the overall reaction rate?",
+            options: [
+                "It is equal to the overall reaction rate.",
+                "It is equal to three times the reaction rate.",
+                "It is equal to one-third of the reaction rate.",
+                "It is equal to twice the reaction rate."
+            ],
+            answer: "It is equal to three times the reaction rate.",
+            explanation: "For 3X + Y → 2Z, the overall reaction rate is -(1/3)Δ[X]/Δt. Therefore, the rate of disappearance of X is three times the overall reaction rate."
         },
+
         {
             id: 2,
-            question: "Which equation describes the kinetic energy of an object of mass m moving with velocity v?",
-            options: ["Ek = mgh", "Ek = ½mv²", "Ek = ½mv", "Ek = mv²"],
-            answer: "Ek = ½mv²",
-            explanation: "Kinetic energy is given by Ek = ½mv², where m is mass and v is velocity."
+            question: "What are the correct units for the rate constant (k) of a third-order overall reaction when concentration is expressed in mol L⁻¹ and time in seconds?",
+            options: [
+                "s⁻¹",
+                "L mol⁻¹ s⁻¹",
+                "L² mol⁻² s⁻¹",
+                "mol L⁻¹ s⁻¹"
+            ],
+            answer: "L² mol⁻² s⁻¹",
+            explanation: "For an nth-order reaction, the units of k are concentration^(1−n) time⁻¹. For a third-order reaction, the units are L² mol⁻² s⁻¹."
         },
+
         {
             id: 3,
-            question: "Which thermodynamic system allows both matter and energy to cross its boundary?",
-            options: ["Closed system", "Isolated system", "Open system", "Adiabatic system"],
-            answer: "Open system",
-            explanation: "An open system exchanges both matter and energy with its surroundings."
+            question: "In a kinetic study, doubling the concentration of reactant A increases the initial reaction rate by a factor of 8, while keeping other conditions constant. What is the order of the reaction with respect to A?",
+            options: ["1", "2", "3", "0"],
+            answer: "3",
+            explanation: "Rate ∝ [A]ⁿ. Therefore, 8 = 2ⁿ. Since 2³ = 8, the reaction is third order with respect to A."
         },
+
         {
             id: 4,
-            question: "The universe is considered which type of thermodynamic system?",
-            options: ["Open system", "Closed system", "Isolated system", "Isothermal system"],
-            answer: "Isolated system",
-            explanation: "The universe is treated as an isolated system because it has no surroundings with which to exchange matter or energy."
+            question: "Which of the following graphical plots yields a straight line with a slope equal to −k for a first-order chemical reaction?",
+            options: [
+                "[A] versus time",
+                "ln[A] versus time",
+                "1/[A] versus time",
+                "log(rate) versus log[A]"
+            ],
+            answer: "ln[A] versus time",
+            explanation: "The integrated first-order rate equation is ln[A] = ln[A]₀ − kt. A plot of ln[A] against time produces a straight line with a slope of −k."
         },
+
         {
             id: 5,
-            question: "Which of the following is an intensive thermodynamic property?",
-            options: ["Mass", "Volume", "Boiling point", "Internal energy"],
-            answer: "Boiling point",
-            explanation: "Boiling point is an intensive property because it does not depend on the amount of substance present."
+            question: "How does the half-life of a zero-order reaction behave as the initial concentration of the reactant is increased?",
+            options: [
+                "It remains constant regardless of the initial concentration.",
+                "It increases inversely proportional to the initial concentration.",
+                "It decreases as the initial concentration rises.",
+                "It increases directly proportional to the initial concentration."
+            ],
+            answer: "It increases directly proportional to the initial concentration.",
+            explanation: "For a zero-order reaction, t½ = [A]₀/(2k). Therefore, the half-life increases directly with the initial concentration."
         },
+
         {
             id: 6,
-            question: "Which of the following is an extensive thermodynamic property?",
-            options: ["Temperature", "Density", "Enthalpy", "Refractive index"],
-            answer: "Enthalpy",
-            explanation: "Enthalpy is extensive because its value depends on the amount of substance in the system."
+            question: "A radioactive isotope undergoes first-order decay with a half-life of 15 minutes. What fraction of the original sample remains after 60 minutes?",
+            options: [
+                "1/4",
+                "1/8",
+                "1/16",
+                "1/32"
+            ],
+            answer: "1/16",
+            explanation: "60 minutes represents four half-lives (60/15 = 4). The remaining fraction is (1/2)⁴ = 1/16."
         },
+
         {
             id: 7,
-            question: "Which thermodynamic process occurs at constant temperature?",
-            options: ["Adiabatic", "Isobaric", "Isochoric", "Isothermal"],
-            answer: "Isothermal",
-            explanation: "An isothermal process occurs at constant temperature, so the temperature change is zero."
+            question: "Which of the following requirements is NOT one of the three core conditions specified by collision theory for a successful chemical reaction?",
+            options: [
+                "Colliding particles must maintain a neutral electrical charge.",
+                "Particles must physically collide with one another.",
+                "Collisions must possess kinetic energy greater than or equal to Ea.",
+                "Colliding molecules must have the proper spatial orientation."
+            ],
+            answer: "Colliding particles must maintain a neutral electrical charge.",
+            explanation: "Successful collisions require sufficient energy to overcome the activation energy and proper spatial orientation. The particles do not have to be electrically neutral."
         },
+
         {
             id: 8,
-            question: "A thermodynamic process in which no heat is exchanged with the surroundings is called:",
-            options: ["Cyclic process", "Adiabatic process", "Isothermal process", "Isobaric process"],
-            answer: "Adiabatic process",
-            explanation: "An adiabatic process involves no heat transfer between the system and its surroundings; q = 0."
+            question: "What is the physical meaning of the peak in a potential energy profile diagram for an elementary reaction?",
+            options: [
+                "The stable intermediate product",
+                "The transition state or activated complex",
+                "The total enthalpy change (ΔH)",
+                "The ground-state reactant energy level"
+            ],
+            answer: "The transition state or activated complex",
+            explanation: "The peak represents the transition state or activated complex, which is the high-energy arrangement formed as reactants are converted into products."
         },
+
         {
             id: 9,
-            question: "What is the change in internal energy of a system after a complete cyclic process?",
-            options: ["Greater than zero", "Less than zero", "Zero", "Infinite"],
-            answer: "Zero",
-            explanation: "Internal energy is a state function. Since a cyclic process returns the system to its initial state, its net change in internal energy is zero."
+            question: "Which of the following operational factors changes the value of the rate constant (k) for a given chemical reaction?",
+            options: [
+                "Increasing the initial concentration of reactants",
+                "Decreasing the system volume for gaseous components",
+                "Increasing the system temperature",
+                "Increasing the surface area of a solid reactant"
+            ],
+            answer: "Increasing the system temperature",
+            explanation: "Temperature changes the rate constant according to the Arrhenius equation. Concentration, volume and surface area can affect reaction rate without necessarily changing the rate constant."
         },
+
         {
             id: 10,
-            question: "Which of the following is a path function rather than a state function?",
-            options: ["Internal energy", "Enthalpy", "Work", "Volume"],
-            answer: "Work",
-            explanation: "Work depends on the path taken between two states. Internal energy, enthalpy and volume are state functions."
+            question: "In an Arrhenius plot of ln k versus 1/T, what physical property does the slope of the resulting straight line represent?",
+            options: [
+                "−Ea/R",
+                "+Ea/R",
+                "−Ea × R",
+                "ln A"
+            ],
+            answer: "−Ea/R",
+            explanation: "The Arrhenius equation in linear form is ln k = ln A − (Ea/R)(1/T). Therefore, the slope is −Ea/R."
         },
+
         {
             id: 11,
-            question: "Which expression represents the First Law of Thermodynamics using the chemistry sign convention?",
-            options: ["ΔE = q − w", "ΔE = q + w", "ΔE = w − q", "ΔE = q/w"],
-            answer: "ΔE = q + w",
-            explanation: "The First Law is ΔE = q + w, where q is heat absorbed by the system and w is work done on the system."
+            question: "What is the primary function of a catalyst in a chemical reaction?",
+            options: [
+                "To shift the chemical equilibrium position toward products",
+                "To supply extra thermal energy to the reactants",
+                "To provide an alternative reaction pathway with a lower activation energy",
+                "To make a non-spontaneous thermodynamic reaction spontaneous"
+            ],
+            answer: "To provide an alternative reaction pathway with a lower activation energy",
+            explanation: "A catalyst provides an alternative reaction pathway with a lower activation energy. It does not change the equilibrium constant or the overall thermodynamic feasibility of a reaction."
         },
+
         {
             id: 12,
-            question: "When heat enters a thermodynamic system from its surroundings, what is the sign of q?",
-            options: ["Positive (+q)", "Negative (−q)", "Zero", "Dependent only on pressure"],
-            answer: "Positive (+q)",
-            explanation: "Heat absorbed by the system is assigned a positive sign under the chemistry sign convention."
+            question: "Which term describes a species that is produced in an early step of a reaction mechanism and consumed in a subsequent step without appearing in the overall balanced equation?",
+            options: [
+                "Catalyst",
+                "Reaction intermediate",
+                "Transition state",
+                "Inhibitor"
+            ],
+            answer: "Reaction intermediate",
+            explanation: "A reaction intermediate is formed in one step and consumed in a later step. It does not appear in the overall balanced equation."
         },
+
         {
             id: 13,
-            question: "According to the chemistry sign convention, what is the sign of work done by the system on its surroundings?",
-            options: ["Positive (+w)", "Negative (−w)", "Zero", "Undefined"],
-            answer: "Negative (−w)",
-            explanation: "Work done by the system is negative because energy leaves the system through work."
+            question: "In a multi-step reaction mechanism, how does the slowest step dictate the overall reaction rate?",
+            options: [
+                "It acts as the rate-determining step, and its rate law matches the overall experimental rate law.",
+                "It dictates the overall stoichiometry of the reaction.",
+                "It determines the standard enthalpy change of the system.",
+                "It consumes all the catalysts present in the mixture."
+            ],
+            answer: "It acts as the rate-determining step, and its rate law matches the overall experimental rate law.",
+            explanation: "The slowest step is commonly called the rate-determining step because it limits the speed of the overall reaction. The experimentally observed rate law must be consistent with the complete reaction mechanism."
         },
+
         {
             id: 14,
-            question: "What is the expression for expansion or compression work against constant external pressure?",
-            options: ["W = −PexΔV", "W = PexΔV", "W = −nRT ln V", "W = PV/T"],
-            answer: "W = −PexΔV",
-            explanation: "At constant external pressure, work is W = −PexΔV. Expansion gives negative work, while compression gives positive work."
+            question: "What is the molecularity of an elementary bimolecular reaction step?",
+            options: [
+                "1",
+                "2",
+                "3",
+                "0"
+            ],
+            answer: "2",
+            explanation: "A bimolecular elementary step involves two reacting species. Its molecularity is therefore two."
         },
+
         {
             id: 15,
-            question: "What is the work done during free expansion against zero external pressure?",
-            options: ["+1 J", "−PΔV", "Zero", "nRT"],
-            answer: "Zero",
-            explanation: "For free expansion, external pressure is zero. Since W = −PexΔV, the work done is zero."
+            question: "If an exothermic reaction has a forward activation energy (Ea,forward) of 60 kJ mol⁻¹ and a reverse activation energy (Ea,reverse) of 90 kJ mol⁻¹, what is the enthalpy change (ΔH) for the forward reaction?",
+            options: [
+                "+30 kJ mol⁻¹",
+                "−30 kJ mol⁻¹",
+                "+150 kJ mol⁻¹",
+                "−150 kJ mol⁻¹"
+            ],
+            answer: "−30 kJ mol⁻¹",
+            explanation: "ΔH = Ea(forward) − Ea(reverse) = 60 − 90 = −30 kJ mol⁻¹. The negative value confirms that the forward reaction is exothermic."
         },
+
         {
             id: 16,
-            question: "Which expression gives the work done during the reversible isothermal expansion of an ideal gas?",
+            question: "Which category of catalysis is exemplified by the Haber process, where gaseous reactants pass over a solid iron surface?",
             options: [
-                "W = −PΔV",
-                "W = −nRT ln(V₂/V₁)",
-                "W = −CΔT",
-                "W = mcΔT"
+                "Homogeneous catalysis",
+                "Heterogeneous catalysis",
+                "Autocatalysis",
+                "Enzyme-mediated catalysis"
             ],
-            answer: "W = −nRT ln(V₂/V₁)",
-            explanation: "For a reversible isothermal expansion of an ideal gas, work is W = −nRT ln(V₂/V₁), using the chemistry sign convention."
+            answer: "Heterogeneous catalysis",
+            explanation: "The Haber process uses gaseous nitrogen and hydrogen with a solid iron catalyst. Since the reactants and catalyst are in different phases, it is heterogeneous catalysis."
         },
+
         {
             id: 17,
-            question: "A gas absorbs 35.0 J of heat and does 15.0 J of work. What is its change in internal energy?",
-            options: ["+50.0 J", "−20.0 J", "+20.0 J", "−50.0 J"],
-            answer: "+20.0 J",
-            explanation: "Using ΔE = q + w, heat absorbed is +35.0 J and work done by the gas is −15.0 J. Therefore, ΔE = 35.0 − 15.0 = +20.0 J."
+            question: "What happens to the rate of a first-order chemical reaction if the reactant concentration is tripled?",
+            options: [
+                "The rate increases by a factor of 3.",
+                "The rate increases by a factor of 9.",
+                "The rate remains completely unchanged.",
+                "The rate decreases by a factor of 3."
+            ],
+            answer: "The rate increases by a factor of 3.",
+            explanation: "For a first-order reaction, rate = k[A]. Tripling the reactant concentration therefore triples the reaction rate."
         },
+
         {
             id: 18,
-            question: "Specific heat capacity is the heat required to raise the temperature of:",
+            question: "Which of the following describes a pseudo-first-order reaction?",
             options: [
-                "One mole of a substance by one kelvin",
-                "One gram of a substance by one degree Celsius or kelvin",
-                "One litre of a substance by one degree Celsius",
-                "One kilogram of a substance by ten degrees Celsius"
+                "A reaction that has a negative reaction order.",
+                "A reaction whose order can only be found theoretically from balanced equations.",
+                "A reaction that is inherently second-order overall, but made to behave as first-order because one reactant is in massive excess.",
+                "A reaction that proceeds exclusively via unimolecular elementary steps."
             ],
-            answer: "One gram of a substance by one degree Celsius or kelvin",
-            explanation: "Specific heat capacity is the heat required to raise the temperature of a unit mass of a substance by one degree. The gram-based option is the common chemistry convention."
+            answer: "A reaction that is inherently second-order overall, but made to behave as first-order because one reactant is in massive excess.",
+            explanation: "When one reactant is present in large excess, its concentration changes negligibly during the reaction. It can be treated as constant, making the observed rate law appear first-order."
         },
+
         {
             id: 19,
-            question: "Which equation relates heat transferred to mass, specific heat capacity and temperature change?",
-            options: ["q = mCΔT", "q = mΔT/C", "q = C + mΔT", "q = C/(mΔT)"],
-            answer: "q = mCΔT",
-            explanation: "The heat equation is q = mCΔT, where m is mass, C is specific heat capacity and ΔT is the temperature change."
+            question: "What is the primary reason why a small increase in temperature produces a dramatic increase in reaction rate?",
+            options: [
+                "It significantly expands the fraction of molecules possessing kinetic energy greater than or equal to Ea.",
+                "It drastically reduces the overall enthalpy of the reaction.",
+                "It alters the stoichiometric coefficients of the balanced equation.",
+                "It increases molecular mass and density."
+            ],
+            answer: "It significantly expands the fraction of molecules possessing kinetic energy greater than or equal to Ea.",
+            explanation: "Increasing temperature raises the fraction of molecules with energy equal to or greater than the activation energy. This increases the number of effective collisions."
         },
+
         {
             id: 20,
-            question: "What is the direct conversion of a solid into a gas without passing through the liquid state called?",
-            options: ["Melting", "Condensation", "Sublimation", "Deposition"],
-            answer: "Sublimation",
-            explanation: "Sublimation is the direct change from solid to gas. Deposition is the reverse process."
+            question: "In second-order kinetics described by 1/[A] = 1/[A]₀ + kt, what does the graphical plot of 1/[A] versus time produce?",
+            options: [
+                "A curved decay line",
+                "A straight line with a negative slope equal to −k",
+                "A straight line with a positive slope equal to +k",
+                "A horizontal line parallel to the time axis"
+            ],
+            answer: "A straight line with a positive slope equal to +k",
+            explanation: "The integrated second-order equation is 1/[A] = 1/[A]₀ + kt. A plot of 1/[A] against time gives a straight line with a positive slope equal to k."
         },
+
         {
             id: 21,
-            question: "Is vaporization an endothermic or exothermic process?",
+            question: "Which of the following statements regarding enzyme catalysis is correct?",
             options: [
-                "Endothermic; heat enters the system",
-                "Exothermic; heat leaves the system",
-                "Neither endothermic nor exothermic",
-                "Adiabatic"
+                "Enzymes alter the thermodynamic equilibrium constant of a biochemical transformation.",
+                "At very high substrate concentrations, enzyme-catalyzed reaction rates reach saturation and become effectively zero-order with respect to the substrate.",
+                "Enzymes operate with peak efficiency at any extreme pH and high temperature.",
+                "Enzymes increase activation energy barriers to slow down metabolic pathways."
             ],
-            answer: "Endothermic; heat enters the system",
-            explanation: "Vaporization requires energy to overcome intermolecular attractions, so heat is absorbed by the substance."
+            answer: "At very high substrate concentrations, enzyme-catalyzed reaction rates reach saturation and become effectively zero-order with respect to the substrate.",
+            explanation: "At substrate saturation, nearly all enzyme active sites are occupied. The reaction rate approaches Vmax and becomes independent of further increases in substrate concentration."
         },
+
         {
             id: 22,
-            question: "What thermodynamic quantity represents the heat exchanged during a process at constant pressure?",
-            options: ["Internal energy", "Enthalpy change (ΔH)", "Work function", "Entropy"],
-            answer: "Enthalpy change (ΔH)",
-            explanation: "At constant pressure, the heat exchanged is equal to the enthalpy change, provided only pressure-volume work occurs."
+            question: "How is the half-life (t½) of a first-order reaction mathematically related to its rate constant (k)?",
+            options: [
+                "t½ = [A]₀/(2k)",
+                "t½ = 1/(k[A]₀)",
+                "t½ = 0.693/k",
+                "t½ = 0.693 × k"
+            ],
+            answer: "t½ = 0.693/k",
+            explanation: "For a first-order reaction, t½ = ln 2/k = 0.693/k. Its half-life is independent of the initial concentration."
         },
+
         {
             id: 23,
-            question: "Which apparatus measures the heat gained or lost during a physical or chemical process?",
-            options: ["Barometer", "Thermostat", "Calorimeter", "Manometer"],
-            answer: "Calorimeter",
-            explanation: "A calorimeter is used to measure heat changes during physical and chemical processes."
+            question: "What term is used to describe a reaction where one of the products acts as a catalyst for the reaction itself, causing the reaction to start slowly and then accelerate as product accumulates?",
+            options: [
+                "Chain termination",
+                "Autocatalysis",
+                "Heterogeneous poisoning",
+                "Photo-oxidation"
+            ],
+            answer: "Autocatalysis",
+            explanation: "Autocatalysis occurs when a product of a reaction catalyses that same reaction. As the product accumulates, the reaction rate can increase."
         },
+
         {
             id: 24,
-            question: "In a bomb calorimeter, which operates at constant volume, what is the relationship between the heat of the system and the heat of the calorimeter?",
+            question: "Which of the following actions will decrease the activation energy (Ea) of a chemical reaction?",
             options: [
-                "qsystem = +100 kJ",
-                "qsystem = 0",
-                "qsystem = −qcalorimeter",
-                "qsystem = qwater"
+                "Increasing reactant concentration",
+                "Adding an appropriate catalyst",
+                "Increasing the system temperature",
+                "Elevating the external pressure of gaseous reactants"
             ],
-            answer: "qsystem = −qcalorimeter",
-            explanation: "Assuming the calorimeter is insulated, heat lost by the reacting system is gained by the calorimeter, and vice versa. Their heat changes are equal in magnitude and opposite in sign."
+            answer: "Adding an appropriate catalyst",
+            explanation: "A catalyst provides an alternative pathway with a lower activation energy. Increasing temperature, concentration or pressure does not itself lower the activation energy."
         },
+
         {
             id: 25,
-            question: "What happens to the enthalpy change when a thermochemical equation is reversed?",
+            question: "In the Arrhenius equation k = A e^(−Ea/RT), what does the pre-exponential factor (A) represent?",
             options: [
-                "It is multiplied by two",
-                "It remains unchanged",
-                "Its sign is reversed",
-                "It becomes zero"
+                "The fraction of molecules with sufficient activation energy",
+                "The exact enthalpy change of the transition state",
+                "The frequency factor, accounting for collision frequency and spatial orientation probability",
+                "The universal gas constant multiplied by absolute temperature"
             ],
-            answer: "Its sign is reversed",
-            explanation: "Reversing a reaction reverses the direction of heat transfer, so the sign of its enthalpy change also reverses."
-        },
-        {
-            id: 26,
-            question: "If all coefficients in a balanced thermochemical equation are multiplied by two, what happens to ΔH?",
-            options: [
-                "It is divided by two",
-                "It is multiplied by two",
-                "It is squared",
-                "It remains unchanged"
-            ],
-            answer: "It is multiplied by two",
-            explanation: "Enthalpy is an extensive property. Multiplying the reaction equation by two also doubles its enthalpy change."
-        },
-        {
-            id: 27,
-            question: "What does Hess's Law state?",
-            options: [
-                "Energy can be created in multi-step reactions",
-                "The enthalpy change of an overall reaction equals the sum of the enthalpy changes of its steps",
-                "Heat transfer depends strictly on the path taken",
-                "Pressure is inversely proportional to volume in every cyclic process"
-            ],
-            answer: "The enthalpy change of an overall reaction equals the sum of the enthalpy changes of its steps",
-            explanation: "Hess's Law follows from enthalpy being a state function. The overall enthalpy change is the sum of the changes for the individual steps."
-        },
-        {
-            id: 28,
-            question: "Which pressure and temperature are commonly used as standard conditions in introductory thermochemistry?",
-            options: [
-                "0 atm and 0°C",
-                "1 atm and 25°C",
-                "2 atm and 100°C",
-                "10 atm and 298 K"
-            ],
-            answer: "1 atm and 25°C",
-            explanation: "Many introductory chemistry texts use 1 atm and 298 K (25°C) as standard conditions. Modern standard pressure is 1 bar, so follow the convention specified in your course."
-        },
-        {
-            id: 29,
-            question: "What is the standard enthalpy of formation of an element in its standard state?",
-            options: ["+1 kJ/mol", "−1 kJ/mol", "Zero", "Undefined"],
-            answer: "Zero",
-            explanation: "The standard enthalpy of formation of an element in its most stable standard state is defined as zero."
-        },
-        {
-            id: 30,
-            question: "How is the standard enthalpy change of a reaction calculated using standard enthalpies of formation?",
-            options: [
-                "ΣΔH°f(reactants) − ΣΔH°f(products)",
-                "ΣΔH°f(products) − ΣΔH°f(reactants)",
-                "ΣΔH°f(products) × ΣΔH°f(reactants)",
-                "ΣΔH°f(products) / ΣΔH°f(reactants)"
-            ],
-            answer: "ΣΔH°f(products) − ΣΔH°f(reactants)",
-            explanation: "The standard enthalpy change is calculated by subtracting the sum of the standard enthalpies of formation of the reactants from that of the products, including balanced equation coefficients."
+            answer: "The frequency factor, accounting for collision frequency and spatial orientation probability",
+            explanation: "The pre-exponential factor, A, is the frequency factor. In collision theory, it accounts for collision frequency and the probability of suitable molecular orientation."
         }
+
     ]
 };
 
@@ -911,26 +977,26 @@ function showLockedResult(message) {
 
 function getResultMessage(percentage) {
     if (percentage >= 90) {
-        return "Outstanding! You conquered CHM 101 at a very high level. 🔥";
+        return "Outstanding! You conquered CHM 101 Chemical Kinetics at a very high level. 🔥";
     }
 
     if (percentage >= 80) {
-        return "Excellent performance! Your thermodynamics foundation is strong. 🧪";
+        return "Excellent performance! Your Chemical Kinetics foundation is strong. 🧪";
     }
 
     if (percentage >= 70) {
-        return "Great job! You have a solid grasp of the concepts. Keep sharpening it.";
+        return "Great job! You have a solid grasp of Chemical Kinetics. Keep sharpening it.";
     }
 
     if (percentage >= 60) {
-        return "Good attempt. Review the corrections carefully and strengthen the weaker areas.";
+        return "Good attempt. Review the corrections carefully and strengthen your weaker areas.";
     }
 
     if (percentage >= 50) {
-        return "You have a foundation to build on. Use the corrections to lock in the concepts.";
+        return "You have a foundation to build on. Use the corrections to master Chemical Kinetics.";
     }
 
-    return "This is your starting point. Review the corrections, learn from the misses, and come back stronger.";
+    return "This is your starting point. Review the corrections, learn from your mistakes, and come back stronger.";
 }
 
 
