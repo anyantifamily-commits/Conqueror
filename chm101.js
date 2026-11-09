@@ -7,7 +7,7 @@
 const QUIZ_CONFIG = {
     title: "CHM 101 — Chemical Kinetics",
 
-    quizVersion: 3,
+    quizVersion: 4,
     timeLimit: 20,
     maxQuestions: 25,
     allowRetake: false,
