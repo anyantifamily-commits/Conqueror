@@ -1,6 +1,6 @@
 /* =================================================
    CONQUERORS LABS
-   BIO 101 CBT — CELL BIOLOGY II
+   BIO 101 CBT — BIOENERGETICS
 ================================================= */
 
 /* =================================================
@@ -8,10 +8,10 @@
 ================================================= */
 
 const QUIZ_CONFIG = {
-    title: "BIO 101 — Cell Biology II",
+    title: "BIO 101 — Bioenergetics",
 
-    // New question set: version 5.
-    quizVersion: 6,
+    // New question set: version 6.
+    quizVersion: 7,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
@@ -24,429 +24,421 @@ const QUIZ_CONFIG = {
     questions: [
 
         // =========================================
-        // PART 1: BIOLOGICAL ORGANIZATION
+        // PART 1: INTRODUCTION TO BIOENERGETICS
         // =========================================
 
         {
             id: 1,
-            question: "What is the correct hierarchical order of biological organization from simplest to most complex?",
+            question: "What is the primary focus of bioenergetics?",
             options: [
-                "Organ, Tissue, Cell, Organ System",
-                "Cell, Tissue, Organ, Organ System",
-                "Tissue, Cell, Organ System, Organ",
-                "Organ System, Organ, Cell, Tissue"
+                "The study of cellular structure and organelles",
+                "The study of energy changes and transformations in living cells",
+                "The chemical synthesis of DNA and RNA",
+                "The measurement of internal cell temperature"
             ],
-            answer: "Cell, Tissue, Organ, Organ System",
-            explanation: "The correct order is cell → tissue → organ → organ system. Cells form tissues, different tissues combine to form organs, and organs work together in organ systems."
+            answer: "The study of energy changes and transformations in living cells",
+            explanation: "Bioenergetics is the study of energy changes and energy transformations occurring in living organisms and cells."
         },
 
         {
             id: 2,
-            question: "Which organism is commonly cited as an example of a colonial organism whose individual cells may survive independently when separated?",
+            question: "Which of the following correctly pairs a metabolic process with its correct energy and ATP characteristic?",
             options: [
-                "Amoeba",
-                "Volvox",
-                "Paramecium",
-                "Hydra"
+                "Catabolism: synthesis of compounds, uses ATP",
+                "Anabolism: breakdown of molecules, releases energy",
+                "Catabolism: breakdown of molecules, makes ATP",
+                "Anabolism: breakdown of molecules, makes ATP"
             ],
-            answer: "Volvox",
-            explanation: "Volvox is a colonial green alga. Its cells live together in an organized colony, although the degree of independence varies among species and cell types."
+            answer: "Catabolism: breakdown of molecules, makes ATP",
+            explanation: "Catabolism involves the breakdown of complex molecules into simpler ones and generally releases energy that can be captured in ATP. Anabolism builds complex molecules and generally requires energy."
         },
 
         {
             id: 3,
-            question: "What does the Colonial Theory propose about the evolution of multicellular organisms?",
+            question: "Which of the following statements about cellular energy charge are true?\n\nI. It acts like a fuel gauge reflecting the ATP to ADP ratio.\nII. A higher amount of ADP compared to ATP signals the cell to make ATP through oxidative phosphorylation.\nIII. Healthy cells keep their formal energy charge strictly between 0 and 0.2.",
             options: [
-                "Multicellular organisms evolved from single-celled organisms through random mutations alone.",
-                "Cooperation among cells of the same species led to the development of multicellular organisms.",
-                "Tissues can survive independently after separation from a multicellular organism.",
-                "Organs function completely independently of organ systems."
+                "I and II only",
+                "II and III only",
+                "I and III only",
+                "I, II, and III"
             ],
-            answer: "Cooperation among cells of the same species led to the development of multicellular organisms.",
-            explanation: "The colonial theory proposes that multicellular organisms evolved from groups or colonies of unicellular organisms. Increasing cooperation and specialization among cells contributed to multicellularity."
+            answer: "I and II only",
+            explanation: "Energy charge reflects the relative amounts of ATP, ADP and AMP and indicates the energy status of a cell. A high ADP level signals increased demand for ATP production. The normal cellular energy charge is generally high, around 0.8–0.95, not 0–0.2."
         },
 
         {
             id: 4,
-            question: "A group of connected cells with similar structures working together to perform a particular function is known as a:",
+            question: "What does a negative change in Gibbs free energy (ΔG < 0) indicate about a chemical reaction?",
             options: [
-                "Organ",
-                "Tissue",
-                "Organ system",
-                "Colony"
+                "The reaction is non-spontaneous and endergonic",
+                "The reaction is at chemical equilibrium",
+                "The reaction is spontaneous and exergonic",
+                "The reaction requires a net input of thermal energy"
             ],
-            answer: "Tissue",
-            explanation: "A tissue consists of cells organized to perform particular functions. Different tissues can combine to form an organ."
+            answer: "The reaction is spontaneous and exergonic",
+            explanation: "A negative ΔG indicates that a reaction is thermodynamically favorable or spontaneous under the specified conditions and releases free energy."
         },
 
         {
             id: 5,
-            question: "Which organ functions as part of both the endocrine system and the digestive system?",
+            question: "Which of the following factors does the change in free energy (ΔG) actually predict?",
             options: [
-                "Liver",
-                "Pancreas",
-                "Kidney",
-                "Spleen"
+                "The exact speed of the chemical reaction",
+                "The feasibility or spontaneity of the reaction",
+                "The specific activation energy barrier height",
+                "The exact concentration of cellular enzymes"
             ],
-            answer: "Pancreas",
-            explanation: "The pancreas has an endocrine function because it releases hormones such as insulin and glucagon into the blood. It also has an exocrine digestive function because it releases digestive enzymes into the small intestine."
+            answer: "The feasibility or spontaneity of the reaction",
+            explanation: "ΔG predicts the thermodynamic favorability or spontaneity of a reaction, not its rate. Reaction rate depends largely on activation energy and kinetics."
         },
 
         // =========================================
-        // PART 2: EXTRACELLULAR FLUID AND ELEMENTS
+        // PART 2: THERMODYNAMICS
         // =========================================
 
         {
             id: 6,
-            question: "Cells in multicellular organisms are surrounded by a fluid called:",
+            question: "Why are living cells described as isothermal systems?",
             options: [
-                "Cytosol",
-                "Intracellular fluid",
-                "Extracellular fluid (ECF)",
-                "Nucleoplasm"
+                "They operate at a constant temperature and pressure",
+                "They generate their own internal body heat through friction",
+                "They fluctuate wildly in temperature depending on their environment",
+                "They rely strictly on heat flow to perform biological work"
             ],
-            answer: "Extracellular fluid (ECF)",
-            explanation: "Extracellular fluid is outside the cells. It includes interstitial fluid and blood plasma and provides the environment through which nutrients, gases and waste products are exchanged."
+            answer: "They operate at a constant temperature and pressure",
+            explanation: "Living cells generally function under relatively constant temperature and pressure conditions, making them approximately isothermal systems."
         },
 
         {
             id: 7,
-            question: "Trace elements such as copper, zinc and manganese are important in the body primarily because they contribute to:",
+            question: "Which of the following describe energy flow in photosynthetic versus heterotrophic cells?\n\nI. Photosynthetic cells capture absorbed solar radiation.\nII. Heterotrophic cells obtain free energy from nutrient molecules like food.\nIII. Both cell types ultimately transform free energy into ATP and other energy-rich compounds.",
             options: [
-                "Providing structural rigidity to bones",
-                "Enzyme activity",
-                "Maintaining osmotic balance as the principal extracellular ions",
-                "Fat storage"
+                "I and II only",
+                "I and III only",
+                "II and III only",
+                "I, II, and III"
             ],
-            answer: "Enzyme activity",
-            explanation: "Copper, zinc and manganese serve as cofactors for various enzymes. They are required in small quantities for normal biochemical reactions and cellular functions."
+            answer: "I, II, and III",
+            explanation: "Photosynthetic cells capture solar energy, while heterotrophic cells obtain energy from nutrient molecules. Both types convert available free energy into ATP and other forms of usable chemical energy."
         },
 
         {
             id: 8,
-            question: "According to the classification used in this course material, how many major ways do cells exchange materials with the extracellular fluid?",
+            question: "What does the second law of thermodynamics state regarding natural processes?",
             options: [
-                "Three",
-                "Four",
-                "Five",
-                "Six"
+                "Energy can be freely created or destroyed within a closed system.",
+                "The total entropy (disorder) of the universe always increases.",
+                "The entropy of a local living cell always decreases without any energy expenditure.",
+                "All chemical reactions must release 100% of their energy as usable work."
             ],
-            answer: "Five",
-            explanation: "The expected answer in this question set is five. The exact number can depend on how a course groups transport processes, so use the specific classification taught in your lecture notes."
+            answer: "The total entropy (disorder) of the universe always increases.",
+            explanation: "The second law states that the entropy of an isolated system tends to increase during spontaneous processes. Living organisms can maintain or decrease local entropy by releasing heat and increasing entropy in their surroundings."
         },
-
-        // =========================================
-        // PART 3: EPITHELIAL TISSUE
-        // =========================================
 
         {
             id: 9,
-            question: "How are epithelial tissues primarily classified according to the number of cell layers?",
+            question: "Which characteristics apply to an exothermic process?\n\nI. It produces and releases heat.\nII. It has a negative enthalpy change (ΔH < 0).\nIII. It absorbs heat from the surroundings.",
             options: [
-                "Simple and stratified",
-                "Squamous, cuboidal and columnar",
-                "Loose and dense",
-                "Voluntary and involuntary"
+                "I and II only",
+                "II and III only",
+                "I and III only",
+                "I, II, and III"
             ],
-            answer: "Simple and stratified",
-            explanation: "Simple epithelium has one cell layer, whereas stratified epithelium has two or more layers. Squamous, cuboidal and columnar describe cell shapes rather than the number of layers."
+            answer: "I and II only",
+            explanation: "An exothermic process releases heat to the surroundings and therefore has a negative enthalpy change, ΔH < 0."
         },
 
         {
             id: 10,
-            question: "Epithelial cells that are flattened, thin and spread out are described as:",
+            question: "In the Gibbs equation (ΔG = ΔH − TΔS), what units must temperature (T) always be measured in?",
             options: [
-                "Cuboidal",
-                "Columnar",
-                "Squamous",
-                "Transitional"
+                "Degrees Celsius (°C)",
+                "Fahrenheit (°F)",
+                "Kelvin (K)",
+                "Calories (cal)"
             ],
-            answer: "Squamous",
-            explanation: "Squamous epithelial cells are thin and flattened, resembling scales. Their shape allows efficient diffusion and filtration in locations such as alveoli and parts of the kidney."
+            answer: "Kelvin (K)",
+            explanation: "Temperature in the Gibbs free-energy equation must be expressed on the absolute temperature scale, Kelvin."
         },
-
-        // =========================================
-        // PART 4: CONNECTIVE TISSUE
-        // =========================================
 
         {
             id: 11,
-            question: "Which connective tissue supports epithelia and forms a network around blood vessels, nerves and some internal organs?",
+            question: "Under which conditions of enthalpy (ΔH) and entropy change (ΔS) is a reaction always spontaneous at any temperature?",
             options: [
-                "Adipose tissue",
-                "Loose connective tissue",
-                "Bone tissue",
-                "Hyaline cartilage"
+                "ΔH is positive and ΔS is negative",
+                "ΔH is negative and ΔS is positive",
+                "ΔH is positive and ΔS is positive",
+                "ΔH is negative and ΔS is negative"
             ],
-            answer: "Loose connective tissue",
-            explanation: "Loose connective tissue supports and binds surrounding tissues. It is commonly found beneath epithelia and around blood vessels, nerves and organs."
+            answer: "ΔH is negative and ΔS is positive",
+            explanation: "From ΔG = ΔH − TΔS, a negative ΔH and positive ΔS both favor a negative ΔG at every temperature."
         },
+
+        // =========================================
+        // PART 3: REDOX AND ENERGY
+        // =========================================
 
         {
             id: 12,
-            question: "Which connective tissue provides tensile strength and support in structures such as tendons and ligaments?",
+            question: "What does a more negative redox potential (E) signify about a chemical compound?",
             options: [
-                "Loose connective tissue",
-                "Fibrous connective tissue",
-                "Adipose tissue",
-                "Cartilage"
+                "It strongly grabs electrons and acts as a powerful oxidizing agent.",
+                "It gives up electrons easily and acts as a strong reducing agent.",
+                "It has zero tendency to participate in electron transfer.",
+                "It represents an ionic bond with high activation energy."
             ],
-            answer: "Fibrous connective tissue",
-            explanation: "Dense fibrous connective tissue contains abundant collagen fibres. Tendons connect muscles to bones, while ligaments connect bones to other bones and help stabilize joints."
+            answer: "It gives up electrons easily and acts as a strong reducing agent.",
+            explanation: "A more negative reduction potential indicates a greater tendency for the reduced form to donate electrons. Such substances are strong reducing agents."
         },
 
         {
             id: 13,
-            question: "What are the mature cells found in cartilage called?",
+            question: "In bioenergetics, what does the ratio of NAD⁺ to NADH + H⁺ describe?",
             options: [
-                "Osteocytes",
-                "Adipocytes",
-                "Chondrocytes",
-                "Fibroblasts"
+                "The overall cellular temperature",
+                "The availability of NAD⁺ for catabolic metabolism",
+                "The total amount of stored structural proteins",
+                "The mechanical work capacity of cell membranes"
             ],
-            answer: "Chondrocytes",
-            explanation: "Chondrocytes are mature cartilage cells. They occupy spaces called lacunae and help maintain the cartilage extracellular matrix."
+            answer: "The availability of NAD⁺ for catabolic metabolism",
+            explanation: "The NAD⁺/NADH ratio reflects the redox state of the cell and the availability of oxidized NAD⁺ to accept electrons during catabolic reactions."
         },
 
         {
             id: 14,
-            question: "Which substance is a major component of the proteoglycans found in cartilage extracellular matrix?",
+            question: "Which of the following features are characteristic of exergonic reactions?\n\nI. Gibbs free energy change is negative (ΔG < 0).\nII. Reactants sit at a higher free-energy level than products.\nIII. They are typically anabolic and absorb energy.",
             options: [
-                "Hydroxyapatite",
-                "Chondroitin sulfate",
-                "Haemoglobin",
-                "Fibrinogen"
+                "I and II only",
+                "II and III only",
+                "I and III only",
+                "I, II, and III"
             ],
-            answer: "Chondroitin sulfate",
-            explanation: "Chondroitin sulfate is a glycosaminoglycan found in cartilage proteoglycans. Together with collagen and other matrix components, it helps cartilage resist compression and retain water."
+            answer: "I and II only",
+            explanation: "Exergonic reactions have negative ΔG and release free energy as reactants move from a higher free-energy state to a lower one. They are generally associated with catabolism rather than anabolism."
         },
-
-        // =========================================
-        // PART 5: BONE TISSUE
-        // =========================================
 
         {
             id: 15,
-            question: "In mature bone, which calcium phosphate mineral gives the extracellular matrix much of its hardness?",
+            question: "How do enzymes affect the activation energy and free energy change of a reaction?",
             options: [
-                "Chondroitin sulfate",
-                "Hydroxyapatite",
-                "Calcium carbonate",
-                "Keratin"
+                "They lower the activation energy hump and change ΔG.",
+                "They lower the activation energy hump but never change ΔG.",
+                "They raise the activation energy hump to slow down spontaneous processes.",
+                "They supply extra free energy to drive endergonic reactions directly."
             ],
-            answer: "Hydroxyapatite",
-            explanation: "Hydroxyapatite is a calcium phosphate mineral deposited in bone matrix. It combines with collagen and other matrix components to give bone strength and rigidity."
+            answer: "They lower the activation energy hump but never change ΔG.",
+            explanation: "Enzymes catalyze reactions by lowering the activation energy required to reach the transition state. They do not change the overall ΔG or equilibrium position of the reaction."
         },
 
         {
             id: 16,
-            question: "Which bone cells are primarily responsible for producing collagen and new bone matrix?",
+            question: "How do cells successfully drive an unfavorable (endergonic) reaction forward?",
             options: [
-                "Osteoclasts",
-                "Osteocytes",
-                "Osteoblasts",
-                "Osteogenic cells"
+                "By increasing the environmental temperature around the cell",
+                "By coupling it with an exergonic reaction, such as ATP hydrolysis, so the overall sum of free energy is negative",
+                "By completely removing the activation energy barrier without any energy source",
+                "By relying entirely on passive diffusion of heat"
             ],
-            answer: "Osteoblasts",
-            explanation: "Osteoblasts synthesize osteoid, the organic portion of bone matrix, which subsequently becomes mineralized. Osteocytes maintain bone tissue, while osteoclasts resorb bone."
+            answer: "By coupling it with an exergonic reaction, such as ATP hydrolysis, so the overall sum of free energy is negative",
+            explanation: "Cells couple endergonic reactions to favorable exergonic reactions such as ATP hydrolysis. If the combined ΔG is negative, the overall process can proceed spontaneously."
         },
+
+        // =========================================
+        // PART 4: HIGH-ENERGY COMPOUNDS
+        // =========================================
 
         {
             id: 17,
-            question: "What is the main function of osteoclasts in bone tissue?",
+            question: "What is the standard free energy of hydrolysis threshold that defines a \"high-energy\" compound at pH 7.0?",
             options: [
-                "Form new bone matrix",
-                "Act as stem cells for bone repair",
-                "Resorb bone and release its minerals",
-                "Maintain mature bone tissue"
+                "Releases at least 1 kcal/mol",
+                "Releases at least 3 kcal/mol",
+                "Releases at least 7 kcal/mol (approximately 29 kJ/mol)",
+                "Releases at least 20 kcal/mol"
             ],
-            answer: "Resorb bone and release its minerals",
-            explanation: "Osteoclasts break down bone matrix during bone resorption. This supports bone remodeling and helps regulate the release of minerals such as calcium into the bloodstream."
+            answer: "Releases at least 7 kcal/mol (approximately 29 kJ/mol)",
+            explanation: "High-energy compounds are commonly defined in biochemical contexts as compounds whose hydrolysis releases a large amount of free energy, approximately 7 kcal/mol or more under the stated standard biochemical conditions."
         },
-
-        // =========================================
-        // PART 6: ADIPOSE TISSUE AND BLOOD
-        // =========================================
 
         {
             id: 18,
-            question: "Adipose tissue consists largely of cells called adipocytes that are specialized primarily for:",
+            question: "Which of the following represents a correct classification and example of a high-energy compound?\n\nI. Pyrophosphate: ATP\nII. Enol phosphate: Phosphoenolpyruvate (PEP)\nIII. Thiol ester: Acetyl CoA",
             options: [
-                "Mineral storage",
-                "Fat storage",
-                "Oxygen transport",
-                "Producing electrical impulses"
+                "I and II only",
+                "II and III only",
+                "I and III only",
+                "I, II, and III"
             ],
-            answer: "Fat storage",
-            explanation: "Adipocytes store energy in the form of triglycerides. Adipose tissue also provides insulation, cushioning and endocrine signals that influence metabolism."
+            answer: "II and III only",
+            explanation: "PEP is an enol phosphate and acetyl-CoA contains a high-energy thioester bond. ATP is a phosphoanhydride compound rather than a pyrophosphate."
         },
 
         {
             id: 19,
-            question: "If the same amount of stored chemical energy were stored as carbohydrates instead of fat, approximately how much extra body mass might be required under the comparison used in this course material?",
+            question: "Why does ATP sit in the \"middle\" of the high-energy compound energy ladder?",
             options: [
-                "About 10 kg",
-                "About 25 kg",
-                "About 45 kg",
-                "About 100 kg"
+                "It cannot accept or donate phosphate groups under any cellular condition.",
+                "It can easily accept a phosphate from higher-energy donors and donate a phosphate to lower-energy acceptors.",
+                "It has the highest free energy release of all known biological molecules.",
+                "It is chemically inert and unreactive with cellular enzymes."
             ],
-            answer: "About 45 kg",
-            explanation: "The expected answer in this question set is approximately 45 kg. The exact estimate depends on the assumed energy stores, the energy density of the substances and how much associated water is included in the comparison."
+            answer: "It can easily accept a phosphate from higher-energy donors and donate a phosphate to lower-energy acceptors.",
+            explanation: "ATP has an intermediate phosphoryl-transfer potential. It can be synthesized using phosphate donors with higher transfer potential and can transfer phosphate to compounds with lower transfer potential."
         },
+
+        // =========================================
+        // PART 5: ATP STRUCTURE AND FUNCTION
+        // =========================================
 
         {
             id: 20,
-            question: "What is the fluid extracellular matrix in which blood cells are suspended called?",
+            question: "What chemical components make up the structure of an ATP molecule?",
             options: [
-                "Interstitial fluid",
-                "Lymph",
-                "Plasma",
-                "Serum"
+                "Guanine, deoxyribose sugar, and two phosphate groups",
+                "Adenine, ribose sugar, and three phosphate groups",
+                "Cytosine, glucose, and a sulfate group",
+                "Uracil, ribose sugar, and a single phosphate group"
             ],
-            answer: "Plasma",
-            explanation: "Blood plasma is the liquid component of blood in which red blood cells, white blood cells and platelets are suspended. Serum is the fluid remaining after blood has clotted."
+            answer: "Adenine, ribose sugar, and three phosphate groups",
+            explanation: "ATP is composed of the nitrogenous base adenine, the five-carbon sugar ribose, and three phosphate groups."
         },
 
         {
             id: 21,
-            question: "What is the approximate lifespan of a normal human red blood cell (erythrocyte)?",
+            question: "In the chemical structure of ATP, where are the base and the phosphate groups attached to the ribose sugar?",
             options: [
-                "30 days",
-                "60 days",
-                "90 days",
-                "120 days"
+                "Base on the 1' carbon; phosphate groups on the 5' carbon",
+                "Base on the 5' carbon; phosphate groups on the 1' carbon",
+                "Both base and phosphate groups attach to the 3' carbon",
+                "Base on the 2' carbon; phosphate groups on the 4' carbon"
             ],
-            answer: "120 days",
-            explanation: "A normal human red blood cell circulates for approximately 120 days before it is removed, mainly by macrophages in the spleen, liver and other reticuloendothelial tissues."
+            answer: "Base on the 1' carbon; phosphate groups on the 5' carbon",
+            explanation: "The adenine base is attached to the 1′ carbon of ribose through an N-glycosidic bond, while the phosphate chain is attached to the 5′ carbon."
         },
 
         {
             id: 22,
-            question: "Platelets circulating in blood plasma are best described as:",
+            question: "What type of bond connects the first phosphate group to the ribose sugar in ATP, compared to the bonds between the outer phosphate groups?",
             options: [
-                "Specialized nucleated cells",
-                "Membrane-bound fragments derived from megakaryocytes",
-                "Variants of white blood cells",
-                "Protein crystals"
+                "An ester bond holds the first phosphate, while high-energy phosphoanhydride bonds connect the outer phosphates",
+                "High-energy bonds hold the sugar, while ester bonds connect the outer phosphates",
+                "All three phosphate groups are attached via thioester bonds",
+                "Hydrogen bonds connect both the sugar and all phosphate groups"
             ],
-            answer: "Membrane-bound fragments derived from megakaryocytes",
-            explanation: "Platelets are small, membrane-bound cell fragments released by megakaryocytes in the bone marrow. They lack a nucleus and are important in blood clotting and haemostasis."
+            answer: "An ester bond holds the first phosphate, while high-energy phosphoanhydride bonds connect the outer phosphates",
+            explanation: "The α-phosphate is linked to ribose by a phosphoester bond, while the α–β and β–γ phosphate linkages are phosphoanhydride bonds."
         },
-
-        // =========================================
-        // PART 7: MUSCLE TISSUE
-        // =========================================
 
         {
             id: 23,
-            question: "Muscle contraction depends primarily on the interaction between which two proteins?",
+            question: "What is the standard free energy of hydrolysis (ΔG°′) for the conversion of ATP to ADP and inorganic phosphate (Pi)?",
             options: [
-                "Collagen and elastin",
-                "Actin and myosin",
-                "Thrombin and fibrinogen",
-                "Albumin and globulin"
+                "-12.0 kJ/mol",
+                "-30.5 kJ/mol (-7.3 kcal/mol)",
+                "-45.6 kJ/mol",
+                "0.0 kJ/mol"
             ],
-            answer: "Actin and myosin",
-            explanation: "Actin and myosin interact to generate force during muscle contraction. Their sliding interaction is regulated by calcium and associated proteins."
+            answer: "-30.5 kJ/mol (-7.3 kcal/mol)",
+            explanation: "Under standard biochemical conditions, ATP hydrolysis to ADP and Pi has a standard free-energy change of approximately −30.5 kJ/mol, or −7.3 kcal/mol."
         },
 
         {
             id: 24,
-            question: "Skeletal muscle cells are elongated, cylindrical and are commonly called:",
+            question: "Which of the following are recognized as the three main biological functions of ATP in living cells?\n\nI. Active transport of ions through cell membranes (e.g., Na⁺/K⁺ pump)\nII. Synthesis of chemical compounds and macromolecules (anabolism)\nIII. Mechanical work such as muscle contraction and flagella movement",
             options: [
-                "Muscle fibres",
-                "Spindle cells",
-                "Intercalated discs",
-                "Glial cells"
+                "I and II only",
+                "II and III only",
+                "I and III only",
+                "I, II, and III"
             ],
-            answer: "Muscle fibres",
-            explanation: "Skeletal muscle cells are long, cylindrical and multinucleated. Because of their elongated shape, they are commonly referred to as muscle fibres."
+            answer: "I, II, and III",
+            explanation: "ATP provides energy for active transport, drives biosynthetic reactions, and powers mechanical work such as muscle contraction and movement of cellular structures."
         },
 
         {
             id: 25,
-            question: "What is the specialized junction connecting adjacent cardiac muscle cells called?",
+            question: "How do physiological conditions inside a living cell affect the actual free energy change (ΔG) of ATP hydrolysis compared to the standard value (ΔG°′)?",
             options: [
-                "Neuromuscular junction",
-                "Intercalated disc",
-                "Node of Ranvier",
-                "Z-line"
+                "The actual free energy change is much more negative (around -50 to -65 kJ/mol) because cellular ATP/ADP ratios are far above equilibrium.",
+                "The actual free energy change becomes positive, halting all cell work.",
+                "The actual free energy change drops to exactly zero.",
+                "The actual free energy change matches standard conditions precisely."
             ],
-            answer: "Intercalated disc",
-            explanation: "Intercalated discs connect adjacent cardiac muscle cells. They contain structures that provide mechanical attachment and electrical communication, allowing the heart muscle to contract in a coordinated manner."
+            answer: "The actual free energy change is much more negative (around -50 to -65 kJ/mol) because cellular ATP/ADP ratios are far above equilibrium.",
+            explanation: "Inside cells, ATP concentrations and ATP/ADP ratios differ substantially from standard biochemical conditions. Consequently, ATP hydrolysis commonly has a more negative actual ΔG than the standard value of −30.5 kJ/mol."
         },
+
+        // =========================================
+        // PART 6: NERNST EQUATION AND PHOSPHOCREATINE
+        // =========================================
 
         {
             id: 26,
-            question: "How are smooth muscle cells typically described?",
+            question: "Which of the following statements regarding the Nernst redox equation and its parameters are true?",
             options: [
-                "Long, striated and multinucleated",
-                "Short, branched and striated",
-                "Spindle-shaped and non-striated",
-                "Large, flat squamous cells"
+                "The standard Nernst equation uses the ratio of oxidized form over reduced form.",
+                "The term n represents the total temperature in Kelvin.",
+                "The constant 0.0592 is derived from 2.303RT/F at 0°C.",
+                "Redox potential is measured exclusively in units of calories."
             ],
-            answer: "Spindle-shaped and non-striated",
-            explanation: "Smooth muscle cells are typically spindle-shaped, have a single centrally located nucleus and lack the visible striations characteristic of skeletal and cardiac muscle."
+            answer: "The standard Nernst equation uses the ratio of oxidized form over reduced form.",
+            explanation: "The Nernst equation relates electrode potential to the ratio of oxidized and reduced species. The term n represents the number of electrons transferred, while 0.0592 V is associated with 2.303RT/F at approximately 25°C, not 0°C."
         },
-
-        // =========================================
-        // PART 8: NERVOUS TISSUE
-        // =========================================
 
         {
             id: 27,
-            question: "What is a major function of glial cells in nervous tissue?",
+            question: "What is the role of phosphocreatine in muscle tissue?",
             options: [
-                "Transmit electrical signals along long distances as their primary role",
-                "Support neurons, provide metabolic assistance and help maintain electrical insulation",
-                "Produce red blood cells",
-                "Contract to move body parts"
+                "It acts as a permanent structural protein for muscle fibers.",
+                "It serves as a short-term backup compound that quickly re-phosphorylates ADP to ATP during sudden activity.",
+                "It functions as the primary electron acceptor for glycolysis.",
+                "It permanently stores glucose as glycogen."
             ],
-            answer: "Support neurons, provide metabolic assistance and help maintain electrical insulation",
-            explanation: "Glial cells support and protect neurons, regulate their environment and provide metabolic assistance. Some glial cells, such as oligodendrocytes and Schwann cells, form myelin around axons."
+            answer: "It serves as a short-term backup compound that quickly re-phosphorylates ADP to ATP during sudden activity.",
+            explanation: "Phosphocreatine provides a rapid source of phosphate for ATP regeneration. Creatine kinase transfers the phosphate group from phosphocreatine to ADP, producing ATP during periods of high energy demand."
         },
 
         {
             id: 28,
-            question: "What is the principal function of dendrites in a typical neuron?",
+            question: "Which of the following represents a correct conversion or relationship?",
             options: [
-                "Convert electrical signals to chemical signals for muscle cells",
-                "Receive incoming signals and convey their effects toward the cell body",
-                "Form the myelin sheath around the axon",
-                "Release neurotransmitters from the terminal branches as their main function"
+                "1 kcal = 4.184 kJ",
+                "Absolute temperature K = 273 - °C",
+                "Standard free energy is calculated as ΔG°′ = +nFΔE°′",
+                "High-energy cut-off is precisely 7 cal/mol"
             ],
-            answer: "Receive incoming signals and convey their effects toward the cell body",
-            explanation: "Dendrites receive signals from other cells. These inputs produce changes in the neuron's membrane potential that are integrated with other inputs and can influence whether an action potential is generated."
+            answer: "1 kcal = 4.184 kJ",
+            explanation: "One kilocalorie is equal to approximately 4.184 kilojoules. The Kelvin conversion is K = °C + 273.15, and the relationship between free energy and redox potential uses ΔG°′ = −nFΔE°′."
         },
 
         // =========================================
-        // PART 9: ORGAN SYSTEMS AND CELL STRUCTURE
+        // PART 7: THERMODYNAMIC APPLICATIONS
         // =========================================
 
         {
             id: 29,
-            question: "How many major organ systems are commonly identified in humans?",
+            question: "Why can an endothermic reaction (ΔH > 0) still be spontaneous under certain conditions?",
             options: [
-                "Nine",
-                "Ten",
-                "Eleven",
-                "Twelve"
+                "If the temperature is absolute zero (0 K)",
+                "If the increase in entropy (ΔS) is large enough to make the -TΔS term dominate, resulting in a negative ΔG",
+                "If an enzyme completely eliminates the enthalpy of the system",
+                "Endothermic reactions can never be spontaneous under any circumstance"
             ],
-            answer: "Eleven",
-            explanation: "Human anatomy is commonly organized into eleven major organ systems. The exact grouping can vary slightly between textbooks, but eleven is the standard answer in many introductory biology courses."
+            answer: "If the increase in entropy (ΔS) is large enough to make the -TΔS term dominate, resulting in a negative ΔG",
+            explanation: "From ΔG = ΔH − TΔS, an endothermic reaction can still have a negative ΔG if the positive entropy change is sufficiently large, particularly at an appropriate temperature."
         },
 
         {
             id: 30,
-            question: "What are the three major parts of a typical human cell?",
+            question: "Which correction or clarification is noted regarding the common misconceptions in bioenergetics slides?",
             options: [
-                "Cell membrane, nucleus and cytoplasm",
-                "Cell wall, cell membrane and nucleus",
-                "Mitochondria, nucleus and cytoplasm",
-                "Ribosome, cytoplasm and membrane"
+                "Spontaneous reactions always occur instantaneously without delay.",
+                "Both exergonic and endergonic reactions require an activation-energy barrier to proceed.",
+                "ATP synthase creates ATP directly from raw AMP without intermediate steps.",
+                "High-energy compounds liberate less energy than standard ATP."
             ],
-            answer: "Cell membrane, nucleus and cytoplasm",
-            explanation: "A typical human cell has a plasma membrane, cytoplasm and nucleus. The plasma membrane forms the boundary, the cytoplasm contains the cytosol and organelles, and the nucleus houses most of the cell's genetic material."
+            answer: "Both exergonic and endergonic reactions require an activation-energy barrier to proceed.",
+            explanation: "Spontaneity and reaction rate are different concepts. Even a thermodynamically favorable reaction can require an activation-energy barrier before it proceeds at an appreciable rate. Enzymes lower this activation energy without changing ΔG."
         }
 
     ]
