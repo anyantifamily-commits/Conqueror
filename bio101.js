@@ -16,7 +16,7 @@ const QUIZ_CONFIG = {
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
 
-    timeLimit: 60,
+    timeLimit: 15,
     maxQuestions: 30,
     passMark: 50,
     allowRetake: false,
