@@ -11,7 +11,7 @@ const QUIZ_CONFIG = {
     title: "BIO 101 — Cell Biology II",
 
     // New question set: version 5.
-    quizVersion: 5,
+    quizVersion: 6,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
@@ -491,6 +491,8 @@ let timerInterval = null;
 
 let quizSubmitted = false;
 
+let quizStarted = false;
+
 let studentName = "";
 
 
@@ -681,6 +683,8 @@ if (studentNameInput) {
 
 function initializeQuiz() {
 
+    quizStarted = true;
+
     quizTitle.textContent =
         QUIZ_CONFIG.title;
 
@@ -691,6 +695,60 @@ function initializeQuiz() {
     startTimer();
 
 }
+
+
+/* =========================================
+   ANTI-TAB / PAGE-LEAVE PROTECTION
+========================================= */
+
+/*
+   Once the actual quiz has started:
+
+   - Switching browser tabs submits the quiz.
+   - Leaving the browser/app submits the quiz.
+   - Navigating away from the page submits the quiz.
+
+   quizSubmitted prevents duplicate submissions.
+*/
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        if (
+            document.visibilityState === "hidden" &&
+            quizStarted &&
+            !quizSubmitted
+        ) {
+
+            submitQuiz();
+
+        }
+
+    }
+);
+
+
+/*
+   Additional protection for page navigation
+   or the page being hidden/unloaded.
+*/
+
+window.addEventListener(
+    "pagehide",
+    () => {
+
+        if (
+            quizStarted &&
+            !quizSubmitted
+        ) {
+
+            submitQuiz();
+
+        }
+
+    }
+);
 
 
 /* =========================================
