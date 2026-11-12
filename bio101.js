@@ -11,7 +11,7 @@ const QUIZ_CONFIG = {
     title: "BIO 101 — Bioenergetics",
 
     // New question set: version 6.
-    quizVersion: 7,
+    quizVersion: 6,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
