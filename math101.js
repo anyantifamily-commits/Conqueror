@@ -1,7 +1,7 @@
 /* =========================================
    CONQUERORS LABS
-   MATH 101 — INTEGRAL CALCULUS
-   QUIZ ENGINE — VERSION 3
+   MATH 101 — SEQUENCE & SERIES
+   QUIZ ENGINE — VERSION 5
 ========================================= */
 
 
@@ -10,431 +10,353 @@
 ========================================= */
 
 const QUIZ_CONFIG = {
-    title: "MATH 101 — Integral Calculus",
+    title: "MATH 101 — Sequence & Series",
     quizId: "math101",
-    quizVersion: 4,
+    quizVersion: 5,
     timeLimit: 30,
-    maxQuestions: 30,
+    maxQuestions: 25,
     allowRetake: false,
     passMark: 50,
 
     questions: [
 
         // =====================================
-        // PART 1: INDEFINITE INTEGRALS & BASIC POWER RULE
+        // PART 1: ARITHMETIC PROGRESSION
         // =====================================
 
         {
             id: 1,
-            question: "What is the indefinite integral ∫x⁴ dx?",
+            question: "What is the 15th term of the arithmetic progression: 7, 13, 19, 25, ...?",
             options: [
-                "4x³ + C",
-                "x⁵/5 + C",
-                "5x⁵ + C",
-                "x⁴/4 + C"
+                "85",
+                "91",
+                "97",
+                "103"
             ],
             answer: "B",
-            explanation: "Using the power rule, increase the power by 1 and divide by the new power: ∫x⁴ dx = x⁵/5 + C."
+            explanation: "For an AP, Tₙ = a + (n − 1)d. Here a = 7, d = 6 and n = 15. Therefore T₁₅ = 7 + 14(6) = 91."
         },
 
         {
             id: 2,
-            question: "Evaluate ∫(3x² + 4x − 5) dx.",
+            question: "Find the sum of the first 20 terms of the arithmetic series: 4 + 9 + 14 + 19 + ...",
             options: [
-                "6x + 4 + C",
-                "x³ + 2x² − 5x + C",
-                "3x³ + 4x² − 5x + C",
-                "x³ + 4x² − 5x + C"
+                "990",
+                "1010",
+                "1030",
+                "1050"
             ],
-            answer: "B",
-            explanation: "Integrate each term separately: ∫3x²dx = x³, ∫4xdx = 2x², and ∫−5dx = −5x."
+            answer: "C",
+            explanation: "Here a = 4, d = 5 and n = 20. T₂₀ = 4 + 19(5) = 99. Therefore S₂₀ = 20/2 × (4 + 99) = 10 × 103 = 1030."
         },
 
         {
             id: 3,
-            question: "What is ∫7 dx?",
+            question: "In a geometric progression, the first term is 3 and the common ratio is 2. What is the 7th term?",
             options: [
-                "0",
-                "7",
-                "7x + C",
-                "7x² + C"
+                "96",
+                "192",
+                "384",
+                "768"
             ],
-            answer: "C",
-            explanation: "The integral of a constant k is kx + C. Therefore, ∫7 dx = 7x + C."
+            answer: "B",
+            explanation: "For a GP, Tₙ = arⁿ⁻¹. Therefore T₇ = 3(2⁶) = 3 × 64 = 192."
         },
 
         {
             id: 4,
-            question: "Find ∫1/x³ dx.",
+            question: "The 4th term of an AP is 14 and the 10th term is 32. What is the common difference?",
             options: [
-                "−1/(2x²) + C",
-                "1/(4x⁴) + C",
-                "−3/x⁴ + C",
-                "ln|x³| + C"
+                "2",
+                "3",
+                "4",
+                "6"
             ],
-            answer: "A",
-            explanation: "Rewrite x⁻³ and apply the power rule: x⁻²/−2 + C = −1/(2x²) + C."
+            answer: "B",
+            explanation: "T₄ = a + 3d = 14 and T₁₀ = a + 9d = 32. Subtracting gives 6d = 18, so d = 3."
         },
 
         {
             id: 5,
-            question: "Evaluate ∫√x dx.",
+            question: "Which of the following statements are true for the geometric progression 81, 27, 9, 3, ...? I. The common ratio is 1/3. II. The 6th term is 1/3. III. The sum to infinity is 121.5.",
             options: [
-                "1/(2√x) + C",
-                "(2/3)x³ᐟ² + C",
-                "(3/2)x³ᐟ² + C",
-                "x¹ᐟ² + C"
+                "I and II only",
+                "I and III only",
+                "II and III only",
+                "I, II, and III"
             ],
-            answer: "B",
-            explanation: "Since √x = x¹ᐟ², the power rule gives x³ᐟ²/(3/2) = (2/3)x³ᐟ² + C."
+            answer: "D",
+            explanation: "The common ratio is 1/3. T₆ = 81(1/3)⁵ = 1/3. Also, S∞ = 81/(1 − 1/3) = 121.5. Therefore all three statements are true."
         },
 
         {
             id: 6,
-            question: "Evaluate ∫(x³ − 1/x²) dx.",
+            question: "If x + 1, 3x − 2, and 4x + 1 are three consecutive terms of an arithmetic progression, what is the value of x?",
             options: [
-                "x⁴/4 + 1/x + C",
-                "x⁴/4 − 1/x + C",
-                "3x² + 2/x³ + C",
-                "x⁴/4 + ln|x²| + C"
+                "2",
+                "4",
+                "6",
+                "8"
             ],
-            answer: "A",
-            explanation: "Rewrite 1/x² as x⁻². Integrating gives x⁴/4 − (−x⁻¹) = x⁴/4 + 1/x + C."
+            answer: "C",
+            explanation: "For three consecutive AP terms, twice the middle term equals the sum of the first and third: 2(3x − 2) = (x + 1) + (4x + 1). Solving gives x = 6."
         },
-
-
-        // =====================================
-        // PART 2: EXPONENTIAL, LOGARITHMIC &
-        // TRIGONOMETRIC INTEGRALS
-        // =====================================
 
         {
             id: 7,
-            question: "What is ∫eˣ dx?",
+            question: "Find the sum to infinity of the geometric series: 16 + 8 + 4 + 2 + ...",
             options: [
-                "eˣ + C",
-                "xeˣ⁻¹ + C",
-                "eˣ⁺¹/(x + 1) + C",
-                "ln(eˣ) + C"
+                "30",
+                "32",
+                "36",
+                "64"
             ],
-            answer: "A",
-            explanation: "The derivative of eˣ is eˣ, so its antiderivative is also eˣ + C."
+            answer: "B",
+            explanation: "S∞ = a/(1 − r). Here a = 16 and r = 1/2. Therefore S∞ = 16/(1 − 1/2) = 32."
         },
 
         {
             id: 8,
-            question: "What is ∫1/x dx for x ≠ 0?",
+            question: "How many terms of the arithmetic progression 5, 9, 13, 17, ... are needed to give a sum of 230?",
             options: [
-                "−1/x² + C",
-                "1 + C",
-                "ln|x| + C",
-                "eˣ + C"
+                "8",
+                "9",
+                "10",
+                "11"
             ],
             answer: "C",
-            explanation: "The standard reciprocal integral is ∫(1/x)dx = ln|x| + C."
+            explanation: "Using Sₙ = n/2[2a + (n − 1)d], we get 230 = n/2[10 + 4(n − 1)] = n(2n + 3). Solving gives n = 10."
         },
 
         {
             id: 9,
-            question: "Evaluate ∫cos(x) dx.",
+            question: "The 3rd term of a GP is 12 and the 6th term is 96. What is the first term?",
             options: [
-                "−sin(x) + C",
-                "sin(x) + C",
-                "−cos(x) + C",
-                "tan(x) + C"
+                "2",
+                "3",
+                "4",
+                "6"
             ],
             answer: "B",
-            explanation: "Since d/dx[sin(x)] = cos(x), the integral of cos(x) is sin(x) + C."
+            explanation: "T₃ = ar² = 12 and T₆ = ar⁵ = 96. Dividing gives r³ = 8, so r = 2. Therefore a(2²) = 12, giving a = 3."
         },
 
         {
             id: 10,
-            question: "Evaluate ∫sin(x) dx.",
+            question: "Insert three arithmetic means between 6 and 26.",
             options: [
-                "cos(x) + C",
-                "−cos(x) + C",
-                "sin(x) + C",
-                "−sin(x) + C"
+                "10, 15, 20",
+                "11, 16, 21",
+                "12, 16, 20",
+                "10, 14, 18"
             ],
             answer: "B",
-            explanation: "Since d/dx[cos(x)] = −sin(x), the antiderivative of sin(x) is −cos(x) + C."
+            explanation: "There are five terms in total: 6, _, _, _, 26. The common difference is (26 − 6)/4 = 5. Therefore the three arithmetic means are 11, 16 and 21."
         },
+
+
+        // =====================================
+        // PART 2: GEOMETRIC PROGRESSION
+        // =====================================
 
         {
             id: 11,
-            question: "What is ∫sec²(x) dx?",
+            question: "Which of the following sequences are geometric progressions? I. 2, −6, 18, −54, ... II. 1, 4, 9, 16, ... III. 5, 5, 5, 5, ...",
             options: [
-                "tan(x) + C",
-                "−cot(x) + C",
-                "sec(x)tan(x) + C",
-                "2sec(x) + C"
+                "I only",
+                "I and II only",
+                "I and III only",
+                "I, II, and III"
             ],
-            answer: "A",
-            explanation: "The derivative of tan(x) is sec²(x), so ∫sec²(x)dx = tan(x) + C."
+            answer: "C",
+            explanation: "Sequence I has common ratio −3. Sequence II does not have a constant ratio. Sequence III has common ratio 1. Therefore I and III only are geometric progressions."
         },
 
         {
             id: 12,
-            question: "Find ∫e³ˣ dx.",
+            question: "The sum of the first n terms of an AP is given by Sₙ = 3n² + 2n. What is the 5th term of this progression?",
             options: [
-                "3e³ˣ + C",
-                "(1/3)e³ˣ + C",
-                "e³ˣ + C",
-                "(1/4)e⁴ˣ + C"
+                "29",
+                "32",
+                "65",
+                "85"
             ],
-            answer: "B",
-            explanation: "Using substitution or the exponential rule, ∫e³ˣdx = (1/3)e³ˣ + C."
+            answer: "A",
+            explanation: "T₅ = S₅ − S₄. S₅ = 3(25) + 10 = 85, while S₄ = 3(16) + 8 = 56. Therefore T₅ = 85 − 56 = 29."
         },
-
-
-        // =====================================
-        // PART 3: DEFINITE INTEGRALS &
-        // FUNDAMENTAL THEOREM OF CALCULUS
-        // =====================================
 
         {
             id: 13,
-            question: "Evaluate ∫₀³ 2x dx.",
+            question: "If k − 2, k + 2, and k + 10 form a geometric progression, find the value of k.",
             options: [
-                "3",
+                "−6",
+                "2",
                 "6",
-                "9",
-                "18"
+                "8"
             ],
-            answer: "C",
-            explanation: "An antiderivative of 2x is x². Evaluating from 0 to 3 gives 3² − 0² = 9."
+            answer: "A",
+            explanation: "For three consecutive GP terms, (k + 2)² = (k − 2)(k + 10). Expanding and simplifying gives 4k + 24 = 0, so k = −6."
         },
 
         {
             id: 14,
-            question: "What is the value of ∫₁² 3x² dx?",
+            question: "What is the sum of all multiples of 4 between 10 and 98?",
             options: [
-                "7",
-                "8",
-                "9",
-                "12"
+                "1144",
+                "1188",
+                "1200",
+                "1232"
             ],
-            answer: "A",
-            explanation: "An antiderivative is x³. Therefore, [x³]₁² = 2³ − 1³ = 8 − 1 = 7."
+            answer: "B",
+            explanation: "The multiples are 12, 16, 20, ..., 96. This is an AP with a = 12, l = 96 and d = 4. There are 22 terms. S = 22/2(12 + 96) = 11 × 108 = 1188."
         },
 
         {
             id: 15,
-            question: "Evaluate ∫₀¹(x² + 1) dx.",
+            question: "A geometric progression has a first term of 10 and a sum to infinity of 25. What is its common ratio?",
             options: [
-                "1/3",
-                "4/3",
-                "2",
-                "2/3"
+                "2/5",
+                "3/5",
+                "1/2",
+                "4/5"
             ],
-            answer: "B",
-            explanation: "Integrate to x³/3 + x. Evaluating from 0 to 1 gives 1/3 + 1 = 4/3."
+            answer: "A",
+            explanation: "Using S∞ = a/(1 − r), 25 = 10/(1 − r). Therefore 1 − r = 2/5, giving r = 3/5."
         },
 
         {
             id: 16,
-            question: "Evaluate ∫₀π sin(x) dx.",
+            question: "Which of the following conditions must hold for a geometric series with first term a (a ≠ 0) and common ratio r to converge to a finite sum to infinity? I. |r| < 1 II. −1 < r < 1 III. r > 1",
             options: [
-                "0",
-                "1",
-                "2",
-                "−2"
+                "I only",
+                "II only",
+                "I and II only",
+                "I and III only"
             ],
             answer: "C",
-            explanation: "An antiderivative of sin(x) is −cos(x). Thus −cos(π) − [−cos(0)] = 1 + 1 = 2."
+            explanation: "A geometric series converges to a finite sum when |r| < 1. This is equivalent to −1 < r < 1. Therefore I and II are both correct."
         },
 
         {
             id: 17,
-            question: "What is the value of ∫₁ᵉ (1/x) dx?",
+            question: "In an AP, the sum of the 2nd and 5th terms is 23, and the 7th term is 22. Find the first term.",
             options: [
-                "0",
-                "1",
-                "e",
-                "e − 1"
+                "2",
+                "4",
+                "6",
+                "8"
             ],
             answer: "B",
-            explanation: "The antiderivative is ln|x|. Therefore, ln(e) − ln(1) = 1 − 0 = 1."
+            explanation: "Let the first term be a and common difference be d. Then a₂ + a₅ = (a + d) + (a + 4d) = 2a + 5d = 23. Also a₇ = a + 6d = 22. Solving gives d = 3 and a = 4."
         },
 
         {
             id: 18,
-            question: "If ∫₀⁴ f(x) dx = 10, what is ∫₀⁴ 3f(x) dx?",
+            question: "Find the sum of the first 6 terms of the geometric progression: 2, 6, 18, 54, ...",
             options: [
-                "10",
-                "13",
-                "30",
-                "40"
+                "486",
+                "728",
+                "729",
+                "1456"
             ],
-            answer: "C",
-            explanation: "By the constant multiple rule, ∫₀⁴3f(x)dx = 3∫₀⁴f(x)dx = 3(10) = 30."
+            answer: "B",
+            explanation: "Here a = 2, r = 3 and n = 6. S₆ = a(r⁶ − 1)/(r − 1) = 2(729 − 1)/2 = 728."
         },
-
-
-        // =====================================
-        // PART 4: INTEGRATION BY SUBSTITUTION
-        // =====================================
 
         {
             id: 19,
-            question: "Evaluate ∫(2x + 1)⁴ dx.",
+            question: "What is the positive geometric mean between 8 and 32?",
             options: [
-                "(2x + 1)⁵/5 + C",
-                "(2x + 1)⁵/10 + C",
-                "4(2x + 1)³ + C",
-                "(2x + 1)⁵/2 + C"
+                "12",
+                "16",
+                "20",
+                "24"
             ],
             answer: "B",
-            explanation: "Let u = 2x + 1, so du = 2dx. Therefore, the integral is (1/2)(u⁵/5) = (2x + 1)⁵/10 + C."
+            explanation: "The geometric mean G satisfies G² = 8 × 32 = 256. Therefore G = √256 = 16."
         },
 
         {
             id: 20,
-            question: "Find ∫2x cos(x²) dx.",
+            question: "A ball dropped from a height of 20 m rebounds to 3/4 of its previous height on each bounce. What is the total vertical distance the ball travels before coming to rest?",
             options: [
-                "sin(x²) + C",
-                "−sin(x²) + C",
-                "x²sin(x²) + C",
-                "2sin(x²) + C"
+                "80 m",
+                "120 m",
+                "140 m",
+                "160 m"
             ],
-            answer: "A",
-            explanation: "Let u = x², so du = 2x dx. The integral becomes ∫cos(u)du = sin(u) + C = sin(x²) + C."
+            answer: "C",
+            explanation: "The first drop is 20 m. The upward and downward rebound distances form a GP beginning with 15 m and ratio 3/4. Total distance = 20 + 2[15/(1 − 3/4)] = 20 + 120 = 140 m."
         },
+
+
+        // =====================================
+        // PART 3: MIXED AP & GP PROBLEMS
+        // =====================================
 
         {
             id: 21,
-            question: "Evaluate ∫xeˣ² dx.",
+            question: "Which of the following are true about an arithmetic progression with first term a and common difference d? I. Tₙ − Tₙ₋₁ = d for all n > 1. II. If d = 0, the sequence is both an AP and a GP (provided a ≠ 0). III. The sum of terms equidistant from the beginning and end is constant.",
             options: [
-                "eˣ² + C",
-                "2eˣ² + C",
-                "(1/2)eˣ² + C",
-                "(x²/2)eˣ² + C"
+                "I and II only",
+                "I and III only",
+                "II and III only",
+                "I, II, and III"
             ],
-            answer: "C",
-            explanation: "Let u = x², so du = 2x dx. Hence ∫xeˣ²dx = (1/2)∫eᵘdu = (1/2)eˣ² + C."
+            answer: "D",
+            explanation: "All three statements are true. Consecutive AP terms differ by d, a constant non-zero sequence with d = 0 has GP ratio 1, and equidistant terms in an AP have a constant sum."
         },
 
         {
             id: 22,
-            question: "Find ∫[2x/(x² + 1)] dx.",
+            question: "The 2nd term of a GP is −6 and the 5th term is 48. Find the common ratio.",
             options: [
-                "1/(x² + 1) + C",
-                "ln(x² + 1) + C",
-                "2ln|x² + 1| + C",
-                "(x² + 1)² + C"
+                "−2",
+                "2",
+                "−3",
+                "3"
             ],
-            answer: "B",
-            explanation: "Let u = x² + 1, so du = 2x dx. The integral becomes ∫du/u = ln|u| + C = ln(x² + 1) + C."
+            answer: "A",
+            explanation: "T₂ = ar = −6 and T₅ = ar⁴ = 48. Dividing gives r³ = 48/(−6) = −8. Therefore r = −2."
         },
 
         {
             id: 23,
-            question: "Evaluate ∫sin(5x) dx.",
+            question: "How many terms are in the arithmetic progression: 11, 15, 19, ..., 95?",
             options: [
-                "5cos(5x) + C",
-                "−(1/5)cos(5x) + C",
-                "(1/5)cos(5x) + C",
-                "−cos(5x) + C"
+                "20",
+                "21",
+                "22",
+                "23"
             ],
             answer: "B",
-            explanation: "Let u = 5x, so du = 5dx. Therefore, ∫sin(5x)dx = −(1/5)cos(5x) + C."
+            explanation: "Using Tₙ = a + (n − 1)d, 95 = 11 + (n − 1)4. Thus 84 = 4(n − 1), so n − 1 = 21 and n = 22."
         },
 
         {
             id: 24,
-            question: "Find ∫3x²(x³ + 2)⁵ dx.",
+            question: "The sum of three numbers in an AP is 27, and their product is 504. What are the three numbers?",
             options: [
-                "(x³ + 2)⁶/6 + C",
-                "(x³ + 2)⁶ + C",
-                "(x³ + 2)⁶/18 + C",
-                "15x(x³ + 2)⁴ + C"
+                "4, 9, 14",
+                "6, 9, 12",
+                "7, 9, 11",
+                "5, 9, 13"
             ],
             answer: "A",
-            explanation: "Let u = x³ + 2, so du = 3x²dx. Therefore, ∫u⁵du = u⁶/6 + C."
+            explanation: "For three AP terms with sum 27, the middle term is 9. Let the terms be 9 − d, 9, 9 + d. Their product is 9(81 − d²) = 504, giving d² = 25 and d = 5. Therefore the numbers are 4, 9 and 14."
         },
-
-
-        // =====================================
-        // PART 5: BASIC APPLICATIONS &
-        // INTEGRATION BY PARTS
-        // =====================================
 
         {
             id: 25,
-            question: "Find the area bounded by y = x², the x-axis, x = 0 and x = 3.",
+            question: "Express the recurring decimal 0.̅45 (0.454545...) as a fraction in its simplest form using an infinite geometric series.",
             options: [
-                "3",
-                "9",
-                "18",
-                "27"
+                "9/20",
+                "5/11",
+                "4/9",
+                "45/100"
             ],
             answer: "B",
-            explanation: "The area is ∫₀³x²dx = [x³/3]₀³ = 27/3 = 9."
-        },
-
-        {
-            id: 26,
-            question: "Find the area under y = 2x from x = 1 to x = 4.",
-            options: [
-                "8",
-                "12",
-                "15",
-                "16"
-            ],
-            answer: "C",
-            explanation: "The area is ∫₁⁴2x dx = [x²]₁⁴ = 16 − 1 = 15."
-        },
-
-        {
-            id: 27,
-            question: "Using integration by parts, evaluate ∫xeˣ dx.",
-            options: [
-                "xeˣ + C",
-                "xeˣ − eˣ + C",
-                "(x²/2)eˣ + C",
-                "eˣ − xeˣ + C"
-            ],
-            answer: "B",
-            explanation: "Take u = x and dv = eˣdx. Then du = dx and v = eˣ. Therefore ∫xeˣdx = xeˣ − ∫eˣdx = xeˣ − eˣ + C."
-        },
-
-        {
-            id: 28,
-            question: "What is the average value of f(x) = 4x on [0, 2]?",
-            options: [
-                "2",
-                "4",
-                "8",
-                "16"
-            ],
-            answer: "B",
-            explanation: "Average value = 1/(2 − 0) × ∫₀²4x dx = (1/2)[2x²]₀² = 4."
-        },
-
-        {
-            id: 29,
-            question: "Evaluate ∫1/(1 + x²) dx.",
-            options: [
-                "ln(1 + x²) + C",
-                "arctan(x) + C",
-                "arcsin(x) + C",
-                "−1/x + C"
-            ],
-            answer: "B",
-            explanation: "The standard inverse-trigonometric integral is ∫1/(1 + x²)dx = arctan(x) + C."
-        },
-
-        {
-            id: 30,
-            question: "Evaluate ∫1/√(1 − x²) dx.",
-            options: [
-                "arcsin(x) + C",
-                "arccos(x) + C",
-                "arctan(x) + C",
-                "ln|√(1 − x²)| + C"
-            ],
-            answer: "A",
-            explanation: "The standard inverse-trigonometric integral is ∫1/√(1 − x²)dx = arcsin(x) + C."
+            explanation: "0.454545... = 0.45 + 0.0045 + 0.000045 + ... This is a GP with a = 0.45 and r = 0.01. Therefore S∞ = 0.45/(1 − 0.01) = 0.45/0.99 = 45/99 = 5/11."
         }
 
     ]
@@ -442,7 +364,7 @@ const QUIZ_CONFIG = {
 
 
 /* =========================================
-   SETTINGS — VERSION 3
+   SETTINGS
 ========================================= */
 
 const COMPLETION_KEY =
@@ -621,37 +543,56 @@ function showQuestion() {
 
     q.options.forEach((optionText, index) => {
 
-        const letter = String.fromCharCode(65 + index);
+        const letter =
+            String.fromCharCode(65 + index);
 
-        const option = document.createElement("button");
+        const option =
+            document.createElement("button");
+
         option.type = "button";
         option.className = "option";
 
-        if (userAnswers[currentQuestion] === letter) {
+        if (
+            userAnswers[currentQuestion] === letter
+        ) {
             option.classList.add("selected");
         }
 
-        const optionLetter = document.createElement("span");
-        optionLetter.className = "option-letter";
-        optionLetter.textContent = letter;
+        const optionLetter =
+            document.createElement("span");
 
-        const text = document.createElement("span");
-        text.className = "option-text";
-        text.textContent = optionText;
+        optionLetter.className =
+            "option-letter";
+
+        optionLetter.textContent =
+            letter;
+
+        const text =
+            document.createElement("span");
+
+        text.className =
+            "option-text";
+
+        text.textContent =
+            optionText;
 
         option.appendChild(optionLetter);
         option.appendChild(text);
 
-        option.addEventListener("click", () => {
+        option.addEventListener(
+            "click",
+            () => {
 
-            if (quizSubmitted) return;
+                if (quizSubmitted) return;
 
-            userAnswers[currentQuestion] = letter;
+                userAnswers[currentQuestion] =
+                    letter;
 
-            showQuestion();
-            updateProgress();
-            renderNavigator();
-        });
+                showQuestion();
+                updateProgress();
+                renderNavigator();
+            }
+        );
 
         optionsContainer.appendChild(option);
     });
@@ -671,36 +612,50 @@ function showQuestion() {
    NAVIGATION
 ========================================= */
 
-prevBtn.addEventListener("click", () => {
+prevBtn.addEventListener(
+    "click",
+    () => {
 
-    if (currentQuestion > 0 && !quizSubmitted) {
-        currentQuestion--;
-        showQuestion();
-        renderNavigator();
+        if (
+            currentQuestion > 0 &&
+            !quizSubmitted
+        ) {
+            currentQuestion--;
+
+            showQuestion();
+            renderNavigator();
+        }
     }
-});
+);
 
 
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener(
+    "click",
+    () => {
 
-    if (
-        currentQuestion < questions.length - 1 &&
-        !quizSubmitted
-    ) {
-        currentQuestion++;
-        showQuestion();
-        renderNavigator();
+        if (
+            currentQuestion <
+                questions.length - 1 &&
+            !quizSubmitted
+        ) {
+            currentQuestion++;
+
+            showQuestion();
+            renderNavigator();
+        }
     }
-});
+);
 
 
 function updateNavigationButtons() {
 
     prevBtn.disabled =
-        currentQuestion === 0 || quizSubmitted;
+        currentQuestion === 0 ||
+        quizSubmitted;
 
     nextBtn.disabled =
-        currentQuestion === questions.length - 1 ||
+        currentQuestion ===
+            questions.length - 1 ||
         quizSubmitted;
 }
 
@@ -715,11 +670,16 @@ function renderNavigator() {
 
     questions.forEach((_, index) => {
 
-        const button = document.createElement("button");
+        const button =
+            document.createElement("button");
 
         button.type = "button";
-        button.className = "question-number-btn";
-        button.textContent = index + 1;
+
+        button.className =
+            "question-number-btn";
+
+        button.textContent =
+            index + 1;
 
         if (userAnswers[index]) {
             button.classList.add("answered");
@@ -729,15 +689,19 @@ function renderNavigator() {
             button.classList.add("current");
         }
 
-        button.addEventListener("click", () => {
+        button.addEventListener(
+            "click",
+            () => {
 
-            if (quizSubmitted) return;
+                if (quizSubmitted) return;
 
-            currentQuestion = index;
+                currentQuestion =
+                    index;
 
-            showQuestion();
-            renderNavigator();
-        });
+                showQuestion();
+                renderNavigator();
+            }
+        );
 
         questionNavigator.appendChild(button);
     });
@@ -751,7 +715,9 @@ function renderNavigator() {
 function updateProgress() {
 
     const answered =
-        userAnswers.filter(answer => answer !== null).length;
+        userAnswers.filter(
+            answer => answer !== null
+        ).length;
 
     const percentage =
         (answered / questions.length) * 100;
@@ -775,42 +741,67 @@ function startTimer() {
 
     updateTimerDisplay();
 
-    timerInterval = setInterval(() => {
+    timerInterval =
+        setInterval(() => {
 
-        if (quizSubmitted) {
-            clearInterval(timerInterval);
-            return;
-        }
+            if (quizSubmitted) {
 
-        timeRemaining--;
+                clearInterval(
+                    timerInterval
+                );
 
-        updateTimerDisplay();
+                return;
+            }
 
-        if (timeRemaining <= 0) {
-            clearInterval(timerInterval);
-            submitQuiz(true);
-        }
+            timeRemaining--;
 
-    }, 1000);
+            updateTimerDisplay();
+
+            if (timeRemaining <= 0) {
+
+                clearInterval(
+                    timerInterval
+                );
+
+                submitQuiz(true);
+            }
+
+        }, 1000);
 }
 
 
 function updateTimerDisplay() {
 
-    const minutes = Math.floor(timeRemaining / 60);
-    const seconds = timeRemaining % 60;
+    const minutes =
+        Math.floor(
+            timeRemaining / 60
+        );
+
+    const seconds =
+        timeRemaining % 60;
 
     timer.textContent =
         `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 
-    timerBox.classList.remove("warning", "danger");
+    timerBox.classList.remove(
+        "warning",
+        "danger"
+    );
 
-    if (timeRemaining <= 300 && timeRemaining > 60) {
-        timerBox.classList.add("warning");
+    if (
+        timeRemaining <= 300 &&
+        timeRemaining > 60
+    ) {
+        timerBox.classList.add(
+            "warning"
+        );
     }
 
     if (timeRemaining <= 60) {
-        timerBox.classList.add("danger");
+
+        timerBox.classList.add(
+            "danger"
+        );
     }
 }
 
@@ -819,26 +810,41 @@ function updateTimerDisplay() {
    SUBMIT MODAL
 ========================================= */
 
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener(
+    "click",
+    () => {
 
-    if (quizSubmitted) return;
+        if (quizSubmitted) return;
 
-    submitModal.classList.remove("hidden");
-});
-
-
-cancelSubmit.addEventListener("click", () => {
-
-    submitModal.classList.add("hidden");
-});
+        submitModal.classList.remove(
+            "hidden"
+        );
+    }
+);
 
 
-confirmSubmit.addEventListener("click", () => {
+cancelSubmit.addEventListener(
+    "click",
+    () => {
 
-    submitModal.classList.add("hidden");
+        submitModal.classList.add(
+            "hidden"
+        );
+    }
+);
 
-    openNameModal();
-});
+
+confirmSubmit.addEventListener(
+    "click",
+    () => {
+
+        submitModal.classList.add(
+            "hidden"
+        );
+
+        openNameModal();
+    }
+);
 
 
 /* =========================================
@@ -849,48 +855,72 @@ function openNameModal() {
 
     studentNameInput.value = "";
 
-    nameError.style.display = "none";
+    nameError.style.display =
+        "none";
 
-    nameModal.classList.remove("hidden");
+    nameModal.classList.remove(
+        "hidden"
+    );
 
     setTimeout(() => {
+
         studentNameInput.focus();
+
     }, 100);
 }
 
 
-cancelName.addEventListener("click", () => {
+cancelName.addEventListener(
+    "click",
+    () => {
 
-    nameModal.classList.add("hidden");
-});
-
-
-confirmName.addEventListener("click", () => {
-
-    if (quizSubmitted) return;
-
-    const name = studentNameInput.value.trim();
-
-    if (!name) {
-        nameError.style.display = "block";
-        studentNameInput.focus();
-        return;
+        nameModal.classList.add(
+            "hidden"
+        );
     }
-
-    studentName = name.substring(0, 60);
-
-    nameModal.classList.add("hidden");
-
-    submitQuiz(false);
-});
+);
 
 
-studentNameInput.addEventListener("keydown", event => {
+confirmName.addEventListener(
+    "click",
+    () => {
 
-    if (event.key === "Enter") {
-        confirmName.click();
+        if (quizSubmitted) return;
+
+        const name =
+            studentNameInput.value.trim();
+
+        if (!name) {
+
+            nameError.style.display =
+                "block";
+
+            studentNameInput.focus();
+
+            return;
+        }
+
+        studentName =
+            name.substring(0, 60);
+
+        nameModal.classList.add(
+            "hidden"
+        );
+
+        submitQuiz(false);
     }
-});
+);
+
+
+studentNameInput.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key === "Enter") {
+            confirmName.click();
+        }
+    }
+);
 
 
 /* =========================================
@@ -911,18 +941,32 @@ async function saveQuizResult(
             await supabaseClient.rpc(
                 "submit_quiz_result",
                 {
-                    p_student_name: studentName || "Anonymous",
-                    p_quiz_id: QUIZ_ID,
-                    p_quiz_title: QUIZ_CONFIG.title,
-                    p_score: score,
-                    p_total_questions: totalQuestions,
-                    p_percentage: percentage,
+                    p_student_name:
+                        studentName ||
+                        "Anonymous",
+
+                    p_quiz_id:
+                        QUIZ_ID,
+
+                    p_quiz_title:
+                        QUIZ_CONFIG.title,
+
+                    p_score:
+                        score,
+
+                    p_total_questions:
+                        totalQuestions,
+
+                    p_percentage:
+                        percentage,
+
                     p_qualified_for_leaderboard:
                         qualifiedForLeaderboard
                 }
             );
 
         if (error) {
+
             console.error(
                 "MATH 101 result save error:",
                 error
@@ -949,13 +993,17 @@ async function saveQuizResult(
    SUBMIT QUIZ
 ========================================= */
 
-async function submitQuiz(automatic = false) {
+async function submitQuiz(
+    automatic = false
+) {
 
     if (quizSubmitted) return;
 
     quizSubmitted = true;
 
-    clearInterval(timerInterval);
+    clearInterval(
+        timerInterval
+    );
 
     submitBtn.disabled = true;
     prevBtn.disabled = true;
@@ -965,57 +1013,92 @@ async function submitQuiz(automatic = false) {
     let wrong = 0;
     let unanswered = 0;
 
-    questions.forEach((question, index) => {
+    questions.forEach(
+        (question, index) => {
 
-        const selected = userAnswers[index];
+            const selected =
+                userAnswers[index];
 
-        if (!selected) {
-            unanswered++;
-        } else if (selected === question.answer) {
-            correct++;
-        } else {
-            wrong++;
+            if (!selected) {
+
+                unanswered++;
+
+            } else if (
+                selected ===
+                question.answer
+            ) {
+
+                correct++;
+
+            } else {
+
+                wrong++;
+            }
         }
-    });
+    );
 
-    const total = questions.length;
+    const total =
+        questions.length;
 
     const percentage =
-        Math.round((correct / total) * 100);
+        Math.round(
+            (correct / total) * 100
+        );
 
     const qualifiedForLeaderboard =
         percentage >= PASS_MARK;
 
-    if (!QUIZ_CONFIG.allowRetake) {
-        localStorage.setItem(COMPLETION_KEY, "true");
+    if (
+        !QUIZ_CONFIG.allowRetake
+    ) {
+
+        localStorage.setItem(
+            COMPLETION_KEY,
+            "true"
+        );
     }
 
-    const resultId = await saveQuizResult(
-        studentName,
-        correct,
-        total,
-        percentage,
-        qualifiedForLeaderboard
-    );
+    const resultId =
+        await saveQuizResult(
+            studentName,
+            correct,
+            total,
+            percentage,
+            qualifiedForLeaderboard
+        );
 
     if (resultId) {
-        localStorage.setItem(RESULT_ID_KEY, resultId);
+
+        localStorage.setItem(
+            RESULT_ID_KEY,
+            resultId
+        );
     }
 
-    const saveSuccessful = Boolean(resultId);
+    const saveSuccessful =
+        Boolean(resultId);
 
-    let leaderboardOpen = false;
+    let leaderboardOpen =
+        false;
 
     try {
 
         const { data, error } =
             await supabaseClient
-                .from("leaderboard_settings")
-                .select("leaderboard_enabled, pass_mark")
-                .eq("quiz_id", QUIZ_ID)
+                .from(
+                    "leaderboard_settings"
+                )
+                .select(
+                    "leaderboard_enabled, pass_mark"
+                )
+                .eq(
+                    "quiz_id",
+                    QUIZ_ID
+                )
                 .single();
 
         if (!error && data) {
+
             leaderboardOpen =
                 data.leaderboard_enabled === true;
         }
@@ -1028,15 +1111,19 @@ async function submitQuiz(automatic = false) {
         );
     }
 
-    quizSection.classList.add("hidden");
+    quizSection.classList.add(
+        "hidden"
+    );
 
-    resultSection.classList.remove("hidden");
+    resultSection.classList.remove(
+        "hidden"
+    );
 
     if (!leaderboardOpen) {
 
         showLockedResult(
             saveSuccessful
-                ? "Your MATH 101 Integral Calculus result has been submitted successfully. The leaderboard is currently closed. Your score will become visible when the leaderboard is opened."
+                ? "Your MATH 101 Sequence & Series result has been submitted successfully. The leaderboard is currently closed. Your score will become visible when the leaderboard is opened."
                 : "Your quiz has been completed, but your result could not be confirmed on the server. Please contact CONQUERORS LABS."
         );
 
@@ -1070,57 +1157,91 @@ function showNormalResult(
 ) {
 
     const icon =
-        resultSection.querySelector(".result-icon");
+        resultSection.querySelector(
+            ".result-icon"
+        );
 
     const label =
-        resultSection.querySelector(".result-label");
+        resultSection.querySelector(
+            ".result-label"
+        );
 
     icon.textContent = "✓";
 
-    icon.classList.remove("hidden");
+    icon.classList.remove(
+        "hidden"
+    );
 
-    label.textContent = "QUIZ COMPLETE";
+    label.textContent =
+        "QUIZ COMPLETE";
 
-    label.classList.remove("hidden");
+    label.classList.remove(
+        "hidden"
+    );
 
-    document.getElementById("resultScore").textContent =
+    document.getElementById(
+        "resultScore"
+    ).textContent =
         `${correct}/${total}`;
 
-    document.getElementById("resultScore")
-        .classList.remove("hidden");
+    document.getElementById(
+        "resultScore"
+    ).classList.remove(
+        "hidden"
+    );
 
-    document.getElementById("resultPercentage").textContent =
+    document.getElementById(
+        "resultPercentage"
+    ).textContent =
         `${percentage}%`;
 
-    document.getElementById("resultPercentage")
-        .classList.remove("hidden");
+    document.getElementById(
+        "resultPercentage"
+    ).classList.remove(
+        "hidden"
+    );
 
-    document.getElementById("correctCount").textContent =
+    document.getElementById(
+        "correctCount"
+    ).textContent =
         correct;
 
-    document.getElementById("wrongCount").textContent =
+    document.getElementById(
+        "wrongCount"
+    ).textContent =
         wrong;
 
-    document.getElementById("unansweredCount").textContent =
+    document.getElementById(
+        "unansweredCount"
+    ).textContent =
         unanswered;
 
-    document.querySelector(".result-stats")
-        .classList.remove("hidden");
+    document.querySelector(
+        ".result-stats"
+    ).classList.remove(
+        "hidden"
+    );
 
     const resultMessage =
-        document.getElementById("resultMessage");
+        document.getElementById(
+            "resultMessage"
+        );
 
     if (automatic) {
 
         resultMessage.textContent =
             "Time is up. Your quiz has been submitted automatically.";
 
-    } else if (percentage >= 80) {
+    } else if (
+        percentage >= 80
+    ) {
 
         resultMessage.textContent =
             "🔥 Strong performance. But don't stop here — review every mistake.";
 
-    } else if (percentage >= 60) {
+    } else if (
+        percentage >= 60
+    ) {
 
         resultMessage.textContent =
             "Good attempt. Your corrections are where the real learning begins.";
@@ -1132,16 +1253,28 @@ function showNormalResult(
     }
 
     if (saveSuccessful) {
+
         resultMessage.textContent +=
             " Your result has been recorded.";
     }
 
-    reviewBtn.classList.remove("hidden");
+    reviewBtn.classList.remove(
+        "hidden"
+    );
 
-    if (QUIZ_CONFIG.allowRetake) {
-        retakeBtn.classList.remove("hidden");
+    if (
+        QUIZ_CONFIG.allowRetake
+    ) {
+
+        retakeBtn.classList.remove(
+            "hidden"
+        );
+
     } else {
-        retakeBtn.classList.add("hidden");
+
+        retakeBtn.classList.add(
+            "hidden"
+        );
     }
 }
 
@@ -1150,32 +1283,59 @@ function showNormalResult(
    LOCKED RESULT
 ========================================= */
 
-function showLockedResult(message) {
+function showLockedResult(
+    message
+) {
 
     resultSection
-        .querySelector(".result-icon")
-        .classList.add("hidden");
+        .querySelector(
+            ".result-icon"
+        )
+        .classList.add(
+            "hidden"
+        );
 
     resultSection
-        .querySelector(".result-label")
-        .classList.add("hidden");
+        .querySelector(
+            ".result-label"
+        )
+        .classList.add(
+            "hidden"
+        );
 
-    document.getElementById("resultScore")
-        .classList.add("hidden");
+    document.getElementById(
+        "resultScore"
+    ).classList.add(
+        "hidden"
+    );
 
-    document.getElementById("resultPercentage")
-        .classList.add("hidden");
+    document.getElementById(
+        "resultPercentage"
+    ).classList.add(
+        "hidden"
+    );
 
-    document.querySelector(".result-stats")
-        .classList.add("hidden");
+    document.querySelector(
+        ".result-stats"
+    ).classList.add(
+        "hidden"
+    );
 
-    reviewBtn.classList.add("hidden");
+    reviewBtn.classList.add(
+        "hidden"
+    );
 
-    retakeBtn.classList.add("hidden");
+    retakeBtn.classList.add(
+        "hidden"
+    );
 
-    reviewSection.classList.add("hidden");
+    reviewSection.classList.add(
+        "hidden"
+    );
 
-    document.getElementById("resultMessage").textContent =
+    document.getElementById(
+        "resultMessage"
+    ).textContent =
         message;
 
     window.scrollTo({
@@ -1189,101 +1349,198 @@ function showLockedResult(message) {
    REVIEW
 ========================================= */
 
-reviewBtn.addEventListener("click", () => {
+reviewBtn.addEventListener(
+    "click",
+    () => {
 
-    reviewSection.classList.toggle("hidden");
+        reviewSection.classList.toggle(
+            "hidden"
+        );
 
-    if (!reviewSection.classList.contains("hidden")) {
+        if (
+            !reviewSection.classList.contains(
+                "hidden"
+            )
+        ) {
 
-        renderReview();
+            renderReview();
 
-        reviewSection.scrollIntoView({
-            behavior: "smooth"
-        });
+            reviewSection.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     }
-});
+);
 
 
 function renderReview() {
 
-    reviewContainer.innerHTML = "";
+    reviewContainer.innerHTML =
+        "";
 
-    questions.forEach((question, index) => {
+    questions.forEach(
+        (question, index) => {
 
-        const selected = userAnswers[index];
+            const selected =
+                userAnswers[index];
 
-        const correct =
-            selected === question.answer;
+            const correct =
+                selected ===
+                question.answer;
 
-        const card = document.createElement("div");
+            const card =
+                document.createElement(
+                    "div"
+                );
 
-        card.className =
-            `review-card ${correct ? "correct" : "wrong"}`;
+            card.className =
+                `review-card ${
+                    correct
+                        ? "correct"
+                        : "wrong"
+                }`;
 
-        const number = document.createElement("div");
+            const number =
+                document.createElement(
+                    "div"
+                );
 
-        number.className = "review-question-number";
+            number.className =
+                "review-question-number";
 
-        number.textContent =
-            `QUESTION ${index + 1}`;
+            number.textContent =
+                `QUESTION ${index + 1}`;
 
-        const questionText = document.createElement("div");
+            const questionText =
+                document.createElement(
+                    "div"
+                );
 
-        questionText.className = "review-question";
+            questionText.className =
+                "review-question";
 
-        questionText.textContent = question.question;
+            questionText.textContent =
+                question.question;
 
-        const selectedAnswer = selected
-            ? `${selected}. ${question.options[selected.charCodeAt(0) - 65]}`
-            : "Not answered";
+            const selectedAnswer =
+                selected
+                    ? `${selected}. ${
+                        question.options[
+                            selected.charCodeAt(0) - 65
+                        ]
+                    }`
+                    : "Not answered";
 
-        const correctAnswer =
-            `${question.answer}. ${question.options[question.answer.charCodeAt(0) - 65]}`;
+            const correctAnswer =
+                `${question.answer}. ${
+                    question.options[
+                        question.answer.charCodeAt(0) - 65
+                    ]
+                }`;
 
-        const yourAnswer = document.createElement("div");
+            const yourAnswer =
+                document.createElement(
+                    "div"
+                );
 
-        yourAnswer.className = "review-answer";
+            yourAnswer.className =
+                "review-answer";
 
-        const yourLabel = document.createElement("strong");
-        yourLabel.textContent = "Your answer: ";
+            const yourLabel =
+                document.createElement(
+                    "strong"
+                );
 
-        yourAnswer.appendChild(yourLabel);
-        yourAnswer.appendChild(
-            document.createTextNode(selectedAnswer)
-        );
+            yourLabel.textContent =
+                "Your answer: ";
 
-        const answer = document.createElement("div");
+            yourAnswer.appendChild(
+                yourLabel
+            );
 
-        answer.className = "review-answer";
+            yourAnswer.appendChild(
+                document.createTextNode(
+                    selectedAnswer
+                )
+            );
 
-        const answerLabel = document.createElement("strong");
-        answerLabel.textContent = "Correct answer: ";
+            const answer =
+                document.createElement(
+                    "div"
+                );
 
-        answer.appendChild(answerLabel);
-        answer.appendChild(
-            document.createTextNode(correctAnswer)
-        );
+            answer.className =
+                "review-answer";
 
-        const correction = document.createElement("div");
+            const answerLabel =
+                document.createElement(
+                    "strong"
+                );
 
-        correction.className = "review-correction";
+            answerLabel.textContent =
+                "Correct answer: ";
 
-        const correctionLabel = document.createElement("strong");
-        correctionLabel.textContent = "🧠 JOT THIS: ";
+            answer.appendChild(
+                answerLabel
+            );
 
-        correction.appendChild(correctionLabel);
-        correction.appendChild(
-            document.createTextNode(question.explanation)
-        );
+            answer.appendChild(
+                document.createTextNode(
+                    correctAnswer
+                )
+            );
 
-        card.appendChild(number);
-        card.appendChild(questionText);
-        card.appendChild(yourAnswer);
-        card.appendChild(answer);
-        card.appendChild(correction);
+            const correction =
+                document.createElement(
+                    "div"
+                );
 
-        reviewContainer.appendChild(card);
-    });
+            correction.className =
+                "review-correction";
+
+            const correctionLabel =
+                document.createElement(
+                    "strong"
+                );
+
+            correctionLabel.textContent =
+                "🧠 JOT THIS: ";
+
+            correction.appendChild(
+                correctionLabel
+            );
+
+            correction.appendChild(
+                document.createTextNode(
+                    question.explanation
+                )
+            );
+
+            card.appendChild(
+                number
+            );
+
+            card.appendChild(
+                questionText
+            );
+
+            card.appendChild(
+                yourAnswer
+            );
+
+            card.appendChild(
+                answer
+            );
+
+            card.appendChild(
+                correction
+            );
+
+            reviewContainer.appendChild(
+                card
+            );
+        }
+    );
 }
 
 
@@ -1293,41 +1550,71 @@ function renderReview() {
 
 function showAlreadyCompleted() {
 
-    quizSection.classList.add("hidden");
+    quizSection.classList.add(
+        "hidden"
+    );
 
-    resultSection.classList.remove("hidden");
+    resultSection.classList.remove(
+        "hidden"
+    );
 
     const icon =
-        resultSection.querySelector(".result-icon");
+        resultSection.querySelector(
+            ".result-icon"
+        );
 
     const label =
-        resultSection.querySelector(".result-label");
+        resultSection.querySelector(
+            ".result-label"
+        );
 
     icon.textContent = "🔒";
 
-    icon.classList.remove("hidden");
+    icon.classList.remove(
+        "hidden"
+    );
 
-    label.textContent = "ATTEMPT COMPLETED";
+    label.textContent =
+        "ATTEMPT COMPLETED";
 
-    label.classList.remove("hidden");
+    label.classList.remove(
+        "hidden"
+    );
 
-    document.getElementById("resultScore").textContent =
+    document.getElementById(
+        "resultScore"
+    ).textContent =
         "LOCKED";
 
-    document.getElementById("resultScore")
-        .classList.remove("hidden");
+    document.getElementById(
+        "resultScore"
+    ).classList.remove(
+        "hidden"
+    );
 
-    document.getElementById("resultPercentage").textContent = "";
+    document.getElementById(
+        "resultPercentage"
+    ).textContent =
+        "";
 
-    document.querySelector(".result-stats")
-        .classList.add("hidden");
+    document.querySelector(
+        ".result-stats"
+    ).classList.add(
+        "hidden"
+    );
 
-    document.getElementById("resultMessage").textContent =
-        "You have already completed this MATH 101 Integral Calculus CBT on this browser/device. Retakes are currently disabled.";
+    document.getElementById(
+        "resultMessage"
+    ).textContent =
+        "You have already completed this MATH 101 Sequence & Series CBT on this browser/device. Retakes are currently disabled.";
 
-    reviewBtn.classList.add("hidden");
+    reviewBtn.classList.add(
+        "hidden"
+    );
 
-    retakeBtn.classList.add("hidden");
+    retakeBtn.classList.add(
+        "hidden"
+    );
 }
 
 
@@ -1335,13 +1622,20 @@ function showAlreadyCompleted() {
    RETAKE
 ========================================= */
 
-retakeBtn.addEventListener("click", () => {
+retakeBtn.addEventListener(
+    "click",
+    () => {
 
-    if (!QUIZ_CONFIG.allowRetake) {
-        return;
+        if (
+            !QUIZ_CONFIG.allowRetake
+        ) {
+            return;
+        }
+
+        localStorage.removeItem(
+            COMPLETION_KEY
+        );
+
+        location.reload();
     }
-
-    localStorage.removeItem(COMPLETION_KEY);
-
-    location.reload();
-});
+);
