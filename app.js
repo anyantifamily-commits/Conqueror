@@ -26,13 +26,13 @@ const QUIZ_CONFIG = {
     },
 
     PHY101: {
-        enabled: true,
+        enabled: false,
         name: "PHY 101",
         url: "phy101.html"
     },
 
     MATH101: {
-        enabled: false,
+        enabled: true,
         name: "MATH 101 & 102",
         url: "math101.html"
     }
