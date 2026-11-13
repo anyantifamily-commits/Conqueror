@@ -78,7 +78,7 @@ button {
             rgba(16, 6, 8, .83),
             rgba(16, 6, 8, .96)
         ),
-        url("cq2.png") center / cover no-repeat;
+        url("cq2.jpg") center / cover no-repeat;
 }
 
 .ambient {
