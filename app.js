@@ -26,7 +26,7 @@ const QUIZ_CONFIG = {
     },
 
     PHY101: {
-        enabled: false,
+        enabled: true,
         name: "PHY 101",
         url: "phy101.html"
     },
