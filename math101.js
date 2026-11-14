@@ -12,7 +12,7 @@
 const QUIZ_CONFIG = {
     title: "MATH 101 — Sequence & Series",
     quizId: "math101",
-    quizVersion: 5,
+    quizVersion: 6,
     timeLimit: 30,
     maxQuestions: 25,
     allowRetake: false,
