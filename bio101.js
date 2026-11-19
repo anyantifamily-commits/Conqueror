@@ -11,7 +11,7 @@ const QUIZ_CONFIG = {
     title: "GES 107 — Reproductive Health, STIs, Drugs & Mankind",
 
     // New question set: version 7.
-    quizVersion: 7,
+    quizVersion: 8,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
