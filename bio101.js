@@ -1,6 +1,6 @@
 /* =================================================
    CONQUERORS LABS
-   BIO 101 CBT — BIOENERGETICS
+   GES 107 CBT — REPRODUCTIVE HEALTH, STIs, DRUGS & MANKIND
 ================================================= */
 
 /* =================================================
@@ -8,15 +8,15 @@
 ================================================= */
 
 const QUIZ_CONFIG = {
-    title: "BIO 101 — Bioenergetics",
+    title: "GES 107 — Reproductive Health, STIs, Drugs & Mankind",
 
-    // New question set: version 6.
+    // New question set: version 7.
     quizVersion: 7,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
 
-    timeLimit: 15,
+    timeLimit: 20,
     maxQuestions: 30,
     passMark: 50,
     allowRetake: false,
@@ -24,421 +24,413 @@ const QUIZ_CONFIG = {
     questions: [
 
         // =========================================
-        // PART 1: INTRODUCTION TO BIOENERGETICS
+        // PART 1: REPRODUCTIVE HEALTH
         // =========================================
 
         {
             id: 1,
-            question: "What is the primary focus of bioenergetics?",
+            question: "What is meant by reproductive health?",
             options: [
-                "The study of cellular structure and organelles",
-                "The study of energy changes and transformations in living cells",
-                "The chemical synthesis of DNA and RNA",
-                "The measurement of internal cell temperature"
+                "The absence of reproductive organs in an individual",
+                "A state of complete physical, mental and social well-being in matters relating to the reproductive system",
+                "The ability to produce children at any age",
+                "The treatment of only sexually transmitted infections"
             ],
-            answer: "The study of energy changes and transformations in living cells",
-            explanation: "Bioenergetics is the study of energy changes and energy transformations occurring in living organisms and cells."
+            answer: "A state of complete physical, mental and social well-being in matters relating to the reproductive system",
+            explanation: "Reproductive health refers to complete physical, mental and social well-being in all matters relating to the reproductive system, its functions and processes."
         },
 
         {
             id: 2,
-            question: "Which of the following correctly pairs a metabolic process with its correct energy and ATP characteristic?",
+            question: "Which of the following is an important component of reproductive health?",
             options: [
-                "Catabolism: synthesis of compounds, uses ATP",
-                "Anabolism: breakdown of molecules, releases energy",
-                "Catabolism: breakdown of molecules, makes ATP",
-                "Anabolism: breakdown of molecules, makes ATP"
+                "Access to accurate information and appropriate reproductive healthcare",
+                "Avoidance of all medical examinations",
+                "Having as many children as possible",
+                "Using antibiotics whenever pregnancy is suspected"
             ],
-            answer: "Catabolism: breakdown of molecules, makes ATP",
-            explanation: "Catabolism involves the breakdown of complex molecules into simpler ones and generally releases energy that can be captured in ATP. Anabolism builds complex molecules and generally requires energy."
+            answer: "Access to accurate information and appropriate reproductive healthcare",
+            explanation: "Reproductive health includes access to accurate information, appropriate healthcare, family planning, prevention of STIs and services related to pregnancy and childbirth."
         },
 
         {
             id: 3,
-            question: "Which of the following statements about cellular energy charge are true?\n\nI. It acts like a fuel gauge reflecting the ATP to ADP ratio.\nII. A higher amount of ADP compared to ATP signals the cell to make ATP through oxidative phosphorylation.\nIII. Healthy cells keep their formal energy charge strictly between 0 and 0.2.",
+            question: "Which of the following is a primary function of the female reproductive system?",
             options: [
-                "I and II only",
-                "II and III only",
-                "I and III only",
-                "I, II, and III"
+                "Production of sperm only",
+                "Production of ova and provision of an environment for fertilization and fetal development",
+                "Production of red blood cells",
+                "Digestion of reproductive hormones"
             ],
-            answer: "I and II only",
-            explanation: "Energy charge reflects the relative amounts of ATP, ADP and AMP and indicates the energy status of a cell. A high ADP level signals increased demand for ATP production. The normal cellular energy charge is generally high, around 0.8–0.95, not 0–0.2."
+            answer: "Production of ova and provision of an environment for fertilization and fetal development",
+            explanation: "The female reproductive system produces ova and provides the structures and environment necessary for fertilization, implantation and development of the fetus."
         },
 
         {
             id: 4,
-            question: "What does a negative change in Gibbs free energy (ΔG < 0) indicate about a chemical reaction?",
+            question: "What is ovulation?",
             options: [
-                "The reaction is non-spontaneous and endergonic",
-                "The reaction is at chemical equilibrium",
-                "The reaction is spontaneous and exergonic",
-                "The reaction requires a net input of thermal energy"
+                "The implantation of an embryo into the uterus",
+                "The release of a mature ovum from an ovary",
+                "The fusion of sperm and ovum",
+                "The shedding of the uterine lining"
             ],
-            answer: "The reaction is spontaneous and exergonic",
-            explanation: "A negative ΔG indicates that a reaction is thermodynamically favorable or spontaneous under the specified conditions and releases free energy."
+            answer: "The release of a mature ovum from an ovary",
+            explanation: "Ovulation is the release of a mature egg or ovum from an ovarian follicle, usually around the middle of the menstrual cycle."
         },
 
         {
             id: 5,
-            question: "Which of the following factors does the change in free energy (ΔG) actually predict?",
+            question: "What is menstruation?",
             options: [
-                "The exact speed of the chemical reaction",
-                "The feasibility or spontaneity of the reaction",
-                "The specific activation energy barrier height",
-                "The exact concentration of cellular enzymes"
+                "The release of sperm from the testes",
+                "The shedding of the uterine lining when pregnancy has not occurred",
+                "The fertilization of an ovum",
+                "The implantation of a fertilized egg"
             ],
-            answer: "The feasibility or spontaneity of the reaction",
-            explanation: "ΔG predicts the thermodynamic favorability or spontaneity of a reaction, not its rate. Reaction rate depends largely on activation energy and kinetics."
+            answer: "The shedding of the uterine lining when pregnancy has not occurred",
+            explanation: "Menstruation occurs when the uterine endometrium is shed following the decline of reproductive hormones when pregnancy has not occurred."
         },
-
-        // =========================================
-        // PART 2: THERMODYNAMICS
-        // =========================================
 
         {
             id: 6,
-            question: "Why are living cells described as isothermal systems?",
+            question: "Which hormone is primarily responsible for stimulating ovulation?",
             options: [
-                "They operate at a constant temperature and pressure",
-                "They generate their own internal body heat through friction",
-                "They fluctuate wildly in temperature depending on their environment",
-                "They rely strictly on heat flow to perform biological work"
+                "Insulin",
+                "Luteinizing hormone (LH)",
+                "Thyroxine",
+                "Adrenaline"
             ],
-            answer: "They operate at a constant temperature and pressure",
-            explanation: "Living cells generally function under relatively constant temperature and pressure conditions, making them approximately isothermal systems."
+            answer: "Luteinizing hormone (LH)",
+            explanation: "A surge in luteinizing hormone, or LH, triggers ovulation during the menstrual cycle."
         },
 
         {
             id: 7,
-            question: "Which of the following describe energy flow in photosynthetic versus heterotrophic cells?\n\nI. Photosynthetic cells capture absorbed solar radiation.\nII. Heterotrophic cells obtain free energy from nutrient molecules like food.\nIII. Both cell types ultimately transform free energy into ATP and other energy-rich compounds.",
+            question: "Which of the following best describes fertilization in humans?",
             options: [
-                "I and II only",
-                "I and III only",
-                "II and III only",
-                "I, II, and III"
+                "Fusion of a sperm cell with an ovum to form a zygote",
+                "Division of the uterus into two chambers",
+                "Release of an ovum from the ovary",
+                "Attachment of sperm to the uterine wall"
             ],
-            answer: "I, II, and III",
-            explanation: "Photosynthetic cells capture solar energy, while heterotrophic cells obtain energy from nutrient molecules. Both types convert available free energy into ATP and other forms of usable chemical energy."
+            answer: "Fusion of a sperm cell with an ovum to form a zygote",
+            explanation: "Fertilization occurs when a sperm fuses with an ovum, producing a diploid zygote that can develop into an embryo."
         },
 
         {
             id: 8,
-            question: "What does the second law of thermodynamics state regarding natural processes?",
+            question: "Which of the following is generally considered a healthy reproductive-health practice?",
             options: [
-                "Energy can be freely created or destroyed within a closed system.",
-                "The total entropy (disorder) of the universe always increases.",
-                "The entropy of a local living cell always decreases without any energy expenditure.",
-                "All chemical reactions must release 100% of their energy as usable work."
+                "Ignoring unusual genital symptoms",
+                "Seeking appropriate medical care when reproductive symptoms or infections occur",
+                "Sharing prescribed antibiotics with friends",
+                "Avoiding all reproductive-health information"
             ],
-            answer: "The total entropy (disorder) of the universe always increases.",
-            explanation: "The second law states that the entropy of an isolated system tends to increase during spontaneous processes. Living organisms can maintain or decrease local entropy by releasing heat and increasing entropy in their surroundings."
+            answer: "Seeking appropriate medical care when reproductive symptoms or infections occur",
+            explanation: "Early assessment and appropriate medical care can help prevent complications from reproductive conditions and sexually transmitted infections."
         },
+
+        // =========================================
+        // PART 2: FAMILY PLANNING & CONTRACEPTION
+        // =========================================
 
         {
             id: 9,
-            question: "Which characteristics apply to an exothermic process?\n\nI. It produces and releases heat.\nII. It has a negative enthalpy change (ΔH < 0).\nIII. It absorbs heat from the surroundings.",
+            question: "What is the major purpose of family planning?",
             options: [
-                "I and II only",
-                "II and III only",
-                "I and III only",
-                "I, II, and III"
+                "To prevent all pregnancies permanently",
+                "To help individuals and couples decide freely and responsibly the number and spacing of their children",
+                "To determine the sex of every child",
+                "To eliminate the need for antenatal care"
             ],
-            answer: "I and II only",
-            explanation: "An exothermic process releases heat to the surroundings and therefore has a negative enthalpy change, ΔH < 0."
+            answer: "To help individuals and couples decide freely and responsibly the number and spacing of their children",
+            explanation: "Family planning enables individuals and couples to determine the number and spacing of children and supports reproductive autonomy and health."
         },
 
         {
             id: 10,
-            question: "In the Gibbs equation (ΔG = ΔH − TΔS), what units must temperature (T) always be measured in?",
+            question: "Which contraceptive method also provides significant protection against many sexually transmitted infections when used correctly?",
             options: [
-                "Degrees Celsius (°C)",
-                "Fahrenheit (°F)",
-                "Kelvin (K)",
-                "Calories (cal)"
+                "Male condom",
+                "Oral contraceptive pill",
+                "Intrauterine device",
+                "Calendar method"
             ],
-            answer: "Kelvin (K)",
-            explanation: "Temperature in the Gibbs free-energy equation must be expressed on the absolute temperature scale, Kelvin."
+            answer: "Male condom",
+            explanation: "Condoms provide contraception and also reduce the risk of transmission of many STIs when used correctly and consistently."
         },
 
         {
             id: 11,
-            question: "Under which conditions of enthalpy (ΔH) and entropy change (ΔS) is a reaction always spontaneous at any temperature?",
+            question: "Which of the following is a hormonal contraceptive method?",
             options: [
-                "ΔH is positive and ΔS is negative",
-                "ΔH is negative and ΔS is positive",
-                "ΔH is positive and ΔS is positive",
-                "ΔH is negative and ΔS is negative"
+                "Condom",
+                "Oral contraceptive pill",
+                "Diaphragm",
+                "Copper intrauterine device"
             ],
-            answer: "ΔH is negative and ΔS is positive",
-            explanation: "From ΔG = ΔH − TΔS, a negative ΔH and positive ΔS both favor a negative ΔG at every temperature."
+            answer: "Oral contraceptive pill",
+            explanation: "Oral contraceptive pills contain reproductive hormones that primarily prevent ovulation and may also alter cervical mucus and the uterine lining."
         },
-
-        // =========================================
-        // PART 3: REDOX AND ENERGY
-        // =========================================
 
         {
             id: 12,
-            question: "What does a more negative redox potential (E) signify about a chemical compound?",
+            question: "Which statement about contraceptive methods is correct?",
             options: [
-                "It strongly grabs electrons and acts as a powerful oxidizing agent.",
-                "It gives up electrons easily and acts as a strong reducing agent.",
-                "It has zero tendency to participate in electron transfer.",
-                "It represents an ionic bond with high activation energy."
+                "No contraceptive method has any possible limitations.",
+                "Different contraceptive methods have different effectiveness, benefits, risks and suitability.",
+                "Contraception always causes infertility.",
+                "Contraception protects against every STI."
             ],
-            answer: "It gives up electrons easily and acts as a strong reducing agent.",
-            explanation: "A more negative reduction potential indicates a greater tendency for the reduced form to donate electrons. Such substances are strong reducing agents."
+            answer: "Different contraceptive methods have different effectiveness, benefits, risks and suitability.",
+            explanation: "Contraceptive methods differ in effectiveness, duration, mechanism, side effects, contraindications and protection against STIs."
         },
+
+        // =========================================
+        // PART 3: SEXUALLY TRANSMITTED INFECTIONS
+        // =========================================
 
         {
             id: 13,
-            question: "In bioenergetics, what does the ratio of NAD⁺ to NADH + H⁺ describe?",
+            question: "What are sexually transmitted infections (STIs)?",
             options: [
-                "The overall cellular temperature",
-                "The availability of NAD⁺ for catabolic metabolism",
-                "The total amount of stored structural proteins",
-                "The mechanical work capacity of cell membranes"
+                "Infections transmitted only through contaminated food",
+                "Infections that can be transmitted through sexual contact and, in some cases, through blood or from mother to child",
+                "Infections that affect only the reproductive organs of males",
+                "Infections caused exclusively by poor nutrition"
             ],
-            answer: "The availability of NAD⁺ for catabolic metabolism",
-            explanation: "The NAD⁺/NADH ratio reflects the redox state of the cell and the availability of oxidized NAD⁺ to accept electrons during catabolic reactions."
+            answer: "Infections that can be transmitted through sexual contact and, in some cases, through blood or from mother to child",
+            explanation: "STIs are infections commonly transmitted through sexual contact. Some can also spread through blood exposure or from an infected mother to her baby during pregnancy or childbirth."
         },
 
         {
             id: 14,
-            question: "Which of the following features are characteristic of exergonic reactions?\n\nI. Gibbs free energy change is negative (ΔG < 0).\nII. Reactants sit at a higher free-energy level than products.\nIII. They are typically anabolic and absorb energy.",
+            question: "Which of the following is a bacterial sexually transmitted infection?",
             options: [
-                "I and II only",
-                "II and III only",
-                "I and III only",
-                "I, II, and III"
+                "HIV infection",
+                "Gonorrhea",
+                "Genital herpes",
+                "Genital warts caused by HPV"
             ],
-            answer: "I and II only",
-            explanation: "Exergonic reactions have negative ΔG and release free energy as reactants move from a higher free-energy state to a lower one. They are generally associated with catabolism rather than anabolism."
+            answer: "Gonorrhea",
+            explanation: "Gonorrhea is caused by the bacterium Neisseria gonorrhoeae. HIV, herpes and HPV are caused by viruses."
         },
 
         {
             id: 15,
-            question: "How do enzymes affect the activation energy and free energy change of a reaction?",
+            question: "Which organism causes gonorrhea?",
             options: [
-                "They lower the activation energy hump and change ΔG.",
-                "They lower the activation energy hump but never change ΔG.",
-                "They raise the activation energy hump to slow down spontaneous processes.",
-                "They supply extra free energy to drive endergonic reactions directly."
+                "Neisseria gonorrhoeae",
+                "Treponema pallidum",
+                "HIV",
+                "Candida albicans"
             ],
-            answer: "They lower the activation energy hump but never change ΔG.",
-            explanation: "Enzymes catalyze reactions by lowering the activation energy required to reach the transition state. They do not change the overall ΔG or equilibrium position of the reaction."
+            answer: "Neisseria gonorrhoeae",
+            explanation: "Gonorrhea is caused by the bacterium Neisseria gonorrhoeae."
         },
 
         {
             id: 16,
-            question: "How do cells successfully drive an unfavorable (endergonic) reaction forward?",
+            question: "Which organism causes syphilis?",
             options: [
-                "By increasing the environmental temperature around the cell",
-                "By coupling it with an exergonic reaction, such as ATP hydrolysis, so the overall sum of free energy is negative",
-                "By completely removing the activation energy barrier without any energy source",
-                "By relying entirely on passive diffusion of heat"
+                "Neisseria gonorrhoeae",
+                "Treponema pallidum",
+                "Human papillomavirus",
+                "Hepatitis B virus"
             ],
-            answer: "By coupling it with an exergonic reaction, such as ATP hydrolysis, so the overall sum of free energy is negative",
-            explanation: "Cells couple endergonic reactions to favorable exergonic reactions such as ATP hydrolysis. If the combined ΔG is negative, the overall process can proceed spontaneously."
+            answer: "Treponema pallidum",
+            explanation: "Syphilis is a sexually transmitted infection caused by the bacterium Treponema pallidum."
         },
-
-        // =========================================
-        // PART 4: HIGH-ENERGY COMPOUNDS
-        // =========================================
 
         {
             id: 17,
-            question: "What is the standard free energy of hydrolysis threshold that defines a \"high-energy\" compound at pH 7.0?",
+            question: "Which of the following statements about HIV is correct?",
             options: [
-                "Releases at least 1 kcal/mol",
-                "Releases at least 3 kcal/mol",
-                "Releases at least 7 kcal/mol (approximately 29 kJ/mol)",
-                "Releases at least 20 kcal/mol"
+                "HIV is caused by a bacterium.",
+                "HIV primarily attacks cells of the immune system.",
+                "HIV can be cured by taking antibiotics for one week.",
+                "HIV is transmitted through ordinary handshakes."
             ],
-            answer: "Releases at least 7 kcal/mol (approximately 29 kJ/mol)",
-            explanation: "High-energy compounds are commonly defined in biochemical contexts as compounds whose hydrolysis releases a large amount of free energy, approximately 7 kcal/mol or more under the stated standard biochemical conditions."
+            answer: "HIV primarily attacks cells of the immune system.",
+            explanation: "Human immunodeficiency virus (HIV) attacks immune-system cells, particularly CD4 T lymphocytes. Antiretroviral therapy can suppress the virus but does not currently eradicate HIV from the body."
         },
 
         {
             id: 18,
-            question: "Which of the following represents a correct classification and example of a high-energy compound?\n\nI. Pyrophosphate: ATP\nII. Enol phosphate: Phosphoenolpyruvate (PEP)\nIII. Thiol ester: Acetyl CoA",
+            question: "Which of the following is NOT a usual route of HIV transmission?",
             options: [
-                "I and II only",
-                "II and III only",
-                "I and III only",
-                "I, II, and III"
+                "Unprotected sexual exposure",
+                "Sharing contaminated needles",
+                "Transmission from an infected mother to her child under certain circumstances",
+                "Sharing food with an infected person"
             ],
-            answer: "II and III only",
-            explanation: "PEP is an enol phosphate and acetyl-CoA contains a high-energy thioester bond. ATP is a phosphoanhydride compound rather than a pyrophosphate."
+            answer: "Sharing food with an infected person",
+            explanation: "HIV is not transmitted through ordinary sharing of food, casual contact, hugging or handshakes. Transmission occurs through specific exposure to infected body fluids."
         },
 
         {
             id: 19,
-            question: "Why does ATP sit in the \"middle\" of the high-energy compound energy ladder?",
+            question: "Which sexually transmitted infection is strongly associated with cervical cancer?",
             options: [
-                "It cannot accept or donate phosphate groups under any cellular condition.",
-                "It can easily accept a phosphate from higher-energy donors and donate a phosphate to lower-energy acceptors.",
-                "It has the highest free energy release of all known biological molecules.",
-                "It is chemically inert and unreactive with cellular enzymes."
+                "Human papillomavirus (HPV)",
+                "Gonorrhea",
+                "Chlamydia only",
+                "Trichomoniasis"
             ],
-            answer: "It can easily accept a phosphate from higher-energy donors and donate a phosphate to lower-energy acceptors.",
-            explanation: "ATP has an intermediate phosphoryl-transfer potential. It can be synthesized using phosphate donors with higher transfer potential and can transfer phosphate to compounds with lower transfer potential."
+            answer: "Human papillomavirus (HPV)",
+            explanation: "Persistent infection with certain high-risk types of human papillomavirus is a major cause of cervical cancer."
         },
-
-        // =========================================
-        // PART 5: ATP STRUCTURE AND FUNCTION
-        // =========================================
 
         {
             id: 20,
-            question: "What chemical components make up the structure of an ATP molecule?",
+            question: "Which of the following is an effective way to reduce the risk of sexually transmitted infections?",
             options: [
-                "Guanine, deoxyribose sugar, and two phosphate groups",
-                "Adenine, ribose sugar, and three phosphate groups",
-                "Cytosine, glucose, and a sulfate group",
-                "Uracil, ribose sugar, and a single phosphate group"
+                "Using condoms correctly and consistently",
+                "Taking antibiotics after every sexual encounter without medical advice",
+                "Assuming a person has no STI because they look healthy",
+                "Sharing medication with sexual partners"
             ],
-            answer: "Adenine, ribose sugar, and three phosphate groups",
-            explanation: "ATP is composed of the nitrogenous base adenine, the five-carbon sugar ribose, and three phosphate groups."
+            answer: "Using condoms correctly and consistently",
+            explanation: "Correct and consistent condom use reduces the risk of many STIs. Testing, vaccination where available, mutual testing and reducing exposure to infected partners are also important preventive measures."
         },
+
+        // =========================================
+        // PART 4: DRUGS & MANKIND
+        // =========================================
 
         {
             id: 21,
-            question: "In the chemical structure of ATP, where are the base and the phosphate groups attached to the ribose sugar?",
+            question: "What is a drug in the broad pharmacological sense?",
             options: [
-                "Base on the 1' carbon; phosphate groups on the 5' carbon",
-                "Base on the 5' carbon; phosphate groups on the 1' carbon",
-                "Both base and phosphate groups attach to the 3' carbon",
-                "Base on the 2' carbon; phosphate groups on the 4' carbon"
+                "Only an illegal substance",
+                "A substance that can alter the functions or processes of a living organism",
+                "Any substance that must be injected",
+                "A substance used exclusively for recreation"
             ],
-            answer: "Base on the 1' carbon; phosphate groups on the 5' carbon",
-            explanation: "The adenine base is attached to the 1′ carbon of ribose through an N-glycosidic bond, while the phosphate chain is attached to the 5′ carbon."
+            answer: "A substance that can alter the functions or processes of a living organism",
+            explanation: "A drug is a substance that can modify physiological or psychological processes in an organism. Drugs may be medicines, recreational substances or other psychoactive compounds."
         },
 
         {
             id: 22,
-            question: "What type of bond connects the first phosphate group to the ribose sugar in ATP, compared to the bonds between the outer phosphate groups?",
+            question: "What is drug abuse?",
             options: [
-                "An ester bond holds the first phosphate, while high-energy phosphoanhydride bonds connect the outer phosphates",
-                "High-energy bonds hold the sugar, while ester bonds connect the outer phosphates",
-                "All three phosphate groups are attached via thioester bonds",
-                "Hydrogen bonds connect both the sugar and all phosphate groups"
+                "The appropriate use of a medicine exactly as prescribed",
+                "The harmful or improper use of a drug, including use in ways or amounts that can cause harm",
+                "The storage of medicine in a pharmacy",
+                "Taking a drug only after consulting a healthcare professional"
             ],
-            answer: "An ester bond holds the first phosphate, while high-energy phosphoanhydride bonds connect the outer phosphates",
-            explanation: "The α-phosphate is linked to ribose by a phosphoester bond, while the α–β and β–γ phosphate linkages are phosphoanhydride bonds."
+            answer: "The harmful or improper use of a drug, including use in ways or amounts that can cause harm",
+            explanation: "Drug abuse refers to harmful or inappropriate patterns of drug use that can cause physical, psychological, social or other adverse consequences."
         },
 
         {
             id: 23,
-            question: "What is the standard free energy of hydrolysis (ΔG°′) for the conversion of ATP to ADP and inorganic phosphate (Pi)?",
+            question: "What is drug dependence?",
             options: [
-                "-12.0 kJ/mol",
-                "-30.5 kJ/mol (-7.3 kcal/mol)",
-                "-45.6 kJ/mol",
-                "0.0 kJ/mol"
+                "A complete inability to remember the name of a drug",
+                "A state in which a person may experience a strong need for a drug and may develop physical or psychological symptoms when it is stopped",
+                "The process of manufacturing a drug",
+                "The normal digestion of a medicine"
             ],
-            answer: "-30.5 kJ/mol (-7.3 kcal/mol)",
-            explanation: "Under standard biochemical conditions, ATP hydrolysis to ADP and Pi has a standard free-energy change of approximately −30.5 kJ/mol, or −7.3 kcal/mol."
+            answer: "A state in which a person may experience a strong need for a drug and may develop physical or psychological symptoms when it is stopped",
+            explanation: "Drug dependence can involve physical and/or psychological dependence, including symptoms that occur when drug use is reduced or stopped."
         },
 
         {
             id: 24,
-            question: "Which of the following are recognized as the three main biological functions of ATP in living cells?\n\nI. Active transport of ions through cell membranes (e.g., Na⁺/K⁺ pump)\nII. Synthesis of chemical compounds and macromolecules (anabolism)\nIII. Mechanical work such as muscle contraction and flagella movement",
+            question: "Which of the following is an example of a stimulant drug?",
             options: [
-                "I and II only",
-                "II and III only",
-                "I and III only",
-                "I, II, and III"
+                "Caffeine",
+                "Alcohol",
+                "Diazepam",
+                "Heroin"
             ],
-            answer: "I, II, and III",
-            explanation: "ATP provides energy for active transport, drives biosynthetic reactions, and powers mechanical work such as muscle contraction and movement of cellular structures."
+            answer: "Caffeine",
+            explanation: "Caffeine is a central nervous system stimulant. Alcohol is primarily a depressant, while diazepam is a sedative/anxiolytic and heroin is an opioid."
         },
 
         {
             id: 25,
-            question: "How do physiological conditions inside a living cell affect the actual free energy change (ΔG) of ATP hydrolysis compared to the standard value (ΔG°′)?",
+            question: "Which of the following is generally classified as a central nervous system depressant?",
             options: [
-                "The actual free energy change is much more negative (around -50 to -65 kJ/mol) because cellular ATP/ADP ratios are far above equilibrium.",
-                "The actual free energy change becomes positive, halting all cell work.",
-                "The actual free energy change drops to exactly zero.",
-                "The actual free energy change matches standard conditions precisely."
+                "Alcohol",
+                "Caffeine",
+                "Amphetamine",
+                "Cocaine"
             ],
-            answer: "The actual free energy change is much more negative (around -50 to -65 kJ/mol) because cellular ATP/ADP ratios are far above equilibrium.",
-            explanation: "Inside cells, ATP concentrations and ATP/ADP ratios differ substantially from standard biochemical conditions. Consequently, ATP hydrolysis commonly has a more negative actual ΔG than the standard value of −30.5 kJ/mol."
+            answer: "Alcohol",
+            explanation: "Alcohol depresses central nervous system activity, particularly at higher doses. Caffeine, amphetamines and cocaine are stimulants."
         },
-
-        // =========================================
-        // PART 6: NERNST EQUATION AND PHOSPHOCREATINE
-        // =========================================
 
         {
             id: 26,
-            question: "Which of the following statements regarding the Nernst redox equation and its parameters are true?",
+            question: "Which of the following can be a consequence of prolonged harmful drug use?",
             options: [
-                "The standard Nernst equation uses the ratio of oxidized form over reduced form.",
-                "The term n represents the total temperature in Kelvin.",
-                "The constant 0.0592 is derived from 2.303RT/F at 0°C.",
-                "Redox potential is measured exclusively in units of calories."
+                "Improved physical health in every case",
+                "Dependence, organ damage and impaired social functioning",
+                "Permanent immunity against infectious diseases",
+                "Guaranteed improvement in academic performance"
             ],
-            answer: "The standard Nernst equation uses the ratio of oxidized form over reduced form.",
-            explanation: "The Nernst equation relates electrode potential to the ratio of oxidized and reduced species. The term n represents the number of electrons transferred, while 0.0592 V is associated with 2.303RT/F at approximately 25°C, not 0°C."
+            answer: "Dependence, organ damage and impaired social functioning",
+            explanation: "Prolonged harmful drug use can result in dependence, damage to organs such as the liver and heart, mental-health problems and disruption of social and academic functioning."
         },
+
+        // =========================================
+        // PART 5: DRUGS, SOCIETY & HUMAN HEALTH
+        // =========================================
 
         {
             id: 27,
-            question: "What is the role of phosphocreatine in muscle tissue?",
+            question: "Why can substance abuse become a public-health problem?",
             options: [
-                "It acts as a permanent structural protein for muscle fibers.",
-                "It serves as a short-term backup compound that quickly re-phosphorylates ADP to ATP during sudden activity.",
-                "It functions as the primary electron acceptor for glycolysis.",
-                "It permanently stores glucose as glycogen."
+                "Because it affects only the individual who uses the substance",
+                "Because it can affect individuals, families, communities and healthcare systems",
+                "Because all medicines are automatically dangerous",
+                "Because drug use never has social consequences"
             ],
-            answer: "It serves as a short-term backup compound that quickly re-phosphorylates ADP to ATP during sudden activity.",
-            explanation: "Phosphocreatine provides a rapid source of phosphate for ATP regeneration. Creatine kinase transfers the phosphate group from phosphocreatine to ADP, producing ATP during periods of high energy demand."
+            answer: "Because it can affect individuals, families, communities and healthcare systems",
+            explanation: "Substance abuse can cause illness, injuries, dependence, family problems, reduced productivity, accidents, crime and increased healthcare and social costs."
         },
 
         {
             id: 28,
-            question: "Which of the following represents a correct conversion or relationship?",
+            question: "Which approach is most appropriate when someone is suspected of having a substance-use disorder?",
             options: [
-                "1 kcal = 4.184 kJ",
-                "Absolute temperature K = 273 - °C",
-                "Standard free energy is calculated as ΔG°′ = +nFΔE°′",
-                "High-energy cut-off is precisely 7 cal/mol"
+                "Publicly humiliating the person",
+                "Encouraging appropriate professional assessment and evidence-based treatment",
+                "Giving the person another person's prescription",
+                "Forcing the person to stop without any support"
             ],
-            answer: "1 kcal = 4.184 kJ",
-            explanation: "One kilocalorie is equal to approximately 4.184 kilojoules. The Kelvin conversion is K = °C + 273.15, and the relationship between free energy and redox potential uses ΔG°′ = −nFΔE°′."
+            answer: "Encouraging appropriate professional assessment and evidence-based treatment",
+            explanation: "Substance-use disorders are health conditions that may require professional assessment, counselling, medical treatment, rehabilitation and social support."
         },
-
-        // =========================================
-        // PART 7: THERMODYNAMIC APPLICATIONS
-        // =========================================
 
         {
             id: 29,
-            question: "Why can an endothermic reaction (ΔH > 0) still be spontaneous under certain conditions?",
+            question: "Which of the following best describes the relationship between reproductive health and substance abuse?",
             options: [
-                "If the temperature is absolute zero (0 K)",
-                "If the increase in entropy (ΔS) is large enough to make the -TΔS term dominate, resulting in a negative ΔG",
-                "If an enzyme completely eliminates the enthalpy of the system",
-                "Endothermic reactions can never be spontaneous under any circumstance"
+                "Substance abuse has no possible effect on reproductive health.",
+                "Some substances can negatively affect fertility, pregnancy, sexual function and fetal development.",
+                "All drugs improve fertility when used regularly.",
+                "Only antibiotics can affect reproductive health."
             ],
-            answer: "If the increase in entropy (ΔS) is large enough to make the -TΔS term dominate, resulting in a negative ΔG",
-            explanation: "From ΔG = ΔH − TΔS, an endothermic reaction can still have a negative ΔG if the positive entropy change is sufficiently large, particularly at an appropriate temperature."
+            answer: "Some substances can negatively affect fertility, pregnancy, sexual function and fetal development.",
+            explanation: "Certain drugs and substances can interfere with reproductive hormones, fertility, sexual function, pregnancy outcomes and fetal development."
         },
 
         {
             id: 30,
-            question: "Which correction or clarification is noted regarding the common misconceptions in bioenergetics slides?",
+            question: "Which statement best reflects a comprehensive approach to reproductive health, STI prevention and drug-related health?",
             options: [
-                "Spontaneous reactions always occur instantaneously without delay.",
-                "Both exergonic and endergonic reactions require an activation-energy barrier to proceed.",
-                "ATP synthase creates ATP directly from raw AMP without intermediate steps.",
-                "High-energy compounds liberate less energy than standard ATP."
+                "Health education, responsible decision-making, prevention and timely professional care are important.",
+                "Treatment should only begin after severe symptoms appear.",
+                "STIs can always be identified by appearance alone.",
+                "Drug-related problems should be ignored because they are purely personal issues."
             ],
-            answer: "Both exergonic and endergonic reactions require an activation-energy barrier to proceed.",
-            explanation: "Spontaneity and reaction rate are different concepts. Even a thermodynamically favorable reaction can require an activation-energy barrier before it proceeds at an appreciable rate. Enzymes lower this activation energy without changing ΔG."
+            answer: "Health education, responsible decision-making, prevention and timely professional care are important.",
+            explanation: "A comprehensive approach combines accurate health education, safer decisions, prevention, appropriate screening and vaccination where available, early treatment, and professional support for substance-related problems."
         }
 
     ]
