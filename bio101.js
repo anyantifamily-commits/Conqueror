@@ -11,7 +11,7 @@ const QUIZ_CONFIG = {
     title: "BIO 101 — Macromolecules",
 
     // New question set: version 8.
-    quizVersion: 9,
+    quizVersion: 10,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
