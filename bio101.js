@@ -1,6 +1,6 @@
 /* =================================================
    CONQUERORS LABS
-   GES 107 CBT — REPRODUCTIVE HEALTH, STIs, DRUGS & MANKIND
+   BIO 101 CBT — MACROMOLECULES
 ================================================= */
 
 /* =================================================
@@ -8,429 +8,502 @@
 ================================================= */
 
 const QUIZ_CONFIG = {
-    title: "GES 107 — Reproductive Health, STIs, Drugs & Mankind",
+    title: "BIO 101 — Macromolecules",
 
-    // New question set: version 7.
+    // New question set: version 8.
     quizVersion: 8,
 
     // Keep this unchanged to retain the existing leaderboard.
     quizId: "bio101-cell-biology",
 
-    timeLimit: 20,
-    maxQuestions: 30,
+    timeLimit: 25,
+    maxQuestions: 35,
     passMark: 50,
     allowRetake: false,
 
     questions: [
 
         // =========================================
-        // PART 1: REPRODUCTIVE HEALTH
+        // PART 1: MACROMOLECULES & MOLECULAR INTERACTIONS
         // =========================================
 
         {
             id: 1,
-            question: "What is meant by reproductive health?",
+            question: "Why do single hydrogen bonds (~5 kcal/mol) and Van der Waals interactions (~1 kcal/mol) play such critical roles in maintaining biological macromolecular structure despite being much weaker than covalent bonds (~80 kcal/mol)?",
             options: [
-                "The absence of reproductive organs in an individual",
-                "A state of complete physical, mental and social well-being in matters relating to the reproductive system",
-                "The ability to produce children at any age",
-                "The treatment of only sexually transmitted infections"
+                "They permanently lock atoms into fixed geometries without allowing conformational shifts.",
+                "Their cumulative effect across thousands of interactions provides overall stability while permitting reversible molecular recognition.",
+                "They transfer electrons completely between atoms to neutralize all surface charges.",
+                "They operate exclusively in anhydrous environments where covalent bonds dissolve."
             ],
-            answer: "A state of complete physical, mental and social well-being in matters relating to the reproductive system",
-            explanation: "Reproductive health refers to complete physical, mental and social well-being in all matters relating to the reproductive system, its functions and processes."
+            answer: "Their cumulative effect across thousands of interactions provides overall stability while permitting reversible molecular recognition.",
+            explanation: "Although individual noncovalent interactions are weak, their cumulative effect across many sites provides substantial stability while remaining reversible, which is essential for biological recognition and molecular interactions."
         },
 
         {
             id: 2,
-            question: "Which of the following is an important component of reproductive health?",
+            question: "Which of the following explains why hydrophobic groups tend to cluster on the interior of a biological macromolecule in an aqueous environment?",
             options: [
-                "Access to accurate information and appropriate reproductive healthcare",
-                "Avoidance of all medical examinations",
-                "Having as many children as possible",
-                "Using antibiotics whenever pregnancy is suspected"
+                "Hydrophobic groups form strong ionic bonds with each other in the center of the molecule.",
+                "Water molecules actively repel nonpolar groups using electrostatic forces.",
+                "Clustering minimizes entropy by allowing surrounding water molecules to form maximum hydrogen bonds with each other, putting the molecule in its lowest energy state.",
+                "Nonpolar groups have higher electronegativity than oxygen and pull themselves inward."
             ],
-            answer: "Access to accurate information and appropriate reproductive healthcare",
-            explanation: "Reproductive health includes access to accurate information, appropriate healthcare, family planning, prevention of STIs and services related to pregnancy and childbirth."
+            answer: "Clustering minimizes entropy by allowing surrounding water molecules to form maximum hydrogen bonds with each other, putting the molecule in its lowest energy state.",
+            explanation: "Hydrophobic groups tend to cluster because this minimizes their disruption of hydrogen bonding among surrounding water molecules. This hydrophobic effect contributes strongly to macromolecular folding."
         },
 
         {
             id: 3,
-            question: "Which of the following is a primary function of the female reproductive system?",
+            question: "How does the presence of double bonds in a carbon chain affect the three-dimensional geometry of a biological molecule compared to single bonds?",
             options: [
-                "Production of sperm only",
-                "Production of ova and provision of an environment for fertilization and fetal development",
-                "Production of red blood cells",
-                "Digestion of reproductive hormones"
+                "Double bonds allow completely free rotation around the bond axis, increasing flexibility.",
+                "Double bonds prevent rotation around the bond axis and introduce rigid bends or kinks in the carbon skeleton.",
+                "Double bonds equalize electron sharing across all adjacent polar groups.",
+                "Double bonds convert linear aliphatic chains into four fused steroid rings."
             ],
-            answer: "Production of ova and provision of an environment for fertilization and fetal development",
-            explanation: "The female reproductive system produces ova and provides the structures and environment necessary for fertilization, implantation and development of the fetus."
+            answer: "Double bonds prevent rotation around the bond axis and introduce rigid bends or kinks in the carbon skeleton.",
+            explanation: "Double bonds restrict rotation around the bond axis. In particular, cis double bonds introduce bends or kinks that affect the three-dimensional shape and packing of biological molecules."
         },
 
         {
             id: 4,
-            question: "What is ovulation?",
+            question: "Which of the following statements accurately explain the relationship between dehydration reactions and hydrolysis in polymer metabolism?\n\nI. Dehydration links monomers by removing a water molecule to form a new covalent bond.\nII. Hydrolysis disassembles polymers into monomers by adding a water molecule to break a bond.\nIII. Both processes occur spontaneously without requiring specific enzymatic catalysis.",
             options: [
-                "The implantation of an embryo into the uterus",
-                "The release of a mature ovum from an ovary",
-                "The fusion of sperm and ovum",
-                "The shedding of the uterine lining"
+                "I and II only",
+                "I and III only",
+                "II and III only",
+                "I, II, and III"
             ],
-            answer: "The release of a mature ovum from an ovary",
-            explanation: "Ovulation is the release of a mature egg or ovum from an ovarian follicle, usually around the middle of the menstrual cycle."
+            answer: "I and II only",
+            explanation: "Dehydration reactions remove water to form covalent bonds between monomers, while hydrolysis adds water to break such bonds. In biological systems, these processes are commonly facilitated or regulated by enzymes, so statement III is incorrect."
         },
 
         {
             id: 5,
-            question: "What is menstruation?",
+            question: "How can cells generate an immense diversity of macromolecules from a relatively small set of monomer building blocks?",
             options: [
-                "The release of sperm from the testes",
-                "The shedding of the uterine lining when pregnancy has not occurred",
-                "The fertilization of an ovum",
-                "The implantation of a fertilized egg"
+                "By constantly altering the elemental composition of each monomer using trace metals.",
+                "By varying the linear sequence, length, and branching patterns of the monomers in each polymer.",
+                "By substituting phospholipids directly into polypeptide backbones.",
+                "By reversing the direction of covalent bonds within individual monosaccharides."
             ],
-            answer: "The shedding of the uterine lining when pregnancy has not occurred",
-            explanation: "Menstruation occurs when the uterine endometrium is shed following the decline of reproductive hormones when pregnancy has not occurred."
+            answer: "By varying the linear sequence, length, and branching patterns of the monomers in each polymer.",
+            explanation: "A relatively small set of monomers can produce enormous molecular diversity because their order, number, length, branching and three-dimensional arrangement can vary."
         },
+
+        // =========================================
+        // PART 2: CARBOHYDRATES
+        // =========================================
 
         {
             id: 6,
-            question: "Which hormone is primarily responsible for stimulating ovulation?",
+            question: "A newly discovered sugar has the molecular formula C5H10O5 and possesses a carbonyl group at the end of its carbon skeleton. How is this molecule classified?",
             options: [
-                "Insulin",
-                "Luteinizing hormone (LH)",
-                "Thyroxine",
-                "Adrenaline"
+                "Hexose ketose",
+                "Pentose aldose",
+                "Triose ketose",
+                "Pentose ketose"
             ],
-            answer: "Luteinizing hormone (LH)",
-            explanation: "A surge in luteinizing hormone, or LH, triggers ovulation during the menstrual cycle."
+            answer: "Pentose aldose",
+            explanation: "C5H10O5 indicates a five-carbon sugar, making it a pentose. A carbonyl group at the end of the carbon skeleton is an aldehyde group, making it an aldose."
         },
 
         {
             id: 7,
-            question: "Which of the following best describes fertilization in humans?",
+            question: "What structural change occurs when a linear glucose molecule is placed into an aqueous solution?",
             options: [
-                "Fusion of a sperm cell with an ovum to form a zygote",
-                "Division of the uterus into two chambers",
-                "Release of an ovum from the ovary",
-                "Attachment of sperm to the uterine wall"
+                "It breaks down spontaneously into two triose sugars.",
+                "It forms a stable ring structure.",
+                "Its hydroxyl groups are replaced by phosphate groups.",
+                "It polymerizes immediately into cellulose without enzymes."
             ],
-            answer: "Fusion of a sperm cell with an ovum to form a zygote",
-            explanation: "Fertilization occurs when a sperm fuses with an ovum, producing a diploid zygote that can develop into an embryo."
+            answer: "It forms a stable ring structure.",
+            explanation: "In aqueous solution, glucose predominantly exists in cyclic ring forms produced by an intramolecular reaction between its carbonyl group and a hydroxyl group."
         },
 
         {
             id: 8,
-            question: "Which of the following is generally considered a healthy reproductive-health practice?",
+            question: "Which of the following pairings of disaccharides, their constituent monomers, and the bonds joining them is correct?",
             options: [
-                "Ignoring unusual genital symptoms",
-                "Seeking appropriate medical care when reproductive symptoms or infections occur",
-                "Sharing prescribed antibiotics with friends",
-                "Avoiding all reproductive-health information"
+                "Sucrose: glucose + galactose joined by a peptide bond",
+                "Maltose: glucose + glucose joined by an ester linkage",
+                "Lactose: glucose + galactose joined by a glycosidic bond",
+                "Sucrose: fructose + fructose joined by a phosphodiester bond"
             ],
-            answer: "Seeking appropriate medical care when reproductive symptoms or infections occur",
-            explanation: "Early assessment and appropriate medical care can help prevent complications from reproductive conditions and sexually transmitted infections."
+            answer: "Lactose: glucose + galactose joined by a glycosidic bond",
+            explanation: "Lactose consists of glucose and galactose joined by a glycosidic bond. Maltose is glucose + glucose, while sucrose is glucose + fructose."
         },
-
-        // =========================================
-        // PART 2: FAMILY PLANNING & CONTRACEPTION
-        // =========================================
 
         {
             id: 9,
-            question: "What is the major purpose of family planning?",
+            question: "Why can human digestive enzymes readily hydrolyze starch for energy, while cellulose passes through the human digestive tract undigested as insoluble fiber?",
             options: [
-                "To prevent all pregnancies permanently",
-                "To help individuals and couples decide freely and responsibly the number and spacing of their children",
-                "To determine the sex of every child",
-                "To eliminate the need for antenatal care"
+                "Starch is made of fructose monomers, whereas cellulose is composed of galactose.",
+                "Starch contains α-glucose linkages forming helical chains, whereas cellulose contains β-glucose linkages forming straight chains that human enzymes cannot hydrolyze.",
+                "Cellulose is held together by triple covalent bonds that resist all biological acids.",
+                "Human enzymes can only digest branched polymers, and starch is completely unbranched."
             ],
-            answer: "To help individuals and couples decide freely and responsibly the number and spacing of their children",
-            explanation: "Family planning enables individuals and couples to determine the number and spacing of children and supports reproductive autonomy and health."
+            answer: "Starch contains α-glucose linkages forming helical chains, whereas cellulose contains β-glucose linkages forming straight chains that human enzymes cannot hydrolyze.",
+            explanation: "Starch contains α-glucose linkages that human digestive enzymes can hydrolyze. Cellulose contains β-1,4 linkages, and humans lack the enzyme cellulase required to break them efficiently."
         },
 
         {
             id: 10,
-            question: "Which contraceptive method also provides significant protection against many sexually transmitted infections when used correctly?",
+            question: "What structural feature gives cellulose microfibrils their exceptional strength in plant cell walls?",
             options: [
-                "Male condom",
-                "Oral contraceptive pill",
-                "Intrauterine device",
-                "Calendar method"
+                "Extensive covalent cross-linking between adjacent sulfur atoms",
+                "Parallel straight chains of β-glucose held together by numerous hydrogen bonds between hydroxyl groups on adjacent strands",
+                "Tightly coiled helices stabilized by hydrophobic interactions",
+                "Alternating layers of chitin and phospholipids"
             ],
-            answer: "Male condom",
-            explanation: "Condoms provide contraception and also reduce the risk of transmission of many STIs when used correctly and consistently."
+            answer: "Parallel straight chains of β-glucose held together by numerous hydrogen bonds between hydroxyl groups on adjacent strands",
+            explanation: "Cellulose consists of straight β-glucose chains arranged in parallel. Numerous hydrogen bonds between adjacent chains produce strong cellulose microfibrils."
         },
 
         {
             id: 11,
-            question: "Which of the following is a hormonal contraceptive method?",
+            question: "Which structural polysaccharide serves a dual role in nature by forming the tough exoskeleton of arthropods and providing structural support in the cell walls of many fungi?",
             options: [
-                "Condom",
-                "Oral contraceptive pill",
-                "Diaphragm",
-                "Copper intrauterine device"
+                "Glycogen",
+                "Amylopectin",
+                "Chitin",
+                "Collagen"
             ],
-            answer: "Oral contraceptive pill",
-            explanation: "Oral contraceptive pills contain reproductive hormones that primarily prevent ovulation and may also alter cervical mucus and the uterine lining."
+            answer: "Chitin",
+            explanation: "Chitin is a structural polysaccharide found in arthropod exoskeletons and in the cell walls of many fungi."
         },
+
+        // =========================================
+        // PART 3: LIPIDS
+        // =========================================
 
         {
             id: 12,
-            question: "Which statement about contraceptive methods is correct?",
+            question: "Why are lipids excluded from the category of true macromolecules and polymers?",
             options: [
-                "No contraceptive method has any possible limitations.",
-                "Different contraceptive methods have different effectiveness, benefits, risks and suitability.",
-                "Contraception always causes infertility.",
-                "Contraception protects against every STI."
+                "They are hydrophilic and dissolve completely in cellular cytoplasm.",
+                "They are not built from repeating chains of similar monomer units covalently linked together.",
+                "They contain less than ten atoms per molecule.",
+                "They are inorganic compounds lacking carbon skeletons."
             ],
-            answer: "Different contraceptive methods have different effectiveness, benefits, risks and suitability.",
-            explanation: "Contraceptive methods differ in effectiveness, duration, mechanism, side effects, contraindications and protection against STIs."
+            answer: "They are not built from repeating chains of similar monomer units covalently linked together.",
+            explanation: "Unlike proteins, nucleic acids and polysaccharides, lipids are not generally polymers made from repeating monomer units. They are nevertheless biologically important large molecules."
         },
-
-        // =========================================
-        // PART 3: SEXUALLY TRANSMITTED INFECTIONS
-        // =========================================
 
         {
             id: 13,
-            question: "What are sexually transmitted infections (STIs)?",
+            question: "Why are saturated fats (such as most animal fats) typically solid at room temperature, whereas unsaturated fats (such as plant oils) are liquid?",
             options: [
-                "Infections transmitted only through contaminated food",
-                "Infections that can be transmitted through sexual contact and, in some cases, through blood or from mother to child",
-                "Infections that affect only the reproductive organs of males",
-                "Infections caused exclusively by poor nutrition"
+                "Saturated fats contain ionic bonds that crystallize at room temperature.",
+                "Saturated fatty acid chains lack double bonds and pack tightly together, while cis double bonds in unsaturated fatty acids cause bends that prevent close packing.",
+                "Unsaturated fats have shorter glycerol backbones that evaporate easily.",
+                "Saturated fats contain phosphate heads that repel water molecules."
             ],
-            answer: "Infections that can be transmitted through sexual contact and, in some cases, through blood or from mother to child",
-            explanation: "STIs are infections commonly transmitted through sexual contact. Some can also spread through blood exposure or from an infected mother to her baby during pregnancy or childbirth."
+            answer: "Saturated fatty acid chains lack double bonds and pack tightly together, while cis double bonds in unsaturated fatty acids cause bends that prevent close packing.",
+            explanation: "Saturated fatty acid chains are relatively straight and can pack closely, increasing intermolecular interactions and producing solids at room temperature. Cis double bonds introduce bends that reduce packing efficiency."
         },
 
         {
             id: 14,
-            question: "Which of the following is a bacterial sexually transmitted infection?",
+            question: "How is a triacylglycerol (fat) molecule assembled from its component parts?",
             options: [
-                "HIV infection",
-                "Gonorrhea",
-                "Genital herpes",
-                "Genital warts caused by HPV"
+                "One fatty acid is joined to three glycerol molecules via glycosidic linkages.",
+                "Three fatty acids are joined to a single glycerol molecule via ester linkages.",
+                "Two fatty acids and one phosphate group are joined to glycerol via peptide bonds.",
+                "Four fused carbon rings are linked to a carboxyl group."
             ],
-            answer: "Gonorrhea",
-            explanation: "Gonorrhea is caused by the bacterium Neisseria gonorrhoeae. HIV, herpes and HPV are caused by viruses."
+            answer: "Three fatty acids are joined to a single glycerol molecule via ester linkages.",
+            explanation: "A triacylglycerol consists of one glycerol molecule esterified to three fatty acids."
         },
 
         {
             id: 15,
-            question: "Which organism causes gonorrhea?",
+            question: "How does the amphipathic structure of phospholipids dictate their behavior when added to water?",
             options: [
-                "Neisseria gonorrhoeae",
-                "Treponema pallidum",
-                "HIV",
-                "Candida albicans"
+                "They dissolve uniformly throughout the water as single isolated molecules.",
+                "They self-assemble into a bilayer with hydrophobic fatty acid tails pointing inward away from water and hydrophilic phosphate heads facing outward toward water.",
+                "They form rigid spherical crystals with phosphate groups buried in the core.",
+                "They immediately hydrolyze into free fatty acids and glycerol."
             ],
-            answer: "Neisseria gonorrhoeae",
-            explanation: "Gonorrhea is caused by the bacterium Neisseria gonorrhoeae."
+            answer: "They self-assemble into a bilayer with hydrophobic fatty acid tails pointing inward away from water and hydrophilic phosphate heads facing outward toward water.",
+            explanation: "Phospholipids are amphipathic molecules. Their hydrophilic heads interact with water while their hydrophobic tails avoid water, causing them to spontaneously form structures such as bilayers."
         },
 
         {
             id: 16,
-            question: "Which organism causes syphilis?",
+            question: "Which structural characteristic distinguishes steroids from other major lipid classes like fats and phospholipids?",
             options: [
-                "Neisseria gonorrhoeae",
-                "Treponema pallidum",
-                "Human papillomavirus",
-                "Hepatitis B virus"
+                "A backbone consisting of long unbranched hydrocarbon chains",
+                "A carbon skeleton consisting of four fused rings",
+                "The presence of three ester linkages attached to a pentose sugar",
+                "Alternating hydrophilic and hydrophobic amino acid side chains"
             ],
-            answer: "Treponema pallidum",
-            explanation: "Syphilis is a sexually transmitted infection caused by the bacterium Treponema pallidum."
+            answer: "A carbon skeleton consisting of four fused rings",
+            explanation: "Steroids are characterized by a carbon skeleton containing four fused carbon rings. Examples include cholesterol and several steroid hormones."
         },
+
+        // =========================================
+        // PART 4: PROTEINS
+        // =========================================
 
         {
             id: 17,
-            question: "Which of the following statements about HIV is correct?",
+            question: "Which of the following statements accurately match a functional class of proteins with its biological role?\n\nI. Hormonal proteins (e.g., insulin) coordinate organismal activities by regulating processes such as blood sugar uptake.\nII. Storage proteins (e.g., casein and ovalbumin) serve as reservoirs of amino acids for developing organisms.\nIII. Contractile and motor proteins (e.g., actin and myosin) generate cellular movement and muscle contraction.",
             options: [
-                "HIV is caused by a bacterium.",
-                "HIV primarily attacks cells of the immune system.",
-                "HIV can be cured by taking antibiotics for one week.",
-                "HIV is transmitted through ordinary handshakes."
+                "I and II only",
+                "I and III only",
+                "II and III only",
+                "I, II, and III"
             ],
-            answer: "HIV primarily attacks cells of the immune system.",
-            explanation: "Human immunodeficiency virus (HIV) attacks immune-system cells, particularly CD4 T lymphocytes. Antiretroviral therapy can suppress the virus but does not currently eradicate HIV from the body."
+            answer: "I, II, and III",
+            explanation: "All three statements are correct. Proteins can function as hormones, storage molecules, contractile proteins and many other functional classes."
         },
 
         {
             id: 18,
-            question: "Which of the following is NOT a usual route of HIV transmission?",
+            question: "What chemical feature distinguishes the 20 different amino acids used by cells to construct proteins?",
             options: [
-                "Unprotected sexual exposure",
-                "Sharing contaminated needles",
-                "Transmission from an infected mother to her child under certain circumstances",
-                "Sharing food with an infected person"
+                "The arrangement of the central alpha carbon relative to the carboxyl group",
+                "The unique chemical properties of their side chains (R groups)",
+                "The number of peptide bonds each free monomer contains",
+                "Whether the amino group is attached to a ribose or deoxyribose ring"
             ],
-            answer: "Sharing food with an infected person",
-            explanation: "HIV is not transmitted through ordinary sharing of food, casual contact, hugging or handshakes. Transmission occurs through specific exposure to infected body fluids."
+            answer: "The unique chemical properties of their side chains (R groups)",
+            explanation: "All standard amino acids share a common basic structure, but their R groups differ in size, charge, polarity, hydrophobicity and other chemical properties."
         },
 
         {
             id: 19,
-            question: "Which sexually transmitted infection is strongly associated with cervical cancer?",
+            question: "Which of the following statements correctly describe the directional polarity of a polypeptide chain?",
             options: [
-                "Human papillomavirus (HPV)",
-                "Gonorrhea",
-                "Chlamydia only",
-                "Trichomoniasis"
+                "Both ends of the polypeptide terminate with free carboxyl groups.",
+                "One end has a free amino group (N-terminus) and the opposite end has a free carboxyl group (C-terminus).",
+                "Directionality is determined solely by the presence of disulfide bridges at the center.",
+                "Polypeptides run antiparallel to one another via complementary base pairing."
             ],
-            answer: "Human papillomavirus (HPV)",
-            explanation: "Persistent infection with certain high-risk types of human papillomavirus is a major cause of cervical cancer."
+            answer: "One end has a free amino group (N-terminus) and the opposite end has a free carboxyl group (C-terminus).",
+            explanation: "Polypeptide chains have directionality. The N-terminus contains the free amino group, while the C-terminus contains the free carboxyl group."
         },
 
         {
             id: 20,
-            question: "Which of the following is an effective way to reduce the risk of sexually transmitted infections?",
+            question: "What distinguishes the chemical interactions stabilizing secondary protein structure from those stabilizing tertiary protein structure?",
             options: [
-                "Using condoms correctly and consistently",
-                "Taking antibiotics after every sexual encounter without medical advice",
-                "Assuming a person has no STI because they look healthy",
-                "Sharing medication with sexual partners"
+                "Secondary structure relies on disulfide bridges, while tertiary structure relies only on peptide bonds.",
+                "Secondary structure is stabilized by hydrogen bonds between repeating constituents of the polypeptide backbone, whereas tertiary structure arises from interactions among various R groups (side chains).",
+                "Secondary structure involves multiple polypeptide chains, while tertiary structure occurs within a single chain.",
+                "Secondary structure is determined by environmental pH, while tertiary structure is unaffected by temperature."
             ],
-            answer: "Using condoms correctly and consistently",
-            explanation: "Correct and consistent condom use reduces the risk of many STIs. Testing, vaccination where available, mutual testing and reducing exposure to infected partners are also important preventive measures."
+            answer: "Secondary structure is stabilized by hydrogen bonds between repeating constituents of the polypeptide backbone, whereas tertiary structure arises from interactions among various R groups (side chains).",
+            explanation: "Secondary structures such as α-helices and β-pleated sheets are stabilized mainly by hydrogen bonds involving the peptide backbone. Tertiary structure results from interactions among R groups, including hydrophobic interactions, ionic interactions, hydrogen bonds and disulfide bridges."
         },
-
-        // =========================================
-        // PART 4: DRUGS & MANKIND
-        // =========================================
 
         {
             id: 21,
-            question: "What is a drug in the broad pharmacological sense?",
+            question: "Which of the following interactions directly contribute to stabilizing the tertiary structure of a polypeptide?\n\nI. Disulfide bridges formed between sulfhydryl groups\nII. Ionic bonds between positively and negatively charged R groups\nIII. Hydrophobic interactions and Van der Waals forces among nonpolar side chains",
             options: [
-                "Only an illegal substance",
-                "A substance that can alter the functions or processes of a living organism",
-                "Any substance that must be injected",
-                "A substance used exclusively for recreation"
+                "I and II only",
+                "I and III only",
+                "II and III only",
+                "I, II, and III"
             ],
-            answer: "A substance that can alter the functions or processes of a living organism",
-            explanation: "A drug is a substance that can modify physiological or psychological processes in an organism. Drugs may be medicines, recreational substances or other psychoactive compounds."
+            answer: "I, II, and III",
+            explanation: "All three types of interactions can contribute to tertiary protein structure. Disulfide bridges are covalent, while ionic interactions, hydrophobic interactions and Van der Waals forces are noncovalent."
         },
 
         {
             id: 22,
-            question: "What is drug abuse?",
+            question: "How does quaternary protein structure differ from tertiary protein structure?",
             options: [
-                "The appropriate use of a medicine exactly as prescribed",
-                "The harmful or improper use of a drug, including use in ways or amounts that can cause harm",
-                "The storage of medicine in a pharmacy",
-                "Taking a drug only after consulting a healthcare professional"
+                "Quaternary structure is found only in fibrous structural proteins like keratin, never in globular proteins.",
+                "Quaternary structure results when two or more separate polypeptide chains aggregate into a single functional macromolecule.",
+                "Quaternary structure eliminates the need for primary amino acid sequences.",
+                "Quaternary structure relies exclusively on covalent glycosidic linkages between subunits."
             ],
-            answer: "The harmful or improper use of a drug, including use in ways or amounts that can cause harm",
-            explanation: "Drug abuse refers to harmful or inappropriate patterns of drug use that can cause physical, psychological, social or other adverse consequences."
+            answer: "Quaternary structure results when two or more separate polypeptide chains aggregate into a single functional macromolecule.",
+            explanation: "Tertiary structure describes the three-dimensional shape of one polypeptide chain, while quaternary structure describes the arrangement and interactions of multiple polypeptide subunits."
         },
 
         {
             id: 23,
-            question: "What is drug dependence?",
+            question: "In sickle-cell disease, how does a single amino acid substitution in the primary structure of hemoglobin alter red blood cell function?",
             options: [
-                "A complete inability to remember the name of a drug",
-                "A state in which a person may experience a strong need for a drug and may develop physical or psychological symptoms when it is stopped",
-                "The process of manufacturing a drug",
-                "The normal digestion of a medicine"
+                "It prevents the iron heme group from binding any oxygen at the lungs.",
+                "Substituting a hydrophilic amino acid with a hydrophobic one creates an exposed hydrophobic region, causing hemoglobin molecules to crystallize into fibers that deform the cell and reduce oxygen-carrying capacity.",
+                "It causes the four polypeptide chains to permanently dissociate into free amino acids.",
+                "It converts the alpha helices of hemoglobin into insoluble cellulose microfibrils."
             ],
-            answer: "A state in which a person may experience a strong need for a drug and may develop physical or psychological symptoms when it is stopped",
-            explanation: "Drug dependence can involve physical and/or psychological dependence, including symptoms that occur when drug use is reduced or stopped."
+            answer: "Substituting a hydrophilic amino acid with a hydrophobic one creates an exposed hydrophobic region, causing hemoglobin molecules to crystallize into fibers that deform the cell and reduce oxygen-carrying capacity.",
+            explanation: "Sickle-cell disease results from a single amino acid substitution in the β-globin chain of hemoglobin. The resulting hydrophobic region promotes hemoglobin aggregation under low-oxygen conditions, producing fibers that distort red blood cells."
         },
 
         {
             id: 24,
-            question: "Which of the following is an example of a stimulant drug?",
+            question: "Why does a denatured protein lose its biological function even when its primary sequence of amino acids remains intact?",
             options: [
-                "Caffeine",
-                "Alcohol",
-                "Diazepam",
-                "Heroin"
+                "Denaturation breaks all peptide bonds along the polypeptide backbone.",
+                "Alterations in pH, salt concentration, or temperature disrupt the weak chemical interactions maintaining its native three-dimensional conformation, and function depends on shape.",
+                "Denaturation permanently removes the R groups from the alpha carbons.",
+                "Denatured proteins convert into nucleic acids and enter the nucleus."
             ],
-            answer: "Caffeine",
-            explanation: "Caffeine is a central nervous system stimulant. Alcohol is primarily a depressant, while diazepam is a sedative/anxiolytic and heroin is an opioid."
+            answer: "Alterations in pH, salt concentration, or temperature disrupt the weak chemical interactions maintaining its native three-dimensional conformation, and function depends on shape.",
+            explanation: "Denaturation usually disrupts a protein's higher-order structure without necessarily breaking its peptide bonds. Because protein function depends heavily on its three-dimensional shape, denaturation can cause loss of function."
         },
 
         {
             id: 25,
-            question: "Which of the following is generally classified as a central nervous system depressant?",
+            question: "How do chaperonins assist in the proper folding of newly synthesized polypeptides inside a cell?",
             options: [
-                "Alcohol",
-                "Caffeine",
-                "Amphetamine",
-                "Cocaine"
+                "They enzymatically cleave misfolded segments until only the active site remains.",
+                "They provide a sheltered, hydrophilic cylindrical environment that isolates the polypeptide from disruptive cytoplasmic influences while it folds.",
+                "They rewrite the mRNA sequence to substitute hydrophilic amino acids for hydrophobic ones.",
+                "They permanently bind to the exterior of the protein to lock its quaternary structure in place."
             ],
-            answer: "Alcohol",
-            explanation: "Alcohol depresses central nervous system activity, particularly at higher doses. Caffeine, amphetamines and cocaine are stimulants."
+            answer: "They provide a sheltered, hydrophilic cylindrical environment that isolates the polypeptide from disruptive cytoplasmic influences while it folds.",
+            explanation: "Chaperonins provide a protected environment in which newly synthesized or misfolded proteins can fold correctly, reducing inappropriate interactions with other cellular components."
         },
 
         {
             id: 26,
-            question: "Which of the following can be a consequence of prolonged harmful drug use?",
+            question: "Which experimental techniques are utilized by scientists to determine the three-dimensional conformation of proteins?\n\nI. X-ray crystallography\nII. Nuclear magnetic resonance (NMR) spectroscopy\nIII. Gel electrophoresis of polysaccharides",
             options: [
-                "Improved physical health in every case",
-                "Dependence, organ damage and impaired social functioning",
-                "Permanent immunity against infectious diseases",
-                "Guaranteed improvement in academic performance"
+                "I and II only",
+                "I and III only",
+                "II and III only",
+                "I, II, and III"
             ],
-            answer: "Dependence, organ damage and impaired social functioning",
-            explanation: "Prolonged harmful drug use can result in dependence, damage to organs such as the liver and heart, mental-health problems and disruption of social and academic functioning."
+            answer: "I and II only",
+            explanation: "X-ray crystallography and NMR spectroscopy are established techniques for determining or studying protein three-dimensional structures. Gel electrophoresis of polysaccharides is not a method for determining protein three-dimensional conformation."
         },
 
         // =========================================
-        // PART 5: DRUGS, SOCIETY & HUMAN HEALTH
+        // PART 5: NUCLEIC ACIDS
         // =========================================
 
         {
             id: 27,
-            question: "Why can substance abuse become a public-health problem?",
+            question: "What is the difference between a nucleoside and a nucleotide?",
             options: [
-                "Because it affects only the individual who uses the substance",
-                "Because it can affect individuals, families, communities and healthcare systems",
-                "Because all medicines are automatically dangerous",
-                "Because drug use never has social consequences"
+                "A nucleoside contains a phosphate group, whereas a nucleotide lacks one.",
+                "A nucleoside consists of a nitrogenous base and a pentose sugar, whereas a nucleotide consists of a nucleoside plus one or more phosphate groups.",
+                "A nucleoside is found only in RNA, whereas a nucleotide is found only in DNA.",
+                "A nucleoside contains two fused rings, whereas a nucleotide contains a single six-membered ring."
             ],
-            answer: "Because it can affect individuals, families, communities and healthcare systems",
-            explanation: "Substance abuse can cause illness, injuries, dependence, family problems, reduced productivity, accidents, crime and increased healthcare and social costs."
+            answer: "A nucleoside consists of a nitrogenous base and a pentose sugar, whereas a nucleotide consists of a nucleoside plus one or more phosphate groups.",
+            explanation: "A nucleoside contains a nitrogenous base attached to a pentose sugar. Adding one or more phosphate groups produces a nucleotide."
         },
 
         {
             id: 28,
-            question: "Which approach is most appropriate when someone is suspected of having a substance-use disorder?",
+            question: "How are adjacent nucleotides covalently linked together to form the sugar-phosphate backbone of a polynucleotide strand?",
             options: [
-                "Publicly humiliating the person",
-                "Encouraging appropriate professional assessment and evidence-based treatment",
-                "Giving the person another person's prescription",
-                "Forcing the person to stop without any support"
+                "Between the nitrogenous base of one nucleotide and the 1' carbon of the next",
+                "Between the hydroxyl (-OH) group on the 3' carbon of one nucleotide and the phosphate group on the 5' carbon of the next",
+                "Via hydrogen bonds connecting the 2' carbons of adjacent pentose sugars",
+                "Via peptide bonds linking the 5' phosphate groups directly together"
             ],
-            answer: "Encouraging appropriate professional assessment and evidence-based treatment",
-            explanation: "Substance-use disorders are health conditions that may require professional assessment, counselling, medical treatment, rehabilitation and social support."
+            answer: "Between the hydroxyl (-OH) group on the 3' carbon of one nucleotide and the phosphate group on the 5' carbon of the next",
+            explanation: "Adjacent nucleotides are connected through phosphodiester bonds between the 3' hydroxyl group of one sugar and the 5' phosphate group of the next nucleotide."
         },
 
         {
             id: 29,
-            question: "Which of the following best describes the relationship between reproductive health and substance abuse?",
+            question: "Which of the following structural differences distinguish DNA from RNA?\n\nI. DNA contains the pentose sugar deoxyribose, whereas RNA contains ribose.\nII. DNA uses thymine (T) as a pyrimidine base, whereas RNA uses uracil (U).\nIII. DNA typically exists as a double-stranded helix, whereas RNA is usually single-stranded.",
             options: [
-                "Substance abuse has no possible effect on reproductive health.",
-                "Some substances can negatively affect fertility, pregnancy, sexual function and fetal development.",
-                "All drugs improve fertility when used regularly.",
-                "Only antibiotics can affect reproductive health."
+                "I and II only",
+                "I and III only",
+                "II and III only",
+                "I, II, and III"
             ],
-            answer: "Some substances can negatively affect fertility, pregnancy, sexual function and fetal development.",
-            explanation: "Certain drugs and substances can interfere with reproductive hormones, fertility, sexual function, pregnancy outcomes and fetal development."
+            answer: "I, II, and III",
+            explanation: "All three statements correctly describe major structural differences between DNA and RNA. DNA contains deoxyribose and thymine and is typically double-stranded, whereas RNA contains ribose and uracil and is usually single-stranded."
         },
 
         {
             id: 30,
-            question: "Which statement best reflects a comprehensive approach to reproductive health, STI prevention and drug-related health?",
+            question: "How do purines differ structurally from pyrimidines?",
             options: [
-                "Health education, responsible decision-making, prevention and timely professional care are important.",
-                "Treatment should only begin after severe symptoms appear.",
-                "STIs can always be identified by appearance alone.",
-                "Drug-related problems should be ignored because they are purely personal issues."
+                "Purines have a single six-membered ring, while pyrimidines have two fused rings.",
+                "Purines (adenine and guanine) have a six-membered ring fused to a five-membered ring, while pyrimidines (cytosine, thymine, and uracil) have a single six-membered ring.",
+                "Purines are attached to the 5' carbon of the sugar, while pyrimidines are attached to the phosphate group.",
+                "Purines form covalent bonds across the double helix, while pyrimidines form ionic bonds."
             ],
-            answer: "Health education, responsible decision-making, prevention and timely professional care are important.",
-            explanation: "A comprehensive approach combines accurate health education, safer decisions, prevention, appropriate screening and vaccination where available, early treatment, and professional support for substance-related problems."
+            answer: "Purines (adenine and guanine) have a six-membered ring fused to a five-membered ring, while pyrimidines (cytosine, thymine, and uracil) have a single six-membered ring.",
+            explanation: "Purines are double-ring nitrogenous bases consisting of a six-membered ring fused to a five-membered ring. Pyrimidines have a single six-membered ring."
+        },
+
+        {
+            id: 31,
+            question: "What does the term \"antiparallel\" mean in the context of the DNA double helix?",
+            options: [
+                "The two polynucleotide strands contain completely identical sequences of bases in the same order.",
+                "The two sugar-phosphate backbones run in opposite 5' → 3' directions relative to each other.",
+                "Adenine pairs exclusively with guanine, while cytosine pairs with thymine.",
+                "One strand is composed of DNA while the complementary strand is composed of RNA."
+            ],
+            answer: "The two sugar-phosphate backbones run in opposite 5' → 3' directions relative to each other.",
+            explanation: "The two DNA strands are antiparallel, meaning one strand runs 5' to 3' while the complementary strand runs 3' to 5'."
+        },
+
+        {
+            id: 32,
+            question: "Why is complementary base pairing (A with T, and G with C) essential for the biological function of DNA?",
+            options: [
+                "It prevents the double helix from ever separating during the cell cycle.",
+                "It ensures that each strand can serve as an accurate template for synthesizing a complementary strand during DNA replication and transcription.",
+                "It allows proteins to bind directly to the sugar-phosphate backbone without reading the base sequence.",
+                "It converts deoxyribose sugars into ribose sugars during mitosis."
+            ],
+            answer: "It ensures that each strand can serve as an accurate template for synthesizing a complementary strand during DNA replication and transcription.",
+            explanation: "Complementary base pairing allows the information in one DNA strand to specify the sequence of its complementary strand, which is essential for accurate genetic information transfer."
+        },
+
+        // =========================================
+        // PART 6: ATP, NADPH & EVOLUTIONARY INFORMATION
+        // =========================================
+
+        {
+            id: 33,
+            question: "How does NADPH function differently from ATP in cellular metabolism?",
+            options: [
+                "NADPH stores energy in triple phosphoanhydride bonds, while ATP acts as a steroid hormone.",
+                "NADPH serves as a stereoselective reducing agent that transfers hydride ions to a specific face of a substrate, whereas ATP stores and transfers energy in phosphoric anhydride bonds.",
+                "NADPH builds the sugar-phosphate backbone of DNA, while ATP hydrolyzes starch.",
+                "NADPH is an inorganic ion, while ATP is a fibrous structural protein."
+            ],
+            answer: "NADPH serves as a stereoselective reducing agent that transfers hydride ions to a specific face of a substrate, whereas ATP stores and transfers energy in phosphoric anhydride bonds.",
+            explanation: "NADPH is an important source of reducing power in anabolic reactions, transferring hydride equivalents to substrates. ATP primarily serves as an energy-transfer molecule through its phosphate groups."
+        },
+
+        {
+            id: 34,
+            question: "How do molecular biologists use DNA and protein sequences as \"tape measures of evolution\"?",
+            options: [
+                "By measuring the physical length of chromosomes under a light microscope",
+                "By comparing linear nucleotide or amino acid sequences between organisms, where more closely related species share a higher degree of sequence similarity",
+                "By counting the total number of phospholipids in the plasma membrane",
+                "By determining the temperature at which cellular enzymes denature"
+            ],
+            answer: "By comparing linear nucleotide or amino acid sequences between organisms, where more closely related species share a higher degree of sequence similarity",
+            explanation: "DNA and protein sequences contain evolutionary information. Comparing sequences between organisms allows scientists to infer evolutionary relationships and common ancestry."
+        },
+
+        // =========================================
+        // PART 7: GENE EXPRESSION
+        // =========================================
+
+        {
+            id: 35,
+            question: "Which of the following correctly traces the flow of genetic information during gene expression in a eukaryotic cell?",
+            options: [
+                "Ribosome → mRNA synthesis → DNA replication in cytoplasm",
+                "Synthesis of mRNA from DNA in the nucleus → movement of mRNA through a nuclear pore into the cytoplasm → translation into a polypeptide at a ribosome",
+                "Synthesis of polypeptides inside the nucleus → export of DNA to the plasma membrane → folding by chaperonins",
+                "Conversion of RNA into starch → transport across the nuclear envelope → assembly of amino acids"
+            ],
+            answer: "Synthesis of mRNA from DNA in the nucleus → movement of mRNA through a nuclear pore into the cytoplasm → translation into a polypeptide at a ribosome",
+            explanation: "In eukaryotic cells, transcription produces mRNA from DNA in the nucleus. The mRNA is transported through a nuclear pore into the cytoplasm, where ribosomes translate it into a polypeptide."
         }
 
     ]
