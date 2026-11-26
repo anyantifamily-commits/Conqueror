@@ -7,7 +7,7 @@ const QUIZZES = {
         title: "BIO 101",
         settingsQuizId: "bio101-cell-biology",
         databaseQuizId: "bio101-cell-biology",
-        resultKey: "conquerorsLabs_BIO101_result_id_v9"
+        resultKey: "conquerorsLabs_BIO101_result_id_v10"
     },
 
     "chm101": {
